@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://6mc4hdd1xvgb"]
+[gd_scene load_steps=6 format=3 uid="uid://6mc4hdd1xvgb"]
 
 [ext_resource type="Script" path="res://Scripts/player_cam.gd" id="1_maico"]
 [ext_resource type="Script" path="res://Scripts/player_0_camh.gd" id="3_8pnre"]
+[ext_resource type="Script" path="res://Scripts/player_vision_ray.gd" id="3_x4pdr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dfbb7"]
 
@@ -11,7 +12,7 @@
 script = ExtResource("1_maico")
 
 [node name="player_0_collision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(0.73, 0, 0, 0, 0.73, 0, 0, 0, 0.73, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_dfbb7")
 
 [node name="player_0_shape" type="MeshInstance3D" parent="."]
@@ -19,7 +20,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.998104, 0)
 mesh = SubResource("CapsuleMesh_m3jvo")
 
 [node name="player_0_camh" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.73323, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68529, 0.0980704)
 script = ExtResource("3_8pnre")
 
 [node name="player_0_cam" type="Camera3D" parent="player_0_camh"]
+
+[node name="vision_ray" type="RayCast3D" parent="player_0_camh"]
+target_position = Vector3(0, 0, -2)
+script = ExtResource("3_x4pdr")

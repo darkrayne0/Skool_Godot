@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 
-const SPEED = 10.0
-const JUMP_VELOCITY = 8.5
+const SPEED = 8.0
+const JUMP_VELOCITY = 6.5
 
 func _ready():
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
