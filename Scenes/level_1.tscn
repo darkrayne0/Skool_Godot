@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://duj1hfgx6amgo"]
+[gd_scene load_steps=9 format=4 uid="uid://duj1hfgx6amgo"]
 
 [ext_resource type="PackedScene" uid="uid://6mc4hdd1xvgb" path="res://Scenes/player_0.tscn" id="2_uqlav"]
 [ext_resource type="Texture2D" uid="uid://drvf32vbul7xe" path="res://Modules/Floor_01_A.tga" id="3_5yvub"]
 [ext_resource type="Texture2D" uid="uid://djnr1skncrkvm" path="res://Modules/Floor_01_N.tga" id="4_f44q1"]
+[ext_resource type="PackedScene" uid="uid://vvwahb61m2li" path="res://Scenes/Interior_Walls/interior_wall_01.scn" id="4_gijyo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_en33h"]
 albedo_texture = ExtResource("3_5yvub")
@@ -60,3 +61,9 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/Plane_005/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_emihx")
+
+[node name="Interior_Wall_01" parent="." instance=ExtResource("4_gijyo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 22)
+
+[node name="Interior_Wall_02" parent="." instance=ExtResource("4_gijyo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 18)
