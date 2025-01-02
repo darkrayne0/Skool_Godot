@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=4 uid="uid://duj1hfgx6amgo"]
+
+[ext_resource type="PackedScene" uid="uid://6mc4hdd1xvgb" path="res://Scenes/player_0.tscn" id="2_uqlav"]
+[ext_resource type="Texture2D" uid="uid://drvf32vbul7xe" path="res://Modules/Floor_01_A.tga" id="3_5yvub"]
+[ext_resource type="Texture2D" uid="uid://djnr1skncrkvm" path="res://Modules/Floor_01_N.tga" id="4_f44q1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_en33h"]
+albedo_texture = ExtResource("3_5yvub")
+normal_enabled = true
+normal_texture = ExtResource("4_f44q1")
+uv1_scale = Vector3(12.36, 12.36, 12.36)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rq4iv"]
+_surfaces = [{
+"aabb": AABB(-0.1059, -0.16, 0, 0.3601, 0.47, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("giaCPlK4nj4AAAAAgiaCPgrXI74AAAAAG+LYvQrXI74AAAAAG+LYvVK4nj4AAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jnxcr"]
+resource_name = "Plane_004"
+_surfaces = [{
+"aabb": AABB(-0.1059, -0.16, 0, 0.3601, 0.47, 1e-05),
+"attribute_data": PackedByteArray("uXy3OEL6fz8s1Lc4AIC3OLAgRD8AwLc4rSBEP0T6fz8="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_en33h"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("giaCPlK4nj4AAAAAgiaCPgrXI74AAAAAG+LYvQrXI74AAAAAG+LYvVK4nj4AAAAA/3//fwAA/7//f/9/AAD/v/9//38AAP+//3//fwAA/78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_rq4iv")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_emihx"]
+data = PackedVector3Array(0.2542, 0.31, 0, 0.2542, -0.16, 0, -0.1059, -0.16, 0, -0.1059, -0.16, 0, -0.1059, 0.31, 0, 0.2542, 0.31, 0)
+
+[node name="3rd_floor" type="Node3D"]
+
+[node name="player_0" parent="." instance=ExtResource("2_uqlav")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2324, -8.94432e-08, 23.2497)
+visible = false
+
+[node name="Floor" type="Node3D" parent="."]
+
+[node name="Plane_005" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 16.307, 0, 24)
+mesh = SubResource("ArrayMesh_jnxcr")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor/Plane_005"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/Plane_005/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_emihx")
