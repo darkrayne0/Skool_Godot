@@ -61,3 +61,7 @@ importance_lod/lod2_multiplier=1.0
 importance_lod/lod3_multiplier=1.0
 importance_lod/hide_multiplier=1.0
 importance_lod/unload_multiplier=1.0
+
+[physics]
+
+3d/physics_engine="JoltPhysics3D"
