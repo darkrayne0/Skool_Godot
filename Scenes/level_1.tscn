@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://duj1hfgx6amgo"]
+[gd_scene load_steps=16 format=4 uid="uid://duj1hfgx6amgo"]
 
 [ext_resource type="PackedScene" uid="uid://6mc4hdd1xvgb" path="res://Scenes/player_0.tscn" id="2_uqlav"]
 [ext_resource type="Texture2D" uid="uid://drvf32vbul7xe" path="res://Modules/Floor_01_A.tga" id="3_5yvub"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://dngal7e3run3j" path="res://Scenes/Interior_Walls/stairs.scn" id="7_64a3h"]
 [ext_resource type="PackedScene" uid="uid://dclpvnb7xibkj" path="res://Scenes/Interior_Walls/interior_wall_02.scn" id="8_1qhba"]
 [ext_resource type="PackedScene" uid="uid://8ht73twjmiqn" path="res://Scenes/Interior_Walls/interior_wall_angle_02.scn" id="8_s35u4"]
+[ext_resource type="PackedScene" uid="uid://dys78uuxewyu8" path="res://Scenes/Props/directors_desk.scn" id="10_kcs56"]
+[ext_resource type="PackedScene" uid="uid://bkn5u6vey0nis" path="res://Scenes/Props/computers_01.scn" id="11_01ljb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_en33h"]
 albedo_texture = ExtResource("3_5yvub")
@@ -74,30 +76,6 @@ shape = SubResource("ConcavePolygonShape3D_emihx")
 
 [node name="Stairs" parent="." instance=ExtResource("7_64a3h")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, -4, -22)
-
-[node name="Doors" type="Node3D" parent="."]
-
-[node name="Interior_Wall_Door_09" parent="Doors" instance=ExtResource("4_k5umd")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7, 0, -10)
-visible = false
-
-[node name="Interior_Wall_Door_07" parent="Doors" instance=ExtResource("4_k5umd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, 6)
-
-[node name="Interior_Wall_Door_08" parent="Doors" instance=ExtResource("4_k5umd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 6)
-
-[node name="Interior_Wall_Door_05" parent="Doors" instance=ExtResource("4_k5umd")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7, 0, -14)
-
-[node name="Interior_Wall_Door_06" parent="Doors" instance=ExtResource("4_k5umd")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7, 0, -6)
-
-[node name="Interior_Wall_Door_03" parent="Doors" instance=ExtResource("4_k5umd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -18)
-
-[node name="Interior_Wall_Door_04" parent="Doors" instance=ExtResource("4_k5umd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -10)
 
 [node name="Walls" type="Node3D" parent="."]
 
@@ -199,3 +177,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -22)
 
 [node name="Interior_Wall_Angle_02" parent="Walls" instance=ExtResource("6_ce6uy")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 0, -22)
+
+[node name="Doors" type="Node3D" parent="Walls"]
+
+[node name="Interior_Wall_Door_09" parent="Walls/Doors" instance=ExtResource("4_k5umd")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7, 0, -10)
+visible = false
+
+[node name="Interior_Wall_Door_07" parent="Walls/Doors" instance=ExtResource("4_k5umd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, 6)
+
+[node name="Interior_Wall_Door_08" parent="Walls/Doors" instance=ExtResource("4_k5umd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 6)
+
+[node name="Interior_Wall_Door_05" parent="Walls/Doors" instance=ExtResource("4_k5umd")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7, 0, -14)
+
+[node name="Interior_Wall_Door_06" parent="Walls/Doors" instance=ExtResource("4_k5umd")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7, 0, -6)
+
+[node name="Interior_Wall_Door_03" parent="Walls/Doors" instance=ExtResource("4_k5umd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -18)
+
+[node name="Interior_Wall_Door_04" parent="Walls/Doors" instance=ExtResource("4_k5umd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -10)
+
+[node name="Props" type="Node3D" parent="."]
+
+[node name="Directors_Desk" parent="Props" instance=ExtResource("10_kcs56")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 14, 0, 0.646065)
+
+[node name="Computers_01" parent="Props" instance=ExtResource("11_01ljb")]
+transform = Transform3D(-0.647231, 0, 0.535436, 0, 0.84, 0, -0.535436, 0, -0.647231, 13.8256, 0.937762, -0.00839043)
