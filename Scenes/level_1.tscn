@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://duj1hfgx6amgo"]
+[gd_scene load_steps=23 format=4 uid="uid://duj1hfgx6amgo"]
 
 [ext_resource type="PackedScene" uid="uid://6mc4hdd1xvgb" path="res://Scenes/player_0.tscn" id="2_uqlav"]
 [ext_resource type="Texture2D" uid="uid://drvf32vbul7xe" path="res://Modules/Floor_01_A.tga" id="3_5yvub"]
@@ -15,6 +15,22 @@
 [ext_resource type="PackedScene" uid="uid://bkn5u6vey0nis" path="res://Scenes/Props/computers_01.scn" id="11_01ljb"]
 [ext_resource type="PackedScene" uid="uid://8ucv8vsft0qo" path="res://Scenes/Props/school_chair.scn" id="11_p2cwu"]
 [ext_resource type="PackedScene" uid="uid://c5ihien3o108v" path="res://Scenes/humanoid_rigged.tscn" id="14_nay4g"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3h1dx"]
+sky_top_color = Color(0.891126, 0.81137, 0.679214, 1)
+sky_horizon_color = Color(0.772781, 0.745093, 0.703054, 1)
+ground_horizon_color = Color(0.772781, 0.745093, 0.703054, 1)
+
+[sub_resource type="Sky" id="Sky_rqmk1"]
+sky_material = SubResource("ProceduralSkyMaterial_3h1dx")
+
+[sub_resource type="Environment" id="Environment_0nb66"]
+background_mode = 2
+sky = SubResource("Sky_rqmk1")
+tonemap_mode = 2
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_en33h"]
 albedo_texture = ExtResource("3_5yvub")
@@ -63,14 +79,14 @@ data = PackedVector3Array(0.2542, 0.31, 0, 0.2542, -0.16, 0, -0.1059, -0.16, 0, 
 
 [node name="3rd_floor" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0nb66")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.623879, 0.571569, -0.532996, 0, 0.681998, 0.731354, 0.781521, 0.456276, -0.425484, 1.06599, -1.46271, 0.85097)
-light_color = Color(0.971255, 0.776699, 0.706873, 1)
+transform = Transform3D(-0.546102, -0.33404, -0.768238, 0, 0.91706, -0.398749, 0.837719, -0.217758, -0.500808, 0, 0, 0)
+light_color = Color(1, 0.477167, 0.327838, 1)
 light_energy = 0.75
 shadow_enabled = true
-
-[node name="player_0" parent="." instance=ExtResource("2_uqlav")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.95228, -0.334853, -18.3061)
 
 [node name="Floor" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.923, 0, 1.01)
@@ -86,7 +102,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_emihx")
 
 [node name="Stairs" parent="." instance=ExtResource("7_64a3h")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, -4, -22)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, -22)
 
 [node name="Walls" type="Node3D" parent="."]
 
@@ -781,3 +797,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.601, -3.21865e-06, -25.324
 
 [node name="Interior_Wall_02" parent="." instance=ExtResource("8_1qhba")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10, 0, -30)
+
+[node name="player_0" parent="." instance=ExtResource("2_uqlav")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.84252, 0, -18)
