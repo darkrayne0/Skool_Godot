@@ -1,7 +1,6 @@
 extends RayCast3D
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+#allows interacting with door collision to open/close
 func _process(_delta):
 	if is_colliding():
 		var hitObj = get_collider()
