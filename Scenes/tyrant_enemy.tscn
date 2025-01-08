@@ -9,7 +9,7 @@
 
 [node name="Tyrant_Enemy" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
 script = ExtResource("1_nqlyk")
-blackboard = NodePath("@Node@17302")
+blackboard = NodePath("@Node@17296")
 actor = NodePath("")
 
 [node name="SelectorComposite" type="Node" parent="."]

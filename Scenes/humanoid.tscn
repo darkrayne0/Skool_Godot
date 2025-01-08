@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://mvy20m1tyq8n"]
+[gd_scene load_steps=6 format=4 uid="uid://c7odu4mbatnmn"]
 
-[ext_resource type="Script" path="res://Scripts/humanoidenemyai.gd" id="1_xucwr"]
+[ext_resource type="Script" path="res://Scripts/humanoid_ai.gd" id="1_pge41"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vrbr4"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i65r8"]
+radius = 0.241061
+height = 1.45598
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hnlbe"]
 resource_name = "Humanoid_NotOverlapping"
@@ -117,15 +119,19 @@ bind/27/name = &"Foot.R"
 bind/27/bone = -1
 bind/27/pose = Transform3D(-0.432845, -0.891799, -0.131679, -0.0646641, -0.114979, 0.991261, -0.899146, 0.437577, -0.00789919, -0.0484432, 0.0202366, -0.167808)
 
-[node name="Humanoid" type="CharacterBody3D"]
-script = ExtResource("1_xucwr")
+[node name="Humanoid" type="CharacterBody3D" groups=["enemy"]]
+collision_mask = 3
+script = ExtResource("1_pge41")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.495, 0, 0, 0, 0.495, 0, 0, 0, 0.495, 0, 1, 0)
-shape = SubResource("CapsuleShape3D_vrbr4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.888574, 0)
+shape = SubResource("CapsuleShape3D_i65r8")
 
-[node name="Humanoid" type="Skeleton3D" parent="CollisionShape3D"]
-transform = Transform3D(2.0202, 0, 0, 0, 2.0202, 0, 0, 0, 2.0202, 0, -2.0202, 0)
+[node name="Humanoid_Rigged" type="Node3D" parent="."]
+
+[node name="Non-Overlapping" type="Node3D" parent="Humanoid_Rigged"]
+
+[node name="Skeleton3D" type="Skeleton3D" parent="Humanoid_Rigged/Non-Overlapping"]
 bones/0/name = "Bone"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.973544, 0)
@@ -323,9 +329,10 @@ bones/27/position = Vector3(9.31323e-10, 0.519637, -6.36282e-09)
 bones/27/rotation = Quaternion(0.153163, -0.113037, 0.69676, 0.691585)
 bones/27/scale = Vector3(1, 1, 1)
 
-[node name="Humanoid2" type="MeshInstance3D" parent="CollisionShape3D/Humanoid"]
+[node name="HumanoidBase_NotOverlapping" type="MeshInstance3D" parent="Humanoid_Rigged/Non-Overlapping/Skeleton3D"]
 mesh = SubResource("ArrayMesh_trxtj")
 skin = SubResource("Skin_vr1ck")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-target_desired_distance = 0.1
+
+[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
