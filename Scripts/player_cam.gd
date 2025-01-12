@@ -17,8 +17,8 @@ const BOB_AMP = 0.08
 var t_bob = 0.0
 
 #fov variables
+const FOV_CHANGE = 25.0
 @export var base_fov = 75.0
-const FOV_CHANGE = 2.0
 @onready var camera = $player_0_camh/player_0_cam
 
 #looks for input
@@ -38,10 +38,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP
 		
 	if Input.is_action_pressed("sprint"): #sprint button
-		move_speed = SPRINT #changes the normal speed to sprint speed
-#		var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT * 2) #fov stuff
-#		var target_fov = base_fov + FOV_CHANGE * velocity_clamped #fov stuff
-#		camera.fov = lerp(camera.fov, target_fov, delta * 8.0) #fov stuff
+		sprint(delta)
 	else:
 		move_speed = SPEED #changes the sprint speed to normal speed
 #		camera.fov = lerp(camera.fov, base_fov, delta * 8.0) #fov stuff
@@ -52,14 +49,10 @@ func _physics_process(delta: float) -> void:
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if is_on_floor():
 		if direction:
-			#velocity.x = direction.x * move_speed
 			velocity.x = lerp(velocity.x, direction.x * move_speed, delta * 15.0)
-			#velocity.z = direction.z * move_speed
 			velocity.z = lerp(velocity.z, direction.z * move_speed, delta * 15.0)
 		else:
-			#velocity.x = move_toward(velocity.x, 0, move_speed)
 			velocity.x = lerp(velocity.x, direction.x * move_speed, delta * 7.0)
-			#velocity.z = move_toward(velocity.z, 0, move_speed)
 			velocity.z = lerp(velocity.z, direction.z * move_speed, delta * 7.0)
 	else:
 		velocity.x = lerp(velocity.x, direction.x * move_speed, delta * 3.0)
@@ -67,12 +60,17 @@ func _physics_process(delta: float) -> void:
 		
 	# Head bob
 	t_bob += delta * velocity.length() * float(is_on_floor())
-	camera.transform.origin = _headbob(t_bob)	
-	print (velocity)
+	camera.transform.origin = _headbob(t_bob)
 	move_and_slide()#calls movement function?
 	
-func _headbob(time) -> Vector3: #headbob function
+func _headbob(time) -> Vector3: # temp - headbob function
 	var pos = Vector3.ZERO
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
+
+func sprint(delta):
+	move_speed = SPRINT #changes the normal speed to sprint speed
+	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT * 2) # todo - fov stuff
+	var target_fov = base_fov + FOV_CHANGE * velocity_clamped #fov stuff
+	camera.fov = lerp(camera.fov, target_fov, delta * 8.0) #fov stuff

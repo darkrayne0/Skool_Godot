@@ -1,37 +1,38 @@
-[gd_scene load_steps=7 format=3 uid="uid://xs7r642oofo"]
+[gd_scene load_steps=8 format=3 uid="uid://xs7r642oofo"]
 
 [ext_resource type="Script" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_nqlyk"]
-[ext_resource type="Script" path="res://addons/beehave/nodes/composites/selector.gd" id="2_62xs4"]
-[ext_resource type="Script" path="res://addons/beehave/nodes/composites/sequence.gd" id="3_db7bt"]
-[ext_resource type="Script" path="res://addons/beehave/nodes/leaves/condition.gd" id="4_kme47"]
-[ext_resource type="Script" path="res://addons/beehave/nodes/leaves/action.gd" id="5_vpqwk"]
-[ext_resource type="Script" path="res://addons/beehave/nodes/decorators/inverter.gd" id="6_q7v4w"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/selector_reactive.gd" id="2_rhody"]
+[ext_resource type="Script" path="res://Scripts/BeeHave/is_at_home_condition.gd" id="3_amy84"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/sequence_reactive.gd" id="3_vxha3"]
+[ext_resource type="Script" path="res://Scripts/BeeHave/action_leaf_2.gd" id="6_d3te4"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/decorators/inverter.gd" id="6_g2pk5"]
+[ext_resource type="Script" path="res://Scripts/BeeHave/action_leaf.gd" id="6_ryp3s"]
 
 [node name="Tyrant_Enemy" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
 script = ExtResource("1_nqlyk")
-blackboard = NodePath("@Node@17296")
+blackboard = NodePath("@Node@17347")
 actor = NodePath("")
 
-[node name="SelectorComposite" type="Node" parent="."]
-script = ExtResource("2_62xs4")
+[node name="SelectorReactiveComposite" type="Node" parent="."]
+script = ExtResource("2_rhody")
 
-[node name="Chase" type="Node" parent="SelectorComposite"]
-script = ExtResource("3_db7bt")
+[node name="SequenceReactiveComposite2" type="Node" parent="SelectorReactiveComposite"]
+script = ExtResource("3_vxha3")
 
-[node name="is player nearby" type="Node" parent="SelectorComposite/Chase"]
-script = ExtResource("4_kme47")
+[node name="InverterDecorator" type="Node" parent="SelectorReactiveComposite/SequenceReactiveComposite2"]
+script = ExtResource("6_g2pk5")
 
-[node name="hide2" type="Node" parent="SelectorComposite/Chase"]
-script = ExtResource("5_vpqwk")
+[node name="IsAtHomeCondition2" type="Node" parent="SelectorReactiveComposite/SequenceReactiveComposite2/InverterDecorator"]
+script = ExtResource("3_amy84")
 
-[node name="Hide" type="Node" parent="SelectorComposite"]
-script = ExtResource("3_db7bt")
+[node name="ActionLeaf2" type="Node" parent="SelectorReactiveComposite/SequenceReactiveComposite2"]
+script = ExtResource("6_d3te4")
 
-[node name="InverterDecorator" type="Node" parent="SelectorComposite/Hide"]
-script = ExtResource("6_q7v4w")
+[node name="SequenceReactiveComposite" type="Node" parent="SelectorReactiveComposite"]
+script = ExtResource("3_vxha3")
 
-[node name="is player nearby" type="Node" parent="SelectorComposite/Hide/InverterDecorator"]
-script = ExtResource("4_kme47")
+[node name="IsAtHomeCondition" type="Node" parent="SelectorReactiveComposite/SequenceReactiveComposite"]
+script = ExtResource("3_amy84")
 
-[node name="hide" type="Node" parent="SelectorComposite/Hide"]
-script = ExtResource("5_vpqwk")
+[node name="Wait" type="Node" parent="SelectorReactiveComposite/SequenceReactiveComposite"]
+script = ExtResource("6_ryp3s")
