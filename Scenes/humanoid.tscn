@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://c7odu4mbatnmn"]
+[gd_scene load_steps=6 format=4 uid="uid://c7odu4mbatnmn"]
 
 [ext_resource type="Script" path="res://Scripts/humanoid_ai.gd" id="1_pge41"]
-[ext_resource type="PackedScene" uid="uid://xs7r642oofo" path="res://Scenes/tyrant_enemy.tscn" id="2_8bjm6"]
 [ext_resource type="Material" uid="uid://5go446nnfw5i" path="res://Shader/checker.tres" id="3_aheyo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i65r8"]
@@ -334,9 +333,5 @@ mesh = SubResource("ArrayMesh_trxtj")
 skin = SubResource("Skin_vr1ck")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-
-[node name="Tyrant_Enemy" parent="." node_paths=PackedStringArray("blackboard", "actor") instance=ExtResource("2_8bjm6")]
-blackboard = NodePath("@Node@27858")
-actor = NodePath("..")
 
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]

@@ -28,17 +28,15 @@ func chase_player(): #temp function to make movement based off of normal delta m
 	var next_nav_point = nav_agent.get_next_path_position()
 	velocity = (next_nav_point - global_transform.origin).normalized() * SPEED
 	move_and_slide()
-	print ("I am cumming") #print
-	print (in_game) #print
+
 
 func wait_player(): #temp function to do waiting
 	velocity = Vector3.ZERO
-	nav_agent.set_target_position(player.global_transform.origin)
-	var next_nav_point = nav_agent.get_next_path_position()
-	velocity = (next_nav_point - global_transform.origin).normalized() * SPEED * 0
-	move_and_slide()
-	print (in_game) #print
-	print ("I am waiting") # print
+	#nav_agent.set_target_position(player.global_transform.origin)
+	#var next_nav_point = nav_agent.get_next_path_position()
+	#velocity = (next_nav_point - global_transform.origin).normalized() * SPEED * 0
+	#move_and_slide()
+
 	
 func exists_in_game(): #temp - a temp function to get the beehave to work 
 	return  in_game == 2

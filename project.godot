@@ -11,14 +11,11 @@ config_version=5
 [application]
 
 config/name="Skool_Game"
+config/version="Alpha_V0.00.1.13.2025"
 run/main_scene="res://Scenes/level_1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
-
-[autoload]
-
-BeehaveGlobalMetrics="*res://addons/beehave/metrics/beehave_global_metrics.gd"
-BeehaveGlobalDebugger="*res://addons/beehave/debug/global_debugger.gd"
 
 [editor]
 
@@ -28,7 +25,11 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/beehave/plugin.cfg")
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [global_group]
 
@@ -85,6 +86,12 @@ space={
 3d_physics/layer_1="Walls"
 3d_physics/layer_2="Doors"
 3d_physics/layer_3="Props"
+
+[navigation]
+
+3d/default_cell_size=0.05
+3d/default_cell_height=0.05
+3d/merge_rasterizer_cell_scale=0.001
 
 [performance]
 
