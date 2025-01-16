@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://c7odu4mbatnmn"]
+[gd_scene load_steps=8 format=4 uid="uid://c7odu4mbatnmn"]
 
 [ext_resource type="Script" path="res://Scripts/humanoid_ai.gd" id="1_pge41"]
 [ext_resource type="Material" uid="uid://5go446nnfw5i" path="res://Shader/checker.tres" id="3_aheyo"]
@@ -115,9 +115,15 @@ bind/27/name = &"Foot.R"
 bind/27/bone = -1
 bind/27/pose = Transform3D(-0.432845, -0.891799, -0.131679, -0.0646641, -0.114979, 0.991261, -0.899146, 0.437577, -0.00789919, -0.0484432, 0.0202366, -0.167808)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_7uuo0"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c7x7w"]
+radius = 9.00719
+
 [node name="Humanoid" type="CharacterBody3D" groups=["enemy"]]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
-collision_mask = 3
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 0, 0, 0)
+collision_layer = 256
+collision_mask = 0
 script = ExtResource("1_pge41")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -125,7 +131,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00359774, 0.888574, 0)
 shape = SubResource("CapsuleShape3D_i65r8")
 
 [node name="Humanoid_Rigged" type="Node3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Non-Overlapping" type="Node3D" parent="Humanoid_Rigged"]
 
@@ -334,4 +340,22 @@ skin = SubResource("Skin_vr1ck")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
+[node name="PatrolTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="VIsion_maybe" type="Area3D" parent="."]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="VIsion_maybe"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02771, 0)
+shape = SubResource("SphereShape3D_7uuo0")
+
+[node name="Hearing" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hearing"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62342, 0)
+shape = SubResource("SphereShape3D_c7x7w")
+
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
+[connection signal="timeout" from="PatrolTimer" to="." method="_on_patrol_timer_timeout"]

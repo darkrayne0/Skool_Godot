@@ -20,7 +20,8 @@ const FOV_CHANGE = 2.0
 @onready var camera = $player_0_camh/player_0_cam
 
 #state machine variables - LimboAI
-var p_state: LimboHSM
+@onready var p_state: LimboHSM = $LimboHSM
+#@onready var jump_state: LimboState = $LimboHSM/LimboState
 
 
 func _ready():
@@ -36,6 +37,7 @@ func _input(event): #looks for input
 
 
 func _physics_process(delta: float) -> void:
+	print(p_state.get_active_state())
 	camera.fov = base_fov #Game FOV
 	
 	if not is_on_floor(): # Add the gravity.
@@ -44,7 +46,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("sprint"):
 		p_state.dispatch(&"sprint_ready")
 	
-	# Get the input direction and handle the movement/deceleration.
+	 #Get the input direction and handle the movement/deceleration.
 	var input_dir := Input.get_vector("a", "d", "w", "s") 	# ui_actions replaced with custom input
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if is_on_floor():
@@ -63,7 +65,7 @@ func _physics_process(delta: float) -> void:
 	camera.transform.origin = _headbob(t_bob)
 
 
-func _headbob(time) -> Vector3: # temp - headbob function
+func _headbob(time) -> Vector3: #to simulate head bob #todo - find a way to make optional ingame
 	var pos = Vector3.ZERO
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
@@ -71,9 +73,6 @@ func _headbob(time) -> Vector3: # temp - headbob function
 
 
 func _initate_state_machine():
-	p_state = LimboHSM.new()
-	add_child(p_state)
-	
 	var idle_state = LimboState.new().named("idle").call_on_enter(idle_ready).call_on_update(idle_update)
 	var move_state = LimboState.new().named("move").call_on_enter(move_ready).call_on_update(move_update)
 	var jump_state = LimboState.new().named("jump").call_on_enter(jump_ready).call_on_update(jump_update)

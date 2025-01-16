@@ -3,24 +3,25 @@
 [ext_resource type="Script" path="res://Scripts/player_cam.gd" id="1_maico"]
 [ext_resource type="Script" path="res://Scripts/player_0_camh.gd" id="3_8pnre"]
 [ext_resource type="Script" path="res://Scripts/player_vision_ray.gd" id="3_x4pdr"]
+[ext_resource type="Script" path="res://ai/Player HSM/jump.gd" id="4_tmn7o"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dfbb7"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_m3jvo"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_e6jgv"]
-
 [node name="player_0" type="CharacterBody3D" groups=["player"]]
-collision_mask = 7
+collision_layer = 8
+collision_mask = 263
 script = ExtResource("1_maico")
 
 [node name="player_0_collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.73, 0, 0, 0, 0.73, 0, 0, 0, 0.73, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_dfbb7")
 
-[node name="player_0_shape" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.998104, 0)
+[node name="player_0_shape" type="MeshInstance3D" parent="player_0_collision"]
+transform = Transform3D(1.36986, 0, 0, 0, 1.36986, 0, 0, 0, 1.36986, 0, -0.00259733, 0)
 mesh = SubResource("CapsuleMesh_m3jvo")
+skeleton = NodePath("../..")
 
 [node name="player_0_camh" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68529, 0.0980704)
@@ -30,10 +31,11 @@ script = ExtResource("3_8pnre")
 
 [node name="vision_ray" type="RayCast3D" parent="player_0_camh"]
 target_position = Vector3(0, 0, -2)
-collision_mask = 3
+collision_mask = 2
+collide_with_areas = true
 script = ExtResource("3_x4pdr")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="LimboHSM" type="LimboHSM" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("SphereShape3D_e6jgv")
+[node name="LimboState" type="LimboState" parent="LimboHSM"]
+script = ExtResource("4_tmn7o")

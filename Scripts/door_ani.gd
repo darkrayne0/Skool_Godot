@@ -13,11 +13,15 @@ func interact():
 			animation_player.play("door_locked")
 		
 		elif door.is_in_group("unlock_ani"):
-			toggle = !toggle
-			if toggle == true:
-				animation_player.play("door_unlock")
-				door.remove_from_group("unlock_ani")
-			
+			if interactable == true:
+				interactable = false
+				toggle = !toggle
+				if toggle == true:
+					animation_player.play("door_unlock")
+					door.remove_from_group("unlock_ani")
+				await get_tree().create_timer(1.0, false).timeout
+				interactable = true
+
 		else:
 			if interactable == true:
 				interactable = false

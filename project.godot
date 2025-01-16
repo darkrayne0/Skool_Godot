@@ -84,8 +84,10 @@ space={
 3d_render/layer_1="base_layer"
 3d_render/layer_2="Layer 2"
 3d_physics/layer_1="Walls"
-3d_physics/layer_2="Doors"
+3d_physics/layer_2="Interactable"
 3d_physics/layer_3="Props"
+3d_physics/layer_4="Player"
+3d_physics/layer_9="Enemy"
 
 [navigation]
 
