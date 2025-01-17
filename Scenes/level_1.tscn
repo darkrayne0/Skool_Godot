@@ -986,7 +986,7 @@ transform = Transform3D(-0.0445959, 0, 0.999005, 0, 1, 0, -0.999005, 0, -0.04459
 waypoints = [NodePath("../Patrol_Markers/SE_Corner"), NodePath("../Patrol_Markers/South_Hall"), NodePath("../Patrol_Markers/SW_Corner"), NodePath("../Patrol_Markers/West_Hall"), NodePath("../Patrol_Markers/NW_Corner"), NodePath("../Patrol_Markers/North_Hall"), NodePath("../Patrol_Markers/NE_Corner"), NodePath("../Patrol_Markers/East_Hall")]
 
 [node name="player_0" parent="." instance=ExtResource("2_uqlav")]
-transform = Transform3D(0.0342715, 0, -0.999413, 0, 1, 0, 0.999413, 0, 0.0342715, -12.051, -0.297589, 8.69283)
+transform = Transform3D(0.0342715, 0, -0.999413, 0, 1, 0, 0.999413, 0, 0.0342715, -12.051, -0.00602171, 8.69283)
 
 [node name="Keys" parent="." instance=ExtResource("16_wrh83")]
 transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, -2.77831, 0.800836, -17.2266)
@@ -996,3 +996,7 @@ transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, -2.77831, 0.800836, 
 [node name="Lights" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("18_wkb65")
 volume_db = -13.0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7343, 1.97706, 8.36989)
+use_collision = true

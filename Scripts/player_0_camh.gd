@@ -2,7 +2,7 @@ extends Node3D
 
 @export var vertical_sens = 6
 @export var horizontal_sens = 6
-
+const CROUCH_DEPTH = -0.5
 
 func _ready():
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) #locks mouse to the game screen

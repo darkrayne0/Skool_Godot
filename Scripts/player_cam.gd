@@ -1,18 +1,24 @@
 extends CharacterBody3D
 
+#player constants
+const SPEED = 4.0 #base player speed
+const JUMP = 4.5 #base jump height
+const SPRINT = 8.0 #base player sprint speed
+const CROUCH = 3.0 #base player crouch speed
+const CROUCH_DEPTH = 1.2 #player crouch height
+const CROUCH_ORIG = 1.7 #player uncrouch height
+
 #player variables
-const SPEED = 4.0
-const JUMP = 4.5
-const SPRINT = 8.0
+#@export var health = 10
+#@export var stamina = 10
+var direction = Vector3.ZERO
+var move_speed: float #player move speed at a given time
+var crouched = false
 
-@export var move_speed = 4.0
-@export var health = 10
-@export var stamina = 10
-
-#bob variables
+#head bob variables
 const BOB_FREQ = 2.0
 const BOB_AMP = .07
-var t_bob = 0.0
+var t_bob: float
 
 #fov variables
 const FOV_CHANGE = 2.0
@@ -21,10 +27,14 @@ const FOV_CHANGE = 2.0
 
 #state machine variables - LimboAI
 @onready var p_state: LimboHSM = $LimboHSM
-#@onready var jump_state: LimboState = $LimboHSM/LimboState
+@onready var jump_state: LimboState = $LimboHSM/jump_state
+@onready var crouch_state: LimboState = $LimboHSM/crouch_state
+@onready var idle_state: LimboState = $LimboHSM/idle_state
+@onready var move_state: LimboState = $LimboHSM/move_state
+@onready var sprint_state: LimboState = $LimboHSM/sprint_state
 
 
-func _ready():
+func _ready(): #starts the state machine
 	_initate_state_machine()
 
 
@@ -32,33 +42,35 @@ func _ready():
 func _input(event): #looks for input
 	if event.is_action_pressed("ui_cancel"): #ui_cancle = esc to quit game
 		get_tree().quit()
-	elif event.is_action_pressed("space"):
+	
+	if event.is_action_pressed("crouch"): #allows to change state on button press
+		p_state.dispatch(&"crouch_ready")
+		
+	if event.is_action_pressed("jump"): #allows to change state on button press
 		p_state.dispatch(&"jump_ready")
-
+		
+	if Input.is_action_pressed("sprint"): #allows to change state on button press
+		p_state.dispatch(&"sprint_ready")
 
 func _physics_process(delta: float) -> void:
-	print(p_state.get_active_state())
 	camera.fov = base_fov #Game FOV
 	
 	if not is_on_floor(): # Add the gravity.
 		velocity += get_gravity() * delta #get_gravity shorter than the alternative
-	
-	if Input.is_action_pressed("sprint"):
-		p_state.dispatch(&"sprint_ready")
-	
-	 #Get the input direction and handle the movement/deceleration.
-	var input_dir := Input.get_vector("a", "d", "w", "s") 	# ui_actions replaced with custom input
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
+	#Get the input direction and handle the movement/deceleration.
+	var input_dir := Input.get_vector("left", "right", "forward", "backward") 	# ui_actions replaced with custom input
+	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() #get vector
 	if is_on_floor():
-		if direction:
-			velocity.x = lerp(velocity.x, direction.x * move_speed, delta * 15.0)
-			velocity.z = lerp(velocity.z, direction.z * move_speed, delta * 15.0)
-		else:
-			velocity.x = lerp(velocity.x, direction.x * move_speed, delta * 7.0)
-			velocity.z = lerp(velocity.z, direction.z * move_speed, delta * 7.0)
-	else:
-		velocity.x = lerp(velocity.x, direction.x * move_speed, delta * 3.0)
-		velocity.z = lerp(velocity.z, direction.z * move_speed, delta * 3.0)
+		if direction: #speed when on the floor
+			velocity.x = move_toward(velocity.x, direction.x * move_speed, delta * 15.0)
+			velocity.z = move_toward(velocity.z, direction.z * move_speed, delta * 15.0)
+		else: #speed when stop moving
+			velocity.x = move_toward(velocity.x, direction.x * move_speed, delta * 15.0)
+			velocity.z = move_toward(velocity.z, direction.z * move_speed, delta * 15.0)
+	else: #speed in the air
+		velocity.x = move_toward(velocity.x, direction.x * move_speed, delta * 3.0)
+		velocity.z = move_toward(velocity.z, direction.z * move_speed, delta * 3.0)
 	move_and_slide()
 
 	t_bob += delta * velocity.length() * float(is_on_floor()) 	# Head bob
@@ -72,61 +84,16 @@ func _headbob(time) -> Vector3: #to simulate head bob #todo - find a way to make
 	return pos
 
 
-func _initate_state_machine():
-	var idle_state = LimboState.new().named("idle").call_on_enter(idle_ready).call_on_update(idle_update)
-	var move_state = LimboState.new().named("move").call_on_enter(move_ready).call_on_update(move_update)
-	var jump_state = LimboState.new().named("jump").call_on_enter(jump_ready).call_on_update(jump_update)
-	var sprint_state = LimboState.new().named("sprint").call_on_enter(sprint_ready).call_on_update(sprint_update)
-	
-	p_state.add_child(idle_state)
-	p_state.add_child(move_state)
-	p_state.add_child(jump_state)
-	p_state.add_child(sprint_state)
-	
+func _initate_state_machine(): #LimboAi state machine
+
+	#adding transitions (from state, to state, what to call)
 	p_state.add_transition(idle_state, move_state, &"move_ready")
 	p_state.add_transition(p_state.ANYSTATE, idle_state, &"state_ended")
 	p_state.add_transition(p_state.ANYSTATE, jump_state, &"jump_ready")
+	p_state.add_transition(p_state.ANYSTATE, crouch_state, &"crouch_ready")
 	p_state.add_transition(move_state, sprint_state, &"sprint_ready")
-	
+
+
 	p_state.initial_state = idle_state #starting state for player
 	p_state.initialize(self)
 	p_state.set_active(true)
-
-
-func idle_ready():
-	pass
-
-
-func idle_update(_delta: float):
-	if velocity.length() >= 0.1:
-		p_state.dispatch(&"move_ready")
-
-
-func move_ready():
-	move_speed = SPEED
-
-
-func move_update(_delta: float):
-	if velocity.length() <= 0.5:
-		p_state.dispatch(&"state_ended")
-
-
-func jump_ready():
-	velocity.y = JUMP
-
-
-func jump_update(_delta: float):
-	if is_on_floor():
-		p_state.dispatch(&"state_ended")
-
-
-func sprint_ready():
-	move_speed = SPRINT #changes the normal speed to sprint speed
-
-
-func sprint_update(delta: float):
-	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT * 2) #fov stuff
-	var target_fov = base_fov + FOV_CHANGE * velocity_clamped #fov stuff
-	camera.fov = lerp(camera.fov, target_fov, delta * 8.0) #fov stuff
-	if Input.is_action_just_released("sprint"):
-		p_state.dispatch(&"state_ended")
