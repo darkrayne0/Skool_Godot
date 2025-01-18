@@ -15,6 +15,7 @@ var direction = Vector3.ZERO
 var move_speed: float #player move speed at a given time
 var crouched = false
 
+
 #head bob variables
 const BOB_FREQ = 2.0
 const BOB_AMP = .07
@@ -38,7 +39,6 @@ func _ready(): #starts the state machine
 	_initate_state_machine()
 
 
-
 func _input(event): #looks for input
 	if event.is_action_pressed("ui_cancel"): #ui_cancle = esc to quit game
 		get_tree().quit()
@@ -54,7 +54,7 @@ func _input(event): #looks for input
 
 func _physics_process(delta: float) -> void:
 	camera.fov = base_fov #Game FOV
-	
+
 	if not is_on_floor(): # Add the gravity.
 		velocity += get_gravity() * delta #get_gravity shorter than the alternative
 

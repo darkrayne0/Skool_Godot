@@ -1,6 +1,6 @@
 extends Area3D
 
-var toggle = false
+var toggle = false #todo - put this variable into the lights and toggle from there it should work for any lights this switch is attched to... maybe
 
 @export var lights: SpotLight3D
 @onready var sound: AudioStreamPlayer = $"../../../../Audio/Lights"
@@ -8,16 +8,10 @@ var toggle = false
 #opt - probably make each switch a seperate set of lights as is 2 switches in the same room activate weirdly
 #otherwise could prolly do something like get_node("SpotLight3D path").visable and do some rewriting...
 func interact():
-	lights_toggle()
+	if toggle:
+		lights.hide()
+		sound.play(0.1)
+	else:
+		lights.show()
+		sound.play(0.1)
 	toggle = !toggle
-
-
-func lights_toggle():
-		if toggle:
-			lights.hide()
-			sound.play(0.1)
-			print("off")
-		else:
-			lights.show()
-			sound.play(0.1)
-			print("on")

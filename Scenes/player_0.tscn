@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://6mc4hdd1xvgb"]
+[gd_scene load_steps=13 format=3 uid="uid://6mc4hdd1xvgb"]
 
 [ext_resource type="Script" path="res://Scripts/player_cam.gd" id="1_maico"]
 [ext_resource type="Script" path="res://Scripts/player_0_camh.gd" id="3_8pnre"]
@@ -19,14 +19,25 @@ height = 2.73462
 radius = 0.682141
 height = 1.78367
 
+[sub_resource type="BlackboardPlan" id="BlackboardPlan_60peb"]
+var/test/name = &"test"
+var/test/type = 3
+var/test/value = 2.0
+var/test/hint = 0
+var/test/hint_string = "hint"
+var/rrr/name = &"rrr"
+var/rrr/type = 3
+var/rrr/value = 3.1
+var/rrr/hint = 0
+var/rrr/hint_string = ""
+
 [node name="player_0" type="CharacterBody3D" groups=["player"]]
-collision_layer = 8
+collision_layer = 264
 collision_mask = 263
 script = ExtResource("1_maico")
 
 [node name="player_0_shape" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.999998, 0, 0, 0, 0.999998, 0, 0, 0, 0.999998, 0, 0.998104, 0)
-visible = false
 mesh = SubResource("CapsuleMesh_m3jvo")
 
 [node name="player_0_collision" type="CollisionShape3D" parent="."]
@@ -56,6 +67,7 @@ target_position = Vector3(0, 1, 0)
 collision_mask = 7
 
 [node name="LimboHSM" type="LimboHSM" parent="."]
+blackboard_plan = SubResource("BlackboardPlan_60peb")
 
 [node name="crouch_state" type="LimboState" parent="LimboHSM"]
 script = ExtResource("4_mkrde")

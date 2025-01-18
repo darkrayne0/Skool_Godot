@@ -1,6 +1,6 @@
 extends RayCast3D
 
-#allows interacting with door collision to open/close
+#allows interacting with interactables, doors, keys etc
 func _process(_delta):
 	if is_colliding():
 		var hitObj = get_collider()

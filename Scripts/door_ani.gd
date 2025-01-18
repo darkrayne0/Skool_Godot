@@ -34,9 +34,4 @@ func interact():
 				interactable = true
 
 
-
-#func door_close(): #todo - auto close door after a peroid of time
-	#while toggle == true:
-		#await get_tree().create_timer(4.0, false, true).timeout
-		#animation_player.play("door_close")
-		#toggle = false
+#todo - auto close door after a peroid of time

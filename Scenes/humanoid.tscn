@@ -115,15 +115,16 @@ bind/27/name = &"Foot.R"
 bind/27/bone = -1
 bind/27/pose = Transform3D(-0.432845, -0.891799, -0.131679, -0.0646641, -0.114979, 0.991261, -0.899146, 0.437577, -0.00789919, -0.0484432, 0.0202366, -0.167808)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_7uuo0"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yruev"]
+points = PackedVector3Array(5, 1, -9, 5, 0, -9, 0, 0.64, 0, 0, 0.63, 0, -5, 1, -9, -5, 0, -9)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_c7x7w"]
 radius = 9.00719
 
 [node name="Humanoid" type="CharacterBody3D" groups=["enemy"]]
 transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 0, 0, 0)
-collision_layer = 256
-collision_mask = 0
+collision_layer = 263
+collision_mask = 263
 script = ExtResource("1_pge41")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -339,23 +340,33 @@ mesh = SubResource("ArrayMesh_trxtj")
 skin = SubResource("Skin_vr1ck")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
 
 [node name="PatrolTimer" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
 
-[node name="VIsion_maybe" type="Area3D" parent="."]
-visible = false
+[node name="Vision" type="Area3D" parent="."]
+collision_layer = 8
+collision_mask = 8
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VIsion_maybe"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02771, 0)
-shape = SubResource("SphereShape3D_7uuo0")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Vision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("ConvexPolygonShape3D_yruev")
 
 [node name="Hearing" type="Area3D" parent="."]
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hearing"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62342, 0)
 shape = SubResource("SphereShape3D_c7x7w")
 
-[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
+[node name="head" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66538, 0)
+
 [connection signal="timeout" from="PatrolTimer" to="." method="_on_patrol_timer_timeout"]
+[connection signal="body_entered" from="Vision" to="." method="_on_vision_body_entered"]
+[connection signal="body_exited" from="Vision" to="." method="_on_vision_body_exited"]
+[connection signal="body_entered" from="Hearing" to="." method="_on_hearing_body_entered"]
+[connection signal="body_exited" from="Hearing" to="." method="_on_hearing_body_exited"]
