@@ -11,7 +11,7 @@ enum States{
 @onready var currentstate: States = States.patrol
 @onready var patroltimer: Timer = $PatrolTimer
 @onready var player = get_tree().get_nodes_in_group("player")[0]
-
+@export var animation: AnimationPlayer
 
 @export var waypoints: Array[Marker3D]
 
@@ -19,8 +19,8 @@ var waypointindex: int
 var seeplayer: bool
 var hearplayer: bool  
 
-const SPEED = 4
-const CHASE = 6
+const SPEED = 2.5
+const CHASE = 5
 
 
 func _ready():
@@ -49,6 +49,7 @@ func _process(delta):
 			patroltimer.start()
 
 		States.waiting:
+			animation.stop()
 			if (seeplayer):
 				currentstate = States.chasing
 			if (hearplayer):
@@ -70,6 +71,7 @@ func move_toward_point(_delta, speed):
 	var direction = global_position.direction_to(targetpos)
 	velocity = direction * speed
 	look_at(Vector3(targetpos.x, global_position.y, targetpos.z), Vector3.UP) #looks at next walk loction
+	animation.play("walk_cycle")
 	move_and_slide()
 
 
