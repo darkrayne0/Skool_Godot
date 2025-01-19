@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+
 #player constants
 const SPEED = 4.0 #base player speed
 const JUMP = 4.5 #base jump height
@@ -15,7 +16,6 @@ var direction = Vector3.ZERO
 var move_speed: float #player move speed at a given time
 var crouched = false
 
-
 #head bob variables
 const BOB_FREQ = 2.0
 const BOB_AMP = .07
@@ -28,15 +28,6 @@ const FOV_CHANGE = 2.0
 
 #state machine variables - LimboAI
 @onready var p_state: LimboHSM = $LimboHSM
-@onready var jump_state: LimboState = $LimboHSM/jump_state
-@onready var crouch_state: LimboState = $LimboHSM/crouch_state
-@onready var idle_state: LimboState = $LimboHSM/idle_state
-@onready var move_state: LimboState = $LimboHSM/move_state
-@onready var sprint_state: LimboState = $LimboHSM/sprint_state
-
-
-func _ready(): #starts the state machine
-	_initate_state_machine()
 
 
 func _input(event): #looks for input
@@ -53,6 +44,8 @@ func _input(event): #looks for input
 		p_state.dispatch(&"sprint_ready")
 
 func _physics_process(delta: float) -> void:
+	print(p_state.get_active_state())
+	
 	camera.fov = base_fov #Game FOV
 
 	if not is_on_floor(): # Add the gravity.
@@ -82,18 +75,3 @@ func _headbob(time) -> Vector3: #to simulate head bob #todo - find a way to make
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
-
-
-func _initate_state_machine(): #LimboAi state machine
-
-	#adding transitions (from state, to state, what to call)
-	p_state.add_transition(idle_state, move_state, &"move_ready")
-	p_state.add_transition(p_state.ANYSTATE, idle_state, &"state_ended")
-	p_state.add_transition(p_state.ANYSTATE, jump_state, &"jump_ready")
-	p_state.add_transition(p_state.ANYSTATE, crouch_state, &"crouch_ready")
-	p_state.add_transition(move_state, sprint_state, &"sprint_ready")
-
-
-	p_state.initial_state = idle_state #starting state for player
-	p_state.initialize(self)
-	p_state.set_active(true)

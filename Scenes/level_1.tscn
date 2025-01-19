@@ -981,8 +981,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.211, 1, -25.317)
 [node name="NW_Corner" type="Marker3D" parent="Patrol_Markers"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3186, 1, -26.1088)
 
-[node name="Humanoid" parent="." node_paths=PackedStringArray("waypoints") instance=ExtResource("15_v4ltc")]
-transform = Transform3D(-0.0445959, 0, 0.999005, 0, 1, 0, -0.999005, 0, -0.0445959, -10.8281, 0.0071158, 9.85289)
+[node name="Humanoid" parent="." node_paths=PackedStringArray("test", "waypoints") instance=ExtResource("15_v4ltc")]
+transform = Transform3D(0.939961, 0, 0.341282, 0, 1, 0, -0.341282, 0, 0.939961, -8.57129, 0.0071158, 9.75215)
+test = NodePath("../player_0")
 waypoints = [NodePath("../Patrol_Markers/SE_Corner"), NodePath("../Patrol_Markers/South_Hall"), NodePath("../Patrol_Markers/SW_Corner"), NodePath("../Patrol_Markers/West_Hall"), NodePath("../Patrol_Markers/NW_Corner"), NodePath("../Patrol_Markers/North_Hall"), NodePath("../Patrol_Markers/NE_Corner"), NodePath("../Patrol_Markers/East_Hall")]
 
 [node name="player_0" parent="." instance=ExtResource("2_uqlav")]

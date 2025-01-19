@@ -12,6 +12,7 @@ enum States{
 @onready var patroltimer: Timer = $PatrolTimer
 @onready var player = get_tree().get_nodes_in_group("player")[0]
 
+
 @export var waypoints: Array[Marker3D]
 
 var waypointindex: int
@@ -78,7 +79,7 @@ func check_for_player():
 	if result.size() > 0:
 		if (result["collider"].is_in_group("player")):
 			if (hearplayer):
-				if (result["collider"]).crouched == false:
+				if player.p_state.get_active_state() != player.p_state.crouch_state: #(result["collider"]).crouched == false:
 					currentstate = States.hunting
 					nav_agent.set_target_position(player.global_position)
 			if (seeplayer):
@@ -97,15 +98,12 @@ func _on_hearing_body_entered(_body: Node3D) -> void:
 	hearplayer = true
 
 
-
 func _on_hearing_body_exited(_body: Node3D) -> void:
 	hearplayer = false
 
 
-
 func _on_vision_body_entered(_body: Node3D) -> void:
 	seeplayer = true
-
 
 
 func _on_vision_body_exited(_body: Node3D) -> void:
