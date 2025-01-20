@@ -10,6 +10,7 @@ extends LimboHSM
 @onready var move_state: LimboState = $move_state
 @onready var sprint_state: LimboState = $sprint_state
 
+
 func _ready(): #starts the state machine
 	add_transition(idle_state, move_state, &"move_ready")
 	add_transition(ANYSTATE, idle_state, &"state_ended")
@@ -17,7 +18,20 @@ func _ready(): #starts the state machine
 	add_transition(ANYSTATE, crouch_state, &"crouch_ready")
 	add_transition(move_state, sprint_state, &"sprint_ready")
 
-
 	initial_state = idle_state #starting state for player
 	initialize(player)
 	set_active(true)
+
+
+func _input(event): #looks for input
+	if event.is_action_pressed("ui_cancel"): #ui_cancle = esc to quit game
+		get_tree().quit()
+
+	if event.is_action_pressed("crouch"): #allows to change state on button press
+		dispatch(&"crouch_ready")
+
+	if event.is_action_pressed("jump"): #allows to change state on button press
+		dispatch(&"jump_ready")
+
+	if Input.is_action_pressed("sprint"): #allows to change state on button press
+		dispatch(&"sprint_ready")

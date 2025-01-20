@@ -96,17 +96,23 @@ func _on_patrol_timer_timeout() -> void: #on time out it sets the next path for 
 	nav_agent.set_target_position(waypoints[waypointindex].global_position)
 
 
-func _on_hearing_body_entered(_body: Node3D) -> void:
-	hearplayer = true
-
+func _on_hearing_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		print("body")
+		hearplayer = true
+	else:
+		hearplayer = false
+		print("this is just a wall")
 
 func _on_hearing_body_exited(_body: Node3D) -> void:
 	hearplayer = false
 
 
-func _on_vision_body_entered(_body: Node3D) -> void:
-	seeplayer = true
-
-
+func _on_vision_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		seeplayer = true
+	else:
+		hearplayer = false
+		
 func _on_vision_body_exited(_body: Node3D) -> void:
 	seeplayer = false
