@@ -1,0 +1,34 @@
+[gd_resource type="BehaviorTree" load_steps=9 format=3 uid="uid://84klwd2vs18e"]
+
+[ext_resource type="Script" path="res://ai/tasks/move_toward.gd" id="1_j5bul"]
+[ext_resource type="Script" path="res://ai/tasks/get_first_node_in_group.gd" id="2_kxutu"]
+
+[sub_resource type="BlackboardPlan" id="BlackboardPlan_xk5id"]
+var/index/name = &"index"
+var/index/type = 2
+var/index/value = 0
+var/index/hint = 0
+var/index/hint_string = ""
+
+[sub_resource type="BTAction" id="BTAction_pu3hx"]
+script = ExtResource("2_kxutu")
+group = &"player"
+output_var = &"target_pos"
+
+[sub_resource type="BTDelay" id="BTDelay_demcn"]
+children = [SubResource("BTAction_pu3hx")]
+
+[sub_resource type="BTAction" id="BTAction_eripw"]
+script = ExtResource("1_j5bul")
+target_var = &"target_pos"
+
+[sub_resource type="BTSequence" id="BTSequence_mvoru"]
+custom_name = "Chase Player Sequence"
+children = [SubResource("BTDelay_demcn"), SubResource("BTAction_eripw")]
+
+[sub_resource type="BTSelector" id="BTSelector_uuii0"]
+children = [SubResource("BTSequence_mvoru")]
+
+[resource]
+blackboard_plan = SubResource("BlackboardPlan_xk5id")
+root_task = SubResource("BTSelector_uuii0")

@@ -1,0 +1,12 @@
+
+@tool                          #extends script to the Inspector
+
+extends BTAction               #extends BTAction script
+
+
+
+@export var target_var: StringName = &"target"  #target (_var) allows it to have a drop down in inspector
+                                                #&"target" is the saved value name in Blackboard
+
+
+ var target: Vector3 := blackboard.get_var(target_var) #get target_var from Blackboard

@@ -30,7 +30,7 @@ const FOV_CHANGE := 2.0
 
 
 func _physics_process(delta: float) -> void:
-	print(p_state.get_active_state())
+	#print(p_state.get_active_state()) #print
 
 	camera.fov = base_fov #Game FOV
 

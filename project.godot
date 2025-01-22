@@ -34,6 +34,7 @@ import/blender/enabled=false
 [global_group]
 
 player="player"
+patrol_markers=""
 
 [importer_defaults]
 

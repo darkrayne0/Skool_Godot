@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=4 uid="uid://c7odu4mbatnmn"]
+[gd_scene load_steps=15 format=4 uid="uid://c7odu4mbatnmn"]
 
 [ext_resource type="Script" path="res://Scripts/humanoid_ai.gd" id="1_pge41"]
 [ext_resource type="Texture2D" uid="uid://b0w36on7rsh7a" path="res://3d_Assets/characters/Walk With Briefcase_0.png" id="2_riga8"]
 [ext_resource type="Texture2D" uid="uid://7xtiyr3rwjfu" path="res://3d_Assets/characters/Walk With Briefcase_3.png" id="3_itq5w"]
 [ext_resource type="Texture2D" uid="uid://5nhtypxk74v1" path="res://3d_Assets/characters/Walk With Briefcase_2.png" id="4_sbel6"]
+[ext_resource type="BehaviorTree" uid="uid://84klwd2vs18e" path="res://ai/trees/tyrant.tres" id="5_nbfoh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i65r8"]
 radius = 0.241061
@@ -581,6 +582,8 @@ points = PackedVector3Array(5, 1, -9, 5, 0, -9, 0, 0.64, 0, 0, 0.63, 0, -5, 1, -
 [sub_resource type="SphereShape3D" id="SphereShape3D_c7x7w"]
 radius = 9.00719
 
+[sub_resource type="BlackboardPlan" id="BlackboardPlan_nxsu2"]
+
 [node name="Humanoid" type="CharacterBody3D" node_paths=PackedStringArray("animation") groups=["enemy"]]
 transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 0, 0, 0)
 collision_layer = 263
@@ -1064,7 +1067,6 @@ libraries = {
 }
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-avoidance_enabled = true
 debug_enabled = true
 
 [node name="PatrolTimer" type="Timer" parent="."]
@@ -1089,6 +1091,11 @@ shape = SubResource("SphereShape3D_c7x7w")
 
 [node name="head" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66538, 0)
+
+[node name="BTPlayer" type="BTPlayer" parent="."]
+behavior_tree = ExtResource("5_nbfoh")
+blackboard_plan = SubResource("BlackboardPlan_nxsu2")
+monitor_performance = true
 
 [connection signal="timeout" from="PatrolTimer" to="." method="_on_patrol_timer_timeout"]
 [connection signal="body_entered" from="Vision" to="." method="_on_vision_body_entered"]
