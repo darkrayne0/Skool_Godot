@@ -102,14 +102,16 @@ func _on_patrol_timer_timeout() -> void: #on time out it sets the next path for 
 func _on_hearing_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		hearplayer = true
+		#set_blackboard_plan(hearplayer)
+		#BlackboardPlan.
 		print(hearplayer) #print
 	else:
 		hearplayer = false
-
+		print(hearplayer) #print
 
 func _on_hearing_body_exited(_body: Node3D) -> void:
 	hearplayer = false
-
+	print(hearplayer) #print
 
 func _on_vision_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):

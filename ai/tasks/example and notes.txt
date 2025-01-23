@@ -10,3 +10,12 @@ extends BTAction               #extends BTAction script
 
 
  var target: Vector3 := blackboard.get_var(target_var) #get target_var from Blackboard
+
+
+ #makes LimboAI window make more sense (renames things in the tree view)
+ func _generate_name() -> String:
+	return "Move Toward %s" % [LimboUtility.decorate_var(target_var)] #%s = first stringname export and so on I think
+
+
+
+

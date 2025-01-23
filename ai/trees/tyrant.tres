@@ -1,33 +1,115 @@
-[gd_resource type="BehaviorTree" load_steps=9 format=3 uid="uid://84klwd2vs18e"]
+[gd_resource type="BehaviorTree" load_steps=18 format=3 uid="uid://84klwd2vs18e"]
 
 [ext_resource type="Script" path="res://ai/tasks/move_toward.gd" id="1_j5bul"]
+[ext_resource type="Script" path="res://ai/tasks/get_all_nodes_in_group.gd" id="1_kbw3m"]
 [ext_resource type="Script" path="res://ai/tasks/get_first_node_in_group.gd" id="2_kxutu"]
 
 [sub_resource type="BlackboardPlan" id="BlackboardPlan_xk5id"]
+var/nav_agent/name = &"nav_agent"
+var/nav_agent/type = 22
+var/nav_agent/value = NodePath("NavigationAgent3D")
+var/nav_agent/hint = 26
+var/nav_agent/hint_string = "Base NavigationAgent3D"
 var/index/name = &"index"
 var/index/type = 2
 var/index/value = 0
 var/index/hint = 0
-var/index/hint_string = ""
+var/index/hint_string = "Base node index for groups"
+var/tolerance/name = &"tolerance"
+var/tolerance/type = 3
+var/tolerance/value = 9.65
+var/tolerance/hint = 0
+var/tolerance/hint_string = "Base how close idk if needed"
+var/speed/name = &"speed"
+var/speed/type = 3
+var/speed/value = 2.5
+var/speed/hint = 0
+var/speed/hint_string = "Base Speed Walk/Patrol"
+var/chase/name = &"chase"
+var/chase/type = 3
+var/chase/value = 15.0
+var/chase/hint = 0
+var/chase/hint_string = "Chasing Speed"
+var/ani_walk/name = &"ani_walk"
+var/ani_walk/type = 22
+var/ani_walk/value = NodePath("Humanoid/Walk With Briefcase/AnimationPlayer")
+var/ani_walk/hint = 26
+var/ani_walk/hint_string = "Animation Player Walk Cycle"
+var/nodes/name = &"nodes"
+var/nodes/type = 24
+var/nodes/hint = 0
+var/nodes/hint_string = ""
+var/groups/name = &"groups"
+var/groups/type = 28
+var/groups/value = []
+var/groups/hint = 0
+var/groups/hint_string = ""
+
+[sub_resource type="BTWait" id="BTWait_0vf26"]
+duration = 5.0
+
+[sub_resource type="BTCooldown" id="BTCooldown_rstpm"]
+duration = 30.0
+children = [SubResource("BTWait_0vf26")]
+
+[sub_resource type="BTSequence" id="BTSequence_aitjl"]
+custom_name = "Idle Sequence"
+children = [SubResource("BTCooldown_rstpm")]
+
+[sub_resource type="BTAction" id="BTAction_ib68u"]
+script = ExtResource("1_kbw3m")
+group = &"patrol_markers"
+index_var = &"index"
+target_node = &"target_pos"
+
+[sub_resource type="BTAction" id="BTAction_ewpfb"]
+script = ExtResource("1_j5bul")
+target_var = &"target_pos"
+speed_var = &"speed"
+tolerance_var = &"tolerance"
+nav_agent_var = &"nav_agent"
+animation_var = &"ani_walk"
+
+[sub_resource type="BTSequence" id="BTSequence_i6w63"]
+custom_name = "Patrol Sequence"
+children = [SubResource("BTAction_ib68u"), SubResource("BTAction_ewpfb")]
 
 [sub_resource type="BTAction" id="BTAction_pu3hx"]
 script = ExtResource("2_kxutu")
 group = &"player"
-output_var = &"target_pos"
-
-[sub_resource type="BTDelay" id="BTDelay_demcn"]
-children = [SubResource("BTAction_pu3hx")]
+target_node = &"target_pos"
 
 [sub_resource type="BTAction" id="BTAction_eripw"]
 script = ExtResource("1_j5bul")
 target_var = &"target_pos"
+speed_var = &"speed"
+tolerance_var = &"tolerance"
+nav_agent_var = &"nav_agent"
+animation_var = &"ani_walk"
 
 [sub_resource type="BTSequence" id="BTSequence_mvoru"]
+custom_name = "Hunt Player Sequence"
+children = [SubResource("BTAction_pu3hx"), SubResource("BTAction_eripw")]
+
+[sub_resource type="BTAction" id="BTAction_j3ckk"]
+script = ExtResource("2_kxutu")
+group = &"player"
+target_node = &"target_pos"
+
+[sub_resource type="BTAction" id="BTAction_spde8"]
+script = ExtResource("1_j5bul")
+target_var = &"target_pos"
+speed_var = &"chase"
+tolerance_var = &"tolerance"
+nav_agent_var = &"nav_agent"
+animation_var = &"ani_walk"
+
+[sub_resource type="BTSequence" id="BTSequence_2qrcq"]
 custom_name = "Chase Player Sequence"
-children = [SubResource("BTDelay_demcn"), SubResource("BTAction_eripw")]
+children = [SubResource("BTAction_j3ckk"), SubResource("BTAction_spde8")]
 
 [sub_resource type="BTSelector" id="BTSelector_uuii0"]
-children = [SubResource("BTSequence_mvoru")]
+children = [SubResource("BTSequence_aitjl"), SubResource("BTSequence_i6w63"), SubResource("BTSequence_mvoru"), SubResource("BTSequence_2qrcq")]
 
 [resource]
 blackboard_plan = SubResource("BlackboardPlan_xk5id")
