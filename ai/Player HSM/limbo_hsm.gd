@@ -12,6 +12,8 @@ extends LimboHSM
 
 
 func _ready(): #starts the state machine
+	initialize(player)
+		
 	add_transition(idle_state, move_state, &"move_ready")
 	add_transition(ANYSTATE, idle_state, &"state_ended")
 	add_transition(ANYSTATE, jump_state, &"jump_ready")
@@ -19,7 +21,7 @@ func _ready(): #starts the state machine
 	add_transition(move_state, sprint_state, &"sprint_ready")
 
 	initial_state = idle_state #starting state for player
-	initialize(player)
+
 	set_active(true)
 
 

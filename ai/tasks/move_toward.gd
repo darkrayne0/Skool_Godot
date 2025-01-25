@@ -19,9 +19,10 @@ var tolerance: float
 var nav_agent: NavigationAgent3D
 var animation: AnimationPlayer
 
+
 #makes LimboAI window make more sense (renames things in the tree view)
 func _generate_name() -> String:
-	return "Move Toward %s" % [LimboUtility.decorate_var(target_var)]
+	return "Move Toward ➜ %s" % [LimboUtility.decorate_var(target_var)]
 
 
 #calls once when starting this leaf
@@ -31,25 +32,29 @@ func _enter() -> void:
 	tolerance = blackboard.get_var(tolerance_var)
 	nav_agent = blackboard.get_var(nav_agent_var)
 	animation = blackboard.get_var(animation_var)
+	
+	nav_agent.set_target_position(target.global_position) #set nav_agent to desired position
 
 
 func _tick(_delta: float) -> Status: #Returns Status SUCCESS RUNNING FAILURE
+
 	agent.velocity = Vector3.ZERO
-	
-	nav_agent.set_target_position(target.global_position)#set nav_agent to desired position
-	
+
 	path = nav_agent.get_next_path_position() #set nav_agent path to nav map
 	direction = agent.global_position.direction_to(path).normalized() 
-	
+
 	agent.velocity = direction * speed
 	agent.look_at(Vector3(path.x, 0, path.z), Vector3.UP) #looks at next walk loction
 	animation.play("walk_cycle")
 	agent.move_and_slide()
-	
+
 	if agent.global_position.distance_to(target.global_position) < tolerance: #how close to target to get
 		return SUCCESS
 
 	if (nav_agent.is_navigation_finished()):
 		return SUCCESS
-	else:
-		return RUNNING
+	
+	if not nav_agent.is_target_reachable():
+		return FAILURE
+	
+	return RUNNING

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://c7odu4mbatnmn"]
+[gd_scene load_steps=16 format=4 uid="uid://c7odu4mbatnmn"]
 
 [ext_resource type="Script" path="res://Scripts/humanoid_ai.gd" id="1_pge41"]
 [ext_resource type="Texture2D" uid="uid://b0w36on7rsh7a" path="res://3d_Assets/characters/Walk With Briefcase_0.png" id="2_riga8"]
@@ -571,8 +571,12 @@ tracks/51/interp = 1
 tracks/51/loop_wrap = true
 tracks/51/keys = PackedFloat32Array(0, 1, 0.543956, -0.0011016, 0.0617866, 0.836835)
 
+[sub_resource type="Animation" id="Animation_20fxj"]
+resource_name = "throwaway"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y7h07"]
 _data = {
+"throwaway": SubResource("Animation_20fxj"),
 "walk_cycle": SubResource("Animation_y1q6j")
 }
 
@@ -584,12 +588,13 @@ radius = 9.00719
 
 [sub_resource type="BlackboardPlan" id="BlackboardPlan_nxsu2"]
 
-[node name="Humanoid" type="CharacterBody3D" node_paths=PackedStringArray("animation") groups=["enemy"]]
+[node name="Humanoid" type="CharacterBody3D" node_paths=PackedStringArray("animation", "bt_player") groups=["enemy"]]
 transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 0, 0, 0)
 collision_layer = 263
 collision_mask = 263
 script = ExtResource("1_pge41")
 animation = NodePath("Humanoid/Walk With Briefcase/AnimationPlayer")
+bt_player = NodePath("BTPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.023174, 0.955633, -0.0552329)
@@ -1062,6 +1067,7 @@ mesh = SubResource("ArrayMesh_8xtob")
 skin = SubResource("Skin_3nnik")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Humanoid/Walk With Briefcase"]
+root_node = NodePath(".")
 libraries = {
 "": SubResource("AnimationLibrary_y7h07")
 }

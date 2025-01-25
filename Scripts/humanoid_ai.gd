@@ -12,23 +12,30 @@ enum States{
 @onready var patroltimer: Timer = $PatrolTimer
 @onready var player = get_tree().get_nodes_in_group("player")[0]
 @export var animation: AnimationPlayer
-
+@export var bt_player: BTPlayer
 @export var waypoints: Array[Marker3D]
-#var blackboard: Blackboard
+
+#NPC variables
+@export var speed = 2.5
+@export var chase = 5
+
+var blackboard: Blackboard
 
 var waypointindex : int = 0
 var seeplayer: bool
 var hearplayer: bool  
 
-const SPEED = 2.5
-const CHASE = 5
 
-#func _ready():
+func _ready():
 	#currentstate = States.patrol
 	#nav_agent.set_target_position(waypoints[0].global_position) #sets the NavigationAgent3D target position
-#
-#
+	blackboard = bt_player.blackboard
+	blackboard.set_var(&"speed", speed)
+	blackboard.set_var(&"chase", chase)
+
+
 #func _process(delta):
+
 	#match currentstate:
 		#States.patrol:
 			#if (nav_agent.is_navigation_finished()): #makes enemy wait for a time after reaching latest target position
@@ -91,35 +98,30 @@ const CHASE = 5
 				#currentstate = States.chasing
 
 
-func _on_patrol_timer_timeout() -> void: #on time out it sets the next path for the enemy
-	currentstate = States.patrol
-	waypointindex += 1 #changes the waypoint array index to the next marker3d
-	if waypointindex > waypoints.size() -1: #checks if the next array index is greater than (8 currently) and sets back to 0
-		waypointindex = 0
-	nav_agent.set_target_position(waypoints[waypointindex].global_position)
+#func on_patrol_timer_timeout() -> void: #on time out it sets the next path for the enemy
+	#currentstate = States.patrol
+	#waypointindex += 1 #changes the waypoint array index to the next marker3d
+	#if waypointindex > waypoints.size() -1: #checks if the next array index is greater than (8 currently) and sets back to 0
+		#waypointindex = 0
+	#nav_agent.set_target_position(waypoints[waypointindex].global_position)
 
 
 func _on_hearing_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
-		hearplayer = true
-		#set_blackboard_plan(hearplayer)
-		#BlackboardPlan.
-		print(hearplayer) #print
-	else:
-		hearplayer = false
-		print(hearplayer) #print
+		if player.crouched == false:
+			hearplayer = true
 
-func _on_hearing_body_exited(_body: Node3D) -> void:
-	hearplayer = false
-	print(hearplayer) #print
+
+func _on_hearing_body_exited(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		hearplayer = false
+
 
 func _on_vision_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		seeplayer = true
-	else:
-		hearplayer = false
-		
-		
-func _on_vision_body_exited(_body: Node3D) -> void:
-	pass
-	#seeplayer = false
+
+
+func _on_vision_body_exited(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		seeplayer = false

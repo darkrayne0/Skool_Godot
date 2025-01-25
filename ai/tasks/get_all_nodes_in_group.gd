@@ -9,7 +9,7 @@ extends BTAction
 
 #makes LimboAI window make more sense (renames things in the tree view)
 func _generate_name() -> String:
-	return "Get All Nodes In Group \"%s\"  ➜%s" % [group, LimboUtility.decorate_var(target_node)]
+	return "Get All Nodes In Group \"%s\" ➜ %s" % [group, LimboUtility.decorate_var(target_node)]
 
 
 func _tick(_delta: float) -> Status:
