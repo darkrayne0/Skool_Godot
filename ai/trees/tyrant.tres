@@ -1,4 +1,4 @@
-[gd_resource type="BehaviorTree" load_steps=20 format=3 uid="uid://84klwd2vs18e"]
+[gd_resource type="BehaviorTree" load_steps=22 format=3 uid="uid://84klwd2vs18e"]
 
 [ext_resource type="Script" path="res://ai/tasks/move_toward.gd" id="1_j5bul"]
 [ext_resource type="Script" path="res://ai/tasks/get_all_nodes_in_group.gd" id="1_kbw3m"]
@@ -44,6 +44,11 @@ var/groups/type = 28
 var/groups/value = []
 var/groups/hint = 0
 var/groups/hint_string = ""
+
+[sub_resource type="BTWait" id="BTWait_coqpx"]
+
+[sub_resource type="BTRunLimit" id="BTRunLimit_gbwsq"]
+children = [SubResource("BTWait_coqpx")]
 
 [sub_resource type="BBVariant" id="BBVariant_0wf25"]
 type = 1
@@ -119,7 +124,7 @@ custom_name = "Patrol Sequence"
 children = [SubResource("BTAction_ib68u"), SubResource("BTAction_ewpfb"), SubResource("BTWait_0vf26")]
 
 [sub_resource type="BTDynamicSelector" id="BTDynamicSelector_b5ojb"]
-children = [SubResource("BTSequence_2qrcq"), SubResource("BTSequence_mvoru"), SubResource("BTSequence_tk2os")]
+children = [SubResource("BTRunLimit_gbwsq"), SubResource("BTSequence_2qrcq"), SubResource("BTSequence_mvoru"), SubResource("BTSequence_tk2os")]
 
 [resource]
 blackboard_plan = SubResource("BlackboardPlan_xk5id")

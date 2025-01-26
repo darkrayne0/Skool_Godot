@@ -11,8 +11,8 @@ func _enter() -> void:  #runs once when calling the jump state
 
 func _update(delta: float): #runs every frame after _enter finishes
 	#handle the movement/deceleration
-	agent.velocity.x = move_toward(agent.velocity.x, agent.direction.x * agent.SPEED, delta * 5.0)
-	agent.velocity.z = move_toward(agent.velocity.z, agent.direction.z * agent.SPEED, delta * 5.0)
+	agent.velocity.x = move_toward(agent.velocity.x, agent.direction.x, delta * 2.0)
+	agent.velocity.z = move_toward(agent.velocity.z, agent.direction.z, delta * 2.0)
 
 	cam.position.y = lerp(cam.position.y, agent.CROUCH_ORIG, delta * 15) #uncrouch
 	if agent.is_on_floor():
