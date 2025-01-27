@@ -23,7 +23,7 @@ var blackboard: Blackboard
 
 var waypointindex : int = 0
 var seeplayer: bool
-var hearplayer: bool  
+var hearplayer: bool
 
 
 func _ready():

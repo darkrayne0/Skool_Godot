@@ -9,7 +9,7 @@ func _unhandled_input(event):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) #locks mouse to the game screen
 	elif event.is_action_pressed("lose_focus"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE) #temp - unlocks mouse likely just for testing? maybe for final game too
-	
+
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion: #Camera up and down bound to the mouse
 			get_parent().rotation_degrees.y -= event.relative.x / 100 * horizontal_sens #left/right movement

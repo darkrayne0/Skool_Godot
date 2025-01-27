@@ -3,15 +3,17 @@ extends StaticBody3D
 var toggle = false
 var interactable = true
 
+
 @onready var door = $"../.."
+
 
 @export var animation_player: AnimationPlayer
 
-	
+
 func interact():
 		if door.is_in_group("locked_door"):
 			animation_player.play("door_locked")
-		
+
 		elif door.is_in_group("unlock_ani"):
 			if interactable == true:
 				interactable = false

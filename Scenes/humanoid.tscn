@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=4 uid="uid://c7odu4mbatnmn"]
+[gd_scene load_steps=15 format=4 uid="uid://c7odu4mbatnmn"]
 
 [ext_resource type="Script" path="res://Scripts/humanoid_ai.gd" id="1_pge41"]
 [ext_resource type="Texture2D" uid="uid://b0w36on7rsh7a" path="res://3d_Assets/characters/Walk With Briefcase_0.png" id="2_riga8"]
 [ext_resource type="Texture2D" uid="uid://7xtiyr3rwjfu" path="res://3d_Assets/characters/Walk With Briefcase_3.png" id="3_itq5w"]
 [ext_resource type="BehaviorTree" uid="uid://84klwd2vs18e" path="res://ai/trees/tyrant.tres" id="5_nbfoh"]
+[ext_resource type="Script" path="res://Scripts/enemy_interact_ray.gd" id="5_uxtok"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i65r8"]
 radius = 0.241061
@@ -1079,7 +1080,7 @@ wait_time = 10.0
 one_shot = true
 
 [node name="Vision" type="Area3D" parent="."]
-collision_layer = 9
+collision_layer = 8
 collision_mask = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Vision"]
@@ -1087,7 +1088,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("ConvexPolygonShape3D_yruev")
 
 [node name="Hearing" type="Area3D" parent="."]
-collision_layer = 9
+collision_layer = 8
 collision_mask = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hearing"]
@@ -1101,6 +1102,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66538, 0)
 behavior_tree = ExtResource("5_nbfoh")
 blackboard_plan = SubResource("BlackboardPlan_nxsu2")
 monitor_performance = true
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33306, 0)
+target_position = Vector3(0, 0, -1)
+collision_mask = 2
+script = ExtResource("5_uxtok")
 
 [connection signal="timeout" from="PatrolTimer" to="." method="_on_patrol_timer_timeout"]
 [connection signal="body_entered" from="Vision" to="." method="_on_vision_body_entered"]

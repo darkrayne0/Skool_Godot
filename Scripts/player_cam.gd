@@ -40,9 +40,9 @@ func _physics_process(delta: float) -> void:
 	#Get the input direction
 	var input_dir := Input.get_vector("left", "right", "forward", "backward") 	# ui_actions replaced with custom input
 	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() #get vector
-	
+
 	head_bob(delta) #calls headbob function
-	
+
 	move_and_slide() #calls movement physics
 
 
