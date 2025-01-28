@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=4 uid="uid://buv1fv4th5a4a"]
+
+[ext_resource type="Texture2D" uid="uid://b065jtap6p4l" path="res://3d_Assets/Props/Directors_Door_Wall_06_Directors_Door_A.png" id="1_sviyt"]
+[ext_resource type="Texture2D" uid="uid://bgqnyaxn0qeji" path="res://3d_Assets/Props/Directors_Door_Wall_06_Directors_Door_N.png" id="2_r04lr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qp1ly"]
+resource_name = "Directors_Door"
+cull_mode = 2
+albedo_texture = ExtResource("1_sviyt")
+roughness = 0.5
+normal_enabled = true
+normal_scale = 2.0
+normal_texture = ExtResource("2_r04lr")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c8mv4"]
+_surfaces = [{
+"aabb": AABB(-5.82259, -100, -114.959, 5.82262, 100, 114.959),
+"format": 34896613377,
+"index_count": 78,
+"index_data": PackedByteArray("FAAHAAYAFAAWAAcAEQADAAIAEQAQAAMAEgACAAQAEgARAAIAGAAEAAoAGAASAAQAEAAFAAMAEAATAAUAFQAHABYAFQAIAAcADgAIABUADgAAAAgADwAJAAEADwAXAAkAGQAMAAsAGQAbAAwAFwALAAkAFwAZAAsAGgAMABsAGgANAAwAGgAKAA0AGgAYAAoABQAUAAYABQATABQA"),
+"name": "Directors_Door",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("/v///wAAAAAAAP////8AAG7z//+qDgAAaL3//yMLAABu8////uEAAGi9//8hBwAAbn3//38FAABuff//NwIAABSX///qAAAAAAD//xz6AAAEoP//suMAAMxM///U9wAAzEz//1nxAADQlf//1u8AAP//AAAAAAAAAAAAAP//AABpvQAAIwsAAG7zAACqDgAAbvMAAP7hAABpvQAAIQcAAG59AAB/BQAAFJcAAOoAAABufQAANwIAAAAAAAAc+gAABaAAALLjAADMTAAA1PcAANCVAADW7wAAzEwAAFnxAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_b566n"]
+resource_name = "Directors_Door_Wall_06_Directors_Door_Wall_06_001"
+_surfaces = [{
+"aabb": AABB(-5.82259, -100, -114.959, 5.82262, 100, 114.959),
+"attribute_data": PackedByteArray("toF2RSgBiEVPbnxFinF1RWIWfEViFnxFxnRuRQJ4dEU+e2xFen5zRWQEhUUmE4JFoAd/RdwKfEXcCnxFGA6CRbaBHKIoAS6iinEbok9uIqJiFiKiYhYiosZ0FKICeBqien4Zoj57EqJkBCuiJhMooqAHJaIYDiii3AoiotwKIqI="),
+"format": 34896613399,
+"index_count": 78,
+"index_data": PackedByteArray("FwAIAAcAFwAZAAgAEwADAAIAEwASAAMAFQACAAUAFQATAAIAGwAEAAsAGwAUAAQAEgAGAAMAEgAWAAYAGAAIABkAGAAJAAgAEAAJABgAEAAAAAkAEQAKAAEAEQAaAAoAHAAOAAwAHAAfAA4AGgAMAAoAGgAcAAwAHQANAB4AHQAPAA0AHQALAA8AHQAbAAsABgAXAAcABgAWABcA"),
+"material": SubResource("StandardMaterial3D_qp1ly"),
+"name": "Directors_Door",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("/v///wAABQAAAP////8pAG7z//+qDjwAaL3//yMLhABu8////uEYAG7z///+4QAAaL3//yEHBQBuff//fwU1AG59//83Ai8AFJf//+oAJgAAAP//HPo7AASg//+y4zoAzEz//9T3NwDMTP//WfEYAMxM//9Z8RkA0JX//9bvPgD//wAAAAAFAAAAAAD//ykAab0AACMLhABu8wAAqg48AG7zAAD+4RgAbvMAAP7hAABpvQAAIQcGAG59AAB/BTUAFJcAAOoAJgBufQAANwIvAAAAAAAc+jsABaAAALLjOQDMTAAA1Pc2ANCVAADW7zwAzEwAAFnxGADMTAAAWfEZAJz/c4oWQC2AiUBBgG5LZ4BbFaeA/z//fxNRA4A+UyGAuP9At8H+A5PLMWuAizVZgKgyX4BU/4+VDUAbgKL/jLad/3OKFkAtgG5LZ4CJQEGAWxWngP8//38UUQSAPVMhgMH+A5O4/0C3yzFrgIs1WYCpMl+Aov+MtlT/j5UNQBuA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_c8mv4")
+
+[node name="WallPanel06" type="Node3D"]
+
+[node name="WallPanel06" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+mesh = SubResource("ArrayMesh_b566n")
+skeleton = NodePath("")
