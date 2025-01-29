@@ -1,0 +1,322 @@
+[gd_scene load_steps=10 format=4 uid="uid://dxxpyetyu0xyf"]
+
+[ext_resource type="Texture2D" uid="uid://7440mg0x2uyr" path="res://Modules/Ceiling_floor_Floor_01_A.png" id="1_v1w6b"]
+[ext_resource type="Texture2D" uid="uid://bwytlka224cet" path="res://Modules/Ceiling_A.tga" id="2_oeaaq"]
+[ext_resource type="Texture2D" uid="uid://boflxaychdovg" path="res://Modules/Ceiling_N.tga" id="3_arq4t"]
+[ext_resource type="Texture2D" uid="uid://cmij7ctbyjbeo" path="res://Modules/Ceiling_AO.tga" id="3_knpeh"]
+[ext_resource type="Texture2D" uid="uid://bq10ujd1ejdhk" path="res://Modules/Ceiling_MS.tga" id="4_2lwb5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdgxm"]
+resource_name = "Floor_01"
+cull_mode = 2
+albedo_texture = ExtResource("1_v1w6b")
+roughness = 0.5
+uv1_scale = Vector3(-5.58, -5.58, -5.58)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bmybw"]
+resource_name = "Ceiling"
+albedo_texture = ExtResource("2_oeaaq")
+roughness_texture = ExtResource("4_2lwb5")
+normal_enabled = true
+normal_texture = ExtResource("3_arq4t")
+ao_enabled = true
+ao_texture = ExtResource("3_knpeh")
+grow_amount = -0.254
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_edxbb"]
+_surfaces = [{
+"aabb": AABB(-200, 0, 0, 200, 200, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
+"name": "Floor_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AABIwwAASEMAAACAAAAAAAAASEMAAACAAABIwwAAAAAAAACAAAAAAAAAAAAAAACA")
+}, {
+"aabb": AABB(-200, 0, 30, 200, 200, 0.93972),
+"format": 34896613377,
+"index_count": 768,
+"index_data": PackedByteArray("BwAmAAQABwAnACYABgAzABwABgAqADMAGQArAAkAGQA1ACsACAAyABgACAAoADIAHAA1ABkAHAAzADUAGgA9AB8AGgA2AD0ADAApAAoADAAxACkAAwBEABYAAwAuAEQAJQA7ACAAJQBBADsAGAAaABkAGAAbABoAHAAeAB0AHAAfAB4AIQAjACIAIQAkACMACQAYABkACQAIABgAGgBYAFcAGgAbAFgABwAcAB0ABwAGABwAHgBWACAAHgAfAFYABQAkACEABQAEACQAIgAlAFUAIgAjACUAIwAdAB4AIwAkAB0AHwAZABoAHwAcABkADQAVABQADQAMABUAFwAhACIAFwAWACEAUQAtAA0AUQAwAC0AGwAMAA0AGwAYAAwAFABRAA0AFABGAFEAAgAMAAoAAgAVAAwAAAAKAAsAAAACAAoADgADAAEADgAFAAMADgAEAAUADgAPAAQAEAAGAAcAEAARAAYAEgAIAAkAEgATAAgAEgAGABEAEgAJAAYACwAIABMACwAKAAgAEAAEAA8AEAAHAAQAJwA0ACYAJwA5ADQAKQAyACgAKQAxADIAKwAzACoAKwA1ADMAOgBBAEIAOgA7AEEANgA8AD0ANgA3ADwAPwBFAEMAPwBAAEUALQA4ACwALQAwADgALwBEAC4ALwA+AEQAVgA3AFcAVgA8ADcABAA0ACQABAAmADQACgAoAAgACgApACgAVwA2ABoAVwA3ADYACQAqAAYACQArACoAGwA4AFgAGwAsADgAGAAxAAwAGAAyADEAHQAnAAcAHQA5ACcAIAA6AB4AIAA7ADoAWAAwAFEAWAA4ADAAHwA8AFYAHwA9ADwAFwBFAEcAFwBDAEUAIQAvAAUAIQA+AC8ADQAsABsADQAtACwAIgBDABcAIgA/AEMAVQA/ACIAVQBAAD8AFgA+ACEAFgBEAD4AIwBBACUAIwBCAEEARwBAAFUARwBFAEAAHgBCACMAHgA6AEIABQAuAAMABQAvAC4AJAA5AB0AJAA0ADkATQBxAEoATQByAHEATAB+AGUATAB1AH4AYAB2AE8AYACAAHYATgB9AF8ATgBzAH0AZQCAAGAAZQB+AIAAYQCIAGgAYQCBAIgAUwB0AFAAUwB8AHQASQCPAF0ASQB5AI8AcACGAGoAcACMAIYAXwBhAGAAXwBiAGEAZQBnAGYAZQBoAGcAawBtAGwAawBuAG0ATwBfAGAATwBOAF8AYQBjAGQAYQBiAGMATQBlAGYATQBMAGUAZwBpAGoAZwBoAGkASwBuAGsASwBKAG4AbABwAG8AbABtAHAAbQBmAGcAbQBuAGYAaABgAGEAaABlAGAAVABaAFkAVABTAFoAXgBrAGwAXgBdAGsAUgB4AFQAUgB7AHgAYgBTAFQAYgBfAFMAWQBSAFQAWQBbAFIASABTAFAASABaAFMARgBQAFEARgBIAFAAVQBJAEcAVQBLAEkAVQBKAEsAVQAlAEoAIABMAE0AIABWAEwAVwBOAE8AVwBYAE4AVwBMAFYAVwBPAEwAUQBOAFgAUQBQAE4AIABKACUAIABNAEoAcgB/AHEAcgCEAH8AdAB9AHMAdAB8AH0AdgB+AHUAdgCAAH4AhQCMAI0AhQCGAIwAgQCHAIgAgQCCAIcAigCQAI4AigCLAJAAeACDAHcAeAB7AIMAegCPAHkAegCJAI8AaQCCAGQAaQCHAIIASgB/AG4ASgBxAH8AUABzAE4AUAB0AHMAZACBAGEAZACCAIEATwB1AEwATwB2AHUAYgCDAGMAYgB3AIMAXwB8AFMAXwB9AHwAZgByAE0AZgCEAHIAagCFAGcAagCGAIUAYwB7AFIAYwCDAHsAaACHAGkAaACIAIcAXgCQAFwAXgCOAJAAawB6AEsAawCJAHoAVAB3AGIAVAB4AHcAbACOAF4AbACKAI4AbwCKAGwAbwCLAIoAXQCJAGsAXQCPAIkAbQCMAHAAbQCNAIwAXACLAG8AXACQAIsAZwCNAG0AZwCFAI0ASwB5AEkASwB6AHkAbgCEAGYAbgB/AIQA"),
+"lods": [1.45136, PackedByteArray("GAAbABoAGgAbAFgAGgBYAFcAGgBXAFYAGgBWAB4AHgAYABoAHgBWACUAGwAYABUAGwAVAA0ADQAVABQAFABRAA0AFABGAFEAAgAVABgAAAACAAsACwACABMAAgAYABMAEgATABgAEgAYABwAHgAcABgAEgAcABEAEAARABwAIgAcAB4AEAAcADQAIgA0ABwAHgAlACIAIgAlAEcAIgBHABcAFwA0ACIAEAA0AA8AFwAWADQADgAPADQADgA0ABYADgAWAAMADgADAAEADQBYABsADQBRAFgAXwBhAGAATwBfAGAAZQBgAGEATwBOAF8AVwBOAE8AVwBPAEwAVwBYAE4AUQBOAFgAUQBQAE4ARgBQAFEARgBIAFAAVwBMAFYASABTAFAASABaAFMAVgBMAE0ATQBMAGUAVgBNAEoATQBlAGYAVgBKACUAWQBTAFoAZQBnAGYAZwBlAGkAZwBpAGoAYQBpAGUAYQBkAGkAbQBmAGcAYQBjAGQAbQBuAGYAWQBSAGMAWQBbAFIAYQBiAGMAWQBjAGIAYgBTAFkAXwBiAGEAYgBfAFMAawBuAG0AawBtAGwAbABtAHAAbABwAG8AXgBrAGwAXgBdAGsASwBuAGsASwBrAF0ASwBKAG4ASwBdAEkAJQBKAEsAJQBLAEkAJQBJAEcATQBuAEoATQBmAG4AUABfAE4AUABTAF8ATwBlAEwATwBgAGUAZwBwAG0AZwBqAHAAbACQAF4AXgCQAFwAbABvAJAAXACQAG8A"), 27.9363, PackedByteArray("EgATABsAAgAbABMACwACABMAAAACAAsAAgAVABsAGwAVABQAFABRABsAFABGAFEAEgAbAFYAGwBYAFYAEgBWABEAEAARAFYAEABWAA8ADgAPAFYAVgBHABcAFwAWAFYADgBWABYADgAWAAMADgADAAEAGwBRAFgAYABnAEoAZwBpAGoAZwBgAGkAYABkAGkAYABjAGQAbABKAGcAbABnAHAAbABwAG8ASgBsAF0AXgBdAGwASgBdAEkAVgBKAEkAVgBgAEoAVgBJAEcAVgBfAGAAYABfAGMAVgBYAF8AUQBfAFgARgBfAFEARgBIAF8ASABaAF8AWQBfAFoAWQBjAF8AWQBSAGMAWQBbAFIAZwBqAHAAbABcAF4AbABvAFwA")],
+"name": "Ceiling",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 145,
+"vertex_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAABQQAAAAA//8FBAAAAAA+vgUEAAAAAMDBBQQAAAAAPn4FBAAAAADAgQUEAAAAAD8+BQQAAAAAwEEFBAAAAAA1AwUEAAAAADUDAAAAAAAANQOQPwAAAAA1AxhDAAAAAMDBAAAAAAAAPr4AAAAAAADAgQAAAAAAAD5+AAAAAAAAwEEAAAAAAAA/PgAAAAAAAAAAGEMAAAAAAACQPwAAAAD//5A/AAAAAP//GEMAAAAAPz6QPwAAAADAQZA/AAAAAMBBGEMAAAAAPz4YQwAAAAA+fpA/AAAAAMCBkD8AAAAAwIEYQwAAAAA+fhhDAAAAAMCB/38AAAAAwMGQPwAAAADAwRhDAAAAAD6+GEMAAAAAPr6QPwAAAAA+vv9/AAAAAPO8SwX//wAACoNLBf//AAD8PEsF//8AAHgESwX//wAA9HxLBf//AAALQ0sF//8AAPw8ZUT//wAAeARlRP//AACq/ksF//8AABTDSwX//wAAeASyfv//AAB4BEs+//8AAPw8Sz7//wAA9HxLPv//AADzvEs+//8AAAtDSz7//wAAC0NlRP//AAALQ7J+//8AAPw8sn7//wAACoNLPv//AAAKg2VE//8AAAqDsn7//wAA9Hyyfv//AAD0fGVE//8AABTDSz7//wAAFMNlRP//AAAUw7J+//8AAPO8sn7//wAA87xlRP//AACq/mVE//8AAKr+Sz7//wAAqv6yfv//AAAAAP9/AAAAAP///38AAAAAAAAFhAAAAAD+/wWEAAAAAD6+BYQAAAAAv8EFhAAAAAA+fgWEAAAAAMCBBYQAAAAAPj4FhAAAAADAQQWEAAAAADUDBYQAAAAANQP/fwAAAAA1A///AAAAADUDkL8AAAAANQMYwwAAAAC/wf9/AAAAAD5+/38AAAAAwEH/fwAAAAA+Pv9/AAAAAAAAGMMAAAAAAACQvwAAAAAAAP//AAAAAP7///8AAAAA/v+QvwAAAAD+/xjDAAAAAD4+kL8AAAAAwEGQvwAAAADAQRjDAAAAAD4+GMMAAAAAPj7//wAAAADAQf//AAAAAD5+kL8AAAAAwIGQvwAAAADAgRjDAAAAAD5+GMMAAAAAPn7//wAAAADAgf//AAAAAL/BkL8AAAAAv8EYwwAAAAA+vhjDAAAAAD6+kL8AAAAAv8H//wAAAAA+vv//AAAAAPO8SoX//wAACoNKhf//AAD8PEqF//8AAHgESoX//wAA9HxKhf//AAALQ0qF//8AAPw8ZMT//wAAeARkxP//AACq/kqF//8AABTDSoX//wAAeASy/v//AAB4BEu+//8AAPw8S77//wAA9HxLvv//AADzvEu+//8AAAtDS77//wAAC0NkxP//AAALQ7L+//8AAPw8sv7//wAACoNLvv//AAAKg2TE//8AAAqDsv7//wAA9Hyy/v//AAD0fGTE//8AABTDS77//wAAFMNkxP//AAAUw7L+//8AAPO8sv7//wAA87xkxP//AACq/mTE//8AAKr+S77//wAAqv6y/v//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ocwqf"]
+resource_name = "Ceiling_floor_Floor_01_LOD0_136"
+_surfaces = [{
+"aabb": AABB(-200, 0, 0, 200, 200, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
+"material": SubResource("StandardMaterial3D_rdgxm"),
+"name": "Floor_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AABIwwAASEMAAACAAAAAAAAASEMAAACAAABIwwAAAAAAAACAAAAAAAAAAAAAAACA/////////7//////////v/////////+//////////78=")
+}, {
+"aabb": AABB(-200, 0, 30, 200, 200, 0.93972),
+"attribute_data": PackedByteArray("gfsWg34EFoOB+/GGfgTxhu9D8YaNQPGGsIHxhk5+8YZxv/GGD7zxhmj48YZo+BaDaPgDwDp+9IZo+GTDjUAWg+9DFoNOfhaDsIEWgw+8FoNxvxaDgftlw4H7A8B+BAPAfgRlw3G/A8APvAPAD7xlwwlE9IZxv2TDsIEDwE5+A8BOfmXDsIFlw05+xP1OfhaDjUADwI1AZcPvQ2XD70MDwO9DxP3vQxaDLkUpiA99KYiowCmIMfcpiO+CKYjQuimIR0U6iPx8OojGBSmIRT8piPx8x74x98u+qMDLvu+Cy74uRcu+0LrLvtC6pMTQuoX8R0XHvg99y74PfaTED32F/O+ChfzvgqTERT/LvkU/pMRFP4X8LkWF/C5FpMTGBaTExgXLvsYFhfyB+8T9gfsWg34ExP1+BBaDgfvxhn4E8YbvQ/GGx7tqw41A8YYTRG7DsIHxhk5+8YbHu539A0QBh3G/8YZyfm7DD7zxhih+AYdo+PGGOn4MwGj4FoNo+MT9aPjE/Sh+E8Bo+APAaPhlw41AxP2NQBaDsIHE/bCBFoMPvMT9D7wWgwlEDMBxv8T9cb8Wg4H7ZcOB+wPAgfvE/eqB2b9+BAPAfgRlw+qB3oYDRBPAcb8DwHJ+1v0PvAPAD7xlw3G/ZcNxv8T9D7zE/RNE1v2wgQPATn4DwPqBnf1OfmXDG/i+hrCBZcOwgcT9Tn7E/Rv4BsCNQAPAjUBlwxi83obvQ2XDmr++hu9DA8D6gWrDjUDE/Ri82b/vQ8T9mr8GwIu6rcSLulr8QUU5iOp8OYhSRabEM32mxKjApMQx96TExgUpiEU/KYgx94X86nzbvkFF275SRZ78NoOtxDN9nvzQuqTE0LqF/KjAhfw2g1r85vb9h+b2xr7vgoX874KkxEU/y77auh2I2rqavs/Axr7PwP2HKIMdiMYFy74og5q+6oHZvw=="),
+"format": 34896613399,
+"index_count": 768,
+"index_data": PackedByteArray("BwAqAAQABwArACoABgA3AB4ABgAuADcAGgAvAAkAGgA5AC8ACAA2ABkACAAsADYAHgA5ABoAHgA3ADkAGwBBACEAGwA6AEEADAAtAAoADAA1AC0AAwBIABcAAwAyAEgAKAA/ACIAKABFAD8AGQAbABoAGQAdABsAHgAgAB8AHgAhACAAJAAmACUAJAAnACYACQAZABoACQAIABkAGwBrAGgAGwAdAGsABwAeAB8ABwAGAB4AIABmACIAIAAhAGYABQAnACQABQAEACcAJQAoAGQAJQAmACgAJgAfACAAJgAnAB8AIQAaABsAIQAeABoADgAWABUADgAMABYAGAAkACUAGAAXACQAXQAxAA0AXQA0ADEAHQAMAA4AHQAZAAwAFQBfAA4AFQBKAF8AAgAMAAoAAgAWAAwAAAAKAAsAAAACAAoADwADAAEADwAFAAMADwAEAAUADwAQAAQAEQAGAAcAEQASAAYAEwAIAAkAEwAUAAgAEwAGABIAEwAJAAYACwAIABQACwAKAAgAEQAEABAAEQAHAAQAKwA4ACoAKwA9ADgALQA2ACwALQA1ADYALwA3AC4ALwA5ADcAPgBFAEYAPgA/AEUAOgBAAEEAOgA7AEAAQwBJAEcAQwBEAEkAMQA8ADAAMQA0ADwAMwBIADIAMwBCAEgAZgA7AGgAZgBAADsABAA4ACcABAAqADgACgAsAAgACgAtACwAaAA6ABsAaAA7ADoACQAuAAYACQAvAC4AHAA8AGoAHAAwADwAGQA1AAwAGQA2ADUAHwArAAcAHwA9ACsAIgA+ACAAIgA/AD4AagA0AF0AagA8ADQAIQBAAGYAIQBBAEAAGABJAEwAGABHAEkAJAAzAAUAJABCADMADQAwABwADQAxADAAJQBHABgAJQBDAEcAZABDACUAZABEAEMAFwBCACQAFwBIAEIAJgBFACgAJgBGAEUATABEAGQATABJAEQAIABGACYAIAA+AEYABQAyAAMABQAzADIAJwA9AB8AJwA4AD0AVgCRAFEAVgCSAJEAUwCeAHwAUwCVAJ4AdgCWAFkAdgCgAJYAVwCdAHQAVwCTAJ0AfACgAHYAfACeAKAAeACoAIIAeAChAKgAYQCUAFsAYQCcAJQATwCvAHEATwCZAK8AkACmAIUAkACsAKYAdQB4AHcAdQB5AHgAfQCAAH4AfQCCAIAAhgCJAIcAhgCLAIkAWgB1AHcAWgBYAHUAeAB6AHsAeAB5AHoAVQB9AH4AVQBUAH0AgACDAIQAgACCAIMAUgCLAIYAUgBQAIsAhwCPAI0AhwCJAI8AiQB+AIAAiQCLAH4AggB3AHgAggB9AHcAYwBuAG0AYwBiAG4AcgCGAIcAcgBxAIYAYACYAGMAYACbAJgAeQBiAGMAeQB1AGIAbQBgAGMAbQBvAGAATgBiAFwATgBuAGIASwBcAF4ASwBOAFwAZQBPAE0AZQBSAE8AZQBQAFIAZQApAFAAIwBUAFUAIwBnAFQAaQBYAFoAaQBsAFgAaQBUAGcAaQBaAFQAXgBYAGwAXgBcAFgAIwBQACkAIwBVAFAAkgCfAJEAkgCkAJ8AlACdAJMAlACcAJ0AlgCeAJUAlgCgAJ4ApQCsAK0ApQCmAKwAoQCnAKgAoQCiAKcAqgCwAK4AqgCrALAAmACjAJcAmACbAKMAmgCvAJkAmgCpAK8AgwCiAHsAgwCnAKIAUQCfAIwAUQCRAJ8AWwCTAFcAWwCUAJMAewChAHgAewCiAKEAWQCVAFMAWQCWAJUAeQCjAHoAeQCXAKMAdACcAGEAdACdAJwAfwCSAFYAfwCkAJIAhQClAIEAhQCmAKUAegCbAGAAegCjAJsAggCnAIMAggCoAKcAcwCwAHAAcwCuALAAhgCaAFIAhgCpAJoAYwCXAHkAYwCYAJcAiACuAHMAiACqAK4AjgCqAIgAjgCrAKoAcQCpAIYAcQCvAKkAigCsAJAAigCtAKwAcACrAI4AcACwAKsAgQCtAIoAgQClAK0AUgCZAE8AUgCaAJkAjACkAH8AjACfAKQA"),
+"lods": [1.45136, PackedByteArray("GQAdABsAGwAdAGsAGwBrAGgAGwBoAGYAGwBmACAAIAAZABsAIABmACgAHQAZABYAHQAWAA4ADgAWABUAFQBfAA4AFQBKAF8AAgAWABkAAAACAAsACwACABQAAgAZABQAEwAUABkAEwAZAB4AIAAeABkAEwAeABIAEQASAB4AJQAeACAAEQAeADgAJQA4AB4AIAAoACUAJQAoAEwAJQBMABgAGAA4ACUAEQA4ABAAGAAXADgADwAQADgADwA4ABcADwAXAAMADwADAAEADQBqABwADQBdAGoAdQB4AHcAWgB1AHcAfQB3AHgAWgBYAHUAaQBYAFoAaQBaAFQAaQBsAFgAXgBYAGwAXgBcAFgASwBcAF4ASwBOAFwAaQBUAGcATgBiAFwATgBuAGIAZwBUAFUAVQBUAH0AZwBVAFAAVQB9AH4AZwBQACkAbQBiAG4AfQCAAH4AgAB9AIMAgACDAIQAeACDAH0AeAB7AIMAiQB+AIAAeAB6AHsAiQCLAH4AbQBgAHoAbQBvAGAAeAB5AHoAbQB6AHkAeQBiAG0AdQB5AHgAeQB1AGIAhgCLAIkAhgCJAIcAhwCJAI8AhwCPAI0AcgCGAIcAcgBxAIYAUgCLAIYAUgCGAHEAUgBQAIsAUgBxAE8AKQBQAFIAKQBSAE8AKQBPAE0AVgCMAFEAVgB/AIwAWwB0AFcAWwBhAHQAWQB8AFMAWQB2AHwAgQCQAIoAgQCFAJAAiACwAHMAcwCwAHAAiACOALAAcACwAI4A"), 27.9363, PackedByteArray("EwAUAB0AAgAdABQACwACABQAAAACAAsAAgAWAB0AHQAWABUAFQBfAB0AFQBKAF8AEwAdAGYAHQBrAGYAEwBmABIAEQASAGYAEQBmABAADwAQAGYAZgBMABgAGAAXAGYADwBmABcADwAXAAMADwADAAEAHABdAGoAdwCAAFAAgACDAIQAgAB3AIMAdwB7AIMAdwB6AHsAhwBQAIAAhwCAAI8AhwCPAI0AUACHAHEAcgBxAIcAUABxAE8AZwBQAE8AZwB3AFAAZwBPAE0AZwB1AHcAdwB1AHoAZwBsAHUAXgB1AGwASwB1AF4ASwBOAHUATgBuAHUAbQB1AG4AbQB6AHUAbQBgAHoAbQBvAGAAgQCFAJAAiACxAHMAiACOALEA")],
+"material": SubResource("StandardMaterial3D_bmybw"),
+"name": "Ceiling",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 178,
+"vertex_data": PackedByteArray("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")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_edxbb")
+
+[node name="Ceiling_floor" type="Node3D"]
+
+[node name="Ceiling_floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, 0, 2, 0)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -7, 2, 0)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -14, 2, 0)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -21, 2, 0)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -28, 2, 0)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -35, 2, 0)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, 0, 2, 7)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -7, 2, 7)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -14, 2, 7)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -21, 2, 7)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor11" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -28, 2, 7)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor12" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -35, 2, 7)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor13" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, 0, 2, 14)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor14" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -7, 2, 14)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor15" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -14, 2, 14)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor16" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -21, 2, 14)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor17" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -28, 2, 14)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor18" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -35, 2, 14)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor19" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, 0, 2, 21)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor20" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -7, 2, 21)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor21" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -14, 2, 21)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor22" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -21, 2, 21)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor23" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -28, 2, 21)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor24" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -35, 2, 21)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor48" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -35, 2, 28)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor25" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, 0, 2, 28)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor26" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -7, 2, 28)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor27" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -14, 2, 28)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor28" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -21, 2, 28)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor29" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -28, 2, 28)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor30" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, 0, 2, 35)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor31" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -7, 2, 35)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor32" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -14, 2, 35)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor33" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -21, 2, 35)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor34" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -28, 2, 35)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor35" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -35, 2, 35)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor36" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, 0, 2, 42)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor37" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -7, 2, 42)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor38" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -14, 2, 42)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor39" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -21, 2, 42)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor40" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -28, 2, 42)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor41" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -35, 2, 42)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor42" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, 0, 2, 49)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor43" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -7, 2, 49)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor44" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -14, 2, 49)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor45" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -21, 2, 49)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor46" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -28, 2, 49)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
+
+[node name="Ceiling_floor47" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, -1.5299e-09, -0.035, 0, 0.035, -1.5299e-09, -35, 2, 49)
+mesh = SubResource("ArrayMesh_ocwqf")
+skeleton = NodePath("")
