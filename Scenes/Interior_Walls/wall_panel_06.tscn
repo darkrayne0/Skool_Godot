@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://buv1fv4th5a4a"]
 
-[ext_resource type="Texture2D" uid="uid://b065jtap6p4l" path="res://3d_Assets/Props/Directors_Door_Wall_06_Directors_Door_A.png" id="1_sviyt"]
-[ext_resource type="Texture2D" uid="uid://bgqnyaxn0qeji" path="res://3d_Assets/Props/Directors_Door_Wall_06_Directors_Door_N.png" id="2_r04lr"]
+[ext_resource type="Texture2D" uid="uid://b065jtap6p4l" path="res://Materials/Textures/Directors_Door_Wall_06_Directors_Door_A.png" id="1_sviyt"]
+[ext_resource type="Texture2D" uid="uid://bgqnyaxn0qeji" path="res://Materials/Textures/Directors_Door_Wall_06_Directors_Door_N.png" id="2_r04lr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qp1ly"]
 resource_name = "Directors_Door"

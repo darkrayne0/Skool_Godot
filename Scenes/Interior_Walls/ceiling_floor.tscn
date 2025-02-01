@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=4 uid="uid://dxxpyetyu0xyf"]
 
-[ext_resource type="Texture2D" uid="uid://7440mg0x2uyr" path="res://Modules/Ceiling_floor_Floor_01_A.png" id="1_v1w6b"]
-[ext_resource type="Texture2D" uid="uid://bwytlka224cet" path="res://Modules/Ceiling_A.tga" id="2_oeaaq"]
-[ext_resource type="Texture2D" uid="uid://boflxaychdovg" path="res://Modules/Ceiling_N.tga" id="3_arq4t"]
-[ext_resource type="Texture2D" uid="uid://cmij7ctbyjbeo" path="res://Modules/Ceiling_AO.tga" id="3_knpeh"]
-[ext_resource type="Texture2D" uid="uid://bq10ujd1ejdhk" path="res://Modules/Ceiling_MS.tga" id="4_2lwb5"]
+[ext_resource type="Texture2D" uid="uid://7440mg0x2uyr" path="res://Materials/Textures/Ceiling_floor_Floor_01_A.png" id="1_v1w6b"]
+[ext_resource type="Texture2D" uid="uid://bwytlka224cet" path="res://Materials/Textures/Ceiling_A.tga" id="2_oeaaq"]
+[ext_resource type="Texture2D" uid="uid://boflxaychdovg" path="res://Materials/Textures/Ceiling_N.tga" id="3_arq4t"]
+[ext_resource type="Texture2D" uid="uid://cmij7ctbyjbeo" path="res://Materials/Textures/Ceiling_AO.tga" id="3_knpeh"]
+[ext_resource type="Texture2D" uid="uid://bq10ujd1ejdhk" path="res://Materials/Textures/Ceiling_MS.tga" id="4_2lwb5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdgxm"]
 resource_name = "Floor_01"
