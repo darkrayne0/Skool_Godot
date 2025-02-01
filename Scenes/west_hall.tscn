@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3vwx3gnnbome"]
+
+[ext_resource type="PackedScene" uid="uid://dngal7e3run3j" path="res://Scenes/Interior_Walls/stairs.scn" id="1_sru0l"]
+
+[node name="WestHall" type="Node3D"]
+
+[node name="West_Stairs" parent="." instance=ExtResource("1_sru0l")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 5, -3.9847, -30)
