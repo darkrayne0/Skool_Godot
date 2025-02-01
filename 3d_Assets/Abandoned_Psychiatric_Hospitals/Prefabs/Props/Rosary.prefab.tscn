@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5id44ntnod0u"]
+
+[ext_resource type="ArrayMesh" uid="uid://bnjaddlt4cngx" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Rosary.Rosary_LOD0.mesh" id="1_8hyyj"]
+[ext_resource type="Material" uid="uid://t2vmkl03rvap" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Shelf.mat.tres" id="2_y718f"]
+[ext_resource type="ArrayMesh" uid="uid://2jpor3of4hu5" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Rosary.Rosary_LOD1.mesh" id="3_1y3iq"]
+[ext_resource type="ArrayMesh" uid="uid://cj438vhh0650e" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Rosary.Rosary_LOD2.mesh" id="4_qgavk"]
+
+[node name="Rosary" type="Node3D"]
+
+[node name="Rosary_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Rosary_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.536044
+mesh = ExtResource("1_8hyyj")
+surface_material_override/0 = ExtResource("2_y718f")
+
+[node name="Rosary_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Rosary_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.536044
+visibility_range_end = 1.32586
+mesh = ExtResource("3_1y3iq")
+surface_material_override/0 = ExtResource("2_y718f")
+
+[node name="Rosary_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Rosary_LOD2"]
+gi_mode = 2
+visibility_range_begin = 1.32586
+visibility_range_end = 3.66132
+mesh = ExtResource("4_qgavk")
+surface_material_override/0 = ExtResource("2_y718f")

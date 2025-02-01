@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cail2m07arph4"]
+
+[ext_resource type="ArrayMesh" uid="uid://dngxsssouab1" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Fence_02.Fence_02_LOD0.mesh" id="1_7yfvq"]
+[ext_resource type="Material" uid="uid://w7ms05sj6ne8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Exterior/Fence.mat.tres" id="2_geia0"]
+[ext_resource type="ArrayMesh" uid="uid://de0hrd63berdv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Fence_02.Fence_02_LOD1.mesh" id="3_5t74u"]
+[ext_resource type="ArrayMesh" uid="uid://b1emkqjw0sypp" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Fence_02.Fence_02_LOD2.mesh" id="4_am3so"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vi0m1"]
+points = PackedVector3Array(-0.000136912, -0.0262717, -0.0951138, 0.0471564, -0.0262717, -0.0824308, -0.0474302, -0.0262717, -0.0824308, -0.0426865, -2.26665e-05, -4.07449, -0.000136912, -2.26665e-05, -4.08559, 0.0425564, -2.26665e-05, -4.07449, 0.0817998, -0.0262717, -0.0475516, -0.0819299, -0.0262717, -0.0475516, -0.0307554, 0.211488, -4.09827, -0.0738799, -2.26665e-05, -4.04278, -0.00631811, 0.211488, -4.09827, -0.00631811, 1.74782, -4.09827, 0.0534813, 2.15001, -4.03169, 0.0737499, -2.26665e-05, -4.04278, 1.32278, -0.00175814, 0.799057, 0.0944497, -0.0262717, -0.000782013, 0.0852498, -2.26665e-05, -4.00077, -0.0945797, -0.0262717, -0.000782013, -0.0853798, -2.26665e-05, -4.00077, -0.0307554, 1.74782, -4.09827, -0.0536114, 2.15001, -4.03169, -0.0380865, 1.74782, -4.08242, -0.000136912, 2.15001, -4.0626, 0.0309128, 2.15001, -4.05388, 0.0441376, 2.17366, -4.02614, 0.0618187, 2.15001, -4.00077, 1.37396, 0.0594173, 0.773691, 1.34276, 0.0060515, 0.775276, 1.34089, 0.00930551, 0.814118, -0.0074681, 0.144239, 3.92786, -0.0159493, 0.140768, 3.92786, -0.000136912, -0.0262717, 0.0943427, 0.0471564, -0.0262717, 0.0816593, 0.0817998, -0.0262717, 0.0467801, 1.3695, 0.034036, 0.780032, 1.35742, 0.0158135, 0.794301, -0.0819299, -0.0262717, 0.0467801, -0.0242867, 0.144239, 3.92786, -0.0278804, 0.152699, 3.92786, -0.0283116, 0.182202, 3.91122, -0.0283116, 2.08515, 3.91122, -0.0619488, 2.15001, -4.00077, -0.0310429, 2.15001, -4.05388, -0.0442677, 2.17366, -4.02614, -0.0511677, 2.17366, -4.00077, -0.0255804, 2.17366, -4.04437, -0.000136912, 2.17366, -4.0515, 0.0254503, 2.17366, -4.04437, 0.0142379, 2.18993, -4.02534, 0.0247316, 2.18993, -4.01504, 0.0286128, 2.18993, -4.00077, 0.0508938, 2.17366, -4.00077, 0.863792, 1.42111, 0.254469, 1.3695, 0.0852325, 0.778447, 1.36936, 0.0746028, 0.803813, 1.3718, 0.0600681, 0.801435, 1.36936, 0.0459674, 0.804606, -0.00401813, 0.152699, 3.92786, 0.0428439, 0.563573, 4, 0.0340753, 0.554895, 4, 1.3626, 0.0355546, 0.813326, 0.0222879, 0.551641, 4, 0.0103567, 0.554895, 4, -0.0474302, -0.0262717, 0.0816593, 0.00158807, 0.563573, 4, -0.0015744, 0.575504, 4, -0.0015744, 1.97538, 4, -0.0248617, 2.08515, 3.91914, -0.0257242, 2.09578, 3.90567, -0.0248617, 2.18993, -4.01504, -0.014368, 2.18993, -4.02534, -0.0287429, 2.18993, -4.00077, -0.000136912, 2.18993, -4.02931, 0.0247316, 2.18993, -3.98571, -0.00674935, 2.09578, 3.90567, 0.453246, 1.88687, 1.11852, 0.857324, 1.42914, 0.248127, 0.0428439, 1.98731, 4, 0.0460064, 1.97538, 4, 0.0460064, 0.575504, 4, 0.00158807, 1.98731, 4, 0.0103567, 1.99599, 4, -0.0163805, 2.08515, 3.92311, -0.000136912, 2.18993, -3.97144, -0.014368, 2.18993, -3.9754, -0.0248617, 2.18993, -3.98571, 0.0142379, 2.18993, -3.9754, -0.00789934, 2.08515, 3.91914, 0.0340753, 1.99599, 4, 0.0222879, 1.99924, 4)
+
+[node name="Fence_02" type="Node3D"]
+
+[node name="Fence_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Fence_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 11.0941
+mesh = ExtResource("1_7yfvq")
+surface_material_override/0 = ExtResource("2_geia0")
+
+[node name="MeshCollider" type="StaticBody3D" parent="Fence_02_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence_02_LOD0/MeshCollider"]
+shape = SubResource("ConvexPolygonShape3D_vi0m1")
+
+[node name="Fence_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Fence_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 11.0941
+visibility_range_end = 30.3449
+mesh = ExtResource("3_5t74u")
+surface_material_override/0 = ExtResource("2_geia0")
+
+[node name="Fence_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Fence_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 30.3449
+visibility_range_end = 219.655
+mesh = ExtResource("4_am3so")
+surface_material_override/0 = ExtResource("2_geia0")

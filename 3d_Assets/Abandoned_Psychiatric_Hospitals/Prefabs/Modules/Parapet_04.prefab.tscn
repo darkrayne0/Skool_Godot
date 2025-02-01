@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://ciuxlxjh45fr7"]
+
+[ext_resource type="ArrayMesh" uid="uid://ctnr1svmqhdrf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Parapet_04.Parapet_04_LOD0.mesh" id="1_yd7ag"]
+[ext_resource type="Material" uid="uid://dqh41ra7gvxcf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Parapet.mat.tres" id="2_w350x"]
+[ext_resource type="ArrayMesh" uid="uid://cl2oh1nitc87t" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Parapet_04.Parapet_04_LOD1.mesh" id="3_gwkey"]
+[ext_resource type="ArrayMesh" uid="uid://bwi35k062ft5i" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Parapet_04.Parapet_04_LOD2.mesh" id="4_fmhvk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7tke3"]
+size = Vector3(0.919519, 1.5, 4.38932)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_35tcm"]
+size = Vector3(3.03932, 1.5, 0.895858)
+
+[node name="Parapet_04" type="Node3D"]
+
+[node name="Parapet_04_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Parapet_04_LOD0"]
+gi_mode = 2
+visibility_range_end = 8.94999
+mesh = ExtResource("1_yd7ag")
+surface_material_override/0 = ExtResource("2_w350x")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Parapet_04_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parapet_04_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0704347, 0.75, 1.80534)
+shape = SubResource("BoxShape3D_7tke3")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Parapet_04_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parapet_04_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13034, 0.75, 0.0586054)
+shape = SubResource("BoxShape3D_35tcm")
+
+[node name="Parapet_04_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Parapet_04_LOD1"]
+gi_mode = 2
+visibility_range_begin = 8.94999
+visibility_range_end = 22.8126
+mesh = ExtResource("3_gwkey")
+surface_material_override/0 = ExtResource("2_w350x")
+
+[node name="Parapet_04_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Parapet_04_LOD2"]
+gi_mode = 2
+visibility_range_begin = 22.8126
+visibility_range_end = 238.07
+mesh = ExtResource("4_fmhvk")
+surface_material_override/0 = ExtResource("2_w350x")

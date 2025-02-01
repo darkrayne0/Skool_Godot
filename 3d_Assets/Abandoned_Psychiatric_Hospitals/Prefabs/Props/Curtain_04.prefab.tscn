@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bp66io4a4uvqs"]
+
+[ext_resource type="ArrayMesh" uid="uid://r7f80a4iq8ax" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Curtain_04.Curtain_04_LOD0.mesh" id="1_wsrfd"]
+[ext_resource type="Material" uid="uid://pfc0gq8vcsv8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Curtain_03.mat.tres" id="2_f17so"]
+[ext_resource type="Material" uid="uid://bt0ni8lrg20ev" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Curtain_03_Fade.mat.tres" id="3_3wxu7"]
+[ext_resource type="ArrayMesh" uid="uid://pw7kgcwlxqor" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Curtain_04.Curtain_04_LOD1.mesh" id="4_b8jdq"]
+[ext_resource type="ArrayMesh" uid="uid://dx8egbdxvhrge" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Curtain_04.Curtain_04_LOD2.mesh" id="5_86htq"]
+
+[node name="Curtain_04" type="Node3D"]
+
+[node name="Curtain_04_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Curtain_04_LOD0"]
+gi_mode = 2
+visibility_range_end = 3.13457
+mesh = ExtResource("1_wsrfd")
+surface_material_override/0 = ExtResource("2_f17so")
+surface_material_override/1 = ExtResource("3_3wxu7")
+
+[node name="Curtain_04_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Curtain_04_LOD1"]
+gi_mode = 2
+visibility_range_begin = 3.13457
+visibility_range_end = 8.65565
+mesh = ExtResource("4_b8jdq")
+surface_material_override/0 = ExtResource("2_f17so")
+surface_material_override/1 = ExtResource("3_3wxu7")
+
+[node name="Curtain_04_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Curtain_04_LOD2"]
+gi_mode = 2
+visibility_range_begin = 8.65565
+visibility_range_end = 67.7944
+mesh = ExtResource("5_86htq")
+surface_material_override/0 = ExtResource("2_f17so")
+surface_material_override/1 = ExtResource("3_3wxu7")

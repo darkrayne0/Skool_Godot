@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://bndt881wodq2f"]
+
+[ext_resource type="ArrayMesh" uid="uid://30x3f5q7o6np" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Wall_07.Wall_07.mesh" id="1_8n86t"]
+[ext_resource type="Material" uid="uid://dqh41ra7gvxcf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Parapet.mat.tres" id="2_rlwcn"]
+[ext_resource type="Material" uid="uid://cdh4x13sgj2em" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_Brick.mat.tres" id="3_8nlrl"]
+[ext_resource type="Material" uid="uid://wjxx7wdx8pgo" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_01.mat.tres" id="4_upei2"]
+
+[node name="Wall_07" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 297.48
+mesh = ExtResource("1_8n86t")
+surface_material_override/0 = ExtResource("2_rlwcn")
+surface_material_override/1 = ExtResource("3_8nlrl")
+surface_material_override/2 = ExtResource("4_upei2")

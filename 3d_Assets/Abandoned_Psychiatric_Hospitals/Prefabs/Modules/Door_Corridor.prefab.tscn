@@ -1,0 +1,126 @@
+[gd_scene load_steps=16 format=3 uid="uid://cwmfbsrmkwpts"]
+
+[ext_resource type="ArrayMesh" uid="uid://lx0c2rx838c7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Door_Corridor.Door_Corridor_LOD0.mesh" id="1_4vpu3"]
+[ext_resource type="Material" uid="uid://4ephuhtcdfnj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Door_Corridor.mat.tres" id="2_lpdl0"]
+[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_qvq3k"]
+[ext_resource type="ArrayMesh" uid="uid://51dyvjnqocr5" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Door_Corridor.Door_Corridor_LOD1.mesh" id="4_4t7d1"]
+[ext_resource type="ArrayMesh" uid="uid://cr5kik3o55po8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Door_Corridor.Door_Corridor_LOD2.mesh" id="5_07vtq"]
+[ext_resource type="ArrayMesh" uid="uid://bg2ba66ih2uwx" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Door_Corridor.Door_Corridor_Wall_LOD0.mesh" id="6_onvs2"]
+[ext_resource type="Material" uid="uid://ddbepkqjucal7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_02.mat.tres" id="7_wpf1r"]
+[ext_resource type="Material" uid="uid://wjxx7wdx8pgo" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_01.mat.tres" id="8_fnvqw"]
+[ext_resource type="ArrayMesh" uid="uid://b1nb6ce2j21gt" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Door_Corridor.Door_Corridor_Wall_LOD1.mesh" id="9_3o6bs"]
+[ext_resource type="ArrayMesh" uid="uid://b6o2csfo6kx71" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Door_Corridor.Door_Corridor_Wall_LOD2.mesh" id="10_lbrn0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n5uco"]
+size = Vector3(2.32109, 2.15147, 1.53274)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5j3gy"]
+size = Vector3(0.148858, 2.15147, 0.949283)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qhxjb"]
+size = Vector3(0.362561, 4.01367, 1.92514)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qdax3"]
+size = Vector3(0.362561, 4.01367, 1.03184)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3w8iq"]
+size = Vector3(0.362561, 1.76942, 4)
+
+[node name="Door_Corridor" type="Node3D"]
+
+[node name="Door_Corridor_LOD0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0486298, 0.0116942, 2.93861)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Door_Corridor_LOD0"]
+gi_mode = 2
+visibility_range_end = 20.8711
+mesh = ExtResource("1_4vpu3")
+surface_material_override/0 = ExtResource("2_lpdl0")
+surface_material_override/1 = ExtResource("3_qvq3k")
+
+[node name="BoxCollider" type="Area3D" parent="Door_Corridor_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_Corridor_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0915856, 1.07573, -0.453171)
+shape = SubResource("BoxShape3D_n5uco")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Door_Corridor_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_Corridor_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0144758, 1.07573, -0.463968)
+shape = SubResource("BoxShape3D_5j3gy")
+
+[node name="Door_Corridor_LOD1" type="Node3D" parent="Door_Corridor_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-09, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Door_Corridor_LOD0/Door_Corridor_LOD1"]
+gi_mode = 2
+visibility_range_begin = 20.8711
+visibility_range_end = 41.7422
+mesh = ExtResource("4_4t7d1")
+surface_material_override/0 = ExtResource("2_lpdl0")
+surface_material_override/1 = ExtResource("3_qvq3k")
+
+[node name="Door_Corridor_LOD2" type="Node3D" parent="Door_Corridor_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-09, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Door_Corridor_LOD0/Door_Corridor_LOD2"]
+gi_mode = 2
+visibility_range_begin = 41.7422
+visibility_range_end = 521.777
+mesh = ExtResource("5_07vtq")
+surface_material_override/0 = ExtResource("2_lpdl0")
+surface_material_override/1 = ExtResource("3_qvq3k")
+
+[node name="Door_Corridor_Wall_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Door_Corridor_Wall_LOD0"]
+gi_mode = 2
+visibility_range_end = 20.8711
+mesh = ExtResource("6_onvs2")
+surface_material_override/0 = ExtResource("7_wpf1r")
+surface_material_override/1 = ExtResource("8_fnvqw")
+surface_material_override/2 = ExtResource("2_lpdl0")
+surface_material_override/3 = ExtResource("3_qvq3k")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Door_Corridor_Wall_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_Corridor_Wall_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0726489, 1.99316, 0.962568)
+shape = SubResource("BoxShape3D_qhxjb")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Door_Corridor_Wall_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_Corridor_Wall_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0726489, 1.99316, 3.48408)
+shape = SubResource("BoxShape3D_qdax3")
+
+[node name="BoxCollider3" type="StaticBody3D" parent="Door_Corridor_Wall_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_Corridor_Wall_LOD0/BoxCollider3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0726489, 3.11529, 2)
+shape = SubResource("BoxShape3D_3w8iq")
+
+[node name="Door_Corridor_Wall_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Door_Corridor_Wall_LOD1"]
+gi_mode = 2
+visibility_range_begin = 20.8711
+visibility_range_end = 41.7422
+mesh = ExtResource("9_3o6bs")
+surface_material_override/0 = ExtResource("7_wpf1r")
+surface_material_override/1 = ExtResource("8_fnvqw")
+surface_material_override/2 = ExtResource("2_lpdl0")
+surface_material_override/3 = ExtResource("3_qvq3k")
+
+[node name="Door_Corridor_Wall_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Door_Corridor_Wall_LOD2"]
+gi_mode = 2
+visibility_range_begin = 41.7422
+visibility_range_end = 521.777
+mesh = ExtResource("10_lbrn0")
+surface_material_override/0 = ExtResource("7_wpf1r")
+surface_material_override/1 = ExtResource("8_fnvqw")
+surface_material_override/2 = ExtResource("2_lpdl0")
+surface_material_override/3 = ExtResource("3_qvq3k")

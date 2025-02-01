@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2pstrpemov20"]
+
+[ext_resource type="ArrayMesh" uid="uid://4bxcbde618kx" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Stump.Stump_LOD0.mesh" id="1_yxe1w"]
+[ext_resource type="Material" uid="uid://d2gv7621fruag" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Stump.mat.tres" id="2_rldf7"]
+[ext_resource type="ArrayMesh" uid="uid://cqm34hajerkop" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Stump.Stump_LOD1.mesh" id="3_ddxpl"]
+[ext_resource type="ArrayMesh" uid="uid://qya6mff6dbnx" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Stump.Stump_LOD2.mesh" id="4_t051j"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5x00f"]
+radius = 0.2
+height = 2.08897
+
+[node name="Stump" type="Node3D"]
+
+[node name="Stump_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Stump_LOD0"]
+gi_mode = 2
+visibility_range_end = 3.45866
+mesh = ExtResource("1_yxe1w")
+surface_material_override/0 = ExtResource("2_rldf7")
+
+[node name="CapsuleCollider" type="StaticBody3D" parent="Stump_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stump_LOD0/CapsuleCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0658233, 1.11256, 0.0360111)
+shape = SubResource("CapsuleShape3D_5x00f")
+
+[node name="Stump_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Stump_LOD1"]
+gi_mode = 2
+visibility_range_begin = 3.45866
+visibility_range_end = 7.11477
+mesh = ExtResource("3_ddxpl")
+surface_material_override/0 = ExtResource("2_rldf7")
+
+[node name="Stump_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Stump_LOD2"]
+gi_mode = 2
+visibility_range_begin = 7.11477
+visibility_range_end = 57.3463
+mesh = ExtResource("4_t051j")
+surface_material_override/0 = ExtResource("2_rldf7")

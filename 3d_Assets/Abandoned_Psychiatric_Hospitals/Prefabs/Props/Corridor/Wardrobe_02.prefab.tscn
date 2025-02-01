@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=3 uid="uid://dm2qxjjgs8lls"]
+
+[ext_resource type="ArrayMesh" uid="uid://cam5uxyrt82aj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_Door_LOD0.mesh" id="1_y4fdd"]
+[ext_resource type="Material" uid="uid://cmtaeyb0cpxpk" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Wardrobe.mat.tres" id="2_vboki"]
+[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_gqg0e"]
+[ext_resource type="ArrayMesh" uid="uid://cru8lhd3cnui" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_Door_LOD1.mesh" id="4_wh2vr"]
+[ext_resource type="ArrayMesh" uid="uid://c1ujyjlaasjdf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_LOD0.mesh" id="5_rmwpn"]
+[ext_resource type="ArrayMesh" uid="uid://dbfrxy0yxa301" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_LOD1.mesh" id="6_2q6vx"]
+[ext_resource type="ArrayMesh" uid="uid://b84csr1xs8cns" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_LOD2.mesh" id="7_b047u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tgku5"]
+size = Vector3(0.0323578, 2.041, 0.890421)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5qmuc"]
+size = Vector3(0.576497, 2.5817, 0.960914)
+
+[node name="Wardrobe_02" type="Node3D"]
+
+[node name="Wardrobe_02_Door_LOD0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.277837, 0.493601, 0.621855)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_02_Door_LOD0"]
+gi_mode = 2
+visibility_range_end = 6.02699
+mesh = ExtResource("1_y4fdd")
+surface_material_override/0 = ExtResource("2_vboki")
+surface_material_override/1 = ExtResource("3_gqg0e")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Wardrobe_02_Door_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardrobe_02_Door_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0102656, 1.0205, -0.431276)
+shape = SubResource("BoxShape3D_tgku5")
+
+[node name="Wardrobe_02_Door_LOD1" type="Node3D" parent="Wardrobe_02_Door_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8147e-08, 7.62939e-08)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_02_Door_LOD0/Wardrobe_02_Door_LOD1"]
+gi_mode = 2
+visibility_range_begin = 6.02699
+visibility_range_end = 17.3696
+mesh = ExtResource("4_wh2vr")
+surface_material_override/0 = ExtResource("2_vboki")
+surface_material_override/1 = ExtResource("3_gqg0e")
+
+[node name="Wardrobe_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 6.02699
+mesh = ExtResource("5_rmwpn")
+surface_material_override/0 = ExtResource("2_vboki")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Wardrobe_02_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardrobe_02_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00317855, 1.29085, 0.178847)
+shape = SubResource("BoxShape3D_5qmuc")
+
+[node name="Wardrobe_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 6.02699
+visibility_range_end = 17.3696
+mesh = ExtResource("6_2q6vx")
+surface_material_override/0 = ExtResource("2_vboki")
+
+[node name="Wardrobe_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 17.3696
+visibility_range_end = 73.5601
+mesh = ExtResource("7_b047u")
+surface_material_override/0 = ExtResource("2_vboki")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b2m1m767401h6"]
+
+[ext_resource type="Texture2D" uid="uid://c8ibygn7uhu33" path="res://Materials/Textures/Terrain_Textures/Grass_03_A.tga" id="1_uloa7"]
+[ext_resource type="Texture2D" uid="uid://lsvjlswtn8iy" path="res://Materials/Textures/Terrain_Textures/Grass_03_N.tga" id="2_cfm6e"]
+
+[resource]
+albedo_texture = ExtResource("1_uloa7")
+normal_enabled = true
+normal_texture = ExtResource("2_cfm6e")
+uv1_scale = Vector3(0.5, 0.5, 0)

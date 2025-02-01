@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcn5vu06pmiby"]
+
+[ext_resource type="PackedScene" uid="uid://btwjnk5pu5r7i" path="res://Assets/Abandoned_Psychiatric_Hospitals/Other/Text.prefab.tscn" id="1_2pn0n"]
+
+[node name="Canvas" type="Node3D"]
+transform = Transform3D(1e-07, 0, 0, 0, 1e-07, 0, 0, 0, 1e-07, 0, 0, 0)
+
+[node name="Canvas" type="Node" parent="."]
+
+[node name="Text" parent="." instance=ExtResource("1_2pn0n")]
+
+[editable path="Text"]

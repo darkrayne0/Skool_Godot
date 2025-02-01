@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://sg18asifnldi"]
+
+[ext_resource type="ArrayMesh" uid="uid://3vvi522i2jd6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Drinking_Fountain.Drinking_Fountain_LOD0.mesh" id="1_37fg4"]
+[ext_resource type="Material" uid="uid://pgnpiv4sri5h" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Urn.mat.tres" id="2_iaqcd"]
+[ext_resource type="ArrayMesh" uid="uid://v6o13qdy45rq" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Drinking_Fountain.Drinking_Fountain_LOD1.mesh" id="3_ynfwy"]
+[ext_resource type="ArrayMesh" uid="uid://cmimhr2dqi0cv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Drinking_Fountain.Drinking_Fountain_LOD2.mesh" id="4_mgaba"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hvs88"]
+size = Vector3(0.517973, 0.662829, 0.614301)
+
+[node name="Drinking_Fountain" type="Node3D"]
+
+[node name="Drinking_Fountain_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Drinking_Fountain_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.39472
+mesh = ExtResource("1_37fg4")
+surface_material_override/0 = ExtResource("2_iaqcd")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Drinking_Fountain_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drinking_Fountain_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.258986, 0.336847, 8.05855e-05)
+shape = SubResource("BoxShape3D_hvs88")
+
+[node name="Drinking_Fountain_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Drinking_Fountain_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.39472
+visibility_range_end = 3.83941
+mesh = ExtResource("3_ynfwy")
+surface_material_override/0 = ExtResource("2_iaqcd")
+
+[node name="Drinking_Fountain_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Drinking_Fountain_LOD2"]
+gi_mode = 2
+visibility_range_begin = 3.83941
+visibility_range_end = 34.4907
+mesh = ExtResource("4_mgaba")
+surface_material_override/0 = ExtResource("2_iaqcd")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://d312rqw0sbus2"]
+
+[ext_resource type="ArrayMesh" uid="uid://n7ar2dgk7p8j" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Spatula.Spatula_LOD0.mesh" id="1_4d7f0"]
+[ext_resource type="Material" uid="uid://dn0xkoc0yyxy6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Construction_Tools.mat.tres" id="2_q165g"]
+[ext_resource type="ArrayMesh" uid="uid://4ryj50gvo5i3" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Spatula.Spatula_LOD1.mesh" id="3_7t7oa"]
+
+[node name="Spatula" type="Node3D"]
+
+[node name="Spatula_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Spatula_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.757545
+mesh = ExtResource("1_4d7f0")
+surface_material_override/0 = ExtResource("2_q165g")
+
+[node name="Spatula_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Spatula_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.757545
+visibility_range_end = 7.59545
+mesh = ExtResource("3_7t7oa")
+surface_material_override/0 = ExtResource("2_q165g")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://8m1x416kq2d2"]
+
+[ext_resource type="ArrayMesh" uid="uid://uhhi6pqiu4hd" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Telephone.Telephone_LOD0.mesh" id="1_dyj75"]
+[ext_resource type="Material" uid="uid://7knclqe2y08f" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Telephone.mat.tres" id="2_7jvbn"]
+[ext_resource type="ArrayMesh" uid="uid://dvc8ty15a7qi0" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Telephone.Telephone_LOD1.mesh" id="3_hcb3h"]
+[ext_resource type="ArrayMesh" uid="uid://5x3fm6hdbrpd" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Telephone.Telephone_LOD2.mesh" id="4_rkcyy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5hwo4"]
+size = Vector3(0.205899, 0.582747, 0.370516)
+
+[node name="Telephone" type="Node3D"]
+
+[node name="Telephone_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Telephone_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.21227
+mesh = ExtResource("1_dyj75")
+surface_material_override/0 = ExtResource("2_7jvbn")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Telephone_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Telephone_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.101301, 0.150867, -0.0216175)
+shape = SubResource("BoxShape3D_5hwo4")
+
+[node name="Telephone_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Telephone_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.21227
+visibility_range_end = 2.69663
+mesh = ExtResource("3_hcb3h")
+surface_material_override/0 = ExtResource("2_7jvbn")
+
+[node name="Telephone_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Telephone_LOD2"]
+gi_mode = 2
+visibility_range_begin = 2.69663
+visibility_range_end = 36.8103
+mesh = ExtResource("4_rkcyy")
+surface_material_override/0 = ExtResource("2_7jvbn")

@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://b28vixx8bss23"]
+
+[ext_resource type="ArrayMesh" uid="uid://bck5yp6ldw50d" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Clock.Clock_LOD0.mesh" id="1_5vmf3"]
+[ext_resource type="Material" uid="uid://t2vmkl03rvap" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Shelf.mat.tres" id="2_yaips"]
+[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_ceevb"]
+[ext_resource type="ArrayMesh" uid="uid://c7efg84m7cnsw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Clock.Clock_LOD1.mesh" id="4_wn4n0"]
+[ext_resource type="ArrayMesh" uid="uid://bv410ad4q1tuw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Clock.Clock_LOD2.mesh" id="5_pwhb8"]
+
+[node name="Clock_02" type="Node3D"]
+
+[node name="Clock_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Clock_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.624502
+mesh = ExtResource("1_5vmf3")
+surface_material_override/0 = ExtResource("2_yaips")
+surface_material_override/1 = ExtResource("3_ceevb")
+
+[node name="Clock_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Clock_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.624502
+visibility_range_end = 4.3472
+mesh = ExtResource("4_wn4n0")
+surface_material_override/0 = ExtResource("2_yaips")
+surface_material_override/1 = ExtResource("3_ceevb")
+
+[node name="Clock_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Clock_LOD2"]
+gi_mode = 2
+visibility_range_begin = 4.3472
+visibility_range_end = 32.2048
+mesh = ExtResource("5_pwhb8")
+surface_material_override/0 = ExtResource("2_yaips")
+surface_material_override/1 = ExtResource("3_ceevb")

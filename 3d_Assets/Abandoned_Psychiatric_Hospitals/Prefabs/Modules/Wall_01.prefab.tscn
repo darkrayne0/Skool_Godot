@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvsvk77ujauci"]
+
+[ext_resource type="ArrayMesh" uid="uid://dianhueprws8g" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Wall_01.Wall_01_LOD0.mesh" id="1_6a7vy"]
+[ext_resource type="Material" uid="uid://cdh4x13sgj2em" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_Brick.mat.tres" id="2_kyxek"]
+[ext_resource type="Material" uid="uid://wjxx7wdx8pgo" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_01.mat.tres" id="3_n0uup"]
+[ext_resource type="Material" uid="uid://dqh41ra7gvxcf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Parapet.mat.tres" id="4_jlrig"]
+[ext_resource type="ArrayMesh" uid="uid://ces6npsmu5ypi" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Wall_01.Wall_01_LOD1.mesh" id="5_qto1h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tnryy"]
+size = Vector3(0.579892, 5, 4)
+
+[node name="Wall_01" type="Node3D"]
+
+[node name="Wall_01_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Wall_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 14.8929
+mesh = ExtResource("1_6a7vy")
+surface_material_override/0 = ExtResource("2_kyxek")
+surface_material_override/1 = ExtResource("3_n0uup")
+surface_material_override/2 = ExtResource("4_jlrig")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Wall_01_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_01_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.263982, 2.5, -2)
+shape = SubResource("BoxShape3D_tnryy")
+
+[node name="Wall_01_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Wall_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 14.8929
+visibility_range_end = 288.096
+mesh = ExtResource("5_qto1h")
+surface_material_override/0 = ExtResource("2_kyxek")
+surface_material_override/1 = ExtResource("4_jlrig")
+surface_material_override/2 = ExtResource("3_n0uup")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://btsnyg7v8pcab"]
+
+[ext_resource type="ArrayMesh" uid="uid://ctngd4gxjtitm" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Books_07.Books_07.mesh" id="1_tberc"]
+[ext_resource type="Material" uid="uid://bhcii1aw6rlff" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Books.mat.tres" id="2_sryxv"]
+
+[node name="Books_07" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 21.1559
+mesh = ExtResource("1_tberc")
+surface_material_override/0 = ExtResource("2_sryxv")

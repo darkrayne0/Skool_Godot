@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://cunharfmt15ht"]
+
+[ext_resource type="Texture2D" uid="uid://rtl15mffqh66" path="res://Materials/Textures/House/Porch/Porch_A.tga" id="1_01h88"]
+[ext_resource type="Texture2D" uid="uid://drs3qtojpoqb7" path="res://Materials/Textures/House/Porch/Porch_AO.tga" id="2_qelk2"]
+[ext_resource type="Texture2D" uid="uid://dkty4vlbiy6g7" path="res://Materials/Textures/House/Porch/Porch_MS.roughness.png" id="3_ml1ww"]
+[ext_resource type="Texture2D" uid="uid://chdg5j4fvyv4p" path="res://Materials/Textures/House/Porch/Porch_N.tga" id="4_y6knp"]
+
+[resource]
+resource_name = "Porch"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_01h88")
+metallic_texture = ExtResource("3_ml1ww")
+roughness_texture = ExtResource("3_ml1ww")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("4_y6knp")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_qelk2")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

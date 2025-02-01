@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://doob248ku80go"]
+
+[ext_resource type="ArrayMesh" uid="uid://dfkj6q82ko6lm" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Bushes_03.Bushes_03.mesh" id="1_8klll"]
+[ext_resource type="Material" uid="uid://dchiy3o7vx83y" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Bushes_01.mat.tres" id="2_7cvrj"]
+
+[node name="Bushes_03" type="Node3D"]
+
+[node name="Bushes_03" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bushes_03"]
+gi_mode = 2
+visibility_range_end = 72.3521
+mesh = ExtResource("1_8klll")
+surface_material_override/0 = ExtResource("2_7cvrj")

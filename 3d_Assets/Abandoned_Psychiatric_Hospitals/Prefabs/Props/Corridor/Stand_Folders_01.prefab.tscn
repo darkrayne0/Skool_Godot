@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsp1kepqo70b4"]
+
+[ext_resource type="ArrayMesh" uid="uid://b1okrfd45iyff" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Stand_Folders_01.Stand_Folders_01_LOD0.mesh" id="1_aea3f"]
+[ext_resource type="Material" uid="uid://ddtmbtpjbmb6s" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Stationery.mat.tres" id="2_7a0u2"]
+[ext_resource type="ArrayMesh" uid="uid://by03r6ib0w3d7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Stand_Folders_01.Stand_Folders_01_LOD1.mesh" id="3_sl4ik"]
+[ext_resource type="ArrayMesh" uid="uid://bxthjvxkrppb7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Stand_Folders_01.Stand_Folders_01_LOD2.mesh" id="4_5g0xc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rci11"]
+size = Vector3(0.502808, 0.412305, 0.576104)
+
+[node name="Stand_Folders_01" type="Node3D"]
+
+[node name="Stand_Folders_01_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Stand_Folders_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.41801
+mesh = ExtResource("1_aea3f")
+surface_material_override/0 = ExtResource("2_7a0u2")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Stand_Folders_01_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stand_Folders_01_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0110575, 0.204641, 0.0234143)
+shape = SubResource("BoxShape3D_rci11")
+
+[node name="Stand_Folders_01_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Stand_Folders_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.41801
+visibility_range_end = 4.39187
+mesh = ExtResource("3_sl4ik")
+surface_material_override/0 = ExtResource("2_7a0u2")
+
+[node name="Stand_Folders_01_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Stand_Folders_01_LOD2"]
+gi_mode = 2
+visibility_range_begin = 4.39187
+visibility_range_end = 16.1433
+mesh = ExtResource("4_5g0xc")
+surface_material_override/0 = ExtResource("2_7a0u2")

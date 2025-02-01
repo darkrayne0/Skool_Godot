@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctnsjsgtvqdi8"]
+
+[ext_resource type="ArrayMesh" uid="uid://cv4g35nggk7lo" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Ballpoint_Pen.Ballpoint_Pen_LOD0.mesh" id="1_6rqlx"]
+[ext_resource type="Material" uid="uid://8d3e17wr754g" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Ballpoint_Pen.mat.tres" id="2_tnoev"]
+[ext_resource type="ArrayMesh" uid="uid://7n7xk0oh31bl" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Ballpoint_Pen.Ballpoint_Pen_LOD1.mesh" id="3_kjhcv"]
+[ext_resource type="ArrayMesh" uid="uid://bf07k4lnumydq" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Ballpoint_Pen.Ballpoint_Pen_LOD2.mesh" id="4_i21vr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pnff7"]
+size = Vector3(0.102534, 0.244586, 0.250318)
+
+[node name="Ballpoint_Pen" type="Node3D"]
+
+[node name="Ballpoint_Pen_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Ballpoint_Pen_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.51304
+mesh = ExtResource("1_6rqlx")
+surface_material_override/0 = ExtResource("2_tnoev")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Ballpoint_Pen_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ballpoint_Pen_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00181101, 0.121644, 0.00224305)
+shape = SubResource("BoxShape3D_pnff7")
+
+[node name="Ballpoint_Pen_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Ballpoint_Pen_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.51304
+visibility_range_end = 3.73802
+mesh = ExtResource("3_kjhcv")
+surface_material_override/0 = ExtResource("2_tnoev")
+
+[node name="Ballpoint_Pen_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Ballpoint_Pen_LOD2"]
+gi_mode = 2
+visibility_range_begin = 3.73802
+visibility_range_end = 9.0629
+mesh = ExtResource("4_i21vr")
+surface_material_override/0 = ExtResource("2_tnoev")

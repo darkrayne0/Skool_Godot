@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwlsi04gwon13"]
+
+[ext_resource type="ArrayMesh" uid="uid://b5iewng4eaat3" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bed_03.Bed_03_LOD0.mesh" id="1_cyac1"]
+[ext_resource type="Material" uid="uid://cgv2agchnab2s" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Bed.mat.tres" id="2_bdle1"]
+[ext_resource type="Material" uid="uid://c6bnacakq3cg7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Pillow.mat.tres" id="3_j2mf8"]
+[ext_resource type="ArrayMesh" uid="uid://4d1vfbks5van" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bed_03.Bed_03_LOD1.mesh" id="4_l5aof"]
+[ext_resource type="ArrayMesh" uid="uid://c1fu3ug71up4q" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bed_03.Bed_03_LOD2.mesh" id="5_jnjmx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bgmsw"]
+size = Vector3(2.09619, 1.10751, 1.03425)
+
+[node name="Bed_03" type="Node3D"]
+
+[node name="Bed_03_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bed_03_LOD0"]
+gi_mode = 2
+visibility_range_end = 3.4034
+mesh = ExtResource("1_cyac1")
+surface_material_override/0 = ExtResource("2_bdle1")
+surface_material_override/1 = ExtResource("3_j2mf8")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Bed_03_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bed_03_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0209782, 0.553531, 0.0186975)
+shape = SubResource("BoxShape3D_bgmsw")
+
+[node name="Bed_03_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bed_03_LOD1"]
+gi_mode = 2
+visibility_range_begin = 3.4034
+visibility_range_end = 8.13153
+mesh = ExtResource("4_l5aof")
+surface_material_override/0 = ExtResource("2_bdle1")
+surface_material_override/1 = ExtResource("3_j2mf8")
+
+[node name="Bed_03_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bed_03_LOD2"]
+gi_mode = 2
+visibility_range_begin = 8.13153
+visibility_range_end = 51.7787
+mesh = ExtResource("5_jnjmx")
+surface_material_override/0 = ExtResource("2_bdle1")
+surface_material_override/1 = ExtResource("3_j2mf8")

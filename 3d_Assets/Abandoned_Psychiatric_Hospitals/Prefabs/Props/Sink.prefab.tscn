@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cj16kcr7vlevl"]
+
+[ext_resource type="ArrayMesh" uid="uid://d308t8xs2smib" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Sink.Sink_LOD0.mesh" id="1_5eufj"]
+[ext_resource type="Material" uid="uid://dho7aovhe5g3g" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Sink.mat.tres" id="2_r6dfk"]
+[ext_resource type="ArrayMesh" uid="uid://leo4dkkby5e8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Sink.Sink_LOD1.mesh" id="3_no164"]
+[ext_resource type="ArrayMesh" uid="uid://3ff21o1b4x3o" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Sink.Sink_LOD2.mesh" id="4_36lfj"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dyjdy"]
+points = PackedVector3Array(0.241033, -0.370413, -0.134312, 0.241033, -0.362828, -0.152704, 0.272319, -0.370413, -0.134312, 0.241033, -0.370413, 0.118838, 0.0248542, -0.368459, 0.00807637, 0.026212, -0.363805, -0.00997666, -0.212345, -0.0286309, -0.326923, -0.184046, -0.0286309, -0.341311, -0.152651, -0.0286309, -0.346673, 0.272319, -0.362828, -0.152704, 0.294751, -0.357886, -0.134312, 0.272319, -0.370413, 0.118838, 0.241033, -0.362828, 0.13723, 0.026212, -0.363805, 0.0261973, -0.00914781, -0.349841, 0.00807637, -0.00583452, -0.346336, -0.00997666, -0.00583452, -0.346336, 0.0261973, -0.234777, -0.0286309, -0.304458, -0.234777, 0.0363007, -0.30439, -0.21229, 0.0363007, -0.326855, -0.183992, 0.0363007, -0.341311, -0.152597, 0.0363007, -0.346673, 0.300672, -0.0286309, -0.346673, 0.294751, -0.353921, -0.143813, 0.294751, -0.357886, 0.118838, 0.272319, -0.362828, 0.13723, -0.152651, -0.0286309, 0.346605, -0.184046, -0.0286309, 0.341243, -0.212345, -0.0286309, 0.326855, -0.254168, -0.0286309, -0.244734, -0.249225, -0.0286309, -0.276089, -0.249225, -0.0286309, 0.276021, -0.254168, -0.0286309, 0.244666, -0.234777, -0.0286309, 0.30439, -0.207293, 0.0447475, -0.319932, -0.249171, 0.0363007, -0.276089, -0.241078, 0.0447475, -0.273442, -0.227825, 0.0447475, -0.299368, 0.144784, 0.132664, -0.346673, -0.18133, 0.0447475, -0.333167, 0.300672, 0.132664, -0.346673, 0.300672, -0.0286309, 0.346605, 0.294751, -0.353921, 0.128339, -0.152597, 0.0363007, 0.346605, -0.183992, 0.0363007, 0.341243, -0.21229, 0.0363007, 0.326787, -0.234777, 0.0363007, 0.304323, -0.254168, 0.0363007, -0.244666, -0.249171, 0.0363007, 0.276021, -0.254168, 0.0363007, 0.244598, 0.148152, 0.141111, -0.33785, -0.245695, 0.0447475, -0.244055, 0.0217581, 0.215466, 0.0699046, 0.300672, 0.141111, -0.33785, 0.300672, 0.132664, 0.346605, 0.144784, 0.132664, 0.346605, -0.18133, 0.0447475, 0.333099, -0.207293, 0.0447475, 0.319865, -0.227825, 0.0447475, 0.2993, -0.241078, 0.0447475, 0.273375, -0.245695, 0.0447475, 0.243988, 0.0310462, 0.216558, 0.0656968, 0.138592, 0.216615, 0.0171708, 0.0117096, 0.210409, 0.0744518, 0.0244196, 0.215466, 0.0758092, 0.149836, 0.215523, 0.0121485, 0.152497, 0.215523, 0.0180531, 0.300672, 0.141111, 0.337782, 0.148152, 0.141111, 0.337782, 0.0143711, 0.210409, 0.0803564, 0.0337077, 0.216558, 0.0716014, 0.141254, 0.216615, 0.0230753)
+
+[node name="Sink" type="Node3D"]
+
+[node name="Sink_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Sink_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.73182
+mesh = ExtResource("1_5eufj")
+surface_material_override/0 = ExtResource("2_r6dfk")
+
+[node name="MeshCollider" type="StaticBody3D" parent="Sink_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sink_LOD0/MeshCollider"]
+shape = SubResource("ConvexPolygonShape3D_dyjdy")
+
+[node name="Sink_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Sink_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.73182
+visibility_range_end = 4.6648
+mesh = ExtResource("3_no164")
+surface_material_override/0 = ExtResource("2_r6dfk")
+
+[node name="Sink_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Sink_LOD2"]
+gi_mode = 2
+visibility_range_begin = 4.6648
+visibility_range_end = 64.7788
+mesh = ExtResource("4_36lfj")
+surface_material_override/0 = ExtResource("2_r6dfk")

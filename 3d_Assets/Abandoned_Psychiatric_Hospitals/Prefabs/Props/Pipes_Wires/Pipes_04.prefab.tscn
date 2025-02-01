@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://brbmspf34ntjy"]
+
+[ext_resource type="ArrayMesh" uid="uid://blfxeq7jcklsc" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Pipes_04.Pipes_04_LOD0.mesh" id="1_ym5ur"]
+[ext_resource type="Material" uid="uid://d27cm2nc5f0ey" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Pipes.mat.tres" id="2_bi804"]
+[ext_resource type="ArrayMesh" uid="uid://bc0ubl4wdxuxm" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Pipes_04.Pipes_04_LOD1.mesh" id="3_mmwlx"]
+[ext_resource type="ArrayMesh" uid="uid://bn42m4sdulpug" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Pipes_04.Pipes_04_LOD2.mesh" id="4_dhend"]
+
+[node name="Pipes_04" type="Node3D"]
+
+[node name="Pipes_04_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Pipes_04_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.395953
+mesh = ExtResource("1_ym5ur")
+surface_material_override/0 = ExtResource("2_bi804")
+
+[node name="Pipes_04_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Pipes_04_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.395953
+visibility_range_end = 1.1711
+mesh = ExtResource("3_mmwlx")
+surface_material_override/0 = ExtResource("2_bi804")
+
+[node name="Pipes_04_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Pipes_04_LOD2"]
+gi_mode = 2
+visibility_range_begin = 1.1711
+visibility_range_end = 12.7581
+mesh = ExtResource("4_dhend")
+surface_material_override/0 = ExtResource("2_bi804")

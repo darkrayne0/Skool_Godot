@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://cka747ag157hp"]
+
+[ext_resource type="ArrayMesh" uid="uid://ckya7snx2cpar" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Stone/extracted/Stone_02.Stone_02_LOD0.mesh" id="1_ar1pn"]
+[ext_resource type="Material" uid="uid://dsfm3uw57rcjs" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Stone/Stone_02.mat.tres" id="2_jtkfy"]
+[ext_resource type="ArrayMesh" uid="uid://clmy2ed5876mx" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Stone/extracted/Stone_02.Stone_02_LOD1.mesh" id="3_5472c"]
+[ext_resource type="ArrayMesh" uid="uid://cbu4clynqds7d" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Stone/extracted/Stone_02.Stone_02_LOD2.mesh" id="4_58ejs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_87itk"]
+size = Vector3(1.71854, 1.11832, 1.06388)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qphwh"]
+size = Vector3(1.50791, 0.839932, 1.5148)
+
+[node name="Stone_02" type="Node3D"]
+
+[node name="Stone_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Stone_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 5.53789
+mesh = ExtResource("1_ar1pn")
+surface_material_override/0 = ExtResource("2_jtkfy")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Stone_02_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stone_02_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.137669, 0.567401, -0.0595113)
+shape = SubResource("BoxShape3D_87itk")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Stone_02_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stone_02_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115735, 0.428204, 1.23316)
+shape = SubResource("BoxShape3D_qphwh")
+
+[node name="Stone_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Stone_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 5.53789
+visibility_range_end = 16.0055
+mesh = ExtResource("3_5472c")
+surface_material_override/0 = ExtResource("2_jtkfy")
+
+[node name="Stone_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Stone_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 16.0055
+visibility_range_end = 66.8772
+mesh = ExtResource("4_58ejs")
+surface_material_override/0 = ExtResource("2_jtkfy")

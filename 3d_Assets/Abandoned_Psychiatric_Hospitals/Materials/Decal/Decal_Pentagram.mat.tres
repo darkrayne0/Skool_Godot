@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b177i4xuwi2on"]
+
+[ext_resource type="Texture2D" uid="uid://c7d23ivn5ynvu" path="res://Materials/Textures/Decal/Decal_Pentagram/Decal_Pentagram_A.tga" id="1_d73ew"]
+[ext_resource type="Texture2D" uid="uid://ct8k528lngbjm" path="res://Materials/Textures/Decal/Decal_Pentagram/Decal_Pentagram_N.tga" id="2_r2ue5"]
+
+[resource]
+resource_name = "Decal_Pentagram"
+transparency = 2
+alpha_scissor_threshold = 0.178
+alpha_antialiasing_mode = 0
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_d73ew")
+roughness = 0.24
+normal_enabled = true
+normal_texture = ExtResource("2_r2ue5")
+uv1_scale = Vector3(1, 1, 0)

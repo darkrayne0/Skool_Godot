@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bog0o4wadxepo"]
+
+[ext_resource type="ArrayMesh" uid="uid://balc6dg0d5lxl" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Ventilation_System_04.Ventilation_System_04.mesh" id="1_8ldav"]
+[ext_resource type="Material" uid="uid://cdi73wsya2kra" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Ventilation_System.mat.tres" id="2_t4a7k"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iie37"]
+points = PackedVector3Array(-0.874672, 0.8, 0.274714, -0.874672, 0.8, -0.263367, -0.87887, 0.8, 0.282129, 1.02323, 0.366337, 0.282188, 1.02323, 0.366337, -0.282284, -0.87887, 0.8, -0.270724, -0.856683, 0.000918403, 0.29947, -0.887265, 0.8, 0.282129, 1.04182, 0.361517, 0.282188, 1.04182, 0.361517, -0.282284, -0.856683, 0.000918403, -0.296997, -0.980811, 0.532226, -0.282284, -0.887265, 0.8, -0.270724, -0.856683, -0.0344571, 0.29947, -0.912251, 0.000918403, 0.29947, -0.891662, 0.8, 0.274714, -1, 0.532226, 0.282188, 1.03083, 0.318527, 0.237756, 0.899904, -0.184731, 0.282188, 1.03083, 0.318527, -0.237853, 0.899904, -0.184731, -0.282284, -0.856683, -0.0344571, -0.296997, -0.912251, 0.000918403, -0.296997, -1, 0.532226, -0.282284, -0.891662, 0.8, -0.263367, -0.912251, -0.0344571, 0.29947, -1, -0.0322401, 0.282188, 0.911097, -0.14174, 0.237756, -0.891063, -0.0440962, 0.288435, -0.898858, -0.0440962, 0.274714, 0.911097, -0.14174, -0.237853, -0.898858, -0.0440962, -0.263367, -0.891063, -0.0440962, -0.277088, -0.912251, -0.0344571, -0.296997, -1, -0.0322401, -0.282284)
+
+[node name="Ventilation_System_04" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 49.9384
+mesh = ExtResource("1_8ldav")
+surface_material_override/0 = ExtResource("2_t4a7k")
+
+[node name="MeshCollider" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshCollider"]
+shape = SubResource("ConvexPolygonShape3D_iie37")

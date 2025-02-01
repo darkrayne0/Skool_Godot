@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://n7d1n4ls4t8h"]
+
+[ext_resource type="ArrayMesh" uid="uid://b3xacgcqa2m2x" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Books_09.Books_09.mesh" id="1_8fg37"]
+[ext_resource type="Material" uid="uid://bhcii1aw6rlff" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Books.mat.tres" id="2_kiwaj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mnx4k"]
+size = Vector3(0.245374, 0.361083, 0.37811)
+
+[node name="Books_09" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 23.1449
+mesh = ExtResource("1_8fg37")
+surface_material_override/0 = ExtResource("2_kiwaj")
+
+[node name="BoxCollider" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12029, 0.173507, 0.186455)
+shape = SubResource("BoxShape3D_mnx4k")

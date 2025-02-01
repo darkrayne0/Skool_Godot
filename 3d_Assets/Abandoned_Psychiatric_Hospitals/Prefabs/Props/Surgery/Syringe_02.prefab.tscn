@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bf31h73iq55bj"]
+
+[ext_resource type="ArrayMesh" uid="uid://c0rutry4bg8kk" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Syringe_02.Syringe_02_LOD0.mesh" id="1_wdbbd"]
+[ext_resource type="Material" uid="uid://creune70uekoe" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Surgical_Instruments.mat.tres" id="2_uwt3w"]
+[ext_resource type="ArrayMesh" uid="uid://div4y5js8pjs3" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Syringe_02.Syringe_02_LOD1.mesh" id="3_d02c7"]
+[ext_resource type="ArrayMesh" uid="uid://8a6ehvwy2lki" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Syringe_02.Syringe_02_LOD2.mesh" id="4_kl317"]
+
+[node name="Syringe_02" type="Node3D"]
+
+[node name="Syringe_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Syringe_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.418601
+mesh = ExtResource("1_wdbbd")
+surface_material_override/0 = ExtResource("2_uwt3w")
+
+[node name="Syringe_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Syringe_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.418601
+visibility_range_end = 1.19367
+mesh = ExtResource("3_d02c7")
+surface_material_override/0 = ExtResource("2_uwt3w")
+
+[node name="Syringe_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Syringe_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 1.19367
+visibility_range_end = 5.63186
+mesh = ExtResource("4_kl317")
+surface_material_override/0 = ExtResource("2_uwt3w")

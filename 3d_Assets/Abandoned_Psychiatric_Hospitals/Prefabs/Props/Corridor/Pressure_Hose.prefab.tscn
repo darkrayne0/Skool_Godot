@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://68kpivohkwen"]
+
+[ext_resource type="ArrayMesh" uid="uid://c5aewf04nudup" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Pressure_Hose.Pressure_Hose_LOD0.mesh" id="1_cqw1w"]
+[ext_resource type="Material" uid="uid://bn5yorrelrbxn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Fire_Fighting.mat.tres" id="2_wd53c"]
+[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_f8u8s"]
+[ext_resource type="ArrayMesh" uid="uid://bkdelm00linr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Pressure_Hose.Pressure_Hose_LOD1.mesh" id="4_k26sg"]
+[ext_resource type="ArrayMesh" uid="uid://cveehu2b71qh3" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Pressure_Hose.Pressure_Hose_LOD2.mesh" id="5_33vbt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ghqxx"]
+size = Vector3(0.157956, 0.538188, 0.542209)
+
+[node name="Pressure_Hose" type="Node3D"]
+
+[node name="Pressure_Hose_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Pressure_Hose_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.13812
+mesh = ExtResource("1_cqw1w")
+surface_material_override/0 = ExtResource("2_wd53c")
+surface_material_override/1 = ExtResource("3_f8u8s")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Pressure_Hose_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pressure_Hose_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.078978, -1.49012e-08, 0)
+shape = SubResource("BoxShape3D_ghqxx")
+
+[node name="Pressure_Hose_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Pressure_Hose_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.13812
+visibility_range_end = 3.73795
+mesh = ExtResource("4_k26sg")
+surface_material_override/0 = ExtResource("2_wd53c")
+surface_material_override/1 = ExtResource("3_f8u8s")
+
+[node name="Pressure_Hose_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Pressure_Hose_LOD2"]
+gi_mode = 2
+visibility_range_begin = 3.73795
+visibility_range_end = 20.6117
+mesh = ExtResource("5_33vbt")
+surface_material_override/0 = ExtResource("2_wd53c")
+surface_material_override/1 = ExtResource("3_f8u8s")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://10xlnhuturti"]
+
+[ext_resource type="ArrayMesh" uid="uid://cq4hn6sl6kehr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_01.FirePipe_01_LOD0.mesh" id="1_1g4yo"]
+[ext_resource type="Material" uid="uid://cdi73wsya2kra" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Ventilation_System.mat.tres" id="2_ywd5d"]
+[ext_resource type="ArrayMesh" uid="uid://dg2ily87oftr7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_01.FirePipe_01_LOD1.mesh" id="3_mrqmq"]
+[ext_resource type="ArrayMesh" uid="uid://b3gewk71v3vy1" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_01.FirePipe_01_LOD2.mesh" id="4_dtktt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hu4t3"]
+size = Vector3(2, 0.161166, 0.129368)
+
+[node name="FirePipe_01" type="Node3D"]
+
+[node name="FirePipe_01_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="FirePipe_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 4.26841
+mesh = ExtResource("1_1g4yo")
+surface_material_override/0 = ExtResource("2_ywd5d")
+
+[node name="BoxCollider" type="StaticBody3D" parent="FirePipe_01_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FirePipe_01_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96046e-08, -0.00806329, 0)
+shape = SubResource("BoxShape3D_hu4t3")
+
+[node name="FirePipe_01_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="FirePipe_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 4.26841
+visibility_range_end = 16.8565
+mesh = ExtResource("3_mrqmq")
+surface_material_override/0 = ExtResource("2_ywd5d")
+
+[node name="FirePipe_01_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="FirePipe_01_LOD2"]
+gi_mode = 2
+visibility_range_begin = 16.8565
+visibility_range_end = 55.4199
+mesh = ExtResource("4_dtktt")
+surface_material_override/0 = ExtResource("2_ywd5d")

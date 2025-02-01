@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://bvnxtedds4t12"]
+
+[ext_resource type="Texture2D" uid="uid://dn1yvr1g4d8as" path="res://Materials/Textures/Vegetation/Aspen/Aspen_Bark_A.tga" id="1_fedem"]
+[ext_resource type="Texture2D" uid="uid://e6biai1rkyh5" path="res://Materials/Textures/Vegetation/Aspen/Aspen_Bark_O.tga" id="2_0sp6t"]
+[ext_resource type="Texture2D" uid="uid://deexq87ww68ry" path="res://Materials/Textures/Vegetation/Aspen/Aspen_Bark_MS.tga" id="3_avrju"]
+[ext_resource type="Texture2D" uid="uid://67vak8ov4qfm" path="res://Materials/Textures/Vegetation/Aspen/Aspen_Bark_N.tga" id="4_qnjqx"]
+
+[resource]
+resource_name = "Aspen_Bark"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_fedem")
+metallic_texture = ExtResource("3_avrju")
+normal_enabled = true
+normal_texture = ExtResource("4_qnjqx")
+ao_enabled = true
+ao_light_affect = 0.425
+ao_texture = ExtResource("2_0sp6t")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

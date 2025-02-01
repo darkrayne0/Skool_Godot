@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://cd52h5ewiyjbg"]
+
+[ext_resource type="Texture2D" uid="uid://0j7u0la1knj5" path="res://Materials/Textures/House/Floor_01/Floor_01_A.tga" id="1_nal8e"]
+[ext_resource type="Texture2D" uid="uid://d4k5v34mofmgr" path="res://Materials/Textures/House/Floor_01/Floor_01_MS.roughness.png" id="2_df0y0"]
+[ext_resource type="Texture2D" uid="uid://trbxkbdx8gkl" path="res://Materials/Textures/House/Floor_01/Floor_01_N.tga" id="3_q7pwj"]
+
+[resource]
+resource_name = "Floor_01"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_nal8e")
+metallic_texture = ExtResource("2_df0y0")
+roughness_texture = ExtResource("2_df0y0")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_scale = 0.8
+normal_texture = ExtResource("3_q7pwj")
+uv1_scale = Vector3(1, 1, 0)

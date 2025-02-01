@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1dlihrrlm0bn"]
+
+[ext_resource type="ArrayMesh" uid="uid://bf3f12ne5dxu1" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_01.Lamp_01_LOD0.mesh" id="1_ehcdj"]
+[ext_resource type="Material" uid="uid://bguq0n7rvexi4" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Ceiling.mat.tres" id="2_4l8h1"]
+[ext_resource type="ArrayMesh" uid="uid://sdjwog0kycu1" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_01.Lamp_01_LOD1.mesh" id="3_38obv"]
+
+[node name="Lamp_01" type="Node3D"]
+
+[node name="Lamp_01_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Lamp_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 6.07732
+mesh = ExtResource("1_ehcdj")
+surface_material_override/0 = ExtResource("2_4l8h1")
+
+[node name="Lamp_01_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Lamp_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 6.07732
+visibility_range_end = 60.7455
+mesh = ExtResource("3_38obv")
+surface_material_override/0 = ExtResource("2_4l8h1")
+
+[node name="Point Light" type="Node3D" parent="."]
+transform = Transform3D(2.93652e-06, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 2.93652e-06, -1.28359e-13, 0, -0.638, 0)
+
+[node name="Light" type="SpotLight3D" parent="Point Light"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+light_energy = 8.02
+light_indirect_energy = 0.0
+light_bake_mode = 0
+shadow_enabled = true
+shadow_bias = 0.05
+spot_range = 5.55397
+spot_attenuation = 0.333
+spot_angle = 39.3083
+spot_angle_attenuation = 0.5

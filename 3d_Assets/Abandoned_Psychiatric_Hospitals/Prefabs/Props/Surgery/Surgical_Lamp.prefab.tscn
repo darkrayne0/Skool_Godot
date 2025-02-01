@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://c32ad3io5wkpc"]
+
+[ext_resource type="ArrayMesh" uid="uid://bynd4lmhji1d0" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Lamp.Surgical_Lamp_LOD0.mesh" id="1_jeoic"]
+[ext_resource type="Material" uid="uid://dqxvnw8go0u75" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Surgical_Lamp.mat.tres" id="2_aqaui"]
+[ext_resource type="ArrayMesh" uid="uid://cwkwpcoe8d43o" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Lamp.Surgical_Lamp_LOD1.mesh" id="3_7lvac"]
+[ext_resource type="ArrayMesh" uid="uid://dfij6nqjq6mp4" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Lamp.Surgical_Lamp_LOD2.mesh" id="4_b68r1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o5qah"]
+size = Vector3(0.621719, 1.18123, 1.2601)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_meuw3"]
+size = Vector3(1.27022, 0.921771, 0.780983)
+
+[node name="Surgical_Lamp" type="Node3D"]
+
+[node name="Surgical_Lamp_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Lamp_LOD0"]
+gi_mode = 2
+visibility_range_end = 5.00779
+mesh = ExtResource("1_jeoic")
+surface_material_override/0 = ExtResource("2_aqaui")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Surgical_Lamp_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Surgical_Lamp_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18948, -1.58334, 0.00240952)
+shape = SubResource("BoxShape3D_o5qah")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Surgical_Lamp_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Surgical_Lamp_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.238885, -0.452604, -0.0100822)
+shape = SubResource("BoxShape3D_meuw3")
+
+[node name="Surgical_Lamp_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Lamp_LOD1"]
+gi_mode = 2
+visibility_range_begin = 5.00779
+visibility_range_end = 14.2075
+mesh = ExtResource("3_7lvac")
+surface_material_override/0 = ExtResource("2_aqaui")
+
+[node name="Surgical_Lamp_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Lamp_LOD2"]
+gi_mode = 2
+visibility_range_begin = 14.2075
+visibility_range_end = 80.6597
+mesh = ExtResource("4_b68r1")
+surface_material_override/0 = ExtResource("2_aqaui")

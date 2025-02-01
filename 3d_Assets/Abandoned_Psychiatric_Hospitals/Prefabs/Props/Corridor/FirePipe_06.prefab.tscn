@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bboggyfk30o3m"]
+
+[ext_resource type="ArrayMesh" uid="uid://dkujryottch38" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_06.FirePipe_06.mesh" id="1_v5i8g"]
+[ext_resource type="Material" uid="uid://cdi73wsya2kra" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Ventilation_System.mat.tres" id="2_eeouw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mgr4p"]
+size = Vector3(1, 0.117906, 0.117907)
+
+[node name="FirePipe_06" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 24.9563
+mesh = ExtResource("1_v5i8g")
+surface_material_override/0 = ExtResource("2_eeouw")
+
+[node name="BoxCollider" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 2.66358e-07)
+shape = SubResource("BoxShape3D_mgr4p")

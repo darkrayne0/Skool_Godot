@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://d27cm2nc5f0ey"]
+
+[ext_resource type="Texture2D" uid="uid://cd7m0lnltom6i" path="res://Materials/Textures/Props/Corridor/Pipes/Pipes_A.tga" id="1_yyt6y"]
+[ext_resource type="Texture2D" uid="uid://caaekajvs6ukb" path="res://Materials/Textures/Props/Corridor/Pipes/Pipes_AO.tga" id="2_11ei5"]
+[ext_resource type="Texture2D" uid="uid://0qfj7vjuwhqc" path="res://Materials/Textures/Props/Corridor/Pipes/Pipes_MS.roughness.png" id="3_g3xvu"]
+[ext_resource type="Texture2D" uid="uid://l150spqsumly" path="res://Materials/Textures/Props/Corridor/Pipes/Pipes_N.tga" id="4_otrau"]
+
+[resource]
+resource_name = "Pipes"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_yyt6y")
+metallic_texture = ExtResource("3_g3xvu")
+roughness_texture = ExtResource("3_g3xvu")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("4_otrau")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_11ei5")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

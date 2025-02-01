@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbtkmgaw53sug"]
+
+[ext_resource type="ArrayMesh" uid="uid://dp5ke2o7puren" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Drainpipe_04.Drainpipe_04_LOD0.mesh" id="1_tglal"]
+[ext_resource type="Material" uid="uid://br1a00647y20p" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Exterior/Drainpipe.mat.tres" id="2_o1n78"]
+[ext_resource type="ArrayMesh" uid="uid://cyd72vim0ohxj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Drainpipe_04.Drainpipe_04_LOD1.mesh" id="3_g4u4r"]
+[ext_resource type="ArrayMesh" uid="uid://b1t3k48ihcxfu" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Drainpipe_04.Drainpipe_04_LOD2.mesh" id="4_tffgr"]
+
+[node name="Drainpipe_04" type="Node3D"]
+
+[node name="Drainpipe_04_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Drainpipe_04_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.15494
+mesh = ExtResource("1_tglal")
+surface_material_override/0 = ExtResource("2_o1n78")
+
+[node name="Drainpipe_04_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Drainpipe_04_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.15494
+visibility_range_end = 3.65388
+mesh = ExtResource("3_g4u4r")
+surface_material_override/0 = ExtResource("2_o1n78")
+
+[node name="Drainpipe_04_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Drainpipe_04_LOD2"]
+gi_mode = 2
+visibility_range_begin = 3.65388
+visibility_range_end = 29.55
+mesh = ExtResource("4_tffgr")
+surface_material_override/0 = ExtResource("2_o1n78")

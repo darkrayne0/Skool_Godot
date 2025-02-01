@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://bcwa6t6v6wf01"]
+
+[ext_resource type="ArrayMesh" uid="uid://ci1sfe2oxpelg" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Curtain.Curtain_LOD0.mesh" id="1_ga0f3"]
+[ext_resource type="Material" uid="uid://bpflc088m464r" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Curtain.mat.tres" id="2_lsxbr"]
+[ext_resource type="Material" uid="uid://dvalpino1wap5" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Curtain_Fade.mat.tres" id="3_7kk5d"]
+[ext_resource type="ArrayMesh" uid="uid://db5rt0nfoeof2" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Curtain.Curtain_LOD1.mesh" id="4_fuxns"]
+[ext_resource type="ArrayMesh" uid="uid://bqwtr5yha6unv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Curtain.Curtain_LOD2.mesh" id="5_y3gua"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rp31i"]
+size = Vector3(2.8507, 2.87515, 0.153855)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gcl63"]
+size = Vector3(2.8507, 0.146612, 1.43664)
+
+[node name="Curtain" type="Node3D"]
+
+[node name="Curtain_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Curtain_LOD0"]
+gi_mode = 2
+visibility_range_end = 7.9595
+mesh = ExtResource("1_ga0f3")
+surface_material_override/0 = ExtResource("2_lsxbr")
+surface_material_override/1 = ExtResource("3_7kk5d")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Curtain_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Curtain_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.42302, 1.65928, -0.655755)
+shape = SubResource("BoxShape3D_rp31i")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Curtain_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Curtain_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.42302, 3.02385, -0.0143629)
+shape = SubResource("BoxShape3D_gcl63")
+
+[node name="Curtain_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Curtain_LOD1"]
+gi_mode = 2
+visibility_range_begin = 7.9595
+visibility_range_end = 21.6698
+mesh = ExtResource("4_fuxns")
+surface_material_override/0 = ExtResource("2_lsxbr")
+surface_material_override/1 = ExtResource("3_7kk5d")
+
+[node name="Curtain_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Curtain_LOD2"]
+gi_mode = 2
+visibility_range_begin = 21.6698
+visibility_range_end = 90.0415
+mesh = ExtResource("5_y3gua")
+surface_material_override/0 = ExtResource("2_lsxbr")
+surface_material_override/1 = ExtResource("3_7kk5d")

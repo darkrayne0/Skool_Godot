@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwbe4xtc5pkbd"]
+
+[ext_resource type="ArrayMesh" uid="uid://c4dk2d0e1s5qn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Wires_05.Wires_05_LOD0.mesh" id="1_uwcdd"]
+[ext_resource type="Material" uid="uid://c1pqsfoubdibd" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Wires.mat.tres" id="2_bbckl"]
+[ext_resource type="ArrayMesh" uid="uid://cq0d5x6yboll4" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Wires_05.Wires_05_LOD1.mesh" id="3_nuebs"]
+
+[node name="Wires_05" type="Node3D"]
+
+[node name="Wires_05_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Wires_05_LOD0"]
+gi_mode = 2
+visibility_range_end = 2.47427
+mesh = ExtResource("1_uwcdd")
+surface_material_override/0 = ExtResource("2_bbckl")
+
+[node name="Wires_05_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Wires_05_LOD1"]
+gi_mode = 2
+visibility_range_begin = 2.47427
+visibility_range_end = 18.1641
+mesh = ExtResource("3_nuebs")
+surface_material_override/0 = ExtResource("2_bbckl")

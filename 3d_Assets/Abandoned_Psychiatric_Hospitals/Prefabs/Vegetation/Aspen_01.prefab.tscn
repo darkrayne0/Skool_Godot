@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://duiyxng447gcq"]
+
+[ext_resource type="ArrayMesh" uid="uid://l6dvgkf0mwgf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Aspen_01.Aspen_01_LOD0.mesh" id="1_uvfjg"]
+[ext_resource type="Material" uid="uid://cqrq3o5bi2ko5" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Aspen_01_Bark.mat.tres" id="2_k3efn"]
+[ext_resource type="Material" uid="uid://bvnxtedds4t12" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Aspen_Bark.mat.tres" id="3_syn4b"]
+[ext_resource type="Material" uid="uid://dt5v7ou1ujfy6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Aspen_Leaves.mat.tres" id="4_wp5tp"]
+[ext_resource type="ArrayMesh" uid="uid://dun47otv12hg0" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Aspen_01.Aspen_01_LOD1.mesh" id="5_omum3"]
+[ext_resource type="ArrayMesh" uid="uid://d145lmeencelw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Aspen_01.Aspen_01_LOD2.mesh" id="6_i36x8"]
+[ext_resource type="ArrayMesh" uid="uid://bsi8bjq3gg3eb" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Aspen_01.Billboard_Aspen_01.mesh" id="7_etl34"]
+[ext_resource type="Material" uid="uid://rwrantid5sgs" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Billboard_Aspen_01.mat.tres" id="8_4ehti"]
+
+[node name="Aspen_01" type="Node3D"]
+
+[node name="Aspen_01_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Aspen_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 14.1095
+visibility_range_end_margin = 0.5
+mesh = ExtResource("1_uvfjg")
+surface_material_override/0 = ExtResource("2_k3efn")
+surface_material_override/1 = ExtResource("3_syn4b")
+surface_material_override/2 = ExtResource("4_wp5tp")
+
+[node name="Aspen_01_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Aspen_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 14.1095
+visibility_range_begin_margin = 0.5
+visibility_range_end = 38.2488
+visibility_range_end_margin = 0.5
+mesh = ExtResource("5_omum3")
+surface_material_override/0 = ExtResource("2_k3efn")
+surface_material_override/1 = ExtResource("3_syn4b")
+surface_material_override/2 = ExtResource("4_wp5tp")
+
+[node name="Aspen_01_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Aspen_01_LOD2"]
+gi_mode = 2
+visibility_range_begin = 38.2488
+visibility_range_begin_margin = 0.5
+visibility_range_end = 69.9202
+visibility_range_end_margin = 0.5
+mesh = ExtResource("6_i36x8")
+surface_material_override/0 = ExtResource("2_k3efn")
+surface_material_override/1 = ExtResource("3_syn4b")
+surface_material_override/2 = ExtResource("4_wp5tp")
+
+[node name="Billboard_Aspen_01" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Billboard_Aspen_01"]
+gi_mode = 2
+visibility_range_begin = 69.9202
+visibility_range_begin_margin = 0.5
+visibility_range_end = 283.966
+visibility_range_end_margin = 0.5
+mesh = ExtResource("7_etl34")
+surface_material_override/0 = ExtResource("8_4ehti")

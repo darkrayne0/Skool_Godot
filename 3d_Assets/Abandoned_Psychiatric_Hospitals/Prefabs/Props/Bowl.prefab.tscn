@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://8frn7rx11obj"]
+
+[ext_resource type="ArrayMesh" uid="uid://by58tudm2133q" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bowl.Bowl_LOD0.mesh" id="1_ww4mk"]
+[ext_resource type="Material" uid="uid://dpal4l0u314nv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Nightstand.mat.tres" id="2_gbq1h"]
+[ext_resource type="ArrayMesh" uid="uid://d3iqlfdhvp0cq" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bowl.Bowl_LOD1.mesh" id="3_10xqd"]
+
+[node name="Bowl" type="Node3D"]
+
+[node name="Bowl_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bowl_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.64046
+mesh = ExtResource("1_ww4mk")
+surface_material_override/0 = ExtResource("2_gbq1h")
+
+[node name="Bowl_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bowl_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.64046
+visibility_range_end = 16.4735
+mesh = ExtResource("3_10xqd")
+surface_material_override/0 = ExtResource("2_gbq1h")

@@ -1,0 +1,24 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://du3gq8i4aqspi"]
+
+[ext_resource type="Texture2D" uid="uid://rfx0cq7avkht" path="res://Materials/Textures/Props/Surgical_Table/Surgical_Table_A.tga" id="1_cfcjd"]
+[ext_resource type="Texture2D" uid="uid://6h7k52xnqpcu" path="res://Materials/Textures/Props/Surgical_Table/Surgical_Table_AO.tga" id="2_3yi25"]
+[ext_resource type="Texture2D" uid="uid://cck5bxo7177ov" path="res://Materials/Textures/Props/Surgical_Table/Surgical_Table_MS.roughness.png" id="3_c0yya"]
+[ext_resource type="Texture2D" uid="uid://d7laxwtuuala" path="res://Materials/Textures/Props/Surgical_Table/Surgical_Table_N.tga" id="4_tt3f1"]
+
+[resource]
+resource_name = "Surgical_Table"
+transparency = 2
+alpha_scissor_threshold = 0.142
+alpha_antialiasing_mode = 0
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_cfcjd")
+metallic_texture = ExtResource("3_c0yya")
+roughness_texture = ExtResource("3_c0yya")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("4_tt3f1")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_3yi25")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

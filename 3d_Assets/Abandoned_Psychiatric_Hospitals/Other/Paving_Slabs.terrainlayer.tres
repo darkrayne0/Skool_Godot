@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dllg0wb3l1vap"]
+
+[ext_resource type="Texture2D" uid="uid://0iq2spvp3qkq" path="res://Materials/Textures/Terrain_Textures/Paving_Slabs_A.tga" id="1_sw7d3"]
+[ext_resource type="Texture2D" uid="uid://fgj3gunc1416" path="res://Materials/Textures/Terrain_Textures/Paving_Slabs_N.tga" id="2_rq1s0"]
+
+[resource]
+albedo_texture = ExtResource("1_sw7d3")
+normal_enabled = true
+normal_scale = 1.29
+normal_texture = ExtResource("2_rq1s0")
+uv1_scale = Vector3(0.5, 0.5, 0)

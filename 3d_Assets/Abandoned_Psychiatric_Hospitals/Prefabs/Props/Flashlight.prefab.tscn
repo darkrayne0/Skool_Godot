@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://oq40v70rxtmv"]
+
+[ext_resource type="ArrayMesh" uid="uid://b0ts5vhm05rbs" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Flashlight.Flashlight_LOD0.mesh" id="1_1kvx0"]
+[ext_resource type="Material" uid="uid://bjacwhcm48kom" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Flashlight.mat.tres" id="2_my4et"]
+[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_biior"]
+[ext_resource type="ArrayMesh" uid="uid://13t878kv51rn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Flashlight.Flashlight_LOD1.mesh" id="4_x6usk"]
+[ext_resource type="ArrayMesh" uid="uid://rty6v400xrch" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Flashlight.Flashlight_LOD2.mesh" id="5_ibmqd"]
+
+[node name="Flashlight" type="Node3D"]
+
+[node name="Flashlight_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Flashlight_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.371383
+mesh = ExtResource("1_1kvx0")
+surface_material_override/0 = ExtResource("2_my4et")
+surface_material_override/1 = ExtResource("3_biior")
+
+[node name="Flashlight_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Flashlight_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.371383
+visibility_range_end = 1.02852
+mesh = ExtResource("4_x6usk")
+surface_material_override/0 = ExtResource("2_my4et")
+surface_material_override/1 = ExtResource("3_biior")
+
+[node name="Flashlight_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Flashlight_LOD2"]
+gi_mode = 2
+visibility_range_begin = 1.02852
+visibility_range_end = 10.1017
+mesh = ExtResource("5_ibmqd")
+surface_material_override/0 = ExtResource("2_my4et")
+surface_material_override/1 = ExtResource("3_biior")
+
+[node name="Point Light" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -0.126)
+
+[node name="Light" type="SpotLight3D" parent="Point Light"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+light_bake_mode = 0
+shadow_bias = 0.05
+spot_range = 10.0
+spot_attenuation = 0.333
+spot_angle = 15.0
+spot_angle_attenuation = 0.5

@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2q8lgml3aoid"]
+
+[ext_resource type="ArrayMesh" uid="uid://cnuj1f0k6xxdh" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Bedside_Table.Bedside_Table_LOD0.mesh" id="1_ngtjd"]
+[ext_resource type="Material" uid="uid://c1m21pw8ahvoc" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Wardrobe_03.mat.tres" id="2_7ilvy"]
+[ext_resource type="ArrayMesh" uid="uid://bvhufcqf4w8k6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Bedside_Table.Bedside_Table_LOD1.mesh" id="3_55rvu"]
+[ext_resource type="ArrayMesh" uid="uid://b7blq0ekbu544" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Bedside_Table.Bedside_Table_LOD2.mesh" id="4_yw3x2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eykmm"]
+size = Vector3(0.743154, 0.899007, 1.40538)
+
+[node name="Bedside_Table" type="Node3D"]
+
+[node name="Bedside_Table_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bedside_Table_LOD0"]
+gi_mode = 2
+visibility_range_end = 3.07169
+mesh = ExtResource("1_ngtjd")
+surface_material_override/0 = ExtResource("2_7ilvy")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Bedside_Table_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bedside_Table_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000420377, 0.451909, 0)
+shape = SubResource("BoxShape3D_eykmm")
+
+[node name="Bedside_Table_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bedside_Table_LOD1"]
+gi_mode = 2
+visibility_range_begin = 3.07169
+visibility_range_end = 7.67723
+mesh = ExtResource("3_55rvu")
+surface_material_override/0 = ExtResource("2_7ilvy")
+
+[node name="Bedside_Table_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bedside_Table_LOD2"]
+gi_mode = 2
+visibility_range_begin = 7.67723
+visibility_range_end = 61.7018
+mesh = ExtResource("4_yw3x2")
+surface_material_override/0 = ExtResource("2_7ilvy")

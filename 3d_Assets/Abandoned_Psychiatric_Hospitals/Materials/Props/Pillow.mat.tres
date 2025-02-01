@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://c6bnacakq3cg7"]
+
+[ext_resource type="Texture2D" uid="uid://dwwahavl1p3ug" path="res://Materials/Textures/Props/Pillow/Pillow_A.tga" id="1_cecg4"]
+[ext_resource type="Texture2D" uid="uid://bmatv6t21cyx7" path="res://Materials/Textures/Props/Pillow/Pillow_AO.tga" id="2_4f3w3"]
+[ext_resource type="Texture2D" uid="uid://dwr5fr64706e2" path="res://Materials/Textures/Props/Pillow/Pillow_MS.roughness.png" id="3_05ohc"]
+[ext_resource type="Texture2D" uid="uid://4dhb308barbt" path="res://Materials/Textures/Props/Pillow/Pillow_N.tga" id="4_eq144"]
+
+[resource]
+resource_name = "Pillow"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_cecg4")
+metallic_texture = ExtResource("3_05ohc")
+roughness_texture = ExtResource("3_05ohc")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("4_eq144")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_4f3w3")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

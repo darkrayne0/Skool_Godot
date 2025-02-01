@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8rk5a4n6sgvt"]
+
+[ext_resource type="ArrayMesh" uid="uid://ce41mh3yy1lal" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Brick_Trash_02.Brick_Trash_02_LOD0.mesh" id="1_tt8bw"]
+[ext_resource type="Material" uid="uid://br1a00647y20p" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Exterior/Drainpipe.mat.tres" id="2_ovtpc"]
+[ext_resource type="ArrayMesh" uid="uid://b7h3kb3spg4ft" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Brick_Trash_02.Brick_Trash_02_LOD1.mesh" id="3_htcln"]
+[ext_resource type="ArrayMesh" uid="uid://dx8fu86xd4awg" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Brick_Trash_02.Brick_Trash_02_LOD2.mesh" id="4_ab0np"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_e35l7"]
+points = PackedVector3Array(0.0314513, -0.0366472, -0.0938538, 0.0112754, -0.0750888, -0.0645748, -0.170817, -0.0308228, -0.0383123, -0.170562, -0.0185653, -0.040036, -0.168867, 0.0903958, -0.0459493, 0.0239065, -0.0304576, -0.0919864, 0.133687, 0.0430003, -0.0552381, 0.134069, 0.0378887, -0.0572012, 0.135001, -0.00389109, -0.0601698, 0.134874, -0.00922874, -0.0589249, 0.140639, -0.0104632, -0.048056, 0.0156411, -0.0744455, -0.0596671, -0.13127, -0.0369428, 0.111075, -0.210999, -0.0310662, 0.0216581, -0.191332, -0.0327353, -0.00347923, -0.171664, -0.0344044, -0.0285926, -0.176242, -0.031779, -0.0323273, -0.17692, -0.0181306, -0.0337876, -0.175098, 0.0986718, -0.0401318, -0.16306, 0.0982545, -0.0442016, 0.011572, 0.0898569, 0.0194795, 0.139452, 0.0429307, -0.0442735, 0.14119, 0.0372106, -0.0453987, 0.142122, -0.00456916, -0.0483673, 0.20833, -0.0137318, 0.101858, 0.206804, -0.0196259, 0.102145, 0.210958, -0.0197649, 0.113804, 0.204218, -0.0208081, 0.118209, 0.145725, -0.0239377, 0.143777, 0.137884, -0.0236769, 0.145764, -0.134068, -0.0327005, 0.113158, -0.216424, -0.0278671, 0.028481, -0.219985, -0.02665, 0.024483, -0.215577, -0.0284408, 0.0179234, -0.216255, -0.0147924, 0.016463, -0.20498, 0.076278, -0.00115703, -0.185228, 0.0818417, -0.0266055, -0.214814, 0.0783122, 0.0114116, -0.208795, 0.0881704, 0.0154575, -0.146275, 0.0984632, 0.00279312, -0.170011, 0.0988109, -0.0361098, -0.0633247, 0.102532, 0.0235015, -0.0678177, 0.101784, 0.0183782, 0.0142, 0.0897352, 0.0271883, 0.205617, 0.0337854, 0.105928, 0.207397, 0.0280653, 0.104803, 0.212229, -0.0145838, 0.115073, 0.205193, -0.0151575, 0.12113, 0.1467, -0.0182871, 0.146698, 0.137502, -0.0185653, 0.147751, -0.147674, 0.00601921, 0.121561, -0.148309, 0.0114786, 0.121561, -0.217314, -0.014097, 0.0291274, -0.22079, -0.0143056, 0.0241478, -0.219434, 0.0737048, 0.0193837, -0.215873, 0.0790251, 0.024076, -0.199385, 0.0794597, 0.0369798, -0.192646, 0.088605, 0.028074, -0.131101, 0.0998541, -0.00572962, -0.176581, 0.0849365, 0.0408821, 0.0267888, 0.0784166, 0.097046, 0.0263649, 0.0805899, 0.0892415, 0.209771, 0.0324641, 0.117515, 0.211254, 0.0272133, 0.118042, 0.204261, 0.0266222, 0.124099, 0.145767, 0.0234926, 0.149667, 0.13657, 0.0232145, 0.15072, -0.136907, 0.0162425, 0.120938, -0.182854, 0.0799118, 0.0498597, 0.136697, 0.0285521, 0.149475, 0.0153868, 0.0744698, 0.0996315, 0.144538, 0.0294562, 0.14756, 0.203031, 0.0325858, 0.121992)
+
+[node name="Brick_Trash_02" type="Node3D"]
+
+[node name="Brick_Trash_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Brick_Trash_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.728403
+mesh = ExtResource("1_tt8bw")
+surface_material_override/0 = ExtResource("2_ovtpc")
+
+[node name="MeshCollider" type="StaticBody3D" parent="Brick_Trash_02_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Brick_Trash_02_LOD0/MeshCollider"]
+shape = SubResource("ConvexPolygonShape3D_e35l7")
+
+[node name="Brick_Trash_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Brick_Trash_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.728403
+visibility_range_end = 4.50866
+mesh = ExtResource("3_htcln")
+surface_material_override/0 = ExtResource("2_ovtpc")
+
+[node name="Brick_Trash_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Brick_Trash_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 4.50866
+visibility_range_end = 56.3583
+mesh = ExtResource("4_ab0np")
+surface_material_override/0 = ExtResource("2_ovtpc")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2pbaiqal0ktq"]
+
+[ext_resource type="ArrayMesh" uid="uid://d3b8alogrb0mv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Ventilation_System_03.Ventilation_System_03.mesh" id="1_dho41"]
+[ext_resource type="Material" uid="uid://cdi73wsya2kra" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Ventilation_System.mat.tres" id="2_4lkeo"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_exqaj"]
+points = PackedVector3Array(0.282231, 0.532158, -0.980793, 0.113128, 0.499937, -0.427348, 0.21323, 0.499937, -0.728302, 0.282231, -0.0322771, -0.980793, 0.282231, 0.532158, -1, -0.874543, 0.8, 0.274666, 0.113128, -5.67511e-05, -0.427348, -0.878825, 0.8, 0.282044, -0.0294067, 0.499937, -0.215306, 0.21323, -5.67511e-05, -0.728302, 0.282231, -0.0322771, -1, -0.0294067, -5.67511e-05, -0.215306, -0.875173, -0.0440086, 0.288404, -0.86724, -0.0440086, 0.274666, -0.282243, 0.532158, -1, -0.878825, 0.8, -0.270765, -0.874543, 0.8, -0.263388, -0.856538, 0.000934646, 0.29947, -0.552203, 0.499937, 0.162094, -0.337771, 0.499937, 0.0528301, -0.164135, 0.499937, -0.0701718, -0.887261, 0.8, 0.282044, -0.282243, -0.0322771, -1, -0.86724, -0.0440086, -0.263388, -0.875173, -0.0440086, -0.277125, -0.164135, -5.67511e-05, -0.0701718, -0.856538, -0.0344252, 0.29947, -0.890912, -0.0440086, 0.288404, -0.337771, -5.67511e-05, 0.0528301, -1.00008, 0.532158, -0.282341, -0.887261, 0.8, -0.270765, -0.912318, 0.000934646, 0.29947, -0.552203, -5.67511e-05, 0.162094, -0.891542, 0.8, 0.274666, -1.00008, 0.532158, 0.282171, -0.890912, -0.0440086, -0.277125, -1.00008, -0.0322771, -0.282341, -0.912318, -0.0344252, 0.29947, -1.00008, -0.0322771, 0.282171, -0.898845, -0.0440086, 0.274666, -1.00411, 0.487793, -0.242018, -0.891542, 0.8, -0.263388, -1.00411, 0.487793, 0.233581, -0.898845, -0.0440086, -0.263388, -1.00411, 0.0121705, -0.242018, -1.00411, 0.0121705, 0.233581)
+
+[node name="Ventilation_System_03" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 61.8973
+mesh = ExtResource("1_dho41")
+surface_material_override/0 = ExtResource("2_4lkeo")
+
+[node name="MeshCollider" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshCollider"]
+shape = SubResource("ConvexPolygonShape3D_exqaj")

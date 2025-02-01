@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dqodb2mrodcqj"]
+
+[ext_resource type="Texture2D" uid="uid://cwq8knejv1roq" path="res://Materials/Textures/Decal/Blood_Decals/Blood_Decals_A.tga" id="1_mgcwf"]
+[ext_resource type="Texture2D" uid="uid://di3u14fjybxed" path="res://Materials/Textures/Decal/Blood_Decals/Blood_Decals_N.tga" id="2_ec0ck"]
+
+[resource]
+resource_name = "Blood_Decals"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_mgcwf")
+roughness = 0.276
+normal_enabled = true
+normal_texture = ExtResource("2_ec0ck")
+uv1_scale = Vector3(1, 1, 0)

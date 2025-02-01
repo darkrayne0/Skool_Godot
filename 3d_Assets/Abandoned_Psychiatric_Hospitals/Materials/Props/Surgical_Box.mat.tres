@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://cqt3nwftnm1ca"]
+
+[ext_resource type="Texture2D" uid="uid://c3e62xkxbk7sb" path="res://Materials/Textures/Props/Surgical_Box/Surgical_Box_A.tga" id="1_6do0w"]
+[ext_resource type="Texture2D" uid="uid://da7b67rw8j4ux" path="res://Materials/Textures/Props/Surgical_Box/Surgical_Box_AO.tga" id="2_3e7u6"]
+[ext_resource type="Texture2D" uid="uid://cvsmab5yep07c" path="res://Materials/Textures/Props/Surgical_Box/Surgical_Box_MS.roughness.png" id="3_1pnx7"]
+[ext_resource type="Texture2D" uid="uid://btp0kna21ryoh" path="res://Materials/Textures/Props/Surgical_Box/Surgical_Box_N.tga" id="4_aglyj"]
+
+[resource]
+resource_name = "Surgical_Box"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_6do0w")
+metallic_texture = ExtResource("3_1pnx7")
+roughness_texture = ExtResource("3_1pnx7")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("4_aglyj")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_3e7u6")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

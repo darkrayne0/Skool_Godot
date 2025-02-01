@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5t30hby76c01"]
+
+[ext_resource type="ArrayMesh" uid="uid://vx8cwnj0baa5" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Wall_Window_02.Wall_Window_02_LOD0.mesh" id="1_voo1y"]
+[ext_resource type="Material" uid="uid://cdh4x13sgj2em" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_Brick.mat.tres" id="2_kil17"]
+[ext_resource type="Material" uid="uid://wjxx7wdx8pgo" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_01.mat.tres" id="3_nqu1u"]
+[ext_resource type="Material" uid="uid://dqh41ra7gvxcf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Parapet.mat.tres" id="4_r3ddg"]
+[ext_resource type="Material" uid="uid://6q7nqt06vnb1" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01.mat.tres" id="5_uqyjl"]
+[ext_resource type="ArrayMesh" uid="uid://dgi2bibybe36k" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Wall_Window_02.Wall_Window_02_LOD1.mesh" id="6_rpmhy"]
+[ext_resource type="ArrayMesh" uid="uid://qq85f7myoc28" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Wall_Window_02.Wall_Window_02_LOD2.mesh" id="7_ymbx7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kr4bo"]
+size = Vector3(0.614674, 5, 2.0029)
+
+[node name="Wall_Window_02" type="Node3D"]
+
+[node name="Wall_Window_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Wall_Window_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 10.8607
+mesh = ExtResource("1_voo1y")
+surface_material_override/0 = ExtResource("2_kil17")
+surface_material_override/1 = ExtResource("3_nqu1u")
+surface_material_override/2 = ExtResource("4_r3ddg")
+surface_material_override/3 = ExtResource("5_uqyjl")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Wall_Window_02_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_Window_02_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.252902, 2.5, -1.00145)
+shape = SubResource("BoxShape3D_kr4bo")
+
+[node name="Wall_Window_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Wall_Window_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 10.8607
+visibility_range_end = 34.7886
+mesh = ExtResource("6_rpmhy")
+surface_material_override/0 = ExtResource("2_kil17")
+surface_material_override/1 = ExtResource("3_nqu1u")
+surface_material_override/2 = ExtResource("4_r3ddg")
+surface_material_override/3 = ExtResource("5_uqyjl")
+
+[node name="Wall_Window_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Wall_Window_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 34.7886
+visibility_range_end = 327.103
+mesh = ExtResource("7_ymbx7")
+surface_material_override/0 = ExtResource("2_kil17")
+surface_material_override/1 = ExtResource("3_nqu1u")
+surface_material_override/2 = ExtResource("4_r3ddg")
+surface_material_override/3 = ExtResource("5_uqyjl")

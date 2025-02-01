@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhop1ofr3ourl"]
+
+[ext_resource type="ArrayMesh" uid="uid://dhyrftxe8bj3o" path="res://Assets/Abandoned_Psychiatric_Hospitals/Other/Terrain.terrain.terrain.mesh" id="1_k2ao2"]
+
+[node name="Terrain" type="Node3D"]
+
+[node name="TerrainMesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_k2ao2")

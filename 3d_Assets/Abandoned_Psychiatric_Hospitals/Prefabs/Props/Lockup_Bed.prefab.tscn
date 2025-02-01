@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://bppherqkep8b4"]
+
+[ext_resource type="ArrayMesh" uid="uid://dnfblss32ybkc" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Lockup_Bed.Lockup_Bed_LOD0.mesh" id="1_4lm8a"]
+[ext_resource type="Material" uid="uid://706y17q7a1pw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Lockup_Bed.mat.tres" id="2_ea8l3"]
+[ext_resource type="ArrayMesh" uid="uid://ogrdnxpml37v" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Lockup_Bed.Lockup_Bed_LOD1.mesh" id="3_iu2p0"]
+[ext_resource type="ArrayMesh" uid="uid://d4a54qyd708nl" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Lockup_Bed.Lockup_Bed_LOD2.mesh" id="4_l2m2x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v1lkj"]
+size = Vector3(2.33167, 0.708036, 1.08433)
+
+[node name="Lockup_Bed" type="Node3D"]
+
+[node name="Lockup_Bed_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Lockup_Bed_LOD0"]
+gi_mode = 2
+visibility_range_end = 4.33239
+mesh = ExtResource("1_4lm8a")
+surface_material_override/0 = ExtResource("2_ea8l3")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Lockup_Bed_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lockup_Bed_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111908, 0.352857, -0.0175018)
+shape = SubResource("BoxShape3D_v1lkj")
+
+[node name="Lockup_Bed_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Lockup_Bed_LOD1"]
+gi_mode = 2
+visibility_range_begin = 4.33239
+visibility_range_end = 11.8046
+mesh = ExtResource("3_iu2p0")
+surface_material_override/0 = ExtResource("2_ea8l3")
+
+[node name="Lockup_Bed_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Lockup_Bed_LOD2"]
+gi_mode = 2
+visibility_range_begin = 11.8046
+visibility_range_end = 61.2481
+mesh = ExtResource("4_l2m2x")
+surface_material_override/0 = ExtResource("2_ea8l3")

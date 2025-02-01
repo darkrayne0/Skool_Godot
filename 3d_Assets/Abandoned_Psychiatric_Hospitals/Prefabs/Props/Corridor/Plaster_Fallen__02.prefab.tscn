@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj1kdrrh7ctro"]
+
+[ext_resource type="ArrayMesh" uid="uid://bo7ybyx4uppqy" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Plaster_Fallen_02.Plaster_Fallen__02_LOD0.mesh" id="1_n5pdo"]
+[ext_resource type="Material" uid="uid://pu10oiuxy4f" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Plaster.mat.tres" id="2_vlcl8"]
+[ext_resource type="ArrayMesh" uid="uid://bel8iwalk7ji0" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Plaster_Fallen_02.Plaster_Fallen__02_LOD1.mesh" id="3_t4cir"]
+[ext_resource type="ArrayMesh" uid="uid://ntkto433ju5q" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Plaster_Fallen_02.Plaster_Fallen__02_LOD2.mesh" id="4_e8bck"]
+
+[node name="Plaster_Fallen__02" type="Node3D"]
+
+[node name="Plaster_Fallen__02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Plaster_Fallen__02_LOD0"]
+gi_mode = 2
+visibility_range_end = 2.89959
+mesh = ExtResource("1_n5pdo")
+surface_material_override/0 = ExtResource("2_vlcl8")
+
+[node name="Plaster_Fallen__02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Plaster_Fallen__02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 2.89959
+visibility_range_end = 8.08125
+mesh = ExtResource("3_t4cir")
+surface_material_override/0 = ExtResource("2_vlcl8")
+
+[node name="Plaster_Fallen__02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Plaster_Fallen__02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 8.08125
+visibility_range_end = 42.8359
+mesh = ExtResource("4_e8bck")
+surface_material_override/0 = ExtResource("2_vlcl8")

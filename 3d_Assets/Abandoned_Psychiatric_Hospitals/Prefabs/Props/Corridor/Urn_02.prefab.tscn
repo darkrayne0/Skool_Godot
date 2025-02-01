@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://i16h775x0h17"]
+
+[ext_resource type="ArrayMesh" uid="uid://qy2v4smukftb" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Urn_02.Urn_02_LOD0.mesh" id="1_o60c0"]
+[ext_resource type="Material" uid="uid://pgnpiv4sri5h" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Urn.mat.tres" id="2_5p57r"]
+[ext_resource type="ArrayMesh" uid="uid://dthcb0sc1yksd" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Urn_02.Urn_02_LOD1.mesh" id="3_s1t26"]
+[ext_resource type="ArrayMesh" uid="uid://caa7ji72lo018" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Urn_02.Urn_02_LOD2.mesh" id="4_oe818"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yutnd"]
+size = Vector3(0.431418, 0.496817, 0.313893)
+
+[node name="Urn_02" type="Node3D"]
+
+[node name="Urn_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Urn_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.20906
+mesh = ExtResource("1_o60c0")
+surface_material_override/0 = ExtResource("2_5p57r")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Urn_02_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Urn_02_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00265208, 0.24762, -0.00130577)
+shape = SubResource("BoxShape3D_yutnd")
+
+[node name="Urn_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Urn_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.20906
+visibility_range_end = 9.32196
+mesh = ExtResource("3_s1t26")
+surface_material_override/0 = ExtResource("2_5p57r")
+
+[node name="Urn_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Urn_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 9.32196
+visibility_range_end = 26.3758
+mesh = ExtResource("4_oe818")
+surface_material_override/0 = ExtResource("2_5p57r")

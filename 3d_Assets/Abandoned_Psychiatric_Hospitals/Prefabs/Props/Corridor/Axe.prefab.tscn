@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://do72s13udf7w1"]
+
+[ext_resource type="ArrayMesh" uid="uid://ct2ci2vgbyl0l" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Axe.Axe_LOD0.mesh" id="1_1h8b3"]
+[ext_resource type="Material" uid="uid://bn5yorrelrbxn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Fire_Fighting.mat.tres" id="2_sygsi"]
+[ext_resource type="ArrayMesh" uid="uid://cldq1bxwpg0ln" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Axe.Axe_LOD1.mesh" id="3_iaibw"]
+
+[node name="Axe" type="Node3D"]
+
+[node name="Axe_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Axe_LOD0"]
+gi_mode = 2
+visibility_range_end = 2.47617
+mesh = ExtResource("1_1h8b3")
+surface_material_override/0 = ExtResource("2_sygsi")
+
+[node name="Axe_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Axe_LOD1"]
+gi_mode = 2
+visibility_range_begin = 2.47617
+visibility_range_end = 23.2531
+mesh = ExtResource("3_iaibw")
+surface_material_override/0 = ExtResource("2_sygsi")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cc56bpokw2yfx"]
+
+[ext_resource type="ArrayMesh" uid="uid://cxj80hehyvfjs" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Radiator.Radiator_LOD0.mesh" id="1_shqc5"]
+[ext_resource type="Material" uid="uid://bf87p6qfmw73k" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Radiator.mat.tres" id="2_xn3v4"]
+[ext_resource type="ArrayMesh" uid="uid://cd1lpu2yqodgp" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Radiator.Radiator_LOD1.mesh" id="3_x64kl"]
+[ext_resource type="ArrayMesh" uid="uid://cgdgktgkqqh25" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Radiator.Radiator_LOD2.mesh" id="4_xtova"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pf1xw"]
+size = Vector3(0.242391, 0.723476, 1.28457)
+
+[node name="Radiator" type="Node3D"]
+
+[node name="Radiator_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Radiator_LOD0"]
+gi_mode = 2
+visibility_range_end = 2.83395
+mesh = ExtResource("1_shqc5")
+surface_material_override/0 = ExtResource("2_xn3v4")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Radiator_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Radiator_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00467264, 0.361738, 0.000303298)
+shape = SubResource("BoxShape3D_pf1xw")
+
+[node name="Radiator_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Radiator_LOD1"]
+gi_mode = 2
+visibility_range_begin = 2.83395
+visibility_range_end = 8.96647
+mesh = ExtResource("3_x64kl")
+surface_material_override/0 = ExtResource("2_xn3v4")
+
+[node name="Radiator_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Radiator_LOD2"]
+gi_mode = 2
+visibility_range_begin = 8.96647
+visibility_range_end = 72.1032
+mesh = ExtResource("4_xtova")
+surface_material_override/0 = ExtResource("2_xn3v4")

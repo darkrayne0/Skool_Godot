@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvtcyyeb5ichs"]
+
+[ext_resource type="ArrayMesh" uid="uid://c2pn2og47umt8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Artificial_Lung_Ventilation.Artificial_Lung_Ventilation_LOD0.mesh" id="1_xor16"]
+[ext_resource type="Material" uid="uid://c5iwu0ou8gpyp" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Artificial_Lung_Ventilation.mat.tres" id="2_eeqvo"]
+[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_jbnc6"]
+[ext_resource type="ArrayMesh" uid="uid://cs0ktsqtlyvug" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Artificial_Lung_Ventilation.Artificial_Lung_Ventilation_LOD1.mesh" id="4_43fg2"]
+[ext_resource type="ArrayMesh" uid="uid://cpplwmskwu4h5" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Artificial_Lung_Ventilation.Artificial_Lung_Ventilation_LOD2.mesh" id="5_aar04"]
+[ext_resource type="ArrayMesh" uid="uid://c83tukh655h06" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Artificial_Lung_Ventilation.Artificial_Lung_Ventilation_LOD3.mesh" id="6_01gr4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w8lau"]
+size = Vector3(1.06338, 1.18222, 1.46375)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y0rdk"]
+size = Vector3(0.710848, 0.88997, 1.46375)
+
+[node name="Artificial_Lung_Ventilation" type="Node3D"]
+
+[node name="Artificial_Lung_Ventilation_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Artificial_Lung_Ventilation_LOD0"]
+gi_mode = 2
+visibility_range_end = 4.39897
+mesh = ExtResource("1_xor16")
+surface_material_override/0 = ExtResource("2_eeqvo")
+surface_material_override/1 = ExtResource("3_jbnc6")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Artificial_Lung_Ventilation_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Artificial_Lung_Ventilation_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158514, 0.589008, -0.188259)
+shape = SubResource("BoxShape3D_w8lau")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Artificial_Lung_Ventilation_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Artificial_Lung_Ventilation_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0177512, 1.61785, -0.188259)
+shape = SubResource("BoxShape3D_y0rdk")
+
+[node name="Artificial_Lung_Ventilation_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Artificial_Lung_Ventilation_LOD1"]
+gi_mode = 2
+visibility_range_begin = 4.39897
+visibility_range_end = 8.50497
+mesh = ExtResource("4_43fg2")
+surface_material_override/0 = ExtResource("2_eeqvo")
+surface_material_override/1 = ExtResource("3_jbnc6")
+
+[node name="Artificial_Lung_Ventilation_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Artificial_Lung_Ventilation_LOD2"]
+gi_mode = 2
+visibility_range_begin = 8.50497
+visibility_range_end = 24.4191
+mesh = ExtResource("5_aar04")
+surface_material_override/0 = ExtResource("2_eeqvo")
+surface_material_override/1 = ExtResource("3_jbnc6")
+
+[node name="Artificial_Lung_Ventilation_LOD3" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Artificial_Lung_Ventilation_LOD3"]
+gi_mode = 2
+visibility_range_begin = 24.4191
+visibility_range_end = 88.4557
+mesh = ExtResource("6_01gr4")
+surface_material_override/0 = ExtResource("2_eeqvo")
+surface_material_override/1 = ExtResource("3_jbnc6")

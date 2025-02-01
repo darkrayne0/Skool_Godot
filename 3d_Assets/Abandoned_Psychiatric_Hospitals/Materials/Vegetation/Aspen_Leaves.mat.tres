@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dt5v7ou1ujfy6"]
+
+[ext_resource type="Texture2D" uid="uid://13xnhpduj6yk" path="res://Materials/Textures/Vegetation/Aspen/Aspen_Leaves_A.tga" id="1_7m4wv"]
+
+[resource]
+resource_name = "Aspen_Leaves"
+transparency = 2
+alpha_scissor_threshold = 0.8
+alpha_antialiasing_mode = 0
+depth_draw_mode = 1
+albedo_color = Color(0.915094, 0.913442, 0.720853, 0)
+albedo_texture = ExtResource("1_7m4wv")
+roughness = 0.5
+uv1_scale = Vector3(1, 1, 0)

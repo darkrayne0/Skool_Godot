@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1pfrvbgqgaom"]
+
+[ext_resource type="ArrayMesh" uid="uid://myif5pdw7fui" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Fire_Fighting.Fire_Fighting.mesh" id="1_3nhf3"]
+[ext_resource type="Material" uid="uid://bn5yorrelrbxn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Fire_Fighting.mat.tres" id="2_vjbjt"]
+
+[node name="Fire_Fighting" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 16.1334
+mesh = ExtResource("1_3nhf3")
+surface_material_override/0 = ExtResource("2_vjbjt")

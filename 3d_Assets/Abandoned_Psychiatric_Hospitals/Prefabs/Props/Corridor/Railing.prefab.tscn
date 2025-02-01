@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmda03j7xdrpj"]
+
+[ext_resource type="ArrayMesh" uid="uid://bdypx0i8uuf07" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Railing.Railing_LOD0.mesh" id="1_5fsxg"]
+[ext_resource type="Material" uid="uid://bf87p6qfmw73k" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Radiator.mat.tres" id="2_kjnxs"]
+[ext_resource type="ArrayMesh" uid="uid://d3ngd8k13371p" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Railing.Railing_LOD1.mesh" id="3_63lnd"]
+[ext_resource type="ArrayMesh" uid="uid://buc1kbs4jmnhs" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Railing.Railing_LOD2.mesh" id="4_5spqp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u464o"]
+size = Vector3(3.30491, 64.1454, 4.60532)
+
+[node name="Railing" type="Node3D"]
+
+[node name="Railing_LOD0" type="Node3D" parent="."]
+transform = Transform3D(0.0311792, 0, 0, 0, -1.36288e-09, -0.0311792, 0, 0.0311792, -1.36288e-09, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Railing_LOD0"]
+gi_mode = 2
+visibility_range_end = 4.17925
+mesh = ExtResource("1_5fsxg")
+surface_material_override/0 = ExtResource("2_kjnxs")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Railing_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Railing_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5548, -1.2086, 0.061118)
+shape = SubResource("BoxShape3D_u464o")
+
+[node name="Railing_LOD1" type="Node3D" parent="."]
+transform = Transform3D(0.0311792, 0, 0, 0, -1.36288e-09, -0.0311792, 0, 0.0311792, -1.36288e-09, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Railing_LOD1"]
+gi_mode = 2
+visibility_range_begin = 4.17925
+visibility_range_end = 11.3507
+mesh = ExtResource("3_63lnd")
+surface_material_override/0 = ExtResource("2_kjnxs")
+
+[node name="Railing_LOD2" type="Node3D" parent="."]
+transform = Transform3D(0.0311792, 0, 0, 0, -1.36288e-09, -0.0311792, 0, 0.0311792, -1.36288e-09, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Railing_LOD2"]
+gi_mode = 2
+visibility_range_begin = 11.3507
+visibility_range_end = 62.0792
+mesh = ExtResource("4_5spqp")
+surface_material_override/0 = ExtResource("2_kjnxs")

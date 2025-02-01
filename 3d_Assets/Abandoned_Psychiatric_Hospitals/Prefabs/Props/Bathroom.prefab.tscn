@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlfbk02i5ax28"]
+
+[ext_resource type="ArrayMesh" uid="uid://cybc3l805c61i" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bathroom.Bathroom_LOD0.mesh" id="1_flqad"]
+[ext_resource type="Material" uid="uid://c0e7hdfo87nco" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Bathroom.mat.tres" id="2_2tyyg"]
+[ext_resource type="ArrayMesh" uid="uid://cfcxmqtvg2d81" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bathroom.Bathroom_LOD1.mesh" id="3_amx5y"]
+[ext_resource type="ArrayMesh" uid="uid://3vgdpi6qasx0" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bathroom.Bathroom_LOD2.mesh" id="4_0tnkp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4y2hc"]
+size = Vector3(2.8018, 0.652196, 1.03837)
+
+[node name="Bathroom" type="Node3D"]
+
+[node name="Bathroom_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bathroom_LOD0"]
+gi_mode = 2
+visibility_range_end = 5.13911
+mesh = ExtResource("1_flqad")
+surface_material_override/0 = ExtResource("2_2tyyg")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Bathroom_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bathroom_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.300899, 0.322815, -0.00786859)
+shape = SubResource("BoxShape3D_4y2hc")
+
+[node name="Bathroom_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bathroom_LOD1"]
+gi_mode = 2
+visibility_range_begin = 5.13911
+visibility_range_end = 14.9991
+mesh = ExtResource("3_amx5y")
+surface_material_override/0 = ExtResource("2_2tyyg")
+
+[node name="Bathroom_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bathroom_LOD2"]
+gi_mode = 2
+visibility_range_begin = 14.9991
+visibility_range_end = 81.1881
+mesh = ExtResource("4_0tnkp")
+surface_material_override/0 = ExtResource("2_2tyyg")

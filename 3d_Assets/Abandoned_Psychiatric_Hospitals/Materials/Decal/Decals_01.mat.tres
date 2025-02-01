@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cnadtiw8huev1"]
+
+[ext_resource type="Texture2D" uid="uid://dglgx3nxdourm" path="res://Materials/Textures/Decal/Decals_01/Decals_01_A.tga" id="1_oc2sf"]
+[ext_resource type="Texture2D" uid="uid://d2hnx4ckv3u72" path="res://Materials/Textures/Decal/Decals_01/Decals_01_N.tga" id="2_lrtuj"]
+
+[resource]
+resource_name = "Decals_01"
+transparency = 2
+alpha_scissor_threshold = 0.32
+alpha_antialiasing_mode = 0
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_oc2sf")
+roughness = 0.955
+normal_enabled = true
+normal_texture = ExtResource("2_lrtuj")
+uv1_scale = Vector3(1, 1, 0)

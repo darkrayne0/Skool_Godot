@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2aoc77b6r7xl"]
+
+[ext_resource type="ArrayMesh" uid="uid://c4n3x4vs72f76" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Poster_02.Poster_02_LOD0.mesh" id="1_g5fju"]
+[ext_resource type="Material" uid="uid://6iis22jac7hm" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Poster.mat.tres" id="2_3y0rs"]
+[ext_resource type="ArrayMesh" uid="uid://dka0uyscpam1h" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Poster_02.Poster_02_LOD1.mesh" id="3_6onoo"]
+[ext_resource type="ArrayMesh" uid="uid://drcydyxuh0r55" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Poster_02.Poster_02_LOD2.mesh" id="4_1vx0f"]
+
+[node name="Poster_02" type="Node3D"]
+
+[node name="Poster_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Poster_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 5.5093
+mesh = ExtResource("1_g5fju")
+surface_material_override/0 = ExtResource("2_3y0rs")
+
+[node name="Poster_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Poster_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 5.5093
+visibility_range_end = 16.3015
+mesh = ExtResource("3_6onoo")
+surface_material_override/0 = ExtResource("2_3y0rs")
+
+[node name="Poster_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Poster_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 16.3015
+visibility_range_end = 66.9934
+mesh = ExtResource("4_1vx0f")
+surface_material_override/0 = ExtResource("2_3y0rs")
+
+[node name="Spot Light (1)" type="Node3D" parent="."]
+transform = Transform3D(0.976901, -6.92554e-07, 0.213691, 0.213691, 3.09848e-06, -0.976901, 1.4441e-08, 1, 3.1749e-06, -0.226, 1.826, -0.00300598)
+
+[node name="Light" type="SpotLight3D" parent="Spot Light (1)"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+light_energy = 3.29
+shadow_enabled = true
+shadow_bias = 0.05
+spot_range = 2.16513
+spot_attenuation = 0.333
+spot_angle = 58.2538
+spot_angle_attenuation = 0.5

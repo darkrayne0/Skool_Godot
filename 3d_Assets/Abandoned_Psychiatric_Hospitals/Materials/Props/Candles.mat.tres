@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://d1jmpbvqfy80v"]
+
+[ext_resource type="Texture2D" uid="uid://b2ju40vhrkj2d" path="res://Materials/Textures/Props/Candles/Candles_A.tga" id="1_jmhdu"]
+[ext_resource type="Texture2D" uid="uid://o536mh7o1ldk" path="res://Materials/Textures/Props/Candles/Candles_AO.tga" id="2_lwd1v"]
+[ext_resource type="Texture2D" uid="uid://ddekjfs3wr2dq" path="res://Materials/Textures/Props/Candles/Candles_MS.roughness.png" id="3_pk7qg"]
+[ext_resource type="Texture2D" uid="uid://bweg3cait21dk" path="res://Materials/Textures/Props/Candles/Candles_N.tga" id="4_bdv21"]
+
+[resource]
+resource_name = "Candles"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_jmhdu")
+metallic_texture = ExtResource("3_pk7qg")
+roughness_texture = ExtResource("3_pk7qg")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("4_bdv21")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_lwd1v")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

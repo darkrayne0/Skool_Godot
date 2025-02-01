@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://brpdwr17lvgaa"]
+
+[ext_resource type="ArrayMesh" uid="uid://caw5i2ns0sopl" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Certificate_01.Certificate_01.mesh" id="1_pnbfx"]
+[ext_resource type="Material" uid="uid://dj3gc5cnbimh6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Curtain_02.mat.tres" id="2_7dv07"]
+
+[node name="Certificate_01" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 19.4669
+mesh = ExtResource("1_pnbfx")
+surface_material_override/0 = ExtResource("2_7dv07")

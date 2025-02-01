@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxdrs0j7a5ahu"]
+
+[ext_resource type="ArrayMesh" uid="uid://c04cr0tpme0mm" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Ventilation_System_02.Ventilation_System_02.mesh" id="1_m2y87"]
+[ext_resource type="Material" uid="uid://cdi73wsya2kra" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Ventilation_System.mat.tres" id="2_tqgh3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oall7"]
+size = Vector3(2, 0.625082, 0.589898)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ippt2"]
+size = Vector3(0.647975, 0.608547, 1.29947)
+
+[node name="Ventilation_System_02" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 52.0119
+mesh = ExtResource("1_m2y87")
+surface_material_override/0 = ExtResource("2_tqgh3")
+
+[node name="BoxCollider" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.268532, 0.00452089)
+shape = SubResource("BoxShape3D_oall7")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0315313, 0.260265, -0.350265)
+shape = SubResource("BoxShape3D_ippt2")

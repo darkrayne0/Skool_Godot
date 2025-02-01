@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://ovmbyqjcg6fp"]
+
+[ext_resource type="ArrayMesh" uid="uid://dxokgxrs0tj27" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Table_02.Surgical_Table_02_LOD0.mesh" id="1_lbi32"]
+[ext_resource type="Material" uid="uid://du3gq8i4aqspi" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Surgical_Table.mat.tres" id="2_oxbn6"]
+[ext_resource type="ArrayMesh" uid="uid://bcio7nxke0wx7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Table_02.Surgical_Table_02_LOD1.mesh" id="3_n86a5"]
+[ext_resource type="ArrayMesh" uid="uid://d4kbyi4xtjf0b" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Table_02.Surgical_Table_02_LOD2.mesh" id="4_njhq6"]
+[ext_resource type="ArrayMesh" uid="uid://bcie4w7gj3pdq" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Table_02.Surgical_Table_02_LOD3.mesh" id="5_llsgq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jl4k2"]
+size = Vector3(0.787127, 0.849776, 2.13505)
+
+[node name="Surgical_Table_02" type="Node3D"]
+
+[node name="Surgical_Table_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Table_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 3.36486
+mesh = ExtResource("1_lbi32")
+surface_material_override/0 = ExtResource("2_oxbn6")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Surgical_Table_02_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Surgical_Table_02_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017746, 0.418747, 0.00165653)
+shape = SubResource("BoxShape3D_jl4k2")
+
+[node name="Surgical_Table_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Table_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 3.36486
+visibility_range_end = 6.0031
+mesh = ExtResource("3_n86a5")
+surface_material_override/0 = ExtResource("2_oxbn6")
+
+[node name="Surgical_Table_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Table_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 6.0031
+visibility_range_end = 17.7687
+mesh = ExtResource("4_njhq6")
+surface_material_override/0 = ExtResource("2_oxbn6")
+
+[node name="Surgical_Table_02_LOD3" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Table_02_LOD3"]
+gi_mode = 2
+visibility_range_begin = 17.7687
+visibility_range_end = 76.5836
+mesh = ExtResource("5_llsgq")
+surface_material_override/0 = ExtResource("2_oxbn6")

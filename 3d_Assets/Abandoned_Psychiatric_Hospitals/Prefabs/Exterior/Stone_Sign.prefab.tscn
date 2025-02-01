@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://df8o342p4vubt"]
+
+[ext_resource type="ArrayMesh" uid="uid://pp0n4ltcbq5b" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Stone_Sign.Stone_Sign_LOD0.mesh" id="1_7olcv"]
+[ext_resource type="Material" uid="uid://elv6tcl11w5" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Exterior/Stone_Sign.mat.tres" id="2_xlfbl"]
+[ext_resource type="ArrayMesh" uid="uid://b52py8dgqv6qb" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Stone_Sign.Stone_Sign_LOD1.mesh" id="3_kkaby"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1y7lh"]
+size = Vector3(0.892901, 1.38053, 3.9351)
+
+[node name="Stone_Sign" type="Node3D"]
+
+[node name="Stone_Sign_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Stone_Sign_LOD0"]
+gi_mode = 2
+visibility_range_end = 5.85225
+mesh = ExtResource("1_7olcv")
+surface_material_override/0 = ExtResource("2_xlfbl")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Stone_Sign_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stone_Sign_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.12924e-07, 0.690266, 5.96046e-08)
+shape = SubResource("BoxShape3D_1y7lh")
+
+[node name="Stone_Sign_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Stone_Sign_LOD1"]
+gi_mode = 2
+visibility_range_begin = 5.85225
+visibility_range_end = 104.5
+mesh = ExtResource("3_kkaby")
+surface_material_override/0 = ExtResource("2_xlfbl")
+
+[node name="Stone_Sign_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Stone_Sign_LOD2"]
+gi_mode = 2

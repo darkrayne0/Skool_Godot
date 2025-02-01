@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj7wp0glp1804"]
+
+[ext_resource type="ArrayMesh" uid="uid://b6q8ffs3yfs45" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Cross.Cross_LOD0.mesh" id="1_g0csa"]
+[ext_resource type="Material" uid="uid://t2vmkl03rvap" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Shelf.mat.tres" id="2_5lkr1"]
+[ext_resource type="ArrayMesh" uid="uid://cd158javxwdpb" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Cross.Cross_LOD1.mesh" id="3_2x4w1"]
+
+[node name="Cross" type="Node3D"]
+
+[node name="Cross_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Cross_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.35757
+mesh = ExtResource("1_g0csa")
+surface_material_override/0 = ExtResource("2_5lkr1")
+
+[node name="Cross_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Cross_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.35757
+visibility_range_end = 12.8276
+mesh = ExtResource("3_2x4w1")
+surface_material_override/0 = ExtResource("2_5lkr1")

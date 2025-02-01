@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://dhd67jt4x8af5"]
+
+[ext_resource type="ArrayMesh" uid="uid://hft04u4yvlyr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Directors_Desk.Box_01_LOD0.mesh" id="1_wuclw"]
+[ext_resource type="Material" uid="uid://byfeycjuitgsa" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Directors_Desk.mat.tres" id="2_bjpa6"]
+[ext_resource type="ArrayMesh" uid="uid://c1uhq683wbd1x" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Directors_Desk.Box_01_LOD1.mesh" id="3_pmc65"]
+[ext_resource type="ArrayMesh" uid="uid://7ktb8ti843j5" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Directors_Desk.Box_02_LOD0.mesh" id="4_05q1l"]
+[ext_resource type="ArrayMesh" uid="uid://bgonk85knmaqi" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Directors_Desk.Box_02_LOD1.mesh" id="5_blu5q"]
+[ext_resource type="ArrayMesh" uid="uid://d1iy40tpm6wcs" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Directors_Desk.Directors_Desk_LOD0.mesh" id="6_e83j2"]
+[ext_resource type="ArrayMesh" uid="uid://dc22jphog25r4" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Directors_Desk.Directors_Desk_LOD1.mesh" id="7_xrhca"]
+[ext_resource type="ArrayMesh" uid="uid://drtx23vkmmbp2" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Directors_Desk.Directors_Desk_LOD2.mesh" id="8_5o4be"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l3n4t"]
+size = Vector3(0.917619, 0.936311, 2.08342)
+
+[node name="Directors_Desk" type="Node3D"]
+
+[node name="Box_01_LOD0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182132, 0.784535, -0.713638)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Box_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 4.35753
+mesh = ExtResource("1_wuclw")
+surface_material_override/0 = ExtResource("2_bjpa6")
+
+[node name="Box_01_LOD1" type="Node3D" parent="Box_01_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.62939e-08, 7.62939e-08, -7.62939e-08)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Box_01_LOD0/Box_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 4.35753
+visibility_range_end = 11.8782
+mesh = ExtResource("3_pmc65")
+surface_material_override/0 = ExtResource("2_bjpa6")
+
+[node name="Box_02_LOD0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182132, 0.784535, 0.713638)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Box_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 4.35753
+mesh = ExtResource("4_05q1l")
+surface_material_override/0 = ExtResource("2_bjpa6")
+
+[node name="Box_02_LOD1" type="Node3D" parent="Box_02_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-07, 7.62939e-08, 7.62939e-08)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Box_02_LOD0/Box_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 4.35753
+visibility_range_end = 11.8782
+mesh = ExtResource("5_blu5q")
+surface_material_override/0 = ExtResource("2_bjpa6")
+
+[node name="Directors_Desk_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Directors_Desk_LOD0"]
+gi_mode = 2
+visibility_range_end = 4.35753
+mesh = ExtResource("6_e83j2")
+surface_material_override/0 = ExtResource("2_bjpa6")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Directors_Desk_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Directors_Desk_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0506282, 0.468155, 0)
+shape = SubResource("BoxShape3D_l3n4t")
+
+[node name="Directors_Desk_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Directors_Desk_LOD1"]
+gi_mode = 2
+visibility_range_begin = 4.35753
+visibility_range_end = 11.8782
+mesh = ExtResource("7_xrhca")
+surface_material_override/0 = ExtResource("2_bjpa6")
+
+[node name="Directors_Desk_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Directors_Desk_LOD2"]
+gi_mode = 2
+visibility_range_begin = 11.8782
+visibility_range_end = 70.1864
+mesh = ExtResource("8_5o4be")
+surface_material_override/0 = ExtResource("2_bjpa6")

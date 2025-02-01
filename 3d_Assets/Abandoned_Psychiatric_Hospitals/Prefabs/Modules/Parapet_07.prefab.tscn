@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dx7cl1cow5wvb"]
+
+[ext_resource type="ArrayMesh" uid="uid://d2o2xuxtgyg12" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Parapet_07.Parapet_07_LOD0.mesh" id="1_qhixk"]
+[ext_resource type="Material" uid="uid://dqh41ra7gvxcf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Parapet.mat.tres" id="2_dknge"]
+[ext_resource type="ArrayMesh" uid="uid://bcqt6b3uk8ddj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Parapet_07.Parapet_07_LOD1.mesh" id="3_pmnmo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_utyhw"]
+size = Vector3(4.55785, 1, 0.88644)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_auo6n"]
+size = Vector3(0.799146, 1, 4.55785)
+
+[node name="Parapet_07" type="Node3D"]
+
+[node name="Parapet_07_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Parapet_07_LOD0"]
+gi_mode = 2
+visibility_range_end = 16.9884
+mesh = ExtResource("1_qhixk")
+surface_material_override/0 = ExtResource("2_dknge")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Parapet_07_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parapet_07_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.72108, 0.5, -0.114628)
+shape = SubResource("BoxShape3D_utyhw")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Parapet_07_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parapet_07_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.158276, 0.5, 1.72108)
+shape = SubResource("BoxShape3D_auo6n")
+
+[node name="Parapet_07_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Parapet_07_LOD1"]
+gi_mode = 2
+visibility_range_begin = 16.9884
+visibility_range_end = 298.177
+mesh = ExtResource("3_pmnmo")
+surface_material_override/0 = ExtResource("2_dknge")

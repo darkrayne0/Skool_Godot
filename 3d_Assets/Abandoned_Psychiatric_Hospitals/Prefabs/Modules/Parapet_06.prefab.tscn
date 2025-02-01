@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4qfs8m1rymf7"]
+
+[ext_resource type="ArrayMesh" uid="uid://brxh8pl7rfomr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Parapet_06.Parapet_06_LOD0.mesh" id="1_2p4nw"]
+[ext_resource type="Material" uid="uid://dqh41ra7gvxcf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Parapet.mat.tres" id="2_2c0pg"]
+[ext_resource type="Material" uid="uid://cdh4x13sgj2em" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_Brick.mat.tres" id="3_eijkd"]
+[ext_resource type="ArrayMesh" uid="uid://benov53d68hf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Parapet_06.Parapet_06_LOD1.mesh" id="4_igjpo"]
+[ext_resource type="ArrayMesh" uid="uid://vnrl6oedifon" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Parapet_06.Parapet_06_LOD2.mesh" id="5_drt2k"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p1mlc"]
+points = PackedVector3Array(2.65, 1.41097, 4.38847, 2.65, 1.29718, 4.38847, 2.65, 1.49978, 4.29996, -0.389325, 1.41097, 4.38847, -0.389325, 1.29718, 4.38847, 2.65, 0.999945, 4.29996, 0.499624, 2.83526, -0.000858784, 0.499922, 1.61135, 3.9992, -0.300073, 1.49978, 4.29996, 2.65, 1.49978, -4.30082, -0.298883, 1.61135, 3.9992, -0.298883, 2.83526, -0.000858784, -0.389325, 1.41097, -4.38932, -0.000186652, 0, 3.9992, -0.300073, 0.999945, 4.29996, -0.389325, 1.29718, -4.38932, 2.65, 0, 3.9992, 0.499922, 1.61135, -4.00006, 2.65, 1.41097, -4.38932, -0.300073, 1.49978, -4.30082, -0.298883, 1.61135, -4.00006, -0.000186652, 0, -4.00006, 2.65, 1.29718, -4.38932, -0.300073, 0.999945, -4.30082, 2.65, 0, -4.00006, 2.65, 0.999945, -4.30082)
+
+[node name="Parapet_06" type="Node3D"]
+
+[node name="Parapet_06_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Parapet_06_LOD0"]
+gi_mode = 2
+visibility_range_end = 18.6306
+mesh = ExtResource("1_2p4nw")
+surface_material_override/0 = ExtResource("2_2c0pg")
+surface_material_override/1 = ExtResource("3_eijkd")
+
+[node name="MeshCollider" type="StaticBody3D" parent="Parapet_06_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parapet_06_LOD0/MeshCollider"]
+shape = SubResource("ConvexPolygonShape3D_p1mlc")
+
+[node name="Parapet_06_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Parapet_06_LOD1"]
+gi_mode = 2
+visibility_range_begin = 18.6306
+visibility_range_end = 60.4447
+mesh = ExtResource("4_igjpo")
+surface_material_override/0 = ExtResource("2_2c0pg")
+surface_material_override/1 = ExtResource("3_eijkd")
+
+[node name="Parapet_06_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Parapet_06_LOD2"]
+gi_mode = 2
+visibility_range_begin = 60.4447
+visibility_range_end = 476.139
+mesh = ExtResource("5_drt2k")
+surface_material_override/0 = ExtResource("2_2c0pg")
+surface_material_override/1 = ExtResource("3_eijkd")

@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckjdbcjfysak5"]
+
+[ext_resource type="ArrayMesh" uid="uid://ouam52dgksmw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Light_Bulb.Light_Bulb_LOD0.mesh" id="1_xkkvc"]
+[ext_resource type="Material" uid="uid://bjacwhcm48kom" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Flashlight.mat.tres" id="2_4r5et"]
+[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_xew4q"]
+[ext_resource type="ArrayMesh" uid="uid://brpw1bm186yec" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Light_Bulb.Light_Bulb_LOD1.mesh" id="4_whm0s"]
+[ext_resource type="ArrayMesh" uid="uid://c4tgiq714dqh" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Light_Bulb.Light_Bulb_LOD2.mesh" id="5_6ot1i"]
+
+[node name="Light_Bulb" type="Node3D"]
+
+[node name="Light_Bulb_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Light_Bulb_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.885983
+mesh = ExtResource("1_xkkvc")
+surface_material_override/0 = ExtResource("2_4r5et")
+surface_material_override/1 = ExtResource("3_xew4q")
+
+[node name="Light_Bulb_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Light_Bulb_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.885983
+visibility_range_end = 2.62424
+mesh = ExtResource("4_whm0s")
+surface_material_override/0 = ExtResource("2_4r5et")
+surface_material_override/1 = ExtResource("3_xew4q")
+
+[node name="Light_Bulb_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Light_Bulb_LOD2"]
+gi_mode = 2
+visibility_range_begin = 2.62424
+visibility_range_end = 20.8693
+mesh = ExtResource("5_6ot1i")
+surface_material_override/0 = ExtResource("2_4r5et")
+surface_material_override/1 = ExtResource("3_xew4q")
+
+[node name="Point Light" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.185)
+
+[node name="Light" type="OmniLight3D" parent="Point Light"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+light_color = Color(0.90566, 0.166607, 0.166607, 1)
+light_energy = 3.0
+shadow_enabled = true
+shadow_bias = 0.05

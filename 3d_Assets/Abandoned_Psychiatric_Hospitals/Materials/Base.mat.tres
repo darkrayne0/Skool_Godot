@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dyee8pxlyrgv6"]
+
+[resource]
+resource_name = "Base"
+depth_draw_mode = 1
+albedo_color = Color(0.51958, 0.792453, 0.778532, 1)
+metallic = 0.557
+roughness = 0.0
+uv1_scale = Vector3(1, 1, 0)

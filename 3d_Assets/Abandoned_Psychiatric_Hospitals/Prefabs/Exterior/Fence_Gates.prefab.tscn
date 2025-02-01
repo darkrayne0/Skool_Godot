@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://ck4vvcg0gee45"]
+
+[ext_resource type="ArrayMesh" uid="uid://c8siqq87uhuds" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Fence_Gates.Fence_Gates_LOD0.mesh" id="1_vshii"]
+[ext_resource type="Material" uid="uid://w7ms05sj6ne8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Exterior/Fence.mat.tres" id="2_h4thh"]
+[ext_resource type="ArrayMesh" uid="uid://dsyul2ymyqs2m" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Fence_Gates.Fence_Gates_LOD1.mesh" id="3_u2srk"]
+[ext_resource type="ArrayMesh" uid="uid://bjsucd04vqaex" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Fence_Gates.Fence_Gates_LOD2.mesh" id="4_7mp48"]
+[ext_resource type="ArrayMesh" uid="uid://xuh0v720pk7v" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Fence_Gates.Fence_Post_LOD0.mesh" id="5_hvyfb"]
+[ext_resource type="ArrayMesh" uid="uid://67aqfe5vy5si" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Fence_Gates.Fence_Post_LOD1.mesh" id="6_6s6cw"]
+[ext_resource type="ArrayMesh" uid="uid://p6y3swknsae" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Fence_Gates.Fence_Post_LOD2.mesh" id="7_6a16t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_icnhh"]
+size = Vector3(0.20339, 2.18776, 4.07484)
+
+[node name="Fence_Gates" type="Node3D"]
+
+[node name="Fence_Gates_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Fence_Gates_LOD0"]
+gi_mode = 2
+visibility_range_end = 6.68909
+mesh = ExtResource("1_vshii")
+surface_material_override/0 = ExtResource("2_h4thh")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Fence_Gates_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence_Gates_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0276128, 1.09529, 2.03551)
+shape = SubResource("BoxShape3D_icnhh")
+
+[node name="Fence_Gates_LOD1" type="Node3D" parent="Fence_Gates_LOD0"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Fence_Gates_LOD0/Fence_Gates_LOD1"]
+gi_mode = 2
+visibility_range_begin = 6.68909
+visibility_range_end = 21.3799
+mesh = ExtResource("3_u2srk")
+surface_material_override/0 = ExtResource("2_h4thh")
+
+[node name="Fence_Gates_LOD2" type="Node3D" parent="Fence_Gates_LOD0"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Fence_Gates_LOD0/Fence_Gates_LOD2"]
+gi_mode = 2
+visibility_range_begin = 21.3799
+visibility_range_end = 148.723
+mesh = ExtResource("4_7mp48")
+surface_material_override/0 = ExtResource("2_h4thh")
+
+[node name="Fence_Post_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Fence_Post_LOD0"]
+gi_mode = 2
+visibility_range_end = 6.68909
+mesh = ExtResource("5_hvyfb")
+surface_material_override/0 = ExtResource("2_h4thh")
+
+[node name="Fence_Post_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Fence_Post_LOD1"]
+gi_mode = 2
+visibility_range_begin = 6.68909
+visibility_range_end = 21.3799
+mesh = ExtResource("6_6s6cw")
+surface_material_override/0 = ExtResource("2_h4thh")
+
+[node name="Fence_Post_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Fence_Post_LOD2"]
+gi_mode = 2
+visibility_range_begin = 21.3799
+visibility_range_end = 148.723
+mesh = ExtResource("7_6a16t")
+surface_material_override/0 = ExtResource("2_h4thh")

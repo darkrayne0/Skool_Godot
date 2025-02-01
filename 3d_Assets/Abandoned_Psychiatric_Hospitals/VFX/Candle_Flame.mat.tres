@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dhgugcwin435"]
+
+[ext_resource type="Texture2D" uid="uid://dfxl237re5xfp" path="res://Materials/Textures/Noise.tga" id="1_l6g44"]
+
+[resource]
+resource_name = "Candle_Flame"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_l6g44")
+roughness = 0.5
+uv1_scale = Vector3(1, 1, 0)

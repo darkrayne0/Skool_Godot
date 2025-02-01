@@ -1,0 +1,109 @@
+[gd_scene load_steps=15 format=3 uid="uid://fm4hk7lav50t"]
+
+[ext_resource type="ArrayMesh" uid="uid://ddg2bvjvvqkhs" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Interior_Wall_Door_01.Interior_Door_01_LOD0.mesh" id="1_pjjpy"]
+[ext_resource type="Material" uid="uid://cf72i76w1evo6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Interior_Door.mat.tres" id="2_s0ll0"]
+[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_yw34d"]
+[ext_resource type="ArrayMesh" uid="uid://xnq1c7pl5quu" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Interior_Wall_Door_01.Interior_Door_01_LOD1.mesh" id="4_sxw5t"]
+[ext_resource type="ArrayMesh" uid="uid://dbhh37vgvw2v0" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Interior_Wall_Door_01.Interior_Door_01_LOD2.mesh" id="5_w7c1x"]
+[ext_resource type="ArrayMesh" uid="uid://dw5qgxrhqxxts" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Interior_Wall_Door_01.Interior_Wall_Door_01_LOD0.mesh" id="6_2unfd"]
+[ext_resource type="Material" uid="uid://wjxx7wdx8pgo" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_01.mat.tres" id="7_ovx22"]
+[ext_resource type="Material" uid="uid://ddbepkqjucal7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_02.mat.tres" id="8_50je7"]
+[ext_resource type="ArrayMesh" uid="uid://dstw43nsdumhh" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Interior_Wall_Door_01.Interior_Wall_Door_01_LOD1.mesh" id="9_gbc1x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_owlec"]
+size = Vector3(2.45195, 2.20416, 1.72498)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mqthp"]
+size = Vector3(0.165611, 2.20416, 1.15061)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yu4sp"]
+size = Vector3(0.313651, 4.0043, 1.35948)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a1jpg"]
+size = Vector3(0.313651, 4.0043, 1.39765)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x0x5y"]
+size = Vector3(0.313651, 1.74006, 4)
+
+[node name="Interior_Wall_Door_01" type="Node3D"]
+
+[node name="Interior_Door_01_LOD0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0407085, 0.0265582, 1.42476)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Interior_Door_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 9.57149
+mesh = ExtResource("1_pjjpy")
+surface_material_override/0 = ExtResource("2_s0ll0")
+surface_material_override/1 = ExtResource("3_yw34d")
+
+[node name="BoxCollider" type="Area3D" parent="Interior_Door_01_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interior_Door_01_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0782745, 1.10208, 0.58926)
+shape = SubResource("BoxShape3D_owlec")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Interior_Door_01_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interior_Door_01_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0200559, 1.10208, 0.567801)
+shape = SubResource("BoxShape3D_mqthp")
+
+[node name="Interior_Door_01_LOD1" type="Node3D" parent="Interior_Door_01_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.52588e-07)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Interior_Door_01_LOD0/Interior_Door_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 9.57149
+visibility_range_end = 32.8141
+mesh = ExtResource("4_sxw5t")
+surface_material_override/0 = ExtResource("2_s0ll0")
+surface_material_override/1 = ExtResource("3_yw34d")
+
+[node name="Interior_Door_01_LOD2" type="Node3D" parent="Interior_Door_01_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.52588e-07)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Interior_Door_01_LOD0/Interior_Door_01_LOD2"]
+gi_mode = 2
+visibility_range_begin = 32.8141
+visibility_range_end = 230.725
+mesh = ExtResource("5_w7c1x")
+surface_material_override/0 = ExtResource("2_s0ll0")
+surface_material_override/1 = ExtResource("3_yw34d")
+
+[node name="Interior_Wall_Door_01_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Interior_Wall_Door_01_LOD0"]
+visibility_range_end = 9.57149
+mesh = ExtResource("6_2unfd")
+surface_material_override/0 = ExtResource("7_ovx22")
+surface_material_override/1 = ExtResource("8_50je7")
+surface_material_override/2 = ExtResource("2_s0ll0")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Interior_Wall_Door_01_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interior_Wall_Door_01_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0971041, 1.99785, 0.67974)
+shape = SubResource("BoxShape3D_yu4sp")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Interior_Wall_Door_01_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interior_Wall_Door_01_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0971041, 1.99785, 3.30118)
+shape = SubResource("BoxShape3D_a1jpg")
+
+[node name="BoxCollider3" type="StaticBody3D" parent="Interior_Wall_Door_01_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interior_Wall_Door_01_LOD0/BoxCollider3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0971041, 3.12997, 2)
+shape = SubResource("BoxShape3D_x0x5y")
+
+[node name="Interior_Wall_Door_01_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Interior_Wall_Door_01_LOD1"]
+visibility_range_begin = 32.8141
+visibility_range_end = 230.725
+mesh = ExtResource("9_gbc1x")
+surface_material_override/0 = ExtResource("7_ovx22")
+surface_material_override/1 = ExtResource("2_s0ll0")
+surface_material_override/2 = ExtResource("8_50je7")

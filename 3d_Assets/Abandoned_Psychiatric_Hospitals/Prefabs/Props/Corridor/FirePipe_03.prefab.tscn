@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://c4bckinu80431"]
+
+[ext_resource type="ArrayMesh" uid="uid://dykeeyeqrlvyw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_03.FirePipe_03_LOD0.mesh" id="1_3a5xv"]
+[ext_resource type="Material" uid="uid://cdi73wsya2kra" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Ventilation_System.mat.tres" id="2_qkswu"]
+[ext_resource type="ArrayMesh" uid="uid://ctch1bg33e6hv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_03.FirePipe_03_LOD1.mesh" id="3_tjbnd"]
+[ext_resource type="ArrayMesh" uid="uid://d4i8k78j4b7ag" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_03.FirePipe_03_LOD2.mesh" id="4_fui46"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_43gw6"]
+size = Vector3(2, 0.157182, 0.130204)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cfro0"]
+size = Vector3(0.165741, 0.139416, 1.05895)
+
+[node name="FirePipe_03" type="Node3D"]
+
+[node name="FirePipe_03_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="FirePipe_03_LOD0"]
+gi_mode = 2
+visibility_range_end = 3.43196
+mesh = ExtResource("1_3a5xv")
+surface_material_override/0 = ExtResource("2_qkswu")
+
+[node name="BoxCollider" type="StaticBody3D" parent="FirePipe_03_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FirePipe_03_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0050877, 0.00614893)
+shape = SubResource("BoxShape3D_43gw6")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="FirePipe_03_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FirePipe_03_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00576693, 0.00473788, 0.470523)
+shape = SubResource("BoxShape3D_cfro0")
+
+[node name="FirePipe_03_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="FirePipe_03_LOD1"]
+gi_mode = 2
+visibility_range_begin = 3.43196
+visibility_range_end = 9.53875
+mesh = ExtResource("3_tjbnd")
+surface_material_override/0 = ExtResource("2_qkswu")
+
+[node name="FirePipe_03_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="FirePipe_03_LOD2"]
+gi_mode = 2
+visibility_range_begin = 9.53875
+visibility_range_end = 32.7781
+mesh = ExtResource("4_fui46")
+surface_material_override/0 = ExtResource("2_qkswu")

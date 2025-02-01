@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cuwh2in3635jf"]
+
+[ext_resource type="ArrayMesh" uid="uid://ra4p76hpbq4p" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Electric_Box_03.Electric_Box_03_LOD0.mesh" id="1_4qk65"]
+[ext_resource type="Material" uid="uid://doms730m8ajv7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Electric_Box.mat.tres" id="2_wbgvg"]
+[ext_resource type="ArrayMesh" uid="uid://ds5nj33jn0qyj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Electric_Box_03.Electric_Box_03_LOD1.mesh" id="3_04om7"]
+[ext_resource type="ArrayMesh" uid="uid://cxtrsdle5hn1f" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Electric_Box_03.Electric_Box_03_LOD2.mesh" id="4_2882e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_obuhd"]
+size = Vector3(1.24753, 1.12865, 3.5264)
+
+[node name="Electric_Box_03" type="Node3D"]
+
+[node name="Electric_Box_03_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Electric_Box_03_LOD0"]
+gi_mode = 2
+visibility_range_end = 6.92858
+mesh = ExtResource("1_4qk65")
+surface_material_override/0 = ExtResource("2_wbgvg")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Electric_Box_03_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Electric_Box_03_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.615901, 0.55582, -0.0012157)
+shape = SubResource("BoxShape3D_obuhd")
+
+[node name="Electric_Box_03_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Electric_Box_03_LOD1"]
+gi_mode = 2
+visibility_range_begin = 6.92858
+visibility_range_end = 17.6566
+mesh = ExtResource("3_04om7")
+surface_material_override/0 = ExtResource("2_wbgvg")
+
+[node name="Electric_Box_03_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Electric_Box_03_LOD2"]
+gi_mode = 2
+visibility_range_begin = 17.6566
+visibility_range_end = 89.8604
+mesh = ExtResource("4_2882e")
+surface_material_override/0 = ExtResource("2_wbgvg")

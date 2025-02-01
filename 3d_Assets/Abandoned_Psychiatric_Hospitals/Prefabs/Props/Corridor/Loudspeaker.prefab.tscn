@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch7468tcv2eyd"]
+
+[ext_resource type="ArrayMesh" uid="uid://p1kt7h7s1dq0" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Loudspeaker.Loudspeaker.mesh" id="1_7q2qp"]
+[ext_resource type="Material" uid="uid://pgnpiv4sri5h" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Urn.mat.tres" id="2_b6at4"]
+
+[node name="Loudspeaker" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 27.662
+mesh = ExtResource("1_7q2qp")
+surface_material_override/0 = ExtResource("2_b6at4")

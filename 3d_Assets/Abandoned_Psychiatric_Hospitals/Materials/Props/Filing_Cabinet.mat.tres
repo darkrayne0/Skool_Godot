@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://bchxfwm7ybcx7"]
+
+[ext_resource type="Texture2D" uid="uid://dmtvuecx51hte" path="res://Materials/Textures/Props/Filing_Cabinet/Filing_Cabinet_A.tga" id="1_0pyej"]
+[ext_resource type="Texture2D" uid="uid://c2qr7jploxioc" path="res://Materials/Textures/Props/Filing_Cabinet/Filing_Cabinet_AO.tga" id="2_pnyr0"]
+[ext_resource type="Texture2D" uid="uid://2r3bevnhv06d" path="res://Materials/Textures/Props/Filing_Cabinet/Filing_Cabinet_MS.roughness.png" id="3_aaodr"]
+[ext_resource type="Texture2D" uid="uid://dsmkc4o0k0wlh" path="res://Materials/Textures/Props/Filing_Cabinet/Filing_Cabinet_N.tga" id="4_28ffo"]
+
+[resource]
+resource_name = "Filing_Cabinet"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_0pyej")
+metallic_texture = ExtResource("3_aaodr")
+roughness_texture = ExtResource("3_aaodr")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("4_28ffo")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_pnyr0")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

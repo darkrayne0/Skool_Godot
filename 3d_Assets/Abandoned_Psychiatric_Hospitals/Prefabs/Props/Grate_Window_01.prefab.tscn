@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3a4lkr5n1jik"]
+
+[ext_resource type="ArrayMesh" uid="uid://ceuwmqpf8e6j7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Grate_Window_01.Grate_Window_LOD0.mesh" id="1_aiblh"]
+[ext_resource type="Material" uid="uid://pfc0gq8vcsv8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Curtain_03.mat.tres" id="2_mxaxh"]
+[ext_resource type="ArrayMesh" uid="uid://04ttxjyatk2f" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Grate_Window_01.Grate_Window_LOD1.mesh" id="3_m2ln8"]
+[ext_resource type="ArrayMesh" uid="uid://cdkwhp7wj5xse" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Grate_Window_01.Grate_Window_LOD2.mesh" id="4_wscu5"]
+
+[node name="Grate_Window_01" type="Node3D"]
+
+[node name="Grate_Window_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Grate_Window_LOD0"]
+gi_mode = 2
+visibility_range_end = 2.78725
+mesh = ExtResource("1_aiblh")
+surface_material_override/0 = ExtResource("2_mxaxh")
+
+[node name="Grate_Window_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Grate_Window_LOD1"]
+gi_mode = 2
+visibility_range_begin = 2.78725
+visibility_range_end = 6.61699
+mesh = ExtResource("3_m2ln8")
+surface_material_override/0 = ExtResource("2_mxaxh")
+
+[node name="Grate_Window_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Grate_Window_LOD2"]
+gi_mode = 2
+visibility_range_begin = 6.61699
+visibility_range_end = 69.9516
+mesh = ExtResource("4_wscu5")
+surface_material_override/0 = ExtResource("2_mxaxh")

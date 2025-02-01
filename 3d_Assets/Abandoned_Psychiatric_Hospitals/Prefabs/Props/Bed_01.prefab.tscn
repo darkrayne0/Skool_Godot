@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://1dvfdbla5weg"]
+
+[ext_resource type="ArrayMesh" uid="uid://bxgmcvkfqpvau" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bed_01.Bed_LOD0.mesh" id="1_fm14o"]
+[ext_resource type="Material" uid="uid://cgv2agchnab2s" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Bed.mat.tres" id="2_crsdv"]
+[ext_resource type="ArrayMesh" uid="uid://duf7u0kfucher" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bed_01.Bed_LOD1.mesh" id="3_4sjkv"]
+[ext_resource type="ArrayMesh" uid="uid://b6la8a47pfoal" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bed_01.Bed_LOD2.mesh" id="4_umgsw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qxitr"]
+size = Vector3(2.05454, 0.600526, 0.98659)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_84q5h"]
+size = Vector3(0.0899956, 1.10751, 0.98659)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_di782"]
+size = Vector3(0.0590425, 0.832158, 0.98659)
+
+[node name="Bed_01" type="Node3D"]
+
+[node name="Bed_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bed_LOD0"]
+gi_mode = 2
+visibility_range_end = 4.45091
+mesh = ExtResource("1_fm14o")
+surface_material_override/0 = ExtResource("2_crsdv")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Bed_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bed_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000152111, 0.300039, 5.96046e-08)
+shape = SubResource("BoxShape3D_qxitr")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Bed_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bed_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98212, 0.553531, 5.96046e-08)
+shape = SubResource("BoxShape3D_84q5h")
+
+[node name="BoxCollider3" type="StaticBody3D" parent="Bed_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bed_LOD0/BoxCollider3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.997901, 0.415855, 5.96046e-08)
+shape = SubResource("BoxShape3D_di782")
+
+[node name="Bed_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bed_LOD1"]
+gi_mode = 2
+visibility_range_begin = 4.45091
+visibility_range_end = 12.7066
+mesh = ExtResource("3_4sjkv")
+surface_material_override/0 = ExtResource("2_crsdv")
+
+[node name="Bed_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bed_LOD2"]
+gi_mode = 2
+visibility_range_begin = 12.7066
+visibility_range_end = 54.9288
+mesh = ExtResource("4_umgsw")
+surface_material_override/0 = ExtResource("2_crsdv")

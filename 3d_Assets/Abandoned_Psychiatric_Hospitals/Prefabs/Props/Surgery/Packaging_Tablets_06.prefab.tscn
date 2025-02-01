@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://655friwwlras"]
+
+[ext_resource type="ArrayMesh" uid="uid://bt63t66dt2357" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Packaging_Tablets_06.Packaging_Tablets_06_LOD0.mesh" id="1_uhbtx"]
+[ext_resource type="Material" uid="uid://cj31wsawkfpq1" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Pills.mat.tres" id="2_qp873"]
+[ext_resource type="ArrayMesh" uid="uid://d3ytrjm03vtp3" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Packaging_Tablets_06.Packaging_Tablets_06_LOD1.mesh" id="3_3w4me"]
+[ext_resource type="ArrayMesh" uid="uid://ddx47dfm5rlii" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Packaging_Tablets_06.Packaging_Tablets_06_LOD2.mesh" id="4_hbofx"]
+
+[node name="Packaging_Tablets_06" type="Node3D"]
+
+[node name="Packaging_Tablets_06_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Packaging_Tablets_06_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.659508
+mesh = ExtResource("1_uhbtx")
+surface_material_override/0 = ExtResource("2_qp873")
+
+[node name="Packaging_Tablets_06_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Packaging_Tablets_06_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.659508
+visibility_range_end = 2.69738
+mesh = ExtResource("3_3w4me")
+surface_material_override/0 = ExtResource("2_qp873")
+
+[node name="Packaging_Tablets_06_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Packaging_Tablets_06_LOD2"]
+gi_mode = 2
+visibility_range_begin = 2.69738
+visibility_range_end = 14.2838
+mesh = ExtResource("4_hbofx")
+surface_material_override/0 = ExtResource("2_qp873")

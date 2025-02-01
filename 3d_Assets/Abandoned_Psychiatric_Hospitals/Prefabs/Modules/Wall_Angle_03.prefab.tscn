@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://clui56087qbw4"]
+
+[ext_resource type="ArrayMesh" uid="uid://1pjpf7b6vv6j" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Wall_Angle_03.Wall_Angle_03.mesh" id="1_dwppc"]
+[ext_resource type="Material" uid="uid://cdh4x13sgj2em" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_Brick.mat.tres" id="2_e5upl"]
+[ext_resource type="Material" uid="uid://wjxx7wdx8pgo" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_01.mat.tres" id="3_6qi6e"]
+[ext_resource type="Material" uid="uid://dqh41ra7gvxcf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Parapet.mat.tres" id="4_yxjcv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e4nwk"]
+size = Vector3(0.626126, 4.18762, 2.11928)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d3dt1"]
+size = Vector3(2.11928, 4.18762, 0.632712)
+
+[node name="Wall_Angle_03" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 257.365
+mesh = ExtResource("1_dwppc")
+surface_material_override/0 = ExtResource("2_e5upl")
+surface_material_override/1 = ExtResource("3_6qi6e")
+surface_material_override/2 = ExtResource("4_yxjcv")
+
+[node name="BoxCollider" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.193784, 1.90619, -0.940361)
+shape = SubResource("BoxShape3D_e4nwk")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.940361, 1.90619, -0.197078)
+shape = SubResource("BoxShape3D_d3dt1")

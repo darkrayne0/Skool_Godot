@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://elv6tcl11w5"]
+
+[ext_resource type="Texture2D" uid="uid://c0tqho6w4frtw" path="res://Materials/Textures/Exterior/Stone_Sign/Stone_Sign_A.tga" id="1_oe8y4"]
+[ext_resource type="Texture2D" uid="uid://b3wyy07w6my2l" path="res://Materials/Textures/Exterior/Stone_Sign/Stone_Sign_AO.tga" id="2_06hua"]
+[ext_resource type="Texture2D" uid="uid://0kikjdia8cwr" path="res://Materials/Textures/Exterior/Stone_Sign/Stone_Sign_MS.roughness.png" id="3_twovg"]
+[ext_resource type="Texture2D" uid="uid://dym7fe1pwmq8p" path="res://Materials/Textures/Exterior/Stone_Sign/Stone_Sign_N.tga" id="4_e7xj1"]
+
+[resource]
+resource_name = "Stone_Sign"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_oe8y4")
+metallic_texture = ExtResource("3_twovg")
+roughness_texture = ExtResource("3_twovg")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("4_e7xj1")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_06hua")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

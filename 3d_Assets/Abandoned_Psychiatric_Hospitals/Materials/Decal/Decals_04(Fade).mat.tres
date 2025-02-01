@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://3ai410kbfysb"]
+
+[ext_resource type="Texture2D" uid="uid://6qsvt5s27hjq" path="res://Materials/Textures/Decal/Decals_04/Decals_04_A.tga" id="1_r3o55"]
+[ext_resource type="Texture2D" uid="uid://dx5hjwp6jaae8" path="res://Materials/Textures/Decal/Decals_04/Decals_04_N.tga" id="2_h5lh6"]
+
+[resource]
+resource_name = "Decals_04(Fade)"
+transparency = 2
+alpha_scissor_threshold = 0.065
+alpha_antialiasing_mode = 0
+depth_draw_mode = 1
+albedo_color = Color(0.641509, 0.641509, 0.641509, 1)
+albedo_texture = ExtResource("1_r3o55")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("2_h5lh6")
+uv1_scale = Vector3(1, 1, 0)

@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://bbm72eflrxqgs"]
+
+[ext_resource type="Texture2D" uid="uid://hya44wcs3id5" path="res://Materials/Textures/Vegetation/Maple/Maple_02_Bark_A.tga" id="1_hemv7"]
+[ext_resource type="Texture2D" uid="uid://cit73hng6m7pt" path="res://Materials/Textures/Vegetation/Maple/Maple_02_Bark_O.tga" id="2_aueyr"]
+[ext_resource type="Texture2D" uid="uid://ceyasbv5odw7c" path="res://Materials/Textures/Vegetation/Maple/Maple_02_Bark_MS.roughness.png" id="3_7p2oy"]
+[ext_resource type="Texture2D" uid="uid://ck4v22ocohdq0" path="res://Materials/Textures/Vegetation/Maple/Maple_02_Bark_N.tga" id="4_ndgwj"]
+
+[resource]
+resource_name = "Maple_02_Bark"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_hemv7")
+metallic_texture = ExtResource("3_7p2oy")
+roughness_texture = ExtResource("3_7p2oy")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("4_ndgwj")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_aueyr")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

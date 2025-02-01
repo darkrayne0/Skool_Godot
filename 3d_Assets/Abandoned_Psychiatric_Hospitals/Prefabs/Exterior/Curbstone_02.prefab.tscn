@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://nry523pivpi7"]
+
+[ext_resource type="ArrayMesh" uid="uid://u5oiqoy7md8r" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Curbstone_02.Curbstone_02_LOD0.mesh" id="1_r6hql"]
+[ext_resource type="Material" uid="uid://c50v166hp80iy" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Exterior/Street_Lamp.mat.tres" id="2_qvuw7"]
+[ext_resource type="ArrayMesh" uid="uid://ca2ywcu02vcv2" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Curbstone_02.Curbstone_02_LOD1.mesh" id="3_noiai"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lkdhk"]
+size = Vector3(1, 0.152714, 0.158009)
+
+[node name="Curbstone_02" type="Node3D"]
+
+[node name="Curbstone_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Curbstone_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 3.7662
+mesh = ExtResource("1_r6hql")
+surface_material_override/0 = ExtResource("2_qvuw7")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Curbstone_02_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Curbstone_02_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.0763569, 0)
+shape = SubResource("BoxShape3D_lkdhk")
+
+[node name="Curbstone_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Curbstone_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 3.7662
+visibility_range_end = 17.5244
+mesh = ExtResource("3_noiai")
+surface_material_override/0 = ExtResource("2_qvuw7")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://slxtlgxmhiba"]
+
+[ext_resource type="ArrayMesh" uid="uid://dbuvdibwnxok" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Sign.Sign.mesh" id="1_yxa4b"]
+[ext_resource type="Material" uid="uid://w7ms05sj6ne8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Exterior/Fence.mat.tres" id="2_6hufx"]
+
+[node name="Sign" type="Node3D"]
+
+[node name="Sign" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Sign"]
+gi_mode = 2
+visibility_range_end = 20.8177
+mesh = ExtResource("1_yxa4b")
+surface_material_override/0 = ExtResource("2_6hufx")

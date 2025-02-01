@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg0whdf0l5376"]
+
+[ext_resource type="ArrayMesh" uid="uid://dklngaup67xfn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Decals/extracted/Decals_16.Decals_16.mesh" id="1_hbj5g"]
+[ext_resource type="Material" uid="uid://djtufyhd3g5iw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Decal/Decals_03.mat.tres" id="2_m8dj3"]
+
+[node name="Decals_16" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 89.0913
+mesh = ExtResource("1_hbj5g")
+surface_material_override/0 = ExtResource("2_m8dj3")

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://c16djtjgiqrxp"]
+
+[ext_resource type="ArrayMesh" uid="uid://d0mdo6lqf47oj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Devices_01.Surgical_Devices_01_LOD0.mesh" id="1_ko03c"]
+[ext_resource type="Material" uid="uid://cyxi8ergbqjn5" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Surgical_Devices.mat.tres" id="2_s6sfn"]
+[ext_resource type="ArrayMesh" uid="uid://debd2f20yv75e" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Devices_01.Surgical_Devices_01_LOD1.mesh" id="3_0oisi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wrypj"]
+size = Vector3(0.414191, 0.240812, 0.502426)
+
+[node name="Surgical_Devices_01" type="Node3D"]
+
+[node name="Surgical_Devices_01_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Devices_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 2.46437
+mesh = ExtResource("1_ko03c")
+surface_material_override/0 = ExtResource("2_s6sfn")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Surgical_Devices_01_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Surgical_Devices_01_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.128838, 0.119366, 0)
+shape = SubResource("BoxShape3D_wrypj")
+
+[node name="Surgical_Devices_01_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Devices_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 2.46437
+visibility_range_end = 33.1624
+mesh = ExtResource("3_0oisi")
+surface_material_override/0 = ExtResource("2_s6sfn")

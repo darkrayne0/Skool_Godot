@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv8q3ewprmxwo"]
+
+[ext_resource type="ArrayMesh" uid="uid://cfglgaxdak425" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_04.FirePipe_04_LOD0.mesh" id="1_bb21y"]
+[ext_resource type="Material" uid="uid://cdi73wsya2kra" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Ventilation_System.mat.tres" id="2_i1r16"]
+[ext_resource type="ArrayMesh" uid="uid://df28t0lgw6rpa" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_04.FirePipe_04_LOD1.mesh" id="3_k56mr"]
+
+[node name="FirePipe_04" type="Node3D"]
+
+[node name="FirePipe_04_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="FirePipe_04_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.64331
+mesh = ExtResource("1_bb21y")
+surface_material_override/0 = ExtResource("2_i1r16")
+
+[node name="FirePipe_04_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="FirePipe_04_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.64331
+visibility_range_end = 23.2276
+mesh = ExtResource("3_k56mr")
+surface_material_override/0 = ExtResource("2_i1r16")

@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://be137dk0881g2"]
+
+[ext_resource type="Texture2D" uid="uid://bf1rbmhkuda0s" path="res://Assets/Abandoned_Psychiatric_Hospitals/VFX/Leaves_Maple.tga" id="1_uyqo3"]
+
+[resource]
+resource_name = "Leaves_Maple"
+transparency = 2
+alpha_scissor_threshold = 0.78
+alpha_antialiasing_mode = 0
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_uyqo3")
+roughness = 0.5
+uv1_scale = Vector3(1, 1, 0)

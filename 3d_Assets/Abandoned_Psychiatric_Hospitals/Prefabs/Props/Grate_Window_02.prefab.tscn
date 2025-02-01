@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8j2g0dlox0ra"]
+
+[ext_resource type="ArrayMesh" uid="uid://c1ndo7vrttyv7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Grate_Window_02.Grate_Window_02_LOD0.mesh" id="1_h2vli"]
+[ext_resource type="Material" uid="uid://pfc0gq8vcsv8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Curtain_03.mat.tres" id="2_i3v3k"]
+[ext_resource type="ArrayMesh" uid="uid://bmmddl8q6alkt" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Grate_Window_02.Grate_Window_02_LOD1.mesh" id="3_o6gmu"]
+[ext_resource type="ArrayMesh" uid="uid://ss2x8m2seprj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Grate_Window_02.Grate_Window_02_LOD2.mesh" id="4_plj2u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lyndq"]
+size = Vector3(0.180463, 1.64016, 1.02382)
+
+[node name="Grate_Window_02" type="Node3D"]
+
+[node name="Grate_Window_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Grate_Window_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 3.25796
+mesh = ExtResource("1_h2vli")
+surface_material_override/0 = ExtResource("2_i3v3k")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Grate_Window_02_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grate_Window_02_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000652153, 0.849366, 0.00135148)
+shape = SubResource("BoxShape3D_lyndq")
+
+[node name="Grate_Window_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Grate_Window_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 3.25796
+visibility_range_end = 8.89699
+mesh = ExtResource("3_o6gmu")
+surface_material_override/0 = ExtResource("2_i3v3k")
+
+[node name="Grate_Window_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Grate_Window_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 8.89699
+visibility_range_end = 48.1983
+mesh = ExtResource("4_plj2u")
+surface_material_override/0 = ExtResource("2_i3v3k")

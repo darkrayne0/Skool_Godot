@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://chgsdo4ub62qs"]
+
+[ext_resource type="ArrayMesh" uid="uid://c1s22talrvmda" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Decals/extracted/Blood_Decals_05.Blood_Decals_05.mesh" id="1_acifw"]
+[ext_resource type="Material" uid="uid://dqodb2mrodcqj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Decal/Blood_Decals.mat.tres" id="2_fa0ak"]
+
+[node name="Blood_Decals_05" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 18.5233
+mesh = ExtResource("1_acifw")
+surface_material_override/0 = ExtResource("2_fa0ak")

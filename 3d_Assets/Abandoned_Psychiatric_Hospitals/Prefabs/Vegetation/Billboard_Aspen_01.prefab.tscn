@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://xo3yeeyn7ih4"]
+
+[ext_resource type="ArrayMesh" uid="uid://dypaq0aqa14j" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Billboard_Aspen_01.Billboard_Aspen_01.mesh" id="1_joa8r"]
+[ext_resource type="Material" uid="uid://rwrantid5sgs" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Billboard_Aspen_01.mat.tres" id="2_dxp24"]
+
+[node name="Billboard_Aspen_01" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 278.085
+mesh = ExtResource("1_joa8r")
+surface_material_override/0 = ExtResource("2_dxp24")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3l14s7e7sy00"]
+
+[ext_resource type="ArrayMesh" uid="uid://w1smymdjdx2x" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Ashtray.Ashtray_LOD0.mesh" id="1_ynkdi"]
+[ext_resource type="Material" uid="uid://be0s354kg03j7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Table_Lamp.mat.tres" id="2_rvxy1"]
+[ext_resource type="ArrayMesh" uid="uid://desvgabm0g4yr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Ashtray.Ashtray_LOD1.mesh" id="3_lem4u"]
+[ext_resource type="ArrayMesh" uid="uid://bf6t8t7nn8od7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Ashtray.Ashtray_LOD2.mesh" id="4_5gqsy"]
+
+[node name="Ashtray" type="Node3D"]
+
+[node name="Ashtray_LOD0" type="Node3D" parent="."]
+transform = Transform3D(1.08744, 0, 0, 0, 1.08744, 0, 0, 0, 1.08744, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Ashtray_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.286453
+mesh = ExtResource("1_ynkdi")
+surface_material_override/0 = ExtResource("2_rvxy1")
+
+[node name="Ashtray_LOD1" type="Node3D" parent="."]
+transform = Transform3D(1.08744, 0, 0, 0, 1.08744, 0, 0, 0, 1.08744, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Ashtray_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.286453
+visibility_range_end = 0.980177
+mesh = ExtResource("3_lem4u")
+surface_material_override/0 = ExtResource("2_rvxy1")
+
+[node name="Ashtray_LOD2" type="Node3D" parent="."]
+transform = Transform3D(1.08744, 0, 0, 0, 1.08744, 0, 0, 0, 1.08744, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Ashtray_LOD2"]
+gi_mode = 2
+visibility_range_begin = 0.980177
+visibility_range_end = 6.41901
+mesh = ExtResource("4_5gqsy")
+surface_material_override/0 = ExtResource("2_rvxy1")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqmtu2f60sxkp"]
+
+[ext_resource type="ArrayMesh" uid="uid://b86dx85lo6881" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Devices_02.Surgical_Devices_02_LOD0.mesh" id="1_0ygnf"]
+[ext_resource type="Material" uid="uid://cyxi8ergbqjn5" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Surgical_Devices.mat.tres" id="2_c1sdr"]
+[ext_resource type="ArrayMesh" uid="uid://b2ua46mrarfke" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Devices_02.Surgical_Devices_02_LOD1.mesh" id="3_akw1k"]
+[ext_resource type="ArrayMesh" uid="uid://caiyok4kibi8r" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Devices_02.Surgical_Devices_02_LOD2.mesh" id="4_c42bo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vymrw"]
+size = Vector3(0.340469, 0.299106, 0.393335)
+
+[node name="Surgical_Devices_02" type="Node3D"]
+
+[node name="Surgical_Devices_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Devices_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.81446
+mesh = ExtResource("1_0ygnf")
+surface_material_override/0 = ExtResource("2_c1sdr")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Surgical_Devices_02_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Surgical_Devices_02_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00668647, 0.148717, -0.00300932)
+shape = SubResource("BoxShape3D_vymrw")
+
+[node name="Surgical_Devices_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Devices_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.81446
+visibility_range_end = 2.5881
+mesh = ExtResource("3_akw1k")
+surface_material_override/0 = ExtResource("2_c1sdr")
+
+[node name="Surgical_Devices_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Devices_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 2.5881
+visibility_range_end = 19.5195
+mesh = ExtResource("4_c42bo")
+surface_material_override/0 = ExtResource("2_c1sdr")

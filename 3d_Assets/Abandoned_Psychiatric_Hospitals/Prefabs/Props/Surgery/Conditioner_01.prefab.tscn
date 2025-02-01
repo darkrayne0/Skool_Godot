@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://cyrio0brx5ir6"]
+
+[ext_resource type="ArrayMesh" uid="uid://dp8esjlhobntk" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Conditioner_01.Conditioner_01_LOD0.mesh" id="1_hv2en"]
+[ext_resource type="Material" uid="uid://y8c8doe5lchv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Shelving.mat.tres" id="2_ix0d1"]
+[ext_resource type="ArrayMesh" uid="uid://cl6qtp5h73lva" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Conditioner_01.Conditioner_01_LOD1.mesh" id="3_7xgvv"]
+[ext_resource type="ArrayMesh" uid="uid://xanak3qp8j2y" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Conditioner_01.Conditioner_Propeller_01_LOD0.mesh" id="4_3cvk4"]
+[ext_resource type="ArrayMesh" uid="uid://b62qbu2776f1f" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Conditioner_01.Conditioner_Propeller_01_LOD1.mesh" id="5_yd6gv"]
+[ext_resource type="ArrayMesh" uid="uid://bswxxj387r3tv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Conditioner_01.Conditioner_Propeller_01_LOD2.mesh" id="6_kcttv"]
+
+[node name="Conditioner_01" type="Node3D"]
+
+[node name="Conditioner_01_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Conditioner_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 7.08404
+mesh = ExtResource("1_hv2en")
+surface_material_override/0 = ExtResource("2_ix0d1")
+
+[node name="Conditioner_01_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Conditioner_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 12.4267
+visibility_range_end = 33.0681
+mesh = ExtResource("3_7xgvv")
+surface_material_override/0 = ExtResource("2_ix0d1")
+
+[node name="Conditioner_Propeller_01_LOD0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.255033, 0.00671685, 0.0011946)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Conditioner_Propeller_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 7.08404
+mesh = ExtResource("4_3cvk4")
+surface_material_override/0 = ExtResource("2_ix0d1")
+
+[node name="Conditioner_Propeller_01_LOD1" type="Node3D" parent="Conditioner_Propeller_01_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.62939e-08, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Conditioner_Propeller_01_LOD0/Conditioner_Propeller_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 7.08404
+visibility_range_end = 12.4267
+mesh = ExtResource("5_yd6gv")
+surface_material_override/0 = ExtResource("2_ix0d1")
+
+[node name="Conditioner_Propeller_01_LOD2" type="Node3D" parent="Conditioner_Propeller_01_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.62939e-08, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Conditioner_Propeller_01_LOD0/Conditioner_Propeller_01_LOD2"]
+gi_mode = 2
+visibility_range_begin = 12.4267
+visibility_range_end = 33.0681
+mesh = ExtResource("6_kcttv")
+surface_material_override/0 = ExtResource("2_ix0d1")

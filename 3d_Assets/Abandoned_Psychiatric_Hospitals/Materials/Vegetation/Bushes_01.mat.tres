@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dchiy3o7vx83y"]
+
+[ext_resource type="Texture2D" uid="uid://dp4ptuefuiede" path="res://Materials/Textures/Vegetation/Bushes_01/Bushes_01_A.tga" id="1_5dsle"]
+
+[resource]
+resource_name = "Bushes_01"
+transparency = 2
+alpha_scissor_threshold = 0.59
+alpha_antialiasing_mode = 0
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_5dsle")
+metallic = 0.098
+uv1_scale = Vector3(1, 1, 0)

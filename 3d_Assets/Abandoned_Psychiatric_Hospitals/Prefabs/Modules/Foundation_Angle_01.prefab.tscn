@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0afru48wvm1e"]
+
+[ext_resource type="ArrayMesh" uid="uid://mvea2vyc4cuw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Foundation_Angle_01.Foundation_Angle_01.mesh" id="1_16e8x"]
+[ext_resource type="Material" uid="uid://dqh41ra7gvxcf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Parapet.mat.tres" id="2_ab1yg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j8m86"]
+size = Vector3(0.552751, 0.138551, 0.552751)
+
+[node name="Foundation_Angle_01" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 33.9712
+mesh = ExtResource("1_16e8x")
+surface_material_override/0 = ExtResource("2_ab1yg")
+
+[node name="BoxCollider" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.270575, 0.0692754, 0.270575)
+shape = SubResource("BoxShape3D_j8m86")

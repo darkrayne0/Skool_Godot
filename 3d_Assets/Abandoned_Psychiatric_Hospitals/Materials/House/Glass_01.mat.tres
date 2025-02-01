@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://6q7nqt06vnb1"]
+
+[ext_resource type="Texture2D" uid="uid://cv1kf3k7vlpwb" path="res://Materials/Textures/House/Glass/Glass_A.tga" id="1_rd4lg"]
+[ext_resource type="Texture2D" uid="uid://bg2pp33v4gu8x" path="res://Materials/Textures/House/Glass/Glass_MS.roughness.png" id="2_etfmk"]
+[ext_resource type="Texture2D" uid="uid://breqiqq5dsfcv" path="res://Materials/Textures/House/Glass/Glass_N.tga" id="3_qjryw"]
+
+[resource]
+resource_name = "Glass_01"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_rd4lg")
+metallic_texture = ExtResource("2_etfmk")
+roughness_texture = ExtResource("2_etfmk")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("3_qjryw")
+uv1_scale = Vector3(1, 1, 0)

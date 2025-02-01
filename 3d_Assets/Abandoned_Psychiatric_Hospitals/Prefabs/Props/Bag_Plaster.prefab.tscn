@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cr4db6tra1ihf"]
+
+[ext_resource type="ArrayMesh" uid="uid://bde4l7huf1dja" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bag_Plaster.Bag_Plaster_LOD0.mesh" id="1_kij7g"]
+[ext_resource type="Material" uid="uid://dn0xkoc0yyxy6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Construction_Tools.mat.tres" id="2_tju3g"]
+[ext_resource type="ArrayMesh" uid="uid://frekse15htek" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bag_Plaster.Bag_Plaster_LOD1.mesh" id="3_7bfsl"]
+[ext_resource type="ArrayMesh" uid="uid://dyr0b0ijcmnyu" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Bag_Plaster.Bag_Plaster_LOD2.mesh" id="4_kvdbl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3w6j7"]
+size = Vector3(0.786222, 0.193707, 0.464292)
+
+[node name="Bag_Plaster" type="Node3D"]
+
+[node name="Bag_Plaster_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bag_Plaster_LOD0"]
+gi_mode = 2
+visibility_range_end = 2.10442
+mesh = ExtResource("1_kij7g")
+surface_material_override/0 = ExtResource("2_tju3g")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Bag_Plaster_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bag_Plaster_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00677279, 0.0872995, 0.00318167)
+shape = SubResource("BoxShape3D_3w6j7")
+
+[node name="Bag_Plaster_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bag_Plaster_LOD1"]
+gi_mode = 2
+visibility_range_begin = 2.10442
+visibility_range_end = 6.5822
+mesh = ExtResource("3_7bfsl")
+surface_material_override/0 = ExtResource("2_tju3g")
+
+[node name="Bag_Plaster_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Bag_Plaster_LOD2"]
+gi_mode = 2
+visibility_range_begin = 6.5822
+visibility_range_end = 30.4112
+mesh = ExtResource("4_kvdbl")
+surface_material_override/0 = ExtResource("2_tju3g")

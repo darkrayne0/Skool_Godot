@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://u0m2okpxwlm5"]
+
+[ext_resource type="ArrayMesh" uid="uid://dfej8mkla0rle" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Billboard_Maple_02.Billboard_Maple_02.mesh" id="1_hqnt8"]
+[ext_resource type="Material" uid="uid://dn7s5vp6qdb3v" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Billboard_Maple_02.mat.tres" id="2_ne2s6"]
+
+[node name="Billboard_Maple_02" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 113.423
+mesh = ExtResource("1_hqnt8")
+surface_material_override/0 = ExtResource("2_ne2s6")

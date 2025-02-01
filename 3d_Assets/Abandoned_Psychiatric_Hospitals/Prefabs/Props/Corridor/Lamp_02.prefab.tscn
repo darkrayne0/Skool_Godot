@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://b66r4y50rkghq"]
+
+[ext_resource type="ArrayMesh" uid="uid://bekgqh3qy6kms" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_02.Lamp_02_LOD0.mesh" id="1_ieohj"]
+[ext_resource type="Material" uid="uid://bguq0n7rvexi4" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Ceiling.mat.tres" id="2_3yh6t"]
+[ext_resource type="ArrayMesh" uid="uid://7oim6l40mpmx" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_02.Lamp_02_LOD1.mesh" id="3_2b7rt"]
+[ext_resource type="ArrayMesh" uid="uid://wmltsb1f47sj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_02.Lamp_02_LOD2.mesh" id="4_abs4r"]
+
+[node name="Lamp_02" type="Node3D"]
+
+[node name="Lamp_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Lamp_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 4.73353
+mesh = ExtResource("1_ieohj")
+surface_material_override/0 = ExtResource("2_3yh6t")
+
+[node name="Lamp_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Lamp_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 4.73353
+visibility_range_end = 13.4773
+mesh = ExtResource("3_2b7rt")
+surface_material_override/0 = ExtResource("2_3yh6t")
+
+[node name="Lamp_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Lamp_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 13.4773
+visibility_range_end = 58.6618
+mesh = ExtResource("4_abs4r")
+surface_material_override/0 = ExtResource("2_3yh6t")
+
+[node name="Point Light" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.02, -0.6, -0.061)
+
+[node name="Light" type="SpotLight3D" parent="Point Light"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+light_color = Color(0.813946, 0.851709, 0.858491, 1)
+light_bake_mode = 0
+shadow_enabled = true
+shadow_bias = 0.05
+spot_range = 10.0
+spot_attenuation = 0.333
+spot_angle = 36.9784
+spot_angle_attenuation = 0.5

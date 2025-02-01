@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1vwftxaxwhk2"]
+
+[ext_resource type="ArrayMesh" uid="uid://ccdnbh1xgmnrr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Reception_Сhair.Reception_Сhair_LOD0.mesh" id="1_q51yc"]
+[ext_resource type="Material" uid="uid://cetid6dhbcrkm" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Reception_Сhair.mat.tres" id="2_pyvka"]
+[ext_resource type="ArrayMesh" uid="uid://dr6nkfqhda3vn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Reception_Сhair.Reception_Сhair_LOD1.mesh" id="3_y74br"]
+[ext_resource type="ArrayMesh" uid="uid://cplbfyott2w3t" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Reception_Сhair.Reception_Сhair_LOD2.mesh" id="4_bv3bc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jlj22"]
+size = Vector3(0.670301, 1.15635, 0.640572)
+
+[node name="Reception_Сhair" type="Node3D"]
+
+[node name="Reception_Сhair_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Reception_Сhair_LOD0"]
+gi_mode = 2
+visibility_range_end = 2.86098
+mesh = ExtResource("1_q51yc")
+surface_material_override/0 = ExtResource("2_pyvka")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Reception_Сhair_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reception_Сhair_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0691201, 0.574701, 0)
+shape = SubResource("BoxShape3D_jlj22")
+
+[node name="Reception_Сhair_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Reception_Сhair_LOD1"]
+gi_mode = 2
+visibility_range_begin = 2.86098
+visibility_range_end = 8.7754
+mesh = ExtResource("3_y74br")
+surface_material_override/0 = ExtResource("2_pyvka")
+
+[node name="Reception_Сhair_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Reception_Сhair_LOD2"]
+gi_mode = 2
+visibility_range_begin = 8.7754
+visibility_range_end = 49.755
+mesh = ExtResource("4_bv3bc")
+surface_material_override/0 = ExtResource("2_pyvka")

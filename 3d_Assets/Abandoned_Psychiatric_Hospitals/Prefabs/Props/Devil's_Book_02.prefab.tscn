@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://c52fjfkbuqr26"]
+
+[ext_resource type="ArrayMesh" uid="uid://dv8i7exhxmlk8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Devil's_Book_02.Devil's_Book_02_LOD0.mesh" id="1_ma0ov"]
+[ext_resource type="Material" uid="uid://b4uf6wldrcp5y" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Booth_Toilet.mat.tres" id="2_51xbw"]
+[ext_resource type="ArrayMesh" uid="uid://d84cthefg6i8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Devil's_Book_02.Devil's_Book_02_LOD1.mesh" id="3_85fej"]
+[ext_resource type="ArrayMesh" uid="uid://d3ofno6ivfit8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Devil's_Book_02.Devil's_Book_02_LOD2.mesh" id="4_3pid6"]
+
+[node name="Devil\'s_Book_02" type="Node3D"]
+
+[node name="Devil\'s_Book_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Devil\'s_Book_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.934839
+mesh = ExtResource("1_ma0ov")
+surface_material_override/0 = ExtResource("2_51xbw")
+
+[node name="Devil\'s_Book_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Devil\'s_Book_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.934839
+visibility_range_end = 3.05036
+mesh = ExtResource("3_85fej")
+surface_material_override/0 = ExtResource("2_51xbw")
+
+[node name="Devil\'s_Book_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Devil\'s_Book_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 3.05036
+visibility_range_end = 21.2327
+mesh = ExtResource("4_3pid6")
+surface_material_override/0 = ExtResource("2_51xbw")

@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://t2vmkl03rvap"]
+
+[ext_resource type="Texture2D" uid="uid://cyfcm4e37nsyv" path="res://Materials/Textures/Props/Shelf/Shelf_A.tga" id="1_1bodl"]
+[ext_resource type="Texture2D" uid="uid://2qad2ayqfx48" path="res://Materials/Textures/Props/Shelf/Shelf_AO.tga" id="2_rrlva"]
+[ext_resource type="Texture2D" uid="uid://cppcekuh11bv4" path="res://Materials/Textures/Props/Shelf/Shelf_MS.roughness.png" id="3_7kele"]
+[ext_resource type="Texture2D" uid="uid://cjy4kitgl2ln4" path="res://Materials/Textures/Props/Shelf/Shelf_N.tga" id="4_xmamq"]
+
+[resource]
+resource_name = "Shelf"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_1bodl")
+metallic_texture = ExtResource("3_7kele")
+roughness_texture = ExtResource("3_7kele")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("4_xmamq")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_rrlva")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

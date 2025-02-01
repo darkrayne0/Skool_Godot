@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c50jgtesodj6n"]
+
+[ext_resource type="ArrayMesh" uid="uid://c6dm6n5utukps" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Grass_02.Grass_02_LOD0.mesh" id="1_mlb06"]
+[ext_resource type="Material" uid="uid://colr8foh4eyih" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Grass_01.mat.tres" id="2_q4wtq"]
+[ext_resource type="ArrayMesh" uid="uid://bfup75rdcujv7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Grass_02.Grass_02_LOD1.mesh" id="3_axwap"]
+
+[node name="Grass_02" type="Node3D"]
+
+[node name="Grass_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Grass_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 3.94664
+mesh = ExtResource("1_mlb06")
+surface_material_override/0 = ExtResource("2_q4wtq")
+
+[node name="Grass_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Grass_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 3.94664
+visibility_range_end = 60.185
+mesh = ExtResource("3_axwap")
+surface_material_override/0 = ExtResource("2_q4wtq")

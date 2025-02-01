@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpgb8lxmeotyo"]
+
+[ext_resource type="ArrayMesh" uid="uid://cgfrn5qy8451q" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Candle_05.Candle_05_LOD0.mesh" id="1_yyewg"]
+[ext_resource type="Material" uid="uid://d1jmpbvqfy80v" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Candles.mat.tres" id="2_jrwnt"]
+[ext_resource type="ArrayMesh" uid="uid://bgsjccvblxn0o" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Candle_05.Candle_05_LOD1.mesh" id="3_gmw6h"]
+[ext_resource type="ArrayMesh" uid="uid://b5pwhke5yammp" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Candle_05.Candle_05_LOD2.mesh" id="4_evosd"]
+[ext_resource type="ArrayMesh" uid="uid://drf4310akdewl" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Candle_05.Candle_Flame_05.mesh" id="5_kxjwr"]
+[ext_resource type="Material" uid="uid://dhgugcwin435" path="res://Assets/Abandoned_Psychiatric_Hospitals/VFX/Candle_Flame.mat.tres" id="6_qf3n8"]
+
+[node name="Candle_05" type="Node3D"]
+
+[node name="Candle_05_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Candle_05_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.0861
+mesh = ExtResource("1_yyewg")
+surface_material_override/0 = ExtResource("2_jrwnt")
+
+[node name="Candle_05_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Candle_05_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.0861
+visibility_range_end = 3.07493
+mesh = ExtResource("3_gmw6h")
+surface_material_override/0 = ExtResource("2_jrwnt")
+
+[node name="Candle_05_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Candle_05_LOD2"]
+gi_mode = 2
+visibility_range_begin = 3.07493
+visibility_range_end = 36.9473
+mesh = ExtResource("4_evosd")
+surface_material_override/0 = ExtResource("2_jrwnt")
+
+[node name="Candle_Flame_05" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000266114, 0.468122, -0.00209826)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Candle_Flame_05"]
+gi_mode = 2
+mesh = ExtResource("5_kxjwr")
+surface_material_override/0 = ExtResource("6_qf3n8")
+
+[node name="Point Light" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.461, 0)
+
+[node name="Light" type="OmniLight3D" parent="Point Light"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+light_color = Color(0.943396, 0.770625, 0.280349, 1)
+shadow_enabled = true
+shadow_bias = 0.05
+omni_range = 0.18

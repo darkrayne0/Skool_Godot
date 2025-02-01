@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://bt87vgtcundpr"]
+
+[ext_resource type="ArrayMesh" uid="uid://cwxbas28hntmp" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Maple_02.Maple_02_LOD0.mesh" id="1_xvsgr"]
+[ext_resource type="Material" uid="uid://ccmgslg2b7iki" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Maple_Leaves.mat.tres" id="2_a47bn"]
+[ext_resource type="Material" uid="uid://bbm72eflrxqgs" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Maple_02_Bark.mat.tres" id="3_rdsdk"]
+[ext_resource type="ArrayMesh" uid="uid://rtjpf1s8pxlv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Maple_02.Maple_02_LOD1.mesh" id="4_4fsmi"]
+[ext_resource type="ArrayMesh" uid="uid://bjgk5o43o4agn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Maple_02.Maple_02_LOD2.mesh" id="5_ea3k8"]
+[ext_resource type="ArrayMesh" uid="uid://dfej8mkla0rle" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Billboard_Maple_02.Billboard_Maple_02.mesh" id="6_ruh23"]
+[ext_resource type="Material" uid="uid://dn7s5vp6qdb3v" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Billboard_Maple_02.mat.tres" id="7_sj1un"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s6as1"]
+radius = 0.1
+height = 3.94566
+
+[node name="Maple_02" type="Node3D"]
+
+[node name="Maple_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Maple_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 5.76891
+visibility_range_end_margin = 0.5
+mesh = ExtResource("1_xvsgr")
+surface_material_override/0 = ExtResource("2_a47bn")
+surface_material_override/1 = ExtResource("3_rdsdk")
+
+[node name="CapsuleCollider" type="StaticBody3D" parent="Maple_02_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Maple_02_LOD0/CapsuleCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0248103, 2.00081, 0.049325)
+shape = SubResource("CapsuleShape3D_s6as1")
+
+[node name="Maple_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Maple_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 5.76891
+visibility_range_begin_margin = 0.5
+visibility_range_end = 19.6686
+visibility_range_end_margin = 0.5
+mesh = ExtResource("4_4fsmi")
+surface_material_override/0 = ExtResource("3_rdsdk")
+surface_material_override/1 = ExtResource("2_a47bn")
+
+[node name="Maple_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Maple_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 19.6686
+visibility_range_begin_margin = 0.5
+visibility_range_end = 40.1384
+visibility_range_end_margin = 0.5
+mesh = ExtResource("5_ea3k8")
+surface_material_override/0 = ExtResource("3_rdsdk")
+surface_material_override/1 = ExtResource("2_a47bn")
+
+[node name="Billboard_Maple_02" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Billboard_Maple_02"]
+gi_mode = 2
+visibility_range_begin = 40.1384
+visibility_range_begin_margin = 0.5
+visibility_range_end = 89.4437
+visibility_range_end_margin = 0.5
+mesh = ExtResource("6_ruh23")
+surface_material_override/0 = ExtResource("7_sj1un")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://de1kfg7f25wln"]
+
+[ext_resource type="ArrayMesh" uid="uid://crgjgen0bh560" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Wires_07.Wires_07.mesh" id="1_hv1kj"]
+[ext_resource type="Material" uid="uid://c1pqsfoubdibd" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Wires.mat.tres" id="2_gscai"]
+
+[node name="Wires_07" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 14.8717
+mesh = ExtResource("1_hv1kj")
+surface_material_override/0 = ExtResource("2_gscai")

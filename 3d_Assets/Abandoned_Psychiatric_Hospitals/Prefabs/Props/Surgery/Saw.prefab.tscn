@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3ffk7bdaic2g"]
+
+[ext_resource type="ArrayMesh" uid="uid://d3wauv3t8fkr0" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Saw.Saw_LOD0.mesh" id="1_tybtt"]
+[ext_resource type="Material" uid="uid://creune70uekoe" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Surgical_Instruments.mat.tres" id="2_gp0sk"]
+[ext_resource type="ArrayMesh" uid="uid://dcb72j7a5vacm" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Saw.Saw_LOD1.mesh" id="3_3ofrn"]
+[ext_resource type="ArrayMesh" uid="uid://ktucko0bqgqq" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Saw.Saw_LOD2.mesh" id="4_qbl0a"]
+
+[node name="Saw" type="Node3D"]
+
+[node name="Saw_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Saw_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.18431
+mesh = ExtResource("1_tybtt")
+surface_material_override/0 = ExtResource("2_gp0sk")
+
+[node name="Saw_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Saw_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.18431
+visibility_range_end = 3.81633
+mesh = ExtResource("3_3ofrn")
+surface_material_override/0 = ExtResource("2_gp0sk")
+
+[node name="Saw_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Saw_LOD2"]
+gi_mode = 2
+visibility_range_begin = 3.81633
+visibility_range_end = 19.1252
+mesh = ExtResource("4_qbl0a")
+surface_material_override/0 = ExtResource("2_gp0sk")

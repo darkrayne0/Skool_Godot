@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjcjxpvf423r3"]
+
+[ext_resource type="ArrayMesh" uid="uid://dmqtk4kmkm6qq" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Decals/extracted/Decal_Pentagram.Decal_Pentagram.mesh" id="1_mkd7y"]
+[ext_resource type="Material" uid="uid://b177i4xuwi2on" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Decal/Decal_Pentagram.mat.tres" id="2_ie2cq"]
+
+[node name="Decal_Pentagram" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 78.1893
+mesh = ExtResource("1_mkd7y")
+surface_material_override/0 = ExtResource("2_ie2cq")

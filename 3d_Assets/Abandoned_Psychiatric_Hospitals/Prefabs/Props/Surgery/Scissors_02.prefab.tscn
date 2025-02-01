@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://1mxrvvk0l5uk"]
+
+[ext_resource type="ArrayMesh" uid="uid://c8jaydkq7oajv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Scissors_02.Scissors_01_LOD0.mesh" id="1_waf0q"]
+[ext_resource type="Material" uid="uid://creune70uekoe" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Surgical_Instruments.mat.tres" id="2_ojyk2"]
+[ext_resource type="ArrayMesh" uid="uid://cbvhp2rh5wje0" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Scissors_02.Scissors_01_LOD1.mesh" id="3_a1fqx"]
+[ext_resource type="ArrayMesh" uid="uid://dqv67bfusmg2c" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Scissors_02.Scissors_02_LOD0.mesh" id="4_67uqw"]
+[ext_resource type="ArrayMesh" uid="uid://cvvkhr82aov3r" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Scissors_02.Scissors_02_LOD1.mesh" id="5_bmoq0"]
+
+[node name="Scissors_02" type="Node3D"]
+
+[node name="Scissors_01_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Scissors_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.967018
+mesh = ExtResource("1_waf0q")
+surface_material_override/0 = ExtResource("2_ojyk2")
+
+[node name="Scissors_01_LOD1" type="Node3D" parent="Scissors_01_LOD0"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Scissors_01_LOD0/Scissors_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.967018
+visibility_range_end = 6.96547
+mesh = ExtResource("3_a1fqx")
+surface_material_override/0 = ExtResource("2_ojyk2")
+
+[node name="Scissors_02_LOD0" type="Node3D" parent="."]
+transform = Transform3D(-1, 1.22465e-16, -3.89414e-07, 1.22465e-16, 1, 1.22465e-16, 3.89414e-07, 1.22465e-16, -1, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Scissors_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.967018
+mesh = ExtResource("4_67uqw")
+surface_material_override/0 = ExtResource("2_ojyk2")
+
+[node name="Scissors_02_LOD1" type="Node3D" parent="Scissors_02_LOD0"]
+transform = Transform3D(1, 0, 3.63798e-14, 0, 1, 0, -3.63798e-14, 0, 1, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Scissors_02_LOD0/Scissors_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.967018
+visibility_range_end = 6.96547
+mesh = ExtResource("5_bmoq0")
+surface_material_override/0 = ExtResource("2_ojyk2")

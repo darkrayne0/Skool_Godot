@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bx8y7etrc0urk"]
+
+[node name="Dust" type="Node3D"]
+
+[node name="ParticleSystem" type="Node" parent="."]
+
+[node name="ParticleSystemRenderer" type="Node" parent="."]

@@ -1,0 +1,112 @@
+[gd_scene load_steps=14 format=3 uid="uid://cuv32fuc1hlcc"]
+
+[ext_resource type="ArrayMesh" uid="uid://d1oy13cwexg7i" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Reception_01.Reception_Door_LOD0.mesh" id="1_8at8j"]
+[ext_resource type="Material" uid="uid://cer3qkb2vu4wk" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Reception.mat.tres" id="2_r34bi"]
+[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_8ylsb"]
+[ext_resource type="ArrayMesh" uid="uid://dqhsdkicetr6h" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Reception_01.Reception_Door_LOD1.mesh" id="4_uhpys"]
+[ext_resource type="ArrayMesh" uid="uid://bgva6tfpadssu" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Reception_01.Reception_Door_LOD2.mesh" id="5_8b3ll"]
+[ext_resource type="ArrayMesh" uid="uid://djb51ctalhdkb" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Reception_01.Reception_LOD0.mesh" id="6_6c0d0"]
+[ext_resource type="Material" uid="uid://wjxx7wdx8pgo" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Wall_01.mat.tres" id="7_si2o2"]
+[ext_resource type="ArrayMesh" uid="uid://cex7v5l5s3cnj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Reception_01.Reception_LOD1.mesh" id="8_8l5qp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i152d"]
+size = Vector3(2.18153, 2.10243, 1.69659)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nu8ux"]
+size = Vector3(0.122936, 2.10243, 1.11601)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l10u1"]
+size = Vector3(0.287547, 3.71023, 2.83022)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fi3i8"]
+size = Vector3(0.270677, 1.52267, 1.20173)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f06bk"]
+size = Vector3(1.07338, 0.899916, 2.78323)
+
+[node name="Reception_01" type="Node3D"]
+
+[node name="Reception_Door_LOD0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000917673, 0, 1.91567)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Reception_Door_LOD0"]
+gi_mode = 2
+visibility_range_end = 8.17358
+mesh = ExtResource("1_8at8j")
+surface_material_override/0 = ExtResource("2_r34bi")
+surface_material_override/1 = ExtResource("3_8ylsb")
+
+[node name="BoxCollider" type="Area3D" parent="Reception_Door_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reception_Door_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.123168, 1.05122, -0.50527)
+shape = SubResource("BoxShape3D_i152d")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Reception_Door_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reception_Door_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0469674, 1.05122, -0.541996)
+shape = SubResource("BoxShape3D_nu8ux")
+
+[node name="Reception_Door_LOD1" type="Node3D" parent="Reception_Door_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.45058e-11, 0, 1.52588e-07)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Reception_Door_LOD0/Reception_Door_LOD1"]
+gi_mode = 2
+visibility_range_begin = 8.17358
+visibility_range_end = 26.7411
+mesh = ExtResource("4_uhpys")
+surface_material_override/0 = ExtResource("2_r34bi")
+surface_material_override/1 = ExtResource("3_8ylsb")
+
+[node name="Reception_Door_LOD2" type="Node3D" parent="Reception_Door_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00205278, 0.0022785, -0.0101071)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Reception_Door_LOD0/Reception_Door_LOD2"]
+gi_mode = 2
+visibility_range_begin = 26.7411
+visibility_range_end = 135.766
+mesh = ExtResource("5_8b3ll")
+surface_material_override/0 = ExtResource("2_r34bi")
+surface_material_override/1 = ExtResource("3_8ylsb")
+
+[node name="Reception_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Reception_LOD0"]
+cast_shadow = 2
+gi_mode = 2
+visibility_range_end = 8.17358
+mesh = ExtResource("6_6c0d0")
+surface_material_override/0 = ExtResource("2_r34bi")
+surface_material_override/1 = ExtResource("7_si2o2")
+surface_material_override/2 = ExtResource("3_8ylsb")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Reception_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reception_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112249, 1.85388, -0.584889)
+shape = SubResource("BoxShape3D_l10u1")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Reception_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reception_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.120684, 2.94766, 1.39914)
+shape = SubResource("BoxShape3D_fi3i8")
+
+[node name="BoxCollider3" type="StaticBody3D" parent="Reception_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reception_LOD0/BoxCollider3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.280666, 0.448719, -0.608383)
+shape = SubResource("BoxShape3D_f06bk")
+
+[node name="Reception_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Reception_LOD1"]
+cast_shadow = 2
+gi_mode = 2
+visibility_range_begin = 26.7411
+visibility_range_end = 135.766
+mesh = ExtResource("8_8l5qp")
+surface_material_override/0 = ExtResource("2_r34bi")
+surface_material_override/1 = ExtResource("7_si2o2")
+surface_material_override/2 = ExtResource("3_8ylsb")

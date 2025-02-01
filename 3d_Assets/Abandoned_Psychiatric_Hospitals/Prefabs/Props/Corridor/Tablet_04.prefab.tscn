@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddqkv5ig5yrir"]
+
+[ext_resource type="ArrayMesh" uid="uid://d3hj88pmsvfmm" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Tablet_04.Tablet_04.mesh" id="1_kgamk"]
+[ext_resource type="Material" uid="uid://7knclqe2y08f" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Telephone.mat.tres" id="2_8ns2f"]
+
+[node name="Tablet_04" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 55.7387
+mesh = ExtResource("1_kgamk")
+surface_material_override/0 = ExtResource("2_8ns2f")

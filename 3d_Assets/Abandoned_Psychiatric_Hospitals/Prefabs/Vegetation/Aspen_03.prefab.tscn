@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://b8arri1pys5us"]
+
+[ext_resource type="ArrayMesh" uid="uid://ccpqh7wecf67m" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Aspen_03.Aspen_03_LOD0.mesh" id="1_ldcyh"]
+[ext_resource type="Material" uid="uid://ctr41e3lunmev" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Maple_01_Bark.mat.tres" id="2_d6pq4"]
+[ext_resource type="Material" uid="uid://dt5v7ou1ujfy6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Aspen_Leaves.mat.tres" id="3_p514r"]
+[ext_resource type="ArrayMesh" uid="uid://bq18g1h284d7c" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Aspen_03.Aspen_03_LOD1.mesh" id="4_pqkw4"]
+[ext_resource type="ArrayMesh" uid="uid://mqpadxj1hkl4" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Aspen_03.Aspen_03_LOD2.mesh" id="5_pcyq1"]
+[ext_resource type="ArrayMesh" uid="uid://b8fuckv4vmkev" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Aspen_03.Billboard_Aspen_03.mesh" id="6_8mtqa"]
+[ext_resource type="Material" uid="uid://ds8635csirujk" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Billboard_Aspen_03.mat.tres" id="7_3iycl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qaybo"]
+radius = 0.1
+height = 2.14895
+
+[node name="Aspen_03" type="Node3D"]
+
+[node name="Aspen_03_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Aspen_03_LOD0"]
+gi_mode = 2
+visibility_range_end = 3.51796
+visibility_range_end_margin = 0.5
+mesh = ExtResource("1_ldcyh")
+surface_material_override/0 = ExtResource("2_d6pq4")
+surface_material_override/1 = ExtResource("3_p514r")
+
+[node name="CapsuleCollider" type="StaticBody3D" parent="Aspen_03_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Aspen_03_LOD0/CapsuleCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15331, 0)
+shape = SubResource("CapsuleShape3D_qaybo")
+
+[node name="Aspen_03_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Aspen_03_LOD1"]
+gi_mode = 2
+visibility_range_begin = 3.51796
+visibility_range_begin_margin = 0.5
+visibility_range_end = 8.76031
+visibility_range_end_margin = 0.5
+mesh = ExtResource("4_pqkw4")
+surface_material_override/0 = ExtResource("2_d6pq4")
+surface_material_override/1 = ExtResource("3_p514r")
+
+[node name="Aspen_03_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Aspen_03_LOD2"]
+gi_mode = 2
+visibility_range_begin = 8.76031
+visibility_range_begin_margin = 0.5
+visibility_range_end = 22.2168
+visibility_range_end_margin = 0.5
+mesh = ExtResource("5_pcyq1")
+surface_material_override/0 = ExtResource("2_d6pq4")
+surface_material_override/1 = ExtResource("3_p514r")
+
+[node name="Billboard_Aspen_03" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Billboard_Aspen_03"]
+gi_mode = 2
+visibility_range_begin = 22.2168
+visibility_range_begin_margin = 0.5
+visibility_range_end = 55.3133
+visibility_range_end_margin = 0.5
+mesh = ExtResource("6_8mtqa")
+surface_material_override/0 = ExtResource("7_3iycl")

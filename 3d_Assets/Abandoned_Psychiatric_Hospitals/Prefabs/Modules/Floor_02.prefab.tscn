@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://bv166gh2acpoq"]
+
+[ext_resource type="ArrayMesh" uid="uid://4bgpqkbfr0cc" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Floor_02.Floor_02_LOD0.mesh" id="1_0t5l6"]
+[ext_resource type="Material" uid="uid://cd52h5ewiyjbg" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Floor_01.mat.tres" id="2_2oqa1"]
+[ext_resource type="Material" uid="uid://bguq0n7rvexi4" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Ceiling.mat.tres" id="3_xvcq3"]
+[ext_resource type="ArrayMesh" uid="uid://bnmw6iv71lei" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Floor_02.Floor_02_LOD1.mesh" id="4_hag65"]
+[ext_resource type="ArrayMesh" uid="uid://cpcjmrpwkueyl" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Floor_02.Floor_02_LOD2.mesh" id="5_f3giy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rvo1a"]
+size = Vector3(2, 0.336133, 2)
+
+[node name="Floor_02" type="Node3D"]
+
+[node name="Floor_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Floor_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 4.69393
+mesh = ExtResource("1_0t5l6")
+surface_material_override/0 = ExtResource("2_2oqa1")
+surface_material_override/1 = ExtResource("3_xvcq3")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Floor_02_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor_02_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.168067, 1)
+shape = SubResource("BoxShape3D_rvo1a")
+
+[node name="Floor_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Floor_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 4.69393
+visibility_range_end = 12.0798
+mesh = ExtResource("4_hag65")
+surface_material_override/0 = ExtResource("2_2oqa1")
+surface_material_override/1 = ExtResource("3_xvcq3")
+
+[node name="Floor_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Floor_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 12.0798
+visibility_range_end = 115.239
+mesh = ExtResource("5_f3giy")
+surface_material_override/0 = ExtResource("3_xvcq3")
+surface_material_override/1 = ExtResource("2_2oqa1")

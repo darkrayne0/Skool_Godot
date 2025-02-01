@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://cyofa38hcsfag"]
+
+[ext_resource type="ArrayMesh" uid="uid://bv7mx22vm5yw2" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Booth_Toilet.Booth_Toilet.mesh" id="1_4j2ob"]
+[ext_resource type="Material" uid="uid://b4uf6wldrcp5y" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Booth_Toilet.mat.tres" id="2_5m82l"]
+[ext_resource type="ArrayMesh" uid="uid://cvgngq5pfc123" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Booth_Toilet.Booth_Toilet_Door_LOD0.mesh" id="3_xwq1m"]
+[ext_resource type="ArrayMesh" uid="uid://d00bofgf73vgo" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Booth_Toilet.Booth_Toilet_Door_LOD1.mesh" id="4_g0crg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qowp8"]
+size = Vector3(2.03541, 2.47037, 0.0839663)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_51mm1"]
+size = Vector3(2.12645, 1.75715, 1.4369)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_urlic"]
+size = Vector3(0.135934, 1.75715, 1.07565)
+
+[node name="Booth_Toilet" type="Node3D"]
+
+[node name="Booth_Toilet" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Booth_Toilet"]
+gi_mode = 2
+visibility_range_begin = 6.57067
+visibility_range_end = 104.194
+mesh = ExtResource("1_4j2ob")
+surface_material_override/0 = ExtResource("2_5m82l")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Booth_Toilet"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Booth_Toilet/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.982294, 1.23518, 0.0418334)
+shape = SubResource("BoxShape3D_qowp8")
+
+[node name="Booth_Toilet_Door_LOD0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0031141, 0.328098, 0.118453)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Booth_Toilet_Door_LOD0"]
+gi_mode = 2
+visibility_range_end = 6.57067
+mesh = ExtResource("3_xwq1m")
+surface_material_override/0 = ExtResource("2_5m82l")
+
+[node name="BoxCollider" type="Area3D" parent="Booth_Toilet_Door_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Booth_Toilet_Door_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0557475, 0.878574, 0.499512)
+shape = SubResource("BoxShape3D_51mm1")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Booth_Toilet_Door_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Booth_Toilet_Door_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00956422, 0.878574, 0.51653)
+shape = SubResource("BoxShape3D_urlic")
+
+[node name="Booth_Toilet_Door_LOD1" type="Node3D" parent="Booth_Toilet_Door_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98023e-10, 3.8147e-08, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Booth_Toilet_Door_LOD0/Booth_Toilet_Door_LOD1"]
+gi_mode = 2
+visibility_range_begin = 6.57067
+visibility_range_end = 104.194
+mesh = ExtResource("4_g0crg")
+surface_material_override/0 = ExtResource("2_5m82l")

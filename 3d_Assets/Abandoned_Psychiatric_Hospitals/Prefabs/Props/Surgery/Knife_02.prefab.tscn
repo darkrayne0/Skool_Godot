@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2msqbla2slny"]
+
+[ext_resource type="ArrayMesh" uid="uid://bk860tqdswxcn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Knife_02.Knife_02_LOD0.mesh" id="1_1j3mg"]
+[ext_resource type="Material" uid="uid://creune70uekoe" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Surgical_Instruments.mat.tres" id="2_wrejt"]
+[ext_resource type="ArrayMesh" uid="uid://ddwe7au3vhc2b" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Knife_02.Knife_02_LOD1.mesh" id="3_gb4dy"]
+
+[node name="Knife_02" type="Node3D"]
+
+[node name="Knife_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Knife_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.33229
+mesh = ExtResource("1_1j3mg")
+surface_material_override/0 = ExtResource("2_wrejt")
+
+[node name="Knife_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Knife_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.33229
+visibility_range_end = 8.52932
+mesh = ExtResource("3_gb4dy")
+surface_material_override/0 = ExtResource("2_wrejt")

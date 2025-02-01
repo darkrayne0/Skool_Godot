@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv3etfoql8de1"]
+
+[ext_resource type="ArrayMesh" uid="uid://cf2jcowwpkbgp" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Ashlar_Corner.Ashlar_Corner.mesh" id="1_nrbrm"]
+[ext_resource type="Material" uid="uid://b7874r6umged6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Emergency_Door.mat.tres" id="2_cr1c2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dqt6f"]
+size = Vector3(0.619851, 3.97902, 0.625574)
+
+[node name="Ashlar_Corner" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 244.544
+mesh = ExtResource("1_nrbrm")
+surface_material_override/0 = ExtResource("2_cr1c2")
+
+[node name="BoxCollider" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190075, 1.82843, 0.192936)
+shape = SubResource("BoxShape3D_dqt6f")

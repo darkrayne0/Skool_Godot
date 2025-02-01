@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://b087q3dbc70y"]
+
+[ext_resource type="ArrayMesh" uid="uid://ci4situe1dcf3" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_04.Lamp_04_LOD0.mesh" id="1_2f6rv"]
+[ext_resource type="Material" uid="uid://pgnpiv4sri5h" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Urn.mat.tres" id="2_fc2ne"]
+[ext_resource type="ArrayMesh" uid="uid://dju0wymn8tuut" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_04.Lamp_04_LOD1.mesh" id="3_23bwh"]
+[ext_resource type="ArrayMesh" uid="uid://q40kvi2nwhst" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_04.Lamp_04_LOD2.mesh" id="4_073pj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ytuw"]
+size = Vector3(0.621399, 1.16451, 0.621399)
+
+[node name="Lamp_04" type="Node3D"]
+
+[node name="Lamp_04_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Lamp_04_LOD0"]
+gi_mode = 2
+visibility_range_end = 2.48995
+mesh = ExtResource("1_2f6rv")
+surface_material_override/0 = ExtResource("2_fc2ne")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Lamp_04_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lamp_04_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.57572, 0)
+shape = SubResource("BoxShape3D_7ytuw")
+
+[node name="Lamp_04_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Lamp_04_LOD1"]
+gi_mode = 2
+visibility_range_begin = 2.48995
+visibility_range_end = 7.37406
+mesh = ExtResource("3_23bwh")
+surface_material_override/0 = ExtResource("2_fc2ne")
+
+[node name="Lamp_04_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Lamp_04_LOD2"]
+gi_mode = 2
+visibility_range_begin = 7.37406
+visibility_range_end = 76.927
+mesh = ExtResource("4_073pj")
+surface_material_override/0 = ExtResource("2_fc2ne")
+
+[node name="Point Light (1)" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2977, 0)
+
+[node name="Light" type="OmniLight3D" parent="Point Light (1)"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+light_energy = 2.98
+light_bake_mode = 0
+shadow_enabled = true
+shadow_bias = 0.05
+omni_range = 0.54
+
+[node name="Spot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1.255, 0)
+
+[node name="Light" type="SpotLight3D" parent="Spot"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+light_energy = 2.9
+light_bake_mode = 0
+shadow_enabled = true
+shadow_bias = 0.05
+spot_range = 3.7811
+spot_attenuation = 0.333
+spot_angle = 37.5269
+spot_angle_attenuation = 0.5

@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cu5cnnkct5hxk"]
+
+[ext_resource type="ArrayMesh" uid="uid://c0d3rb3wulodn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Fence_01.Fence_01_LOD0.mesh" id="1_ms73k"]
+[ext_resource type="Material" uid="uid://w7ms05sj6ne8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Exterior/Fence.mat.tres" id="2_7b1fp"]
+[ext_resource type="ArrayMesh" uid="uid://c405tnkyudk4d" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Fence_01.Fence_01_LOD1.mesh" id="3_mwgvo"]
+[ext_resource type="ArrayMesh" uid="uid://cp7hg8rljljbn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Fence_01.Fence_01_LOD2.mesh" id="4_a57uf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fg52s"]
+size = Vector3(0.170588, 2.18989, 4.09827)
+
+[node name="Fence_01" type="Node3D"]
+
+[node name="Fence_01_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Fence_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 6.34271
+mesh = ExtResource("1_ms73k")
+surface_material_override/0 = ExtResource("2_7b1fp")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Fence_01_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence_01_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27243e-07, 1.09499, 1.95086)
+shape = SubResource("BoxShape3D_fg52s")
+
+[node name="Fence_01_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Fence_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 6.34271
+visibility_range_end = 10.4629
+mesh = ExtResource("3_mwgvo")
+surface_material_override/0 = ExtResource("2_7b1fp")
+
+[node name="Fence_01_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Fence_01_LOD2"]
+gi_mode = 2
+visibility_range_begin = 10.4629
+visibility_range_end = 146.122
+mesh = ExtResource("4_a57uf")
+surface_material_override/0 = ExtResource("2_7b1fp")

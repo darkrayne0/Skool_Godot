@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://djtufyhd3g5iw"]
+
+[ext_resource type="Texture2D" uid="uid://mptbds7csxo7" path="res://Materials/Textures/Decal/Decals_03/Decals_03_A.tga" id="1_nbjoj"]
+[ext_resource type="Texture2D" uid="uid://c36y7051v7vdw" path="res://Materials/Textures/Decal/Decals_03/Decals_03_H.tga" id="2_btebi"]
+[ext_resource type="Texture2D" uid="uid://dnvbqxwl5gd1g" path="res://Materials/Textures/Decal/Decals_03/Decals_03_N.tga" id="3_vev6v"]
+
+[resource]
+resource_name = "Decals_03"
+transparency = 2
+alpha_scissor_threshold = 0.315
+alpha_antialiasing_mode = 0
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_nbjoj")
+normal_enabled = true
+normal_scale = 0.65
+normal_texture = ExtResource("3_vev6v")
+heightmap_enabled = true
+heightmap_scale = -1.58
+heightmap_texture = ExtResource("2_btebi")
+uv1_scale = Vector3(1, 1, 0)

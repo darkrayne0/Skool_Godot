@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwrxbb65l8rs6"]
+
+[ext_resource type="ArrayMesh" uid="uid://cvmcwnnfrau61" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Urinal.Urinal_LOD0.mesh" id="1_dfivq"]
+[ext_resource type="Material" uid="uid://c23obona0mgvt" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Toilet_Bowl.mat.tres" id="2_tqkpv"]
+[ext_resource type="ArrayMesh" uid="uid://dra16c7lnfes1" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Urinal.Urinal_LOD1.mesh" id="3_cos2n"]
+[ext_resource type="ArrayMesh" uid="uid://bs4jbbob0guk6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Urinal.Urinal_LOD2.mesh" id="4_ucyo5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cosmf"]
+size = Vector3(0.299917, 1.28848, 0.752991)
+
+[node name="Urinal" type="Node3D"]
+
+[node name="Urinal_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Urinal_LOD0"]
+gi_mode = 2
+visibility_range_end = 2.69517
+mesh = ExtResource("1_dfivq")
+surface_material_override/0 = ExtResource("2_tqkpv")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Urinal_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Urinal_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149204, 0.614295, 0.0120667)
+shape = SubResource("BoxShape3D_cosmf")
+
+[node name="Urinal_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Urinal_LOD1"]
+gi_mode = 2
+visibility_range_begin = 2.69517
+visibility_range_end = 9.08669
+mesh = ExtResource("3_cos2n")
+surface_material_override/0 = ExtResource("2_tqkpv")
+
+[node name="Urinal_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Urinal_LOD2"]
+gi_mode = 2
+visibility_range_begin = 9.08669
+visibility_range_end = 76.9008
+mesh = ExtResource("4_ucyo5")
+surface_material_override/0 = ExtResource("2_tqkpv")

@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://ddtmbtpjbmb6s"]
+
+[ext_resource type="Texture2D" uid="uid://dmvkd2rnw16s5" path="res://Materials/Textures/Props/Corridor/Stationery/Stationery_A.tga" id="1_isvua"]
+[ext_resource type="Texture2D" uid="uid://dqe4f2d7c21b1" path="res://Materials/Textures/Props/Corridor/Stationery/Stationery_AO.tga" id="2_61upr"]
+[ext_resource type="Texture2D" uid="uid://c1gmac8e8pv6i" path="res://Materials/Textures/Props/Corridor/Stationery/Stationery_MS.roughness.png" id="3_0mvy8"]
+[ext_resource type="Texture2D" uid="uid://dsfkiif1xxotv" path="res://Materials/Textures/Props/Corridor/Stationery/Stationery_N.tga" id="4_e5mvq"]
+
+[resource]
+resource_name = "Stationery"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_isvua")
+metallic_texture = ExtResource("3_0mvy8")
+roughness_texture = ExtResource("3_0mvy8")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("4_e5mvq")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_61upr")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

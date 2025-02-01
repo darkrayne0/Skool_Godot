@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://pyb2djj3yj7r"]
+
+[ext_resource type="ArrayMesh" uid="uid://chrn4ro55b4j6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Directors_Door_Wall_03.Directors_Door_Wall_03.mesh" id="1_c4kik"]
+[ext_resource type="Material" uid="uid://bj34ykmaceqa7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Directors_Door.mat.tres" id="2_74lqb"]
+
+[node name="Directors_Door_Wall_03" type="Node3D"]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+gi_mode = 2
+visibility_range_end = 138.266
+mesh = ExtResource("1_c4kik")
+surface_material_override/0 = ExtResource("2_74lqb")

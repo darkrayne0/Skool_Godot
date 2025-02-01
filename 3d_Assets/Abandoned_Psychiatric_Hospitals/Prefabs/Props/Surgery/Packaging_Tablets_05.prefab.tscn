@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bv2uam5ffi3ad"]
+
+[ext_resource type="ArrayMesh" uid="uid://cus3cd1xbcmyj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Packaging_Tablets_05.Packaging_Tablets_05_LOD0.mesh" id="1_7jed8"]
+[ext_resource type="Material" uid="uid://cj31wsawkfpq1" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Pills.mat.tres" id="2_tp7xo"]
+[ext_resource type="ArrayMesh" uid="uid://qo5ft7kwouhu" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Packaging_Tablets_05.Packaging_Tablets_05_LOD1.mesh" id="3_mws1m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3rq1c"]
+size = Vector3(0.152205, 0.315609, 0.152205)
+
+[node name="Packaging_Tablets_05" type="Node3D"]
+
+[node name="Packaging_Tablets_05_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Packaging_Tablets_05_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.6416
+mesh = ExtResource("1_7jed8")
+surface_material_override/0 = ExtResource("2_tp7xo")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Packaging_Tablets_05_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Packaging_Tablets_05_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000146002, 0.157804, -0.000121206)
+shape = SubResource("BoxShape3D_3rq1c")
+
+[node name="Packaging_Tablets_05_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Packaging_Tablets_05_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.6416
+visibility_range_end = 41.04
+mesh = ExtResource("3_mws1m")
+surface_material_override/0 = ExtResource("2_tp7xo")

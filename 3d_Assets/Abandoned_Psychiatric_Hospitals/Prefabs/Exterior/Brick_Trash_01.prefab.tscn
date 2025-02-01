@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkjqmj6kjll80"]
+
+[ext_resource type="ArrayMesh" uid="uid://bt3rgfaoyg4ot" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Brick_Trash_01.Brick_Trash_01_LOD0.mesh" id="1_s7b77"]
+[ext_resource type="Material" uid="uid://br1a00647y20p" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Exterior/Drainpipe.mat.tres" id="2_a5yxd"]
+[ext_resource type="ArrayMesh" uid="uid://cly4hldieog2" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Brick_Trash_01.Brick_Trash_01_LOD1.mesh" id="3_3nuk6"]
+[ext_resource type="ArrayMesh" uid="uid://8naavybr1c36" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Brick_Trash_01.Brick_Trash_01_LOD2.mesh" id="4_6ebs7"]
+
+[node name="Brick_Trash_01" type="Node3D"]
+
+[node name="Brick_Trash_01_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Brick_Trash_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 3.19959
+mesh = ExtResource("1_s7b77")
+surface_material_override/0 = ExtResource("2_a5yxd")
+
+[node name="Brick_Trash_01_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Brick_Trash_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 3.19959
+visibility_range_end = 13.7084
+mesh = ExtResource("3_3nuk6")
+surface_material_override/0 = ExtResource("2_a5yxd")
+
+[node name="Brick_Trash_01_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Brick_Trash_01_LOD2"]
+gi_mode = 2
+visibility_range_begin = 13.7084
+visibility_range_end = 45.5141
+mesh = ExtResource("4_6ebs7")
+surface_material_override/0 = ExtResource("2_a5yxd")

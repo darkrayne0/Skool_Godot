@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b3vbi0amu6e77"]
+
+[ext_resource type="Texture2D" uid="uid://dsfrny2ci2xnw" path="res://Assets/Abandoned_Psychiatric_Hospitals/VFX/DustBig.png" id="1_w1xle"]
+
+[resource]
+resource_name = "Dust_Big"
+depth_draw_mode = 1
+albedo_color = Color(1, 1, 1, 0.254902)
+albedo_texture = ExtResource("1_w1xle")
+roughness = 0.5
+uv1_scale = Vector3(1, 1, 0)

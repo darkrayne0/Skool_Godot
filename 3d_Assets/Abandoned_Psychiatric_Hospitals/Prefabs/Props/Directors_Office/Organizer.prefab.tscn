@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://06nyaev5jfmw"]
+
+[ext_resource type="ArrayMesh" uid="uid://b7r23niaw68m6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Organizer.Organizer_LOD0.mesh" id="1_25xbf"]
+[ext_resource type="Material" uid="uid://8d3e17wr754g" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Ballpoint_Pen.mat.tres" id="2_xs2ve"]
+[ext_resource type="ArrayMesh" uid="uid://dee5ueiwc1617" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Organizer.Organizer_LOD1.mesh" id="3_jm2fh"]
+
+[node name="Organizer" type="Node3D"]
+
+[node name="Organizer_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Organizer_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.446343
+mesh = ExtResource("1_25xbf")
+surface_material_override/0 = ExtResource("2_xs2ve")
+
+[node name="Organizer_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Organizer_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.446343
+visibility_range_end = 8.18279
+mesh = ExtResource("3_jm2fh")
+surface_material_override/0 = ExtResource("2_xs2ve")

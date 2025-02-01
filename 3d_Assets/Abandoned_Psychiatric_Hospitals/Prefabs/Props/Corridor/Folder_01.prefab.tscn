@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds68a0wmjhpvj"]
+
+[ext_resource type="ArrayMesh" uid="uid://nd6f8kydc1h5" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Folder_01.Folder_01_LOD0.mesh" id="1_8emeq"]
+[ext_resource type="Material" uid="uid://ddtmbtpjbmb6s" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Stationery.mat.tres" id="2_bhwii"]
+[ext_resource type="ArrayMesh" uid="uid://dsgm8pph4r65c" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Folder_01.Folder_01_LOD1.mesh" id="3_ygdyo"]
+
+[node name="Folder_01" type="Node3D"]
+
+[node name="Folder_01_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Folder_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.52746
+mesh = ExtResource("1_8emeq")
+surface_material_override/0 = ExtResource("2_bhwii")
+
+[node name="Folder_01_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Folder_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.52746
+visibility_range_end = 17.3743
+mesh = ExtResource("3_ygdyo")
+surface_material_override/0 = ExtResource("2_bhwii")

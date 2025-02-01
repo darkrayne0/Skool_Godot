@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://deqkatcx17bmb"]
+
+[ext_resource type="ArrayMesh" uid="uid://d3f1svafshtyl" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Table_Lamp.Table_Lamp_LOD0.mesh" id="1_2vf38"]
+[ext_resource type="Material" uid="uid://be0s354kg03j7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Table_Lamp.mat.tres" id="2_tq5yx"]
+[ext_resource type="ArrayMesh" uid="uid://bqgie3oakbppw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Table_Lamp.Table_Lamp_LOD1.mesh" id="3_ba1r3"]
+[ext_resource type="ArrayMesh" uid="uid://2fnoumd6ex6c" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Table_Lamp.Table_Lamp_LOD2.mesh" id="4_hqafn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nctin"]
+size = Vector3(0.297159, 0.64832, 0.297159)
+
+[node name="Table_Lamp" type="Node3D"]
+
+[node name="Table_Lamp_LOD0" type="Node3D" parent="."]
+transform = Transform3D(1.08744, 0, 0, 0, 1.08744, 0, 0, 0, 1.08744, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Table_Lamp_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.18061
+mesh = ExtResource("1_2vf38")
+surface_material_override/0 = ExtResource("2_tq5yx")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Table_Lamp_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Table_Lamp_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98023e-08, 0.306708, -7.45058e-09)
+shape = SubResource("BoxShape3D_nctin")
+
+[node name="Table_Lamp_LOD1" type="Node3D" parent="."]
+transform = Transform3D(1.08744, 0, 0, 0, 1.08744, 0, 0, 0, 1.08744, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Table_Lamp_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.18061
+visibility_range_end = 3.31717
+mesh = ExtResource("3_ba1r3")
+surface_material_override/0 = ExtResource("2_tq5yx")
+
+[node name="Table_Lamp_LOD2" type="Node3D" parent="."]
+transform = Transform3D(1.08744, 0, 0, 0, 1.08744, 0, 0, 0, 1.08744, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Table_Lamp_LOD2"]
+gi_mode = 2
+visibility_range_begin = 3.31717
+visibility_range_end = 30.9528
+mesh = ExtResource("4_hqafn")
+surface_material_override/0 = ExtResource("2_tq5yx")
+
+[node name="Point Light" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.617, 0)
+
+[node name="Light" type="OmniLight3D" parent="Point Light"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shadow_enabled = true
+shadow_bias = 0.05
+omni_range = 3.18649

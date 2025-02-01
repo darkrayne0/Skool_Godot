@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://buymd7bxcc6pg"]
+
+[ext_resource type="ArrayMesh" uid="uid://segk66jm6gmr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Curtain_02.Сurtain_02_LOD0.mesh" id="1_whry7"]
+[ext_resource type="Material" uid="uid://e3546lygbpat" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Curtain_02_Fade.mat.tres" id="2_eq2oe"]
+[ext_resource type="Material" uid="uid://dj3gc5cnbimh6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Curtain_02.mat.tres" id="3_s5tvh"]
+[ext_resource type="ArrayMesh" uid="uid://d34ed0rgryd3y" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Curtain_02.Сurtain_02_LOD1.mesh" id="4_yawrj"]
+[ext_resource type="ArrayMesh" uid="uid://bsw2d5fbjw5ct" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Curtain_02.Сurtain_02_LOD2.mesh" id="5_8hr85"]
+
+[node name="Curtain_02" type="Node3D"]
+
+[node name="Сurtain_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Сurtain_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 7.73052
+mesh = ExtResource("1_whry7")
+surface_material_override/0 = ExtResource("2_eq2oe")
+surface_material_override/1 = ExtResource("3_s5tvh")
+
+[node name="Сurtain_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Сurtain_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 7.73052
+visibility_range_end = 21.6929
+mesh = ExtResource("4_yawrj")
+surface_material_override/0 = ExtResource("2_eq2oe")
+surface_material_override/1 = ExtResource("3_s5tvh")
+
+[node name="Сurtain_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Сurtain_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 21.6929
+visibility_range_end = 103.435
+mesh = ExtResource("5_8hr85")
+surface_material_override/0 = ExtResource("3_s5tvh")
+surface_material_override/1 = ExtResource("2_eq2oe")

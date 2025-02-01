@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://d36s8ty2w6aie"]
+
+[ext_resource type="Texture2D" uid="uid://di3gfn8k3nnjk" path="res://Materials/Textures/Props/Electric_Сhair/Electric_Сhair_A.tga" id="1_f0hnq"]
+[ext_resource type="Texture2D" uid="uid://dw5dbls1cxsy7" path="res://Materials/Textures/Props/Electric_Сhair/Electric_Сhair_AO.tga" id="2_n1q54"]
+[ext_resource type="Texture2D" uid="uid://criplro0uutaf" path="res://Materials/Textures/Props/Electric_Сhair/Electric_Сhair_MS.roughness.png" id="3_6k3hc"]
+[ext_resource type="Texture2D" uid="uid://4pfd8fbotri6" path="res://Materials/Textures/Props/Electric_Сhair/Electric_Сhair_N.tga" id="4_hb4uh"]
+
+[resource]
+resource_name = "Electric_Сhair"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_f0hnq")
+metallic_texture = ExtResource("3_6k3hc")
+roughness_texture = ExtResource("3_6k3hc")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("4_hb4uh")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_n1q54")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

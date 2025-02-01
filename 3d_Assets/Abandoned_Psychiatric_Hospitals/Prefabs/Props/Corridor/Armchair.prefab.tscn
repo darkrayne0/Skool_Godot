@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://bf66t2vp5c8x5"]
+
+[ext_resource type="ArrayMesh" uid="uid://cjqw4h3j4exdh" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Armchair.Armchair_LOD0.mesh" id="1_x7qxf"]
+[ext_resource type="Material" uid="uid://bmkl5q25ofcgj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Armchair.mat.tres" id="2_538k2"]
+[ext_resource type="ArrayMesh" uid="uid://sowva4prqq35" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Armchair.Armchair_LOD1.mesh" id="3_c6kos"]
+[ext_resource type="ArrayMesh" uid="uid://c6j083wxiv5gt" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Armchair.Armchair_LOD2.mesh" id="4_yaei8"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y7phu"]
+points = PackedVector3Array(-0.188516, 0.000192612, -0.963669, 0.322828, 0.000192612, -0.963669, -0.206953, 0.000192612, -0.958755, -0.188516, 0.00660667, -0.963669, 0.322828, 0.00660667, -0.963669, 0.341265, 0.000192612, -0.958755, -0.220457, 0.000192612, -0.945338, -0.206953, 0.00660667, -0.958755, -0.181764, 0.609133, -0.940236, -0.171254, 0.650282, -0.940236, -0.149823, 0.67584, -0.940236, -0.124107, 0.690543, -0.940236, -0.0887604, 0.696661, -0.940236, 0.31226, 0.67357, -0.940236, 0.374438, 0.988352, -0.916803, 0.341265, 0.00660667, -0.958755, 0.27116, 0.696069, -0.940236, 0.285486, 0.693602, -0.940236, 0.296055, 0.688273, -0.940236, 0.354828, 0.000192612, -0.945338, -0.220457, 0.00660667, -0.945338, -0.225389, 0.000192612, -0.926818, -0.201551, 0.433487, -0.916803, -0.181764, 0.609133, 0.943283, -0.171254, 0.650282, 0.943283, 0.347782, 1.00503, -0.916803, -0.149823, 0.67584, 0.943283, 0.356883, 1.00819, -0.916803, 0.365573, 1.00394, -0.916803, 0.37115, 0.997628, -0.916803, 0.35976, 0.000192612, -0.926818, 0.354828, 0.00660667, -0.945338, 0.374438, 0.988352, 0.914181, -0.225389, 0.00660667, -0.926818, -0.225389, 0.000192612, 0.929866, -0.201551, 0.433487, 0.914181, -0.220457, 0.00660667, 0.948386, -0.206953, 0.00660667, 0.961803, -0.188516, 0.00660667, 0.966716, 0.356883, 1.00829, -0.867291, 0.347782, 1.00503, 0.914181, -0.124107, 0.690543, 0.943283, 0.365573, 1.00394, 0.914181, 0.37115, 0.997628, 0.914181, 0.35976, 0.000192612, 0.929866, 0.31226, 0.67357, 0.943283, 0.322828, 0.00660667, 0.966905, 0.341265, 0.00660667, 0.961803, 0.354828, 0.00660667, 0.948386, 0.354828, 0.000192612, 0.948386, -0.225389, 0.00660667, 0.929866, -0.220457, 0.000192612, 0.948386, -0.206953, 0.000192612, 0.961803, -0.188516, 0.000192612, 0.966716, -0.0887604, 0.696661, 0.943283, 0.356883, 1.00829, 0.86467, 0.356883, 1.00819, 0.914181, 0.285486, 0.693602, 0.943283, 0.296055, 0.688273, 0.943283, 0.322828, 0.000192612, 0.966905, 0.27116, 0.696069, 0.943283, 0.341265, 0.000192612, 0.961803)
+
+[node name="Armchair" type="Node3D"]
+
+[node name="Armchair_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Armchair_LOD0"]
+gi_mode = 2
+visibility_range_end = 4.01697
+mesh = ExtResource("1_x7qxf")
+surface_material_override/0 = ExtResource("2_538k2")
+
+[node name="MeshCollider" type="StaticBody3D" parent="Armchair_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armchair_LOD0/MeshCollider"]
+shape = SubResource("ConvexPolygonShape3D_y7phu")
+
+[node name="Armchair_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Armchair_LOD1"]
+gi_mode = 2
+visibility_range_begin = 4.01697
+visibility_range_end = 9.56479
+mesh = ExtResource("3_c6kos")
+surface_material_override/0 = ExtResource("2_538k2")
+
+[node name="Armchair_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Armchair_LOD2"]
+gi_mode = 2
+visibility_range_begin = 9.56479
+visibility_range_end = 49.0967
+mesh = ExtResource("4_yaei8")
+surface_material_override/0 = ExtResource("2_538k2")

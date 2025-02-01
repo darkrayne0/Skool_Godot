@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://exqid6ykh2fu"]
+
+[ext_resource type="Texture2D" uid="uid://dumtc8aw4u6a4" path="res://Materials/Textures/Vegetation/Maple/Billboard_Maple_01.tga" id="1_p2jl0"]
+
+[resource]
+resource_name = "Billboard_Maple_01"
+transparency = 2
+alpha_scissor_threshold = 0.662
+alpha_antialiasing_mode = 0
+depth_draw_mode = 1
+albedo_color = Color(0.962264, 0.962264, 0.962264, 1)
+albedo_texture = ExtResource("1_p2jl0")
+uv1_scale = Vector3(1, 1, 0)

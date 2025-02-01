@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk8xf2he6f1s0"]
+
+[ext_resource type="ArrayMesh" uid="uid://ba4sqxyqrisnw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_02.FirePipe_02_LOD0.mesh" id="1_tj1ys"]
+[ext_resource type="Material" uid="uid://cdi73wsya2kra" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Ventilation_System.mat.tres" id="2_l1oy3"]
+[ext_resource type="ArrayMesh" uid="uid://bykvkre4mk5yx" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_02.FirePipe_02_LOD1.mesh" id="3_eh54j"]
+[ext_resource type="ArrayMesh" uid="uid://4e1q8dq15sqh" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_02.FirePipe_02_LOD2.mesh" id="4_slcj3"]
+
+[node name="FirePipe_02" type="Node3D"]
+
+[node name="FirePipe_02_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="FirePipe_02_LOD0"]
+gi_mode = 2
+visibility_range_end = 2.25209
+mesh = ExtResource("1_tj1ys")
+surface_material_override/0 = ExtResource("2_l1oy3")
+
+[node name="FirePipe_02_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="FirePipe_02_LOD1"]
+gi_mode = 2
+visibility_range_begin = 2.25209
+visibility_range_end = 5.52846
+mesh = ExtResource("3_eh54j")
+surface_material_override/0 = ExtResource("2_l1oy3")
+
+[node name="FirePipe_02_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="FirePipe_02_LOD2"]
+gi_mode = 2
+visibility_range_begin = 5.52846
+visibility_range_end = 26.8102
+mesh = ExtResource("4_slcj3")
+surface_material_override/0 = ExtResource("2_l1oy3")

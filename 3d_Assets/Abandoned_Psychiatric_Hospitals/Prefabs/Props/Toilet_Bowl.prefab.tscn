@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://i2dxwogwtjc8"]
+
+[ext_resource type="ArrayMesh" uid="uid://831plwdfr2fh" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Toilet_Bowl.Toilet_Bowl_Cap_LOD0.mesh" id="1_kfgib"]
+[ext_resource type="Material" uid="uid://c23obona0mgvt" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Toilet_Bowl.mat.tres" id="2_51sxc"]
+[ext_resource type="ArrayMesh" uid="uid://b8b0ojuhge36m" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Toilet_Bowl.Toilet_Bowl_Cap_LOD1.mesh" id="3_5mykp"]
+[ext_resource type="ArrayMesh" uid="uid://cs8s7di4x21e7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Toilet_Bowl.Toilet_Bowl_Cap_LOD2.mesh" id="4_nyh6y"]
+[ext_resource type="ArrayMesh" uid="uid://cnf4o1m0bcjyj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Toilet_Bowl.Toilet_Bowl_LOD0.mesh" id="5_bey63"]
+[ext_resource type="ArrayMesh" uid="uid://ciijkrqyhtkpx" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Toilet_Bowl.Toilet_Bowl_LOD1.mesh" id="6_7gtfl"]
+[ext_resource type="ArrayMesh" uid="uid://vc2luremvy0" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Toilet_Bowl.Toilet_Bowl_LOD2.mesh" id="7_tp65d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3xkgq"]
+size = Vector3(0.823304, 0.626408, 0.453144)
+
+[node name="Toilet_Bowl" type="Node3D"]
+
+[node name="Toilet_Bowl_Cap_LOD0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.276291, 0.517676, 0.00270889)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Toilet_Bowl_Cap_LOD0"]
+gi_mode = 2
+visibility_range_end = 4.16335
+mesh = ExtResource("1_kfgib")
+surface_material_override/0 = ExtResource("2_51sxc")
+
+[node name="Toilet_Bowl_Cap_LOD1" type="Node3D" parent="Toilet_Bowl_Cap_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8147e-08, 1.78814e-08)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Toilet_Bowl_Cap_LOD0/Toilet_Bowl_Cap_LOD1"]
+gi_mode = 2
+visibility_range_begin = 4.16335
+visibility_range_end = 10.3872
+mesh = ExtResource("3_5mykp")
+surface_material_override/0 = ExtResource("2_51sxc")
+
+[node name="Toilet_Bowl_Cap_LOD2" type="Node3D" parent="Toilet_Bowl_Cap_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8147e-08, 1.78814e-08)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Toilet_Bowl_Cap_LOD0/Toilet_Bowl_Cap_LOD2"]
+gi_mode = 2
+visibility_range_begin = 10.3872
+visibility_range_end = 80.6389
+mesh = ExtResource("4_nyh6y")
+surface_material_override/0 = ExtResource("2_51sxc")
+
+[node name="Toilet_Bowl_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Toilet_Bowl_LOD0"]
+gi_mode = 2
+visibility_range_end = 4.16335
+mesh = ExtResource("5_bey63")
+surface_material_override/0 = ExtResource("2_51sxc")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Toilet_Bowl_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Toilet_Bowl_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0595226, 0.309674, -0.023494)
+shape = SubResource("BoxShape3D_3xkgq")
+
+[node name="Toilet_Bowl_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Toilet_Bowl_LOD1"]
+gi_mode = 2
+visibility_range_begin = 4.16335
+visibility_range_end = 10.3872
+mesh = ExtResource("6_7gtfl")
+surface_material_override/0 = ExtResource("2_51sxc")
+
+[node name="Toilet_Bowl_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Toilet_Bowl_LOD2"]
+gi_mode = 2
+visibility_range_begin = 10.3872
+visibility_range_end = 80.6389
+mesh = ExtResource("7_tp65d")
+surface_material_override/0 = ExtResource("2_51sxc")

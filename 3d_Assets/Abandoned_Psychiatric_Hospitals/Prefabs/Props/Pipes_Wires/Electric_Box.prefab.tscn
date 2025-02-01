@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://ba73a7spbvm6b"]
+
+[ext_resource type="ArrayMesh" uid="uid://cpmba7dv8sb2j" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Electric_Box.Electric_Box_Door.mesh" id="1_1an2r"]
+[ext_resource type="Material" uid="uid://c1pqsfoubdibd" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Wires.mat.tres" id="2_bpntw"]
+[ext_resource type="ArrayMesh" uid="uid://cejilofbcd46n" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Electric_Box.Electric_Box_Handle.mesh" id="3_gw71f"]
+[ext_resource type="ArrayMesh" uid="uid://cr5fqo4t024ln" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Electric_Box.Electric_Box_LOD0.mesh" id="4_tkad2"]
+[ext_resource type="ArrayMesh" uid="uid://dugvfoos4lbpd" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Electric_Box.Electric_Box_LOD1.mesh" id="5_3jwqu"]
+[ext_resource type="ArrayMesh" uid="uid://bhgvv3vg7h5pm" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Electric_Box.Electric_Box_LOD2.mesh" id="6_lfjwd"]
+
+[node name="Electric_Box" type="Node3D"]
+
+[node name="Electric_Box_Door" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.128713, -0.206376, -0.134401)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Electric_Box_Door"]
+gi_mode = 2
+mesh = ExtResource("1_1an2r")
+surface_material_override/0 = ExtResource("2_bpntw")
+
+[node name="Electric_Box_Handle" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0556612, -0.000219289, 0.133386)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Electric_Box_Handle"]
+gi_mode = 2
+mesh = ExtResource("3_gw71f")
+surface_material_override/0 = ExtResource("2_bpntw")
+
+[node name="Electric_Box_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Electric_Box_LOD0"]
+gi_mode = 2
+visibility_range_end = 0.893837
+mesh = ExtResource("4_tkad2")
+surface_material_override/0 = ExtResource("2_bpntw")
+
+[node name="Electric_Box_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Electric_Box_LOD1"]
+gi_mode = 2
+visibility_range_begin = 0.893837
+visibility_range_end = 3.44055
+mesh = ExtResource("5_3jwqu")
+surface_material_override/0 = ExtResource("2_bpntw")
+
+[node name="Electric_Box_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Electric_Box_LOD2"]
+gi_mode = 2
+visibility_range_begin = 3.44055
+visibility_range_end = 30.0017
+mesh = ExtResource("6_lfjwd")
+surface_material_override/0 = ExtResource("2_bpntw")

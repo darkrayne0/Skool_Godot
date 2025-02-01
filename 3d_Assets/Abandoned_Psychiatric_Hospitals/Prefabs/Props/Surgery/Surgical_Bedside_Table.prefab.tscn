@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwasw3rt2587a"]
+
+[ext_resource type="ArrayMesh" uid="uid://bmw8y4atbxy6w" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Bedside_Table.Surgical_Bedside_Table_LOD0.mesh" id="1_mdtew"]
+[ext_resource type="Material" uid="uid://y8c8doe5lchv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Shelving.mat.tres" id="2_0ir5f"]
+[ext_resource type="ArrayMesh" uid="uid://cddi0vpw2gsnd" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Bedside_Table.Surgical_Bedside_Table_LOD1.mesh" id="3_qbyq3"]
+[ext_resource type="ArrayMesh" uid="uid://em7r0wq3c2jj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Bedside_Table.Surgical_Bedside_Table_LOD2.mesh" id="4_hetd5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sjg00"]
+size = Vector3(0.594628, 0.920765, 0.824108)
+
+[node name="Surgical_Bedside_Table" type="Node3D"]
+
+[node name="Surgical_Bedside_Table_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Bedside_Table_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.89935
+mesh = ExtResource("1_mdtew")
+surface_material_override/0 = ExtResource("2_0ir5f")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Surgical_Bedside_Table_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Surgical_Bedside_Table_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00644857, 0.459137, 0.00251323)
+shape = SubResource("BoxShape3D_sjg00")
+
+[node name="Surgical_Bedside_Table_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Bedside_Table_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.89935
+visibility_range_end = 4.58148
+mesh = ExtResource("3_qbyq3")
+surface_material_override/0 = ExtResource("2_0ir5f")
+
+[node name="Surgical_Bedside_Table_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Bedside_Table_LOD2"]
+gi_mode = 2
+visibility_range_begin = 4.58148
+visibility_range_end = 29.6355
+mesh = ExtResource("4_hetd5")
+surface_material_override/0 = ExtResource("2_0ir5f")

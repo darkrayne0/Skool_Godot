@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://b0dxy8fywmwfv"]
+
+[ext_resource type="Texture2D" uid="uid://bl024xh8xpm1q" path="res://Materials/Textures/Props/Directors_Chair/Directors_Chair_A.tga" id="1_qrvkx"]
+[ext_resource type="Texture2D" uid="uid://cd36ijgolf77y" path="res://Materials/Textures/Props/Directors_Chair/Directors_Chair_AO.tga" id="2_uaeow"]
+[ext_resource type="Texture2D" uid="uid://brgigqu1f1hma" path="res://Materials/Textures/Props/Directors_Chair/Directors_Chair_MS.roughness.png" id="3_m06us"]
+[ext_resource type="Texture2D" uid="uid://c6akwqgcuf1px" path="res://Materials/Textures/Props/Directors_Chair/Directors_Chair_N.tga" id="4_uu1qu"]
+
+[resource]
+resource_name = "Directors_Chair"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_qrvkx")
+metallic_texture = ExtResource("3_m06us")
+roughness_texture = ExtResource("3_m06us")
+roughness_texture_channel = 3
+normal_enabled = true
+normal_texture = ExtResource("4_uu1qu")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_uaeow")
+ao_texture_channel = 1
+uv1_scale = Vector3(1, 1, 0)

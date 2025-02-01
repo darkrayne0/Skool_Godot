@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://rwrantid5sgs"]
+
+[ext_resource type="Texture2D" uid="uid://0etwg6c7f12g" path="res://Materials/Textures/Vegetation/Aspen/Billboard_Aspen_01.tga" id="1_qmdso"]
+
+[resource]
+resource_name = "Billboard_Aspen_01"
+transparency = 2
+alpha_scissor_threshold = 0.872
+alpha_antialiasing_mode = 0
+depth_draw_mode = 1
+albedo_color = Color(0.933962, 0.906098, 0.885502, 1)
+albedo_texture = ExtResource("1_qmdso")
+uv1_scale = Vector3(1, 1, 0)

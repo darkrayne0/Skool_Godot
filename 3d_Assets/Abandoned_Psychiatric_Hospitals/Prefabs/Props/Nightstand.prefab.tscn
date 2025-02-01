@@ -1,0 +1,84 @@
+[gd_scene load_steps=10 format=3 uid="uid://dgblpnngsydj1"]
+
+[ext_resource type="ArrayMesh" uid="uid://ct41sq81d8t4a" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Nightstand.Nightstand_Door_LOD0.mesh" id="1_i2dfg"]
+[ext_resource type="Material" uid="uid://dpal4l0u314nv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Nightstand.mat.tres" id="2_7c2tb"]
+[ext_resource type="ArrayMesh" uid="uid://d1w5g18fpyigw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Nightstand.Nightstand_Door_LOD1.mesh" id="3_6ess7"]
+[ext_resource type="ArrayMesh" uid="uid://ciyoq3j6db4t8" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Nightstand.Nightstand_Door_LOD2.mesh" id="4_t1myk"]
+[ext_resource type="ArrayMesh" uid="uid://dcwqf1ue5ei21" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Nightstand.Nightstand_LOD0.mesh" id="5_kghej"]
+[ext_resource type="ArrayMesh" uid="uid://6nxr8c26sndh" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Nightstand.Nightstand_LOD1.mesh" id="6_w1g8k"]
+[ext_resource type="ArrayMesh" uid="uid://cba4wo218dnfl" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Nightstand.Nightstand_LOD2.mesh" id="7_jrohu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jihxq"]
+size = Vector3(0.0607259, 0.465519, 0.67302)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nqtkt"]
+size = Vector3(0.680362, 0.943715, 0.849793)
+
+[node name="Nightstand" type="Node3D"]
+
+[node name="Nightstand_Door_LOD0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.314269, 0.266631, 0.333847)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Nightstand_Door_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.79801
+mesh = ExtResource("1_i2dfg")
+surface_material_override/0 = ExtResource("2_7c2tb")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Nightstand_Door_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Nightstand_Door_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00721094, 0.17847, -0.331182)
+shape = SubResource("BoxShape3D_jihxq")
+
+[node name="Nightstand_Door_LOD1" type="Node3D" parent="Nightstand_Door_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-08, 1.90735e-08, 3.8147e-08)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Nightstand_Door_LOD0/Nightstand_Door_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.79801
+visibility_range_end = 4.2834
+mesh = ExtResource("3_6ess7")
+surface_material_override/0 = ExtResource("2_7c2tb")
+
+[node name="Nightstand_Door_LOD2" type="Node3D" parent="Nightstand_Door_LOD0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-08, 1.90735e-08, 3.8147e-08)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Nightstand_Door_LOD0/Nightstand_Door_LOD2"]
+gi_mode = 2
+visibility_range_begin = 4.2834
+visibility_range_end = 28.7563
+mesh = ExtResource("4_t1myk")
+surface_material_override/0 = ExtResource("2_7c2tb")
+
+[node name="Nightstand_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Nightstand_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.79801
+mesh = ExtResource("5_kghej")
+surface_material_override/0 = ExtResource("2_7c2tb")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Nightstand_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Nightstand_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.471634, -0.0356548)
+shape = SubResource("BoxShape3D_nqtkt")
+
+[node name="Nightstand_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Nightstand_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.79801
+visibility_range_end = 4.2834
+mesh = ExtResource("6_w1g8k")
+surface_material_override/0 = ExtResource("2_7c2tb")
+
+[node name="Nightstand_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Nightstand_LOD2"]
+gi_mode = 2
+visibility_range_begin = 4.2834
+visibility_range_end = 28.7563
+mesh = ExtResource("7_jrohu")
+surface_material_override/0 = ExtResource("2_7c2tb")

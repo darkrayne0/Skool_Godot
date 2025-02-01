@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://c65jcsq7ev0eh"]
+
+[ext_resource type="ArrayMesh" uid="uid://csqrmmm1sier6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Extinguisher.Extinguisher_LOD0.mesh" id="1_eo1v8"]
+[ext_resource type="Material" uid="uid://bn5yorrelrbxn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Fire_Fighting.mat.tres" id="2_266pp"]
+[ext_resource type="ArrayMesh" uid="uid://cps3eue00c7wn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Extinguisher.Extinguisher_LOD1.mesh" id="3_4v304"]
+[ext_resource type="ArrayMesh" uid="uid://d2f2oumiacanr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Extinguisher.Extinguisher_LOD2.mesh" id="4_s44sd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_alos6"]
+size = Vector3(0.220279, 0.637209, 0.316933)
+
+[node name="Extinguisher" type="Node3D"]
+
+[node name="Extinguisher_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Extinguisher_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.72606
+mesh = ExtResource("1_eo1v8")
+surface_material_override/0 = ExtResource("2_266pp")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Extinguisher_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Extinguisher_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107495, 0.305193, -0.0403956)
+shape = SubResource("BoxShape3D_alos6")
+
+[node name="Extinguisher_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Extinguisher_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.72606
+visibility_range_end = 5.21471
+mesh = ExtResource("3_4v304")
+surface_material_override/0 = ExtResource("2_266pp")
+
+[node name="Extinguisher_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Extinguisher_LOD2"]
+gi_mode = 2
+visibility_range_begin = 5.21471
+visibility_range_end = 17.8721
+mesh = ExtResource("4_s44sd")
+surface_material_override/0 = ExtResource("2_266pp")

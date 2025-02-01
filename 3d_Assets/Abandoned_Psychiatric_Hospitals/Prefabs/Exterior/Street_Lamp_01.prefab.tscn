@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://gbprl72n4rya"]
+
+[ext_resource type="ArrayMesh" uid="uid://cyw7dqbmbn4n6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Street_Lamp_01.Street_Lamp_01_LOD0.mesh" id="1_sxq8u"]
+[ext_resource type="Material" uid="uid://c50v166hp80iy" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Exterior/Street_Lamp.mat.tres" id="2_j563b"]
+[ext_resource type="ArrayMesh" uid="uid://cgrnrf4mtxtbv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Street_Lamp_01.Street_Lamp_01_LOD1.mesh" id="3_8ehvr"]
+[ext_resource type="ArrayMesh" uid="uid://dtrx2df5tmto7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Street_Lamp_01.Street_Lamp_01_LOD2.mesh" id="4_jcr86"]
+[ext_resource type="ArrayMesh" uid="uid://m1fjw4ql6jfe" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Exterior/extracted/Street_Lamp_01.Street_Lamp_Glass.mesh" id="5_ckb4p"]
+[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="6_mkdcw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ohooy"]
+size = Vector3(0.287503, 3.23261, 0.341001)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lpndq"]
+size = Vector3(1.19552, 0.533648, 0.341001)
+
+[node name="Street_Lamp_01" type="Node3D"]
+
+[node name="Street_Lamp_01_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Street_Lamp_01_LOD0"]
+gi_mode = 2
+visibility_range_end = 5.16319
+mesh = ExtResource("1_sxq8u")
+surface_material_override/0 = ExtResource("2_j563b")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Street_Lamp_01_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Street_Lamp_01_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0391631, 1.61631, 0.00752926)
+shape = SubResource("BoxShape3D_ohooy")
+
+[node name="BoxCollider2" type="StaticBody3D" parent="Street_Lamp_01_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Street_Lamp_01_LOD0/BoxCollider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00929177, 3.16297, 0.00752926)
+shape = SubResource("BoxShape3D_lpndq")
+
+[node name="Street_Lamp_01_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Street_Lamp_01_LOD1"]
+gi_mode = 2
+visibility_range_begin = 5.16319
+visibility_range_end = 9.11248
+mesh = ExtResource("3_8ehvr")
+surface_material_override/0 = ExtResource("2_j563b")
+
+[node name="Street_Lamp_01_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Street_Lamp_01_LOD2"]
+gi_mode = 2
+visibility_range_begin = 9.11248
+visibility_range_end = 46.4317
+mesh = ExtResource("4_jcr86")
+surface_material_override/0 = ExtResource("2_j563b")
+
+[node name="Street_Lamp_Glass" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Street_Lamp_Glass"]
+gi_mode = 2
+visibility_range_begin = 9.11248
+visibility_range_end = 46.4317
+mesh = ExtResource("5_ckb4p")
+surface_material_override/0 = ExtResource("6_mkdcw")

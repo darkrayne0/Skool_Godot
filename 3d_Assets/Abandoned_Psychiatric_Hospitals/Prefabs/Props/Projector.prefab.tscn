@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://c48uiohyar01k"]
+
+[ext_resource type="ArrayMesh" uid="uid://dcn3j57vg7cw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Projector.Projector_LOD0.mesh" id="1_edr1f"]
+[ext_resource type="Material" uid="uid://5gsicxxrjegj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Projector.mat.tres" id="2_lfq7d"]
+[ext_resource type="ArrayMesh" uid="uid://dsy58bwhpgxc1" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Projector.Projector_LOD1.mesh" id="3_h4j58"]
+[ext_resource type="ArrayMesh" uid="uid://bocjgujt33jfg" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Projector.Projector_LOD2.mesh" id="4_xynoa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_la7yc"]
+size = Vector3(0.588379, 0.704385, 0.313762)
+
+[node name="Projector" type="Node3D"]
+
+[node name="Projector_LOD0" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Projector_LOD0"]
+gi_mode = 2
+visibility_range_end = 1.3309
+mesh = ExtResource("1_edr1f")
+surface_material_override/0 = ExtResource("2_lfq7d")
+
+[node name="BoxCollider" type="StaticBody3D" parent="Projector_LOD0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Projector_LOD0/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.042369, 0.352882, 0.0134684)
+shape = SubResource("BoxShape3D_la7yc")
+
+[node name="Projector_LOD1" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Projector_LOD1"]
+gi_mode = 2
+visibility_range_begin = 1.3309
+visibility_range_end = 3.69083
+mesh = ExtResource("3_h4j58")
+surface_material_override/0 = ExtResource("2_lfq7d")
+
+[node name="Projector_LOD2" type="Node3D" parent="."]
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Projector_LOD2"]
+gi_mode = 2
+visibility_range_begin = 3.69083
+visibility_range_end = 17.735
+mesh = ExtResource("4_xynoa")
+surface_material_override/0 = ExtResource("2_lfq7d")
+
+[node name="Point Light" type="Node3D" parent="."]
+transform = Transform3D(2.93652e-06, 0, -1, 0, 1, 0, 1, 0, 2.93652e-06, -0.2293, 0.393, -0.0303)
+
+[node name="Light" type="SpotLight3D" parent="Point Light"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+light_bake_mode = 0
+shadow_enabled = true
+shadow_bias = 0.05
+spot_range = 10.0
+spot_attenuation = 0.333
+spot_angle = 22.3292
+spot_angle_attenuation = 0.5
