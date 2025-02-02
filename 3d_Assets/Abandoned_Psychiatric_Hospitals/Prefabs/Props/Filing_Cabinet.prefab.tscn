@@ -1,17 +1,17 @@
 [gd_scene load_steps=14 format=3 uid="uid://8yncne3wc826"]
 
-[ext_resource type="ArrayMesh" uid="uid://hdllp8qksmrc" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_01_LOD0.mesh" id="1_w1xrq"]
-[ext_resource type="Material" uid="uid://bchxfwm7ybcx7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Filing_Cabinet.mat.tres" id="2_p53yu"]
-[ext_resource type="ArrayMesh" uid="uid://rhxrnjet3rba" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_01_LOD1.mesh" id="3_4ay3f"]
-[ext_resource type="ArrayMesh" uid="uid://d1ljqafc5mjke" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_01_LOD2.mesh" id="4_on3a6"]
-[ext_resource type="ArrayMesh" uid="uid://dbmffi1462yqu" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_01_LOD0_001.mesh" id="5_8munf"]
-[ext_resource type="ArrayMesh" uid="uid://dm3flxe5k1n1" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_01_LOD1_001.mesh" id="6_jmfac"]
-[ext_resource type="ArrayMesh" uid="uid://dwp448cm7p078" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_03_LOD0.mesh" id="7_j7lfx"]
-[ext_resource type="ArrayMesh" uid="uid://d3177n5df7670" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_03_LOD1.mesh" id="8_3dkkr"]
-[ext_resource type="ArrayMesh" uid="uid://cp5gekoa5b455" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_04_LOD0.mesh" id="9_v6x7w"]
-[ext_resource type="ArrayMesh" uid="uid://conjlqatfyp7n" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_04_LOD1.mesh" id="10_d5ua0"]
-[ext_resource type="ArrayMesh" uid="uid://cf7u3umcmhhbm" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_04_LOD2.mesh" id="11_8gu65"]
-[ext_resource type="ArrayMesh" uid="uid://dxxwbgyud4rtf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Cabinet_LOD0.mesh" id="12_1bnaq"]
+[ext_resource type="ArrayMesh" uid="uid://hdllp8qksmrc" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_01_LOD0.mesh" id="1_w1xrq"]
+[ext_resource type="Material" uid="uid://bchxfwm7ybcx7" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Filing_Cabinet.mat.tres" id="2_p53yu"]
+[ext_resource type="ArrayMesh" uid="uid://rhxrnjet3rba" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_01_LOD1.mesh" id="3_4ay3f"]
+[ext_resource type="ArrayMesh" uid="uid://d1ljqafc5mjke" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_01_LOD2.mesh" id="4_on3a6"]
+[ext_resource type="ArrayMesh" uid="uid://dbmffi1462yqu" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_01_LOD0_001.mesh" id="5_8munf"]
+[ext_resource type="ArrayMesh" uid="uid://dm3flxe5k1n1" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_01_LOD1_001.mesh" id="6_jmfac"]
+[ext_resource type="ArrayMesh" uid="uid://dwp448cm7p078" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_03_LOD0.mesh" id="7_j7lfx"]
+[ext_resource type="ArrayMesh" uid="uid://d3177n5df7670" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_03_LOD1.mesh" id="8_3dkkr"]
+[ext_resource type="ArrayMesh" uid="uid://cp5gekoa5b455" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_04_LOD0.mesh" id="9_v6x7w"]
+[ext_resource type="ArrayMesh" uid="uid://conjlqatfyp7n" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_04_LOD1.mesh" id="10_d5ua0"]
+[ext_resource type="ArrayMesh" uid="uid://cf7u3umcmhhbm" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Box_04_LOD2.mesh" id="11_8gu65"]
+[ext_resource type="ArrayMesh" uid="uid://dxxwbgyud4rtf" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Filing_Cabinet.Filing_Cabinet_LOD0.mesh" id="12_1bnaq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4b0i0"]
 size = Vector3(0.565633, 1.78374, 0.676066)
@@ -47,22 +47,22 @@ visibility_range_end = 83.3047
 mesh = ExtResource("4_on3a6")
 surface_material_override/0 = ExtResource("2_p53yu")
 
-[node name="Filing_Box_01_LOD0_001" type="Node3D" parent="."]
+[node name="Filing_Box_02_LOD0" type="Node3D" parent="."]
 transform = Transform3D(0.677807, 0, 0, 0, 0.677807, 0, 0, 0, 0.677807, -0.381572, 0.368296, 0)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_01_LOD0_001"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_02_LOD0"]
 gi_mode = 2
 visibility_range_end = 4.58536
 mesh = ExtResource("5_8munf")
 surface_material_override/0 = ExtResource("2_p53yu")
 
-[node name="Filing_Box_01_LOD1_001" type="Node3D" parent="Filing_Box_01_LOD0_001"]
+[node name="Filing_Box_02_LOD1" type="Node3D" parent="Filing_Box_02_LOD0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8147e-08, 0, 0)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_01_LOD0_001/Filing_Box_01_LOD1_001"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_02_LOD0/Filing_Box_02_LOD1"]
 gi_mode = 2
-visibility_range_begin = 11.1087
-visibility_range_end = 83.3047
+visibility_range_begin = 4.59
+visibility_range_end = 11.11
 mesh = ExtResource("6_jmfac")
 surface_material_override/0 = ExtResource("2_p53yu")
 
@@ -80,8 +80,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8147e-08, 0, 0)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_03_LOD0/Filing_Box_03_LOD1"]
 gi_mode = 2
-visibility_range_begin = 11.1087
-visibility_range_end = 83.3047
+visibility_range_begin = 4.59
+visibility_range_end = 11.11
 mesh = ExtResource("8_3dkkr")
 surface_material_override/0 = ExtResource("2_p53yu")
 
@@ -118,8 +118,7 @@ surface_material_override/0 = ExtResource("2_p53yu")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Cabinet_LOD0"]
 gi_mode = 2
-visibility_range_begin = 11.1087
-visibility_range_end = 83.3047
+visibility_range_end = 20.0
 mesh = ExtResource("12_1bnaq")
 surface_material_override/0 = ExtResource("2_p53yu")
 
