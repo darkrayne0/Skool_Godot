@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://ykn0vowi4m1p"]
+[gd_scene load_steps=48 format=4 uid="uid://ykn0vowi4m1p"]
 
 [ext_resource type="PackedScene" uid="uid://d0xvnytjomfy1" path="res://Scenes/Props/school_desk.scn" id="1_nqm36"]
 [ext_resource type="PackedScene" uid="uid://8ucv8vsft0qo" path="res://Scenes/Props/school_chair.scn" id="2_amid6"]
@@ -34,9 +34,6 @@
 [ext_resource type="PackedScene" uid="uid://i16h775x0h17" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Props/Corridor/Urn_02.prefab.tscn" id="30_p0lrw"]
 [ext_resource type="PackedScene" uid="uid://dpy40qktmxo7n" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Props/Shelf.prefab.tscn" id="31_dg8s2"]
 [ext_resource type="PackedScene" uid="uid://chhx7o7yy6te2" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Props/Corridor/Wardrobe_01.prefab.tscn" id="34_vpm81"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqyx2"]
-albedo_texture = ExtResource("3_bf0ag")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3pa3t"]
 resource_name = "Directors_Desk"
@@ -211,7 +208,6 @@ transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 14, 0,
 [node name="Directors_Desk" type="Node3D" parent="Directors_Desk"]
 
 [node name="Directors_Desk_LOD0" type="MeshInstance3D" parent="Directors_Desk/Directors_Desk"]
-material_override = SubResource("StandardMaterial3D_kqyx2")
 visibility_range_end = 30.0
 mesh = SubResource("ArrayMesh_vm2ln")
 skeleton = NodePath("")
