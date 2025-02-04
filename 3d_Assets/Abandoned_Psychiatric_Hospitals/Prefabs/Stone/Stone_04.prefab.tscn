@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpgmlcjncx61s"]
+[gd_scene load_steps=4 format=3 uid="uid://bpgmlcjncx61s"]
 
-[ext_resource type="ArrayMesh" uid="uid://du2qpse6xxv84" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Stone/extracted/Stone_04.Stone_04_LOD0.mesh" id="1_owj2u"]
-[ext_resource type="Material" uid="uid://djg4relaci1c4" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Stone/Stone_01.mat.tres" id="2_t4hcu"]
-[ext_resource type="ArrayMesh" uid="uid://d7c6xe8p5tvu" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Stone/extracted/Stone_04.Stone_04_LOD1.mesh" id="3_yn2cf"]
-[ext_resource type="ArrayMesh" uid="uid://ds5h7dxpr36m5" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Stone/extracted/Stone_04.Stone_04_LOD2.mesh" id="4_cueom"]
+[ext_resource type="ArrayMesh" uid="uid://du2qpse6xxv84" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Stone/extracted/Stone_04.Stone_04_LOD0.mesh" id="1_owj2u"]
+[ext_resource type="ArrayMesh" uid="uid://d7c6xe8p5tvu" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Stone/extracted/Stone_04.Stone_04_LOD1.mesh" id="3_yn2cf"]
+[ext_resource type="ArrayMesh" uid="uid://ds5h7dxpr36m5" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Stone/extracted/Stone_04.Stone_04_LOD2.mesh" id="4_cueom"]
 
 [node name="Stone_04" type="Node3D"]
 
@@ -11,24 +10,21 @@
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Stone_04_LOD0"]
 gi_mode = 2
-visibility_range_end = 2.22449
+visibility_range_end = 2.0
 mesh = ExtResource("1_owj2u")
-surface_material_override/0 = ExtResource("2_t4hcu")
 
 [node name="Stone_04_LOD1" type="Node3D" parent="."]
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Stone_04_LOD1"]
 gi_mode = 2
-visibility_range_begin = 2.22449
-visibility_range_end = 4.48831
+visibility_range_begin = 2.0
+visibility_range_end = 4.0
 mesh = ExtResource("3_yn2cf")
-surface_material_override/0 = ExtResource("2_t4hcu")
 
 [node name="Stone_04_LOD2" type="Node3D" parent="."]
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Stone_04_LOD2"]
 gi_mode = 2
-visibility_range_begin = 4.48831
-visibility_range_end = 28.0487
+visibility_range_begin = 4.0
+visibility_range_end = 10.0
 mesh = ExtResource("4_cueom")
-surface_material_override/0 = ExtResource("2_t4hcu")

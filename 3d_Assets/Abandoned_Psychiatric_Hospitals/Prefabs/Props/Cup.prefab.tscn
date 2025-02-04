@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://c047ayi3qie4n"]
 
-[ext_resource type="ArrayMesh" uid="uid://c88ixkwd730f6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Cup.Cup_LOD0.mesh" id="1_y0hsp"]
-[ext_resource type="Material" uid="uid://t2vmkl03rvap" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Shelf.mat.tres" id="2_am05e"]
-[ext_resource type="ArrayMesh" uid="uid://y5b15d85syqh" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Cup.Cup_LOD1.mesh" id="3_ucfnk"]
-[ext_resource type="ArrayMesh" uid="uid://dn6wptccgel3s" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Cup.Cup_LOD2.mesh" id="4_3mbqt"]
+[ext_resource type="ArrayMesh" uid="uid://c88ixkwd730f6" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Cup.Cup_LOD0.mesh" id="1_y0hsp"]
+[ext_resource type="Material" uid="uid://t2vmkl03rvap" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Shelf.mat.tres" id="2_am05e"]
+[ext_resource type="ArrayMesh" uid="uid://y5b15d85syqh" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Cup.Cup_LOD1.mesh" id="3_ucfnk"]
+[ext_resource type="ArrayMesh" uid="uid://dn6wptccgel3s" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Cup.Cup_LOD2.mesh" id="4_3mbqt"]
 
 [node name="Cup" type="Node3D"]
 
@@ -11,7 +11,7 @@
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Cup_LOD0"]
 gi_mode = 2
-visibility_range_end = 0.752376
+visibility_range_end = 2.0
 mesh = ExtResource("1_y0hsp")
 surface_material_override/0 = ExtResource("2_am05e")
 
@@ -19,8 +19,8 @@ surface_material_override/0 = ExtResource("2_am05e")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Cup_LOD1"]
 gi_mode = 2
-visibility_range_begin = 0.752376
-visibility_range_end = 1.50475
+visibility_range_begin = 2.0
+visibility_range_end = 4.0
 mesh = ExtResource("3_ucfnk")
 surface_material_override/0 = ExtResource("2_am05e")
 
@@ -28,7 +28,7 @@ surface_material_override/0 = ExtResource("2_am05e")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Cup_LOD2"]
 gi_mode = 2
-visibility_range_begin = 1.50475
-visibility_range_end = 18.8094
+visibility_range_begin = 4.0
+visibility_range_end = 20.0
 mesh = ExtResource("4_3mbqt")
 surface_material_override/0 = ExtResource("2_am05e")

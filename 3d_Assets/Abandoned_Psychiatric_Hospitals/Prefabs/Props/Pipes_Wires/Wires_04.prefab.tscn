@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqxtnudtig0q7"]
 
-[ext_resource type="ArrayMesh" uid="uid://ie0u6ymlpa0a" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Wires_04.Wires_04_01.mesh" id="1_upqjb"]
-[ext_resource type="Material" uid="uid://c1pqsfoubdibd" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Wires.mat.tres" id="2_mq3f0"]
-[ext_resource type="ArrayMesh" uid="uid://btg76jmeba44h" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Wires_04.Wires_04_LOD0.mesh" id="3_lkcks"]
-[ext_resource type="ArrayMesh" uid="uid://b2mwukrthfk8x" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Wires_04.Wires_04_LOD1.mesh" id="4_2wgk7"]
+[ext_resource type="ArrayMesh" uid="uid://ie0u6ymlpa0a" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Wires_04.Wires_04_01.mesh" id="1_upqjb"]
+[ext_resource type="Material" uid="uid://c1pqsfoubdibd" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Wires.mat.tres" id="2_mq3f0"]
+[ext_resource type="ArrayMesh" uid="uid://btg76jmeba44h" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Wires_04.Wires_04_LOD0.mesh" id="3_lkcks"]
+[ext_resource type="ArrayMesh" uid="uid://b2mwukrthfk8x" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Pipes_Wires/extracted/Wires_04.Wires_04_LOD1.mesh" id="4_2wgk7"]
 
 [node name="Wires_04" type="Node3D"]
 
@@ -12,6 +12,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0329242, 0.0137173, 7.0095
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wires_04_01"]
 gi_mode = 2
+visibility_range_end = 15.0
 mesh = ExtResource("1_upqjb")
 surface_material_override/0 = ExtResource("2_mq3f0")
 
@@ -19,7 +20,7 @@ surface_material_override/0 = ExtResource("2_mq3f0")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wires_04_LOD0"]
 gi_mode = 2
-visibility_range_end = 2.16648
+visibility_range_end = 10.0
 mesh = ExtResource("3_lkcks")
 surface_material_override/0 = ExtResource("2_mq3f0")
 
@@ -27,7 +28,7 @@ surface_material_override/0 = ExtResource("2_mq3f0")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wires_04_LOD1"]
 gi_mode = 2
-visibility_range_begin = 2.16648
-visibility_range_end = 21.954
+visibility_range_begin = 10.0
+visibility_range_end = 22.0
 mesh = ExtResource("4_2wgk7")
 surface_material_override/0 = ExtResource("2_mq3f0")

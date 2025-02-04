@@ -589,12 +589,11 @@ radius = 9.00719
 
 [sub_resource type="BlackboardPlan" id="BlackboardPlan_nxsu2"]
 
-[node name="Humanoid" type="CharacterBody3D" node_paths=PackedStringArray("animation", "bt_player") groups=["enemy"]]
+[node name="Humanoid" type="CharacterBody3D" node_paths=PackedStringArray("bt_player") groups=["enemy"]]
 transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 0, 0, 0)
 collision_layer = 263
 collision_mask = 263
 script = ExtResource("1_pge41")
-animation = NodePath("")
 bt_player = NodePath("BTPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

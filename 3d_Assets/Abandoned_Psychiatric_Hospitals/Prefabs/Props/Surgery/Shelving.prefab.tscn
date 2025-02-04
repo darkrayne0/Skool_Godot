@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://44g12dhay220"]
 
-[ext_resource type="ArrayMesh" uid="uid://b8173hscpkxgv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Shelving.Shelving_01_LOD0.mesh" id="1_w8mf3"]
-[ext_resource type="Material" uid="uid://y8c8doe5lchv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Shelving.mat.tres" id="2_awg54"]
-[ext_resource type="ArrayMesh" uid="uid://bbkkljayenrbg" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Shelving.Shelving_01_LOD1.mesh" id="3_asmyb"]
+[ext_resource type="ArrayMesh" uid="uid://b8173hscpkxgv" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Shelving.Shelving_01_LOD0.mesh" id="1_w8mf3"]
+[ext_resource type="Material" uid="uid://y8c8doe5lchv" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Shelving.mat.tres" id="2_awg54"]
+[ext_resource type="ArrayMesh" uid="uid://bbkkljayenrbg" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Shelving.Shelving_01_LOD1.mesh" id="3_asmyb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bgoeh"]
 size = Vector3(0.441655, 1.6027, 2.09)
@@ -13,7 +13,7 @@ size = Vector3(0.441655, 1.6027, 2.09)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Shelving_01_LOD0"]
 gi_mode = 2
-visibility_range_end = 8.28067
+visibility_range_end = 7.0
 mesh = ExtResource("1_w8mf3")
 surface_material_override/0 = ExtResource("2_awg54")
 
@@ -27,7 +27,7 @@ shape = SubResource("BoxShape3D_bgoeh")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Shelving_01_LOD1"]
 gi_mode = 2
-visibility_range_begin = 8.28067
-visibility_range_end = 60.6324
+visibility_range_begin = 7.0
+visibility_range_end = 20.0
 mesh = ExtResource("3_asmyb")
 surface_material_override/0 = ExtResource("2_awg54")

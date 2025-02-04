@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bbs11pavgm37l"]
 
-[ext_resource type="ArrayMesh" uid="uid://1gmy2n7k5up" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Fern_01.Fern_01_LOD0.mesh" id="1_ubk6q"]
-[ext_resource type="Material" uid="uid://colr8foh4eyih" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Grass_01.mat.tres" id="2_vu4c6"]
-[ext_resource type="ArrayMesh" uid="uid://cd8fxiqfbkvxj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Fern_01.Fern_01_LOD1.mesh" id="3_e3vor"]
-[ext_resource type="ArrayMesh" uid="uid://cpun1ul7loj3o" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Fern_01.Fern_01_LOD2.mesh" id="4_bu6lm"]
+[ext_resource type="ArrayMesh" uid="uid://1gmy2n7k5up" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Fern_01.Fern_01_LOD0.mesh" id="1_ubk6q"]
+[ext_resource type="Material" uid="uid://colr8foh4eyih" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Vegetation/Grass_01.mat.tres" id="2_vu4c6"]
+[ext_resource type="ArrayMesh" uid="uid://cd8fxiqfbkvxj" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Fern_01.Fern_01_LOD1.mesh" id="3_e3vor"]
+[ext_resource type="ArrayMesh" uid="uid://cpun1ul7loj3o" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Vegetation/extracted/Fern_01.Fern_01_LOD2.mesh" id="4_bu6lm"]
 
 [node name="Fern_01" type="Node3D"]
 
@@ -11,7 +11,9 @@
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Fern_01_LOD0"]
 gi_mode = 2
-visibility_range_end = 4.33081
+visibility_range_end = 4.0
+visibility_range_end_margin = 4.55
+visibility_range_fade_mode = 1
 mesh = ExtResource("1_ubk6q")
 surface_material_override/0 = ExtResource("2_vu4c6")
 
@@ -19,8 +21,11 @@ surface_material_override/0 = ExtResource("2_vu4c6")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Fern_01_LOD1"]
 gi_mode = 2
-visibility_range_begin = 4.33081
-visibility_range_end = 11.2119
+visibility_range_begin = 4.0
+visibility_range_begin_margin = 5.0
+visibility_range_end = 10.0
+visibility_range_end_margin = 11.0
+visibility_range_fade_mode = 1
 mesh = ExtResource("3_e3vor")
 surface_material_override/0 = ExtResource("2_vu4c6")
 
@@ -28,7 +33,10 @@ surface_material_override/0 = ExtResource("2_vu4c6")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Fern_01_LOD2"]
 gi_mode = 2
-visibility_range_begin = 11.2119
-visibility_range_end = 62.0823
+visibility_range_begin = 10.0
+visibility_range_begin_margin = 11.0
+visibility_range_end = 20.0
+visibility_range_end_margin = 21.0
+visibility_range_fade_mode = 1
 mesh = ExtResource("4_bu6lm")
 surface_material_override/0 = ExtResource("2_vu4c6")

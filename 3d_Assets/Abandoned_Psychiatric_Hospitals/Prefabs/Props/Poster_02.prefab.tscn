@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://d2aoc77b6r7xl"]
 
-[ext_resource type="ArrayMesh" uid="uid://c4n3x4vs72f76" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Poster_02.Poster_02_LOD0.mesh" id="1_g5fju"]
-[ext_resource type="Material" uid="uid://6iis22jac7hm" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Poster.mat.tres" id="2_3y0rs"]
-[ext_resource type="ArrayMesh" uid="uid://dka0uyscpam1h" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Poster_02.Poster_02_LOD1.mesh" id="3_6onoo"]
-[ext_resource type="ArrayMesh" uid="uid://drcydyxuh0r55" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Poster_02.Poster_02_LOD2.mesh" id="4_1vx0f"]
+[ext_resource type="ArrayMesh" uid="uid://c4n3x4vs72f76" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Poster_02.Poster_02_LOD0.mesh" id="1_g5fju"]
+[ext_resource type="Material" uid="uid://6iis22jac7hm" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Poster.mat.tres" id="2_3y0rs"]
+[ext_resource type="ArrayMesh" uid="uid://dka0uyscpam1h" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Poster_02.Poster_02_LOD1.mesh" id="3_6onoo"]
+[ext_resource type="ArrayMesh" uid="uid://drcydyxuh0r55" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/extracted/Poster_02.Poster_02_LOD2.mesh" id="4_1vx0f"]
 
 [node name="Poster_02" type="Node3D"]
 
@@ -11,7 +11,7 @@
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Poster_02_LOD0"]
 gi_mode = 2
-visibility_range_end = 5.5093
+visibility_range_end = 5.0
 mesh = ExtResource("1_g5fju")
 surface_material_override/0 = ExtResource("2_3y0rs")
 
@@ -19,8 +19,8 @@ surface_material_override/0 = ExtResource("2_3y0rs")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Poster_02_LOD1"]
 gi_mode = 2
-visibility_range_begin = 5.5093
-visibility_range_end = 16.3015
+visibility_range_begin = 5.0
+visibility_range_end = 10.0
 mesh = ExtResource("3_6onoo")
 surface_material_override/0 = ExtResource("2_3y0rs")
 
@@ -28,8 +28,8 @@ surface_material_override/0 = ExtResource("2_3y0rs")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Poster_02_LOD2"]
 gi_mode = 2
-visibility_range_begin = 16.3015
-visibility_range_end = 66.9934
+visibility_range_begin = 10.0
+visibility_range_end = 30.0
 mesh = ExtResource("4_1vx0f")
 surface_material_override/0 = ExtResource("2_3y0rs")
 

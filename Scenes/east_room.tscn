@@ -212,6 +212,7 @@ transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 14, 0,
 
 [node name="Directors_Desk_LOD0" type="MeshInstance3D" parent="Directors_Desk/Directors_Desk"]
 material_override = SubResource("StandardMaterial3D_kqyx2")
+visibility_range_end = 30.0
 mesh = SubResource("ArrayMesh_vm2ln")
 skeleton = NodePath("")
 
@@ -224,6 +225,7 @@ shape = SubResource("ConcavePolygonShape3D_1kqls")
 
 [node name="DrawerL" type="MeshInstance3D" parent="Directors_Desk/Directors_Desk"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182, 0.785, -0.716)
+visibility_range_end = 5.0
 mesh = SubResource("ArrayMesh_iy8wj")
 skeleton = NodePath("")
 
@@ -238,6 +240,7 @@ shape = SubResource("ConcavePolygonShape3D_hvgsi")
 
 [node name="DrawerR" type="MeshInstance3D" parent="Directors_Desk/Directors_Desk"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182132, 0.784535, 0.713638)
+visibility_range_end = 5.0
 mesh = SubResource("ArrayMesh_wnxau")
 skeleton = NodePath("")
 
@@ -280,8 +283,6 @@ transform = Transform3D(1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 0.314792
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.0409384, 0.9331, -0.387397)
 
 [node name="Walls" parent="." instance=ExtResource("12_ek73x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
-visible = false
 
 [node name="StudentDesk" type="Node3D" parent="."]
 
@@ -566,15 +567,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8, 2.3, -2.19983)
 [node name="Shelf4" parent="WallArt/WallShelf" instance=ExtResource("31_dg8s2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8, 1.6, -2.19983)
 
-[node name="Urn_01" parent="WallArt" instance=ExtResource("29_iujaf")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.72571, 0, 5.46593)
-
-[node name="Urn_02" parent="WallArt" instance=ExtResource("29_iujaf")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.27429, 0, 5.46593)
-
-[node name="Urn_03" parent="WallArt" instance=ExtResource("30_p0lrw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9631, 0, 1.90797)
-
 [node name="Ventilation_System_05" parent="WallArt" instance=ExtResource("30_ouecw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.93267, -3.97732)
 
@@ -786,3 +778,12 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.443
 
 [node name="Wardrobe_05" parent="ScienceCab" instance=ExtResource("34_vpm81")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.44321, 0, -2.94266)
+
+[node name="Urn_01" parent="." instance=ExtResource("29_iujaf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.72571, 0, 5.46593)
+
+[node name="Urn_02" parent="." instance=ExtResource("29_iujaf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.27429, 0, 5.46593)
+
+[node name="Urn_03" parent="." instance=ExtResource("30_p0lrw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9631, 0, 1.90797)

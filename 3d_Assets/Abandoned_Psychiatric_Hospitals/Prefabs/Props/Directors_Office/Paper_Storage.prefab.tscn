@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c7xebwkr1dsqk"]
 
-[ext_resource type="ArrayMesh" uid="uid://dpcsn2fy600om" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Paper_Storage.Paper_Storage_LOD0.mesh" id="1_e3dy5"]
-[ext_resource type="Material" uid="uid://8d3e17wr754g" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Ballpoint_Pen.mat.tres" id="2_bvo4c"]
-[ext_resource type="ArrayMesh" uid="uid://dvahji2x1a36g" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Paper_Storage.Paper_Storage_LOD1.mesh" id="3_vblxt"]
+[ext_resource type="ArrayMesh" uid="uid://dpcsn2fy600om" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Paper_Storage.Paper_Storage_LOD0.mesh" id="1_e3dy5"]
+[ext_resource type="Material" uid="uid://8d3e17wr754g" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Ballpoint_Pen.mat.tres" id="2_bvo4c"]
+[ext_resource type="ArrayMesh" uid="uid://dvahji2x1a36g" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Paper_Storage.Paper_Storage_LOD1.mesh" id="3_vblxt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8bvrd"]
 size = Vector3(0.417559, 0.189235, 0.278829)
@@ -13,7 +13,7 @@ size = Vector3(0.417559, 0.189235, 0.278829)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Paper_Storage_LOD0"]
 gi_mode = 2
-visibility_range_end = 1.41265
+visibility_range_end = 4.0
 mesh = ExtResource("1_e3dy5")
 surface_material_override/0 = ExtResource("2_bvo4c")
 
@@ -27,7 +27,7 @@ shape = SubResource("BoxShape3D_8bvrd")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Paper_Storage_LOD1"]
 gi_mode = 2
-visibility_range_begin = 1.41265
-visibility_range_end = 17.9801
+visibility_range_begin = 4.0
+visibility_range_end = 20.0
 mesh = ExtResource("3_vblxt")
 surface_material_override/0 = ExtResource("2_bvo4c")

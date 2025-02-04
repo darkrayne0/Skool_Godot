@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2v6o65xrh331"]
 
-[ext_resource type="ArrayMesh" uid="uid://bggjoagnt7q4u" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Clock_03.Clock_03_LOD0.mesh" id="1_oqev5"]
-[ext_resource type="Material" uid="uid://cqt3nwftnm1ca" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Surgical_Box.mat.tres" id="2_mpqql"]
-[ext_resource type="ArrayMesh" uid="uid://bjad6dfoawdf2" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Clock_03.Clock_03_LOD1.mesh" id="3_nxg0g"]
+[ext_resource type="ArrayMesh" uid="uid://bggjoagnt7q4u" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Clock_03.Clock_03_LOD0.mesh" id="1_oqev5"]
+[ext_resource type="Material" uid="uid://cqt3nwftnm1ca" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Surgical_Box.mat.tres" id="2_mpqql"]
+[ext_resource type="ArrayMesh" uid="uid://bjad6dfoawdf2" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Clock_03.Clock_03_LOD1.mesh" id="3_nxg0g"]
 
 [node name="Clock_03" type="Node3D"]
 
@@ -10,7 +10,7 @@
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Clock_03_LOD0"]
 gi_mode = 2
-visibility_range_end = 3.22071
+visibility_range_end = 5.0
 mesh = ExtResource("1_oqev5")
 surface_material_override/0 = ExtResource("2_mpqql")
 
@@ -18,7 +18,7 @@ surface_material_override/0 = ExtResource("2_mpqql")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Clock_03_LOD1"]
 gi_mode = 2
-visibility_range_begin = 3.22071
-visibility_range_end = 71.6474
+visibility_range_begin = 5.0
+visibility_range_end = 25.0
 mesh = ExtResource("3_nxg0g")
 surface_material_override/0 = ExtResource("2_mpqql")

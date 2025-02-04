@@ -48,5 +48,6 @@ shadow_mesh = SubResource("ArrayMesh_snrej")
 
 [node name="WallPanel01" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+visibility_range_end = 46.0
 mesh = SubResource("ArrayMesh_njf3y")
 skeleton = NodePath("")
