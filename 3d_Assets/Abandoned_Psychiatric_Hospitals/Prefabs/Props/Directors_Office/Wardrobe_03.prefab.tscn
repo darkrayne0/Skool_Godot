@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c1ja8o2k827bd"]
 
-[ext_resource type="ArrayMesh" uid="uid://c08wb8fdvpdp7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Wardrobe_03.Wardrobe_03_LOD0.mesh" id="1_k1syy"]
-[ext_resource type="Material" uid="uid://c1m21pw8ahvoc" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Wardrobe_03.mat.tres" id="2_4a7as"]
-[ext_resource type="ArrayMesh" uid="uid://5yol5gw3kous" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Wardrobe_03.Wardrobe_03_LOD1.mesh" id="3_w5l23"]
+[ext_resource type="ArrayMesh" uid="uid://c08wb8fdvpdp7" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Wardrobe_03.Wardrobe_03_LOD0.mesh" id="1_k1syy"]
+[ext_resource type="Material" uid="uid://c1m21pw8ahvoc" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Wardrobe_03.mat.tres" id="2_4a7as"]
+[ext_resource type="ArrayMesh" uid="uid://5yol5gw3kous" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Wardrobe_03.Wardrobe_03_LOD1.mesh" id="3_w5l23"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4q1u5"]
 size = Vector3(0.594979, 2.2149, 1.73775)
@@ -13,7 +13,7 @@ size = Vector3(0.594979, 2.2149, 1.73775)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_03_LOD0"]
 gi_mode = 2
-visibility_range_end = 4.67313
+visibility_range_end = 3.0
 mesh = ExtResource("1_k1syy")
 surface_material_override/0 = ExtResource("2_4a7as")
 
@@ -27,7 +27,7 @@ shape = SubResource("BoxShape3D_4q1u5")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_03_LOD1"]
 gi_mode = 2
-visibility_range_begin = 4.67313
-visibility_range_end = 84.0974
+visibility_range_begin = 3.0
+visibility_range_end = 30.0
 mesh = ExtResource("3_w5l23")
 surface_material_override/0 = ExtResource("2_4a7as")

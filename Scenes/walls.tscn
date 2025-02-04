@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://cueb41srfreiy" path="res://Music/SFX/switch-light-04.wav" id="8_hx5vs"]
 
 [sub_resource type="SystemFont" id="SystemFont_saibm"]
+subpixel_positioning = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cimga"]
 size = Vector3(0.144379, 0.150757, 0.161644)

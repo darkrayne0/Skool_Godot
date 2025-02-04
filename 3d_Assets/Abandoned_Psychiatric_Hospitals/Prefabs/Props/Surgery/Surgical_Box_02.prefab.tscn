@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cogmsdq5eshbo"]
 
-[ext_resource type="ArrayMesh" uid="uid://bxfcvqjjqp5fl" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Box_02.Surgical_Box_02_LOD0.mesh" id="1_6cn3v"]
-[ext_resource type="Material" uid="uid://cqt3nwftnm1ca" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Surgical_Box.mat.tres" id="2_48v1r"]
-[ext_resource type="ArrayMesh" uid="uid://b1g6as2oecxnl" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Box_02.Surgical_Box_02_LOD1.mesh" id="3_ncubx"]
-[ext_resource type="ArrayMesh" uid="uid://dbu7uu1ha2py0" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Box_02.Surgical_Box_02_LOD2.mesh" id="4_rmn5j"]
+[ext_resource type="ArrayMesh" uid="uid://bxfcvqjjqp5fl" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Box_02.Surgical_Box_02_LOD0.mesh" id="1_6cn3v"]
+[ext_resource type="Material" uid="uid://cqt3nwftnm1ca" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Surgical_Box.mat.tres" id="2_48v1r"]
+[ext_resource type="ArrayMesh" uid="uid://b1g6as2oecxnl" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Box_02.Surgical_Box_02_LOD1.mesh" id="3_ncubx"]
+[ext_resource type="ArrayMesh" uid="uid://dbu7uu1ha2py0" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Surgery/extracted/Surgical_Box_02.Surgical_Box_02_LOD2.mesh" id="4_rmn5j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s64li"]
 size = Vector3(0.407327, 0.180249, 0.61302)
@@ -14,7 +14,7 @@ size = Vector3(0.407327, 0.180249, 0.61302)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Box_02_LOD0"]
 gi_mode = 2
-visibility_range_end = 1.57388
+visibility_range_end = 1.0
 mesh = ExtResource("1_6cn3v")
 surface_material_override/0 = ExtResource("2_48v1r")
 
@@ -28,8 +28,8 @@ shape = SubResource("BoxShape3D_s64li")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Box_02_LOD1"]
 gi_mode = 2
-visibility_range_begin = 1.57388
-visibility_range_end = 4.19808
+visibility_range_begin = 1.0
+visibility_range_end = 3.0
 mesh = ExtResource("3_ncubx")
 surface_material_override/0 = ExtResource("2_48v1r")
 
@@ -37,7 +37,7 @@ surface_material_override/0 = ExtResource("2_48v1r")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Surgical_Box_02_LOD2"]
 gi_mode = 2
-visibility_range_begin = 4.19808
-visibility_range_end = 26.7616
+visibility_range_begin = 3.0
+visibility_range_end = 25.0
 mesh = ExtResource("4_rmn5j")
 surface_material_override/0 = ExtResource("2_48v1r")

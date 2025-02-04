@@ -11,8 +11,8 @@
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Fern_01_LOD0"]
 gi_mode = 2
-visibility_range_end = 4.0
-visibility_range_end_margin = 4.55
+visibility_range_end = 5.0
+visibility_range_end_margin = 1.0
 visibility_range_fade_mode = 1
 mesh = ExtResource("1_ubk6q")
 surface_material_override/0 = ExtResource("2_vu4c6")
@@ -21,10 +21,10 @@ surface_material_override/0 = ExtResource("2_vu4c6")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Fern_01_LOD1"]
 gi_mode = 2
-visibility_range_begin = 4.0
-visibility_range_begin_margin = 5.0
-visibility_range_end = 10.0
-visibility_range_end_margin = 11.0
+visibility_range_begin = 5.0
+visibility_range_begin_margin = 1.0
+visibility_range_end = 9.0
+visibility_range_end_margin = 10.0
 visibility_range_fade_mode = 1
 mesh = ExtResource("3_e3vor")
 surface_material_override/0 = ExtResource("2_vu4c6")
@@ -33,10 +33,10 @@ surface_material_override/0 = ExtResource("2_vu4c6")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Fern_01_LOD2"]
 gi_mode = 2
-visibility_range_begin = 10.0
-visibility_range_begin_margin = 11.0
-visibility_range_end = 20.0
-visibility_range_end_margin = 21.0
+visibility_range_begin = 9.0
+visibility_range_begin_margin = 10.0
+visibility_range_end = 19.0
+visibility_range_end_margin = 20.0
 visibility_range_fade_mode = 1
 mesh = ExtResource("4_bu6lm")
 surface_material_override/0 = ExtResource("2_vu4c6")

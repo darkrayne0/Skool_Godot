@@ -15,7 +15,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Urn_03_LOD0"]
 gi_mode = 2
-visibility_range_end = 3.18486
+visibility_range_end = 5.0
 mesh = ExtResource("1_xx00s")
 surface_material_override/0 = ExtResource("2_fwtxy")
 
@@ -28,7 +28,7 @@ shape = SubResource("ConvexPolygonShape3D_jxmxk")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Urn_03_LOD1"]
 gi_mode = 2
-visibility_range_begin = 3.18486
+visibility_range_begin = 5.0
 visibility_range_end = 10.0
 mesh = ExtResource("3_qf7m2")
 surface_material_override/0 = ExtResource("2_fwtxy")

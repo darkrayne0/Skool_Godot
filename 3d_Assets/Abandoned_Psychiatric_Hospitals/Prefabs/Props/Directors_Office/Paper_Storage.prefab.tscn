@@ -13,7 +13,7 @@ size = Vector3(0.417559, 0.189235, 0.278829)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Paper_Storage_LOD0"]
 gi_mode = 2
-visibility_range_end = 4.0
+visibility_range_end = 2.0
 mesh = ExtResource("1_e3dy5")
 surface_material_override/0 = ExtResource("2_bvo4c")
 
@@ -27,7 +27,7 @@ shape = SubResource("BoxShape3D_8bvrd")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Paper_Storage_LOD1"]
 gi_mode = 2
-visibility_range_begin = 4.0
-visibility_range_end = 20.0
+visibility_range_begin = 2.0
+visibility_range_end = 30.0
 mesh = ExtResource("3_vblxt")
 surface_material_override/0 = ExtResource("2_bvo4c")

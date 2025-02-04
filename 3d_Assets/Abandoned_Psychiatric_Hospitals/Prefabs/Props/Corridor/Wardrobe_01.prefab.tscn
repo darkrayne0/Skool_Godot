@@ -27,7 +27,7 @@ size = Vector3(0.0464006, 1.27134, 0.633038)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_01_LOD0"]
 gi_mode = 2
-visibility_range_end = 5.2376
+visibility_range_end = 4.0
 mesh = ExtResource("1_qhxsb")
 surface_material_override/0 = ExtResource("2_g0x15")
 
@@ -41,8 +41,8 @@ shape = SubResource("BoxShape3D_67cx5")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_01_LOD1"]
 gi_mode = 2
-visibility_range_begin = 5.2376
-visibility_range_end = 12.6083
+visibility_range_begin = 4.0
+visibility_range_end = 7.0
 mesh = ExtResource("3_conuv")
 surface_material_override/0 = ExtResource("2_g0x15")
 
@@ -50,8 +50,8 @@ surface_material_override/0 = ExtResource("2_g0x15")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_01_LOD2"]
 gi_mode = 2
-visibility_range_begin = 12.6083
-visibility_range_end = 79.5571
+visibility_range_begin = 7.0
+visibility_range_end = 30.0
 mesh = ExtResource("4_pxdsr")
 surface_material_override/0 = ExtResource("2_g0x15")
 
@@ -60,7 +60,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.278449, 1.26326, -0.626882
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_Door_01_LOD0"]
 gi_mode = 2
-visibility_range_end = 5.2376
+visibility_range_end = 4.0
 mesh = ExtResource("5_wenqa")
 surface_material_override/0 = ExtResource("2_g0x15")
 surface_material_override/1 = ExtResource("6_smo7r")
@@ -76,8 +76,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.62939e-08, 7.62939e-08)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_Door_01_LOD0/Wardrobe_Door_01_LOD1"]
 gi_mode = 2
-visibility_range_begin = 5.2376
-visibility_range_end = 12.6083
+visibility_range_begin = 4.0
+visibility_range_end = 7.0
 mesh = ExtResource("7_qivre")
 surface_material_override/0 = ExtResource("2_g0x15")
 surface_material_override/1 = ExtResource("6_smo7r")
@@ -87,8 +87,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.62939e-08, 7.62939e-08)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_Door_01_LOD0/Wardrobe_Door_01_LOD2"]
 gi_mode = 2
-visibility_range_begin = 12.6083
-visibility_range_end = 79.5571
+visibility_range_begin = 7.0
+visibility_range_end = 30.0
 mesh = ExtResource("8_qc4jo")
 surface_material_override/0 = ExtResource("2_g0x15")
 surface_material_override/1 = ExtResource("6_smo7r")
@@ -98,7 +98,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.278449, 1.26326, 0.620461)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_Door_02_LOD0"]
 gi_mode = 2
-visibility_range_end = 5.2376
+visibility_range_end = 4.0
 mesh = ExtResource("9_ndb1d")
 surface_material_override/0 = ExtResource("2_g0x15")
 surface_material_override/1 = ExtResource("6_smo7r")
@@ -114,8 +114,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.62939e-08, 1.14441e-07)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_Door_02_LOD0/Wardrobe_Door_02_LOD1"]
 gi_mode = 2
-visibility_range_begin = 5.2376
-visibility_range_end = 12.6083
+visibility_range_begin = 4.0
+visibility_range_end = 7.0
 mesh = ExtResource("10_ngobs")
 surface_material_override/0 = ExtResource("2_g0x15")
 surface_material_override/1 = ExtResource("6_smo7r")
@@ -125,8 +125,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.62939e-08, 1.14441e-07)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Wardrobe_Door_02_LOD0/Wardrobe_Door_02_LOD2"]
 gi_mode = 2
-visibility_range_begin = 12.6083
-visibility_range_end = 79.5571
+visibility_range_begin = 7.0
+visibility_range_end = 30.0
 mesh = ExtResource("11_jpajj")
 surface_material_override/0 = ExtResource("2_g0x15")
 surface_material_override/1 = ExtResource("6_smo7r")

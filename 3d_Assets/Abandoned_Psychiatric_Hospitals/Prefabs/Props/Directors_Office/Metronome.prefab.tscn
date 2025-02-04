@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://b0wt737ot7a7f"]
 
-[ext_resource type="ArrayMesh" uid="uid://cwb6555ir6qm6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Metronome.Metronome_LOD0.mesh" id="1_2m2qu"]
-[ext_resource type="Material" uid="uid://be0s354kg03j7" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Table_Lamp.mat.tres" id="2_bk41o"]
-[ext_resource type="ArrayMesh" uid="uid://bkcw5c8jpt587" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Metronome.Metronome_LOD1.mesh" id="3_eydpv"]
-[ext_resource type="ArrayMesh" uid="uid://bd2uddyt6nlm3" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Metronome.Metronome_LOD2.mesh" id="4_0s0pp"]
+[ext_resource type="ArrayMesh" uid="uid://cwb6555ir6qm6" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Metronome.Metronome_LOD0.mesh" id="1_2m2qu"]
+[ext_resource type="Material" uid="uid://be0s354kg03j7" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Table_Lamp.mat.tres" id="2_bk41o"]
+[ext_resource type="ArrayMesh" uid="uid://bkcw5c8jpt587" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Metronome.Metronome_LOD1.mesh" id="3_eydpv"]
+[ext_resource type="ArrayMesh" uid="uid://bd2uddyt6nlm3" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Metronome.Metronome_LOD2.mesh" id="4_0s0pp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0f8y6"]
 size = Vector3(0.150822, 0.296303, 0.171166)
@@ -14,7 +14,7 @@ size = Vector3(0.150822, 0.296303, 0.171166)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Metronome_LOD0"]
 gi_mode = 2
-visibility_range_end = 0.836697
+visibility_range_end = 1.0
 mesh = ExtResource("1_2m2qu")
 surface_material_override/0 = ExtResource("2_bk41o")
 
@@ -28,8 +28,8 @@ shape = SubResource("BoxShape3D_0f8y6")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Metronome_LOD1"]
 gi_mode = 2
-visibility_range_begin = 0.836697
-visibility_range_end = 2.17567
+visibility_range_begin = 1.0
+visibility_range_end = 2.0
 mesh = ExtResource("3_eydpv")
 surface_material_override/0 = ExtResource("2_bk41o")
 
@@ -37,7 +37,7 @@ surface_material_override/0 = ExtResource("2_bk41o")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Metronome_LOD2"]
 gi_mode = 2
-visibility_range_begin = 2.17567
-visibility_range_end = 9.80763
+visibility_range_begin = 2.0
+visibility_range_end = 20.0
 mesh = ExtResource("4_0s0pp")
 surface_material_override/0 = ExtResource("2_bk41o")

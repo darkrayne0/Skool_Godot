@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=4 uid="uid://bjln01x6mmeoc"]
+[gd_scene load_steps=60 format=4 uid="uid://bjln01x6mmeoc"]
 
 [ext_resource type="PackedScene" uid="uid://bkn5u6vey0nis" path="res://Scenes/Props/computers_01.scn" id="1_bve1o"]
 [ext_resource type="PackedScene" uid="uid://d0xvnytjomfy1" path="res://Scenes/Props/school_desk.scn" id="2_tr45w"]
@@ -46,9 +46,6 @@
 [ext_resource type="PackedScene" uid="uid://c3xw6arvigm52" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Props/Projector_Screen_01.prefab.tscn" id="43_tj2qt"]
 [ext_resource type="PackedScene" uid="uid://8yncne3wc826" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Props/Filing_Cabinet.prefab.tscn" id="45_nmqdd"]
 [ext_resource type="PackedScene" uid="uid://dgx1y3c5neni" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Props/Corridor/Ventilation_System_05.prefab.tscn" id="46_asaqr"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqyx2"]
-albedo_texture = ExtResource("6_a2vbf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3pa3t"]
 resource_name = "Directors_Desk"
@@ -429,7 +426,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.837
 [node name="Directors_Desk" type="Node3D" parent="TeacherDesk/DirectorsDesk"]
 
 [node name="Desk" type="MeshInstance3D" parent="TeacherDesk/DirectorsDesk/Directors_Desk"]
-material_override = SubResource("StandardMaterial3D_kqyx2")
+visibility_range_end = 30.0
 mesh = SubResource("ArrayMesh_vm2ln")
 skeleton = NodePath("")
 
@@ -442,6 +439,9 @@ shape = SubResource("ConcavePolygonShape3D_1kqls")
 
 [node name="DrawerL" type="MeshInstance3D" parent="TeacherDesk/DirectorsDesk/Directors_Desk"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182, 0.785, -0.716)
+visibility_range_end = 9.0
+visibility_range_end_margin = 1.0
+visibility_range_fade_mode = 1
 mesh = SubResource("ArrayMesh_iy8wj")
 skeleton = NodePath("")
 
@@ -459,6 +459,8 @@ transform = Transform3D(0.749892, 0, -0.661561, 0, 1, 0, 0.661561, 0, 0.749892, 
 
 [node name="DrawerR" type="MeshInstance3D" parent="TeacherDesk/DirectorsDesk/Directors_Desk"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182132, 0.784535, 0.713638)
+visibility_range_end = 9.0
+visibility_range_end_margin = 1.0
 mesh = SubResource("ArrayMesh_wnxau")
 skeleton = NodePath("")
 

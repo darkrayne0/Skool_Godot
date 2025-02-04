@@ -23,7 +23,7 @@ transform = Transform3D(0.677807, 0, 0, 0, 0.677807, 0, 0, 0, 0.677807, -0.38157
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_01_LOD0"]
 gi_mode = 2
-visibility_range_end = 4.58536
+visibility_range_end = 3.0
 mesh = ExtResource("1_w1xrq")
 surface_material_override/0 = ExtResource("2_p53yu")
 
@@ -32,8 +32,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52588e-07, -7.62939e-08, 0)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_01_LOD0/Filing_Box_01_LOD1"]
 gi_mode = 2
-visibility_range_begin = 4.58536
-visibility_range_end = 11.1087
+visibility_range_begin = 3.0
+visibility_range_end = 7.0
 mesh = ExtResource("3_4ay3f")
 surface_material_override/0 = ExtResource("2_p53yu")
 
@@ -42,8 +42,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52588e-07, -7.62939e-08, 0)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_01_LOD0/Filing_Box_01_LOD2"]
 gi_mode = 2
-visibility_range_begin = 11.1087
-visibility_range_end = 83.3047
+visibility_range_begin = 7.0
+visibility_range_end = 30.0
 mesh = ExtResource("4_on3a6")
 surface_material_override/0 = ExtResource("2_p53yu")
 
@@ -52,7 +52,7 @@ transform = Transform3D(0.677807, 0, 0, 0, 0.677807, 0, 0, 0, 0.677807, -0.38157
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_02_LOD0"]
 gi_mode = 2
-visibility_range_end = 4.58536
+visibility_range_end = 3.0
 mesh = ExtResource("5_8munf")
 surface_material_override/0 = ExtResource("2_p53yu")
 
@@ -61,8 +61,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8147e-08, 0, 0)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_02_LOD0/Filing_Box_02_LOD1"]
 gi_mode = 2
-visibility_range_begin = 4.59
-visibility_range_end = 11.11
+visibility_range_begin = 3.0
+visibility_range_end = 30.0
 mesh = ExtResource("6_jmfac")
 surface_material_override/0 = ExtResource("2_p53yu")
 
@@ -71,7 +71,7 @@ transform = Transform3D(0.677807, 0, 0, 0, 0.677807, 0, 0, 0, 0.677807, -0.38157
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_03_LOD0"]
 gi_mode = 2
-visibility_range_end = 4.58536
+visibility_range_end = 3.0
 mesh = ExtResource("7_j7lfx")
 surface_material_override/0 = ExtResource("2_p53yu")
 
@@ -80,8 +80,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8147e-08, 0, 0)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_03_LOD0/Filing_Box_03_LOD1"]
 gi_mode = 2
-visibility_range_begin = 4.59
-visibility_range_end = 11.11
+visibility_range_begin = 3.0
+visibility_range_end = 30.0
 mesh = ExtResource("8_3dkkr")
 surface_material_override/0 = ExtResource("2_p53yu")
 
@@ -90,7 +90,7 @@ transform = Transform3D(0.677807, 0, 0, 0, 0.677807, 0, 0, 0, 0.677807, -0.38157
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_04_LOD0"]
 gi_mode = 2
-visibility_range_end = 4.58536
+visibility_range_end = 2.0
 mesh = ExtResource("9_v6x7w")
 surface_material_override/0 = ExtResource("2_p53yu")
 
@@ -99,8 +99,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52588e-07, 0, 0)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_04_LOD0/Filing_Box_04_LOD1"]
 gi_mode = 2
-visibility_range_begin = 4.58536
-visibility_range_end = 11.1087
+visibility_range_begin = 2.0
+visibility_range_end = 7.0
 mesh = ExtResource("10_d5ua0")
 surface_material_override/0 = ExtResource("2_p53yu")
 
@@ -109,8 +109,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52588e-07, 0, 0)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Box_04_LOD0/Filing_Box_04_LOD2"]
 gi_mode = 2
-visibility_range_begin = 11.1087
-visibility_range_end = 83.3047
+visibility_range_begin = 7.0
+visibility_range_end = 30.0
 mesh = ExtResource("11_8gu65")
 surface_material_override/0 = ExtResource("2_p53yu")
 
@@ -118,7 +118,7 @@ surface_material_override/0 = ExtResource("2_p53yu")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Filing_Cabinet_LOD0"]
 gi_mode = 2
-visibility_range_end = 20.0
+visibility_range_end = 30.0
 mesh = ExtResource("12_1bnaq")
 surface_material_override/0 = ExtResource("2_p53yu")
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://e7t3wpes4ogu"]
 
-[ext_resource type="ArrayMesh" uid="uid://4d4gwchp50nw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Stationery.Stationery_LOD0.mesh" id="1_lhqeo"]
-[ext_resource type="Material" uid="uid://ddtmbtpjbmb6s" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Stationery.mat.tres" id="2_ecdyx"]
-[ext_resource type="ArrayMesh" uid="uid://cunnkoiohgkws" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Stationery.Stationery_LOD1.mesh" id="3_dwhbf"]
+[ext_resource type="ArrayMesh" uid="uid://4d4gwchp50nw" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Stationery.Stationery_LOD0.mesh" id="1_lhqeo"]
+[ext_resource type="Material" uid="uid://ddtmbtpjbmb6s" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Stationery.mat.tres" id="2_ecdyx"]
+[ext_resource type="ArrayMesh" uid="uid://cunnkoiohgkws" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Stationery.Stationery_LOD1.mesh" id="3_dwhbf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rxhq2"]
 size = Vector3(0.130754, 0.288165, 0.121697)
@@ -13,7 +13,7 @@ size = Vector3(0.130754, 0.288165, 0.121697)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Stationery_LOD0"]
 gi_mode = 2
-visibility_range_end = 1.00743
+visibility_range_end = 1.0
 mesh = ExtResource("1_lhqeo")
 surface_material_override/0 = ExtResource("2_ecdyx")
 
@@ -27,7 +27,7 @@ shape = SubResource("BoxShape3D_rxhq2")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Stationery_LOD1"]
 gi_mode = 2
-visibility_range_begin = 1.00743
-visibility_range_end = 8.63959
+visibility_range_begin = 1.0
+visibility_range_end = 25.0
 mesh = ExtResource("3_dwhbf")
 surface_material_override/0 = ExtResource("2_ecdyx")

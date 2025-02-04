@@ -14,7 +14,7 @@ size = Vector3(0.725082, 1.27916, 0.642052)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Directors_Chair_LOD0"]
 gi_mode = 2
-visibility_range_end = 3.15183
+visibility_range_end = 1.5
 mesh = ExtResource("1_07ddi")
 surface_material_override/0 = ExtResource("2_u1n5s")
 
@@ -28,8 +28,8 @@ shape = SubResource("BoxShape3D_kuvny")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Directors_Chair_LOD1"]
 gi_mode = 2
-visibility_range_begin = 3.15183
-visibility_range_end = 11.1674
+visibility_range_begin = 1.5
+visibility_range_end = 4.0
 mesh = ExtResource("3_1hj4y")
 surface_material_override/0 = ExtResource("2_u1n5s")
 
@@ -37,7 +37,7 @@ surface_material_override/0 = ExtResource("2_u1n5s")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Directors_Chair_LOD2"]
 gi_mode = 2
-visibility_range_begin = 11.1674
+visibility_range_begin = 4.0
 visibility_range_end = 35.0
 mesh = ExtResource("4_q6p86")
 surface_material_override/0 = ExtResource("2_u1n5s")

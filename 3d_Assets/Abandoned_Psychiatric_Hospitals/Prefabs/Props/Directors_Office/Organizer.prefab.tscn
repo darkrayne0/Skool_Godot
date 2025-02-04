@@ -10,7 +10,7 @@
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Organizer_LOD0"]
 gi_mode = 2
-visibility_range_end = 2.0
+visibility_range_end = 1.0
 mesh = ExtResource("1_25xbf")
 surface_material_override/0 = ExtResource("2_xs2ve")
 
@@ -18,7 +18,7 @@ surface_material_override/0 = ExtResource("2_xs2ve")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Organizer_LOD1"]
 gi_mode = 2
-visibility_range_begin = 2.0
-visibility_range_end = 15.0
+visibility_range_begin = 1.0
+visibility_range_end = 20.0
 mesh = ExtResource("3_jm2fh")
 surface_material_override/0 = ExtResource("2_xs2ve")

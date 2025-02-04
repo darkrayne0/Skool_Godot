@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmmp4osg8eama"]
 
-[ext_resource type="ArrayMesh" uid="uid://dev8dp0kju17" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Books_08.Books_08.mesh" id="1_1xisf"]
-[ext_resource type="Material" uid="uid://bhcii1aw6rlff" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Books.mat.tres" id="2_a1yyw"]
+[ext_resource type="ArrayMesh" uid="uid://dev8dp0kju17" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Books_08.Books_08.mesh" id="1_1xisf"]
+[ext_resource type="Material" uid="uid://bhcii1aw6rlff" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Books.mat.tres" id="2_a1yyw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uufbx"]
 size = Vector3(0.263369, 0.287967, 0.331535)
@@ -10,6 +10,7 @@ size = Vector3(0.263369, 0.287967, 0.331535)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="."]
 gi_mode = 2
+visibility_range_end = 23.0
 mesh = ExtResource("1_1xisf")
 surface_material_override/0 = ExtResource("2_a1yyw")
 

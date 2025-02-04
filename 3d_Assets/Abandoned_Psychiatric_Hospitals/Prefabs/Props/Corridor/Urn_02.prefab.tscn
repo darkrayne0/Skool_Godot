@@ -14,7 +14,7 @@ size = Vector3(0.431418, 0.496817, 0.313893)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Urn_02_LOD0"]
 gi_mode = 2
-visibility_range_end = 1.20906
+visibility_range_end = 1.0
 mesh = ExtResource("1_o60c0")
 surface_material_override/0 = ExtResource("2_5p57r")
 
@@ -28,8 +28,8 @@ shape = SubResource("BoxShape3D_yutnd")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Urn_02_LOD1"]
 gi_mode = 2
-visibility_range_begin = 1.20906
-visibility_range_end = 9.32196
+visibility_range_begin = 1.0
+visibility_range_end = 7.0
 mesh = ExtResource("3_s1t26")
 surface_material_override/0 = ExtResource("2_5p57r")
 
@@ -37,7 +37,7 @@ surface_material_override/0 = ExtResource("2_5p57r")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Urn_02_LOD2"]
 gi_mode = 2
-visibility_range_begin = 9.32196
+visibility_range_begin = 7.0
 visibility_range_end = 20.0
 mesh = ExtResource("4_oe818")
 surface_material_override/0 = ExtResource("2_5p57r")

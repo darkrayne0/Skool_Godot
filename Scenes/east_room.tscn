@@ -225,7 +225,9 @@ shape = SubResource("ConcavePolygonShape3D_1kqls")
 
 [node name="DrawerL" type="MeshInstance3D" parent="Directors_Desk/Directors_Desk"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182, 0.785, -0.716)
-visibility_range_end = 5.0
+visibility_range_end = 9.0
+visibility_range_end_margin = 1.0
+visibility_range_fade_mode = 1
 mesh = SubResource("ArrayMesh_iy8wj")
 skeleton = NodePath("")
 
@@ -240,7 +242,9 @@ shape = SubResource("ConcavePolygonShape3D_hvgsi")
 
 [node name="DrawerR" type="MeshInstance3D" parent="Directors_Desk/Directors_Desk"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182132, 0.784535, 0.713638)
-visibility_range_end = 5.0
+visibility_range_end = 9.0
+visibility_range_end_margin = 1.0
+visibility_range_fade_mode = 1
 mesh = SubResource("ArrayMesh_wnxau")
 skeleton = NodePath("")
 
@@ -283,6 +287,8 @@ transform = Transform3D(1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 0.314792
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.0409384, 0.9331, -0.387397)
 
 [node name="Walls" parent="." instance=ExtResource("12_ek73x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+visible = false
 
 [node name="StudentDesk" type="Node3D" parent="."]
 

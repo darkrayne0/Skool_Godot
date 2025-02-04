@@ -7,6 +7,6 @@
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="."]
 gi_mode = 2
-visibility_range_end = 20.0
+visibility_range_end = 25.0
 mesh = ExtResource("1_edk55")
 surface_material_override/0 = ExtResource("2_05s4c")

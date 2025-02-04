@@ -20,7 +20,7 @@ surface_material_override/0 = ExtResource("2_h5asj")
 [node name="MeshRenderer" type="MeshInstance3D" parent="Stapler_LOD1"]
 gi_mode = 2
 visibility_range_begin = 1.0
-visibility_range_end = 5.0
+visibility_range_end = 3.0
 mesh = ExtResource("3_5nji5")
 surface_material_override/0 = ExtResource("2_h5asj")
 
@@ -28,7 +28,7 @@ surface_material_override/0 = ExtResource("2_h5asj")
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Stapler_LOD2"]
 gi_mode = 2
-visibility_range_begin = 5.0
+visibility_range_begin = 3.0
 visibility_range_end = 25.0
 mesh = ExtResource("4_q0er5")
 surface_material_override/0 = ExtResource("2_h5asj")
