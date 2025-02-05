@@ -588,6 +588,11 @@ points = PackedVector3Array(5, 1, -9, 5, 0, -9, 0, 0.64, 0, 0, 0.63, 0, -5, 1, -
 radius = 9.00719
 
 [sub_resource type="BlackboardPlan" id="BlackboardPlan_nxsu2"]
+var/tolerance/name = &"tolerance"
+var/tolerance/type = 3
+var/tolerance/value = 0.0
+var/tolerance/hint = 0
+var/tolerance/hint_string = "Base how close idk if needed"
 
 [node name="Humanoid" type="CharacterBody3D" node_paths=PackedStringArray("bt_player") groups=["enemy"]]
 transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 0, 0, 0)

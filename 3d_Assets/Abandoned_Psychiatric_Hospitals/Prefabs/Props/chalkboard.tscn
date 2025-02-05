@@ -53,6 +53,6 @@ shadow_mesh = SubResource("ArrayMesh_32t8r")
 
 [node name="Blackboard" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 2, -0.1)
-visibility_range_end = 27.0
+visibility_range_end = 30.0
 mesh = SubResource("ArrayMesh_xbaxq")
 skeleton = NodePath("")
