@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://buwbuy27inmo8"]
 
-[ext_resource type="ArrayMesh" uid="uid://cdxuib76pdhqe" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Tablet_07.Tablet_07.mesh" id="1_8wcr2"]
-[ext_resource type="Material" uid="uid://dck7r5uqcxpfa" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Projector_Screen.mat.tres" id="2_tsbk3"]
+[ext_resource type="ArrayMesh" uid="uid://cdxuib76pdhqe" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Tablet_07.Tablet_07.mesh" id="1_8wcr2"]
+[ext_resource type="Material" uid="uid://dck7r5uqcxpfa" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Projector_Screen.mat.tres" id="2_tsbk3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x2wy8"]
 size = Vector3(0.0514469, 0.754581, 1.16675)

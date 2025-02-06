@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d0x66as4xhu4h"]
 
-[ext_resource type="ArrayMesh" uid="uid://bjurgf64skeml" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Inscription.Inscription.mesh" id="1_s1iqt"]
-[ext_resource type="Material" uid="uid://b7874r6umged6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Emergency_Door.mat.tres" id="2_ubjfs"]
+[ext_resource type="ArrayMesh" uid="uid://bjurgf64skeml" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Inscription.Inscription.mesh" id="1_s1iqt"]
+[ext_resource type="Material" uid="uid://b7874r6umged6" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Emergency_Door.mat.tres" id="2_ubjfs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i6tm3"]
 size = Vector3(0.166807, 0.794425, 5.79179)

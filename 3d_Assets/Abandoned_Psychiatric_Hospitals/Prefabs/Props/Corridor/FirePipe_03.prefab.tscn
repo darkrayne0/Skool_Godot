@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://c4bckinu80431"]
 
-[ext_resource type="ArrayMesh" uid="uid://dykeeyeqrlvyw" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_03.FirePipe_03_LOD0.mesh" id="1_3a5xv"]
-[ext_resource type="Material" uid="uid://cdi73wsya2kra" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Ventilation_System.mat.tres" id="2_qkswu"]
-[ext_resource type="ArrayMesh" uid="uid://ctch1bg33e6hv" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_03.FirePipe_03_LOD1.mesh" id="3_tjbnd"]
-[ext_resource type="ArrayMesh" uid="uid://d4i8k78j4b7ag" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_03.FirePipe_03_LOD2.mesh" id="4_fui46"]
+[ext_resource type="ArrayMesh" uid="uid://dykeeyeqrlvyw" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_03.FirePipe_03_LOD0.mesh" id="1_3a5xv"]
+[ext_resource type="Material" uid="uid://cdi73wsya2kra" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Ventilation_System.mat.tres" id="2_qkswu"]
+[ext_resource type="ArrayMesh" uid="uid://ctch1bg33e6hv" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_03.FirePipe_03_LOD1.mesh" id="3_tjbnd"]
+[ext_resource type="ArrayMesh" uid="uid://d4i8k78j4b7ag" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/FirePipe_03.FirePipe_03_LOD2.mesh" id="4_fui46"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_43gw6"]
 size = Vector3(2, 0.157182, 0.130204)

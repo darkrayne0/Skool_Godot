@@ -1,16 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://2km8sua36wfu"]
+[gd_scene load_steps=4 format=4 uid="uid://2km8sua36wfu"]
 
-[ext_resource type="Texture2D" uid="uid://dy605l7b1bn2i" path="res://Materials/Textures/Directors_Door_Wall_05_Directors_Door_A.png" id="1_l1u6n"]
-[ext_resource type="Texture2D" uid="uid://dwo1ukc6x7wf5" path="res://Materials/Textures/Directors_Door_Wall_05_Directors_Door_N.png" id="2_lebcj"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_grbbd"]
-resource_name = "Directors_Door"
-cull_mode = 2
-albedo_texture = ExtResource("1_l1u6n")
-roughness = 0.5
-normal_enabled = true
-normal_scale = 2.0
-normal_texture = ExtResource("2_lebcj")
+[ext_resource type="Material" uid="uid://bj34ykmaceqa7" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Directors_Door.mat.tres" id="1_vwpox"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_oyjge"]
 _surfaces = [{
@@ -36,7 +26,7 @@ _surfaces = [{
 "index_count": 258,
 "index_data": PackedByteArray("HgAIACIAHgAHAAgAFwADABUAFwACAAMAGgACABcAGgAFAAIAJgAEABkAJgALAAQAFQAGABwAFQADAAYAIAAIAAkAIAAiAAgAEQAJAAAAEQAgAAkAEwAKACQAEwABAAoAKAAOAC0AKAAMAA4AJAAMACgAJAAKAAwAKgANAA8AKgAsAA0AKgALACYAKgAPAAsABgAeABwABgAHAB4ASgA1ADQASgBMADUAOwBUADkAOwBYAFQAOwBaAFgAOwA8AFoAOABWADoAOABSAFYAOgBbAD0AOgBWAFsALwBSADgALwBBAFIALgBOAD8ALgA2AE4ANgBQAE4ANgA3AFAAMQBKADQAMQBDAEoAOQBHADIAOQBUAEcAMwBFADAAMwBIAEUAMABDADEAMABFAEMANQBQADcANQBMAFAAFgAfABAAHwAdACEAGwAWABQAHwAbAB0AHwAWABsAGAApACUAKQAnACsAJwASACMAXAApABgAJwBcABIAKQBcACcAGABgAFwAGABfAGAAEABeABYAEABdAF4AFgBfABgAFgBeAF8ATQBEAD4ARABJAEIASQBPAEsATQBJAEQASQBNAE8AVwBGAFMAYQBRAEAAVQBXAFkAYQBVAFEAVwBhAEYAYQBXAFUAYQBkAEYAYQBlAGQARABiAD4ARABjAGIARgBjAEQARgBkAGMA"),
 "lods": [3.50294, PackedByteArray("awAHAGcAawBnAGgABgAHAGsAHgADAAYAawACAAMAGgACAB4AGgAFAAIAKgBmAGoAKgALAGYAKgAPAAsAKgBpAA8AKgBtAGkAEQAJAAAAEQBsAAkAEwAKACgAEwABAAoAKAAKAAwAKAAMAA4AKAAOAC0ARQA1ADQAMQBFADQAMABFADEAMwBFADAAMwBIAEUANQBFAHMANQBzAG8AcABYADkAOQBYAHIAOQByADIAcAB0AFgAcABxAHQAOABSADoALwBSADgALwBBAFIAOgBSAFsAOgBbAD0ALgBOAD8ALgA2AE4ANgBuAE4AKQAnACsAKQBcACcAJwBcABIAXAApABgAGABgAFwAGABfAGAAHQBfABgAHQBeAF8AEABeAB0AEABdAF4ATQBEAD4ARABiAD4ARABjAGIARgBjAEQARgBkAGMAYQBkAEYAYQBlAGQAVwBhAEYAYQBXAFEAUQBXAFkAYQBRAEAA")],
-"material": SubResource("StandardMaterial3D_grbbd"),
+"material": ExtResource("1_vwpox"),
 "name": "Directors_Door",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),

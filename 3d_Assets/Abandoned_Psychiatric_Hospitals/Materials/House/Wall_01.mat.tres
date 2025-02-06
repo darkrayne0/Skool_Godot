@@ -6,11 +6,9 @@
 
 [resource]
 resource_name = "Wall_01"
-depth_draw_mode = 1
 albedo_texture = ExtResource("1_k3dcg")
 metallic_texture = ExtResource("2_jbhag")
 roughness_texture = ExtResource("2_jbhag")
 roughness_texture_channel = 3
 normal_enabled = true
 normal_texture = ExtResource("3_716ml")
-uv1_scale = Vector3(1, 1, 0)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://de5k24fo6qtvj"]
 
-[ext_resource type="ArrayMesh" uid="uid://con1vogel72ri" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Foundation_Angle_02.Foundation_Angle_02.mesh" id="1_ovcxf"]
-[ext_resource type="Material" uid="uid://dqh41ra7gvxcf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Parapet.mat.tres" id="2_rlmvp"]
+[ext_resource type="ArrayMesh" uid="uid://con1vogel72ri" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Foundation_Angle_02.Foundation_Angle_02.mesh" id="1_ovcxf"]
+[ext_resource type="Material" uid="uid://dqh41ra7gvxcf" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Parapet.mat.tres" id="2_rlmvp"]
 
 [node name="Foundation_Angle_02" type="Node3D"]
 

@@ -30,3 +30,7 @@ func swap_scene(room_to_load: String, room_to_replace: String, what_to_do: Strin
 		_room_to_replace.hide() #Hides old node, still running and in memory
 
 	_map.add_child(_new_room) #adds new scene to tree
+	#_map.call_deferred("add_child", _new_room) #same as above, maybe better?
+
+func load_room():
+	pass

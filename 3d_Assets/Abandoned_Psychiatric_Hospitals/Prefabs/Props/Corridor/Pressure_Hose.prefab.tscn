@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://68kpivohkwen"]
 
-[ext_resource type="ArrayMesh" uid="uid://c5aewf04nudup" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Pressure_Hose.Pressure_Hose_LOD0.mesh" id="1_cqw1w"]
-[ext_resource type="Material" uid="uid://bn5yorrelrbxn" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Fire_Fighting.mat.tres" id="2_wd53c"]
-[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_f8u8s"]
-[ext_resource type="ArrayMesh" uid="uid://bkdelm00linr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Pressure_Hose.Pressure_Hose_LOD1.mesh" id="4_k26sg"]
-[ext_resource type="ArrayMesh" uid="uid://cveehu2b71qh3" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Pressure_Hose.Pressure_Hose_LOD2.mesh" id="5_33vbt"]
+[ext_resource type="ArrayMesh" uid="uid://c5aewf04nudup" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Pressure_Hose.Pressure_Hose_LOD0.mesh" id="1_cqw1w"]
+[ext_resource type="Material" uid="uid://bn5yorrelrbxn" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Fire_Fighting.mat.tres" id="2_wd53c"]
+[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_f8u8s"]
+[ext_resource type="ArrayMesh" uid="uid://bkdelm00linr" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Pressure_Hose.Pressure_Hose_LOD1.mesh" id="4_k26sg"]
+[ext_resource type="ArrayMesh" uid="uid://cveehu2b71qh3" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Pressure_Hose.Pressure_Hose_LOD2.mesh" id="5_33vbt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ghqxx"]
 size = Vector3(0.157956, 0.538188, 0.542209)

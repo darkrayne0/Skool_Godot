@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://d2q8lgml3aoid"]
 
-[ext_resource type="ArrayMesh" uid="uid://cnuj1f0k6xxdh" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Bedside_Table.Bedside_Table_LOD0.mesh" id="1_ngtjd"]
-[ext_resource type="Material" uid="uid://c1m21pw8ahvoc" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Wardrobe_03.mat.tres" id="2_7ilvy"]
-[ext_resource type="ArrayMesh" uid="uid://bvhufcqf4w8k6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Bedside_Table.Bedside_Table_LOD1.mesh" id="3_55rvu"]
-[ext_resource type="ArrayMesh" uid="uid://b7blq0ekbu544" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Bedside_Table.Bedside_Table_LOD2.mesh" id="4_yw3x2"]
+[ext_resource type="ArrayMesh" uid="uid://cnuj1f0k6xxdh" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Bedside_Table.Bedside_Table_LOD0.mesh" id="1_ngtjd"]
+[ext_resource type="Material" uid="uid://c1m21pw8ahvoc" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Wardrobe_03.mat.tres" id="2_7ilvy"]
+[ext_resource type="ArrayMesh" uid="uid://bvhufcqf4w8k6" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Bedside_Table.Bedside_Table_LOD1.mesh" id="3_55rvu"]
+[ext_resource type="ArrayMesh" uid="uid://b7blq0ekbu544" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Bedside_Table.Bedside_Table_LOD2.mesh" id="4_yw3x2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eykmm"]
 size = Vector3(0.743154, 0.899007, 1.40538)

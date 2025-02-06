@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cyei8mtrs1fxf"]
+[gd_scene load_steps=13 format=3 uid="uid://cyei8mtrs1fxf"]
 
 [ext_resource type="PackedScene" uid="uid://vvwahb61m2li" path="res://Scenes/Interior_Walls/interior_wall_01.scn" id="1_lkjr6"]
 [ext_resource type="PackedScene" uid="uid://8ht73twjmiqn" path="res://Scenes/Interior_Walls/interior_wall_angle_02.scn" id="2_pc53t"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://ftkxn05dn4nl" path="res://Scenes/Interior_Walls/interior_wall_door_03.scn" id="6_gsy47"]
 [ext_resource type="Script" path="res://Scripts/lights.gd" id="7_vo5qs"]
 [ext_resource type="AudioStream" uid="uid://cueb41srfreiy" path="res://Music/SFX/switch-light-04.wav" id="8_hx5vs"]
+[ext_resource type="PackedScene" uid="uid://cwmfbsrmkwpts" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Modules/Door_Corridor.prefab.tscn" id="9_dtkfo"]
+[ext_resource type="PackedScene" uid="uid://1gqfle6vdw6g" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Modules/Wall_Window_01.prefab.tscn" id="10_3mlek"]
 
 [sub_resource type="SystemFont" id="SystemFont_saibm"]
 subpixel_positioning = 0
@@ -16,6 +18,24 @@ subpixel_positioning = 0
 size = Vector3(0.144379, 0.150757, 0.161644)
 
 [node name="Walls" type="Node3D"]
+
+[node name="Wall_Window_01" parent="." instance=ExtResource("10_3mlek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3, -1, -10)
+
+[node name="Wall_Window_03" parent="." instance=ExtResource("10_3mlek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3, -1, 2)
+
+[node name="Wall_Window_02" parent="." instance=ExtResource("10_3mlek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3, -1, -22)
+
+[node name="Wall_Window_04" parent="." instance=ExtResource("10_3mlek")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 24.3, -1, -6)
+
+[node name="Wall_Window_05" parent="." instance=ExtResource("10_3mlek")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 24.3, -1, 6)
+
+[node name="Wall_Window_06" parent="." instance=ExtResource("10_3mlek")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 24.3, -1, -18)
 
 [node name="Interior_Wall_03" parent="." instance=ExtResource("1_lkjr6")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 9, 0, -22)
@@ -26,29 +46,20 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 0,
 [node name="Interior_Wall_07" parent="." instance=ExtResource("1_lkjr6")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -7, 0, -10)
 
-[node name="Interior_Wall_45" parent="." instance=ExtResource("1_lkjr6")]
+[node name="Interior_Wall_46" parent="." instance=ExtResource("1_lkjr6")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -14, 0, -22)
 
-[node name="Interior_Wall_46" parent="." instance=ExtResource("1_lkjr6")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -14, 0, -18)
-
-[node name="Interior_Wall_47" parent="." instance=ExtResource("1_lkjr6")]
+[node name="Interior_Wall_48" parent="." instance=ExtResource("1_lkjr6")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -14, 0, -14)
 
-[node name="Interior_Wall_48" parent="." instance=ExtResource("1_lkjr6")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -14, 0, -10)
-
 [node name="Interior_Wall_49" parent="." instance=ExtResource("1_lkjr6")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -14, 0, -6)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -14, 0, -10)
 
 [node name="Interior_Wall_50" parent="." instance=ExtResource("1_lkjr6")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -14, 0, -2)
 
 [node name="Interior_Wall_51" parent="." instance=ExtResource("1_lkjr6")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -14, 0, 2)
-
-[node name="Interior_Wall_52" parent="." instance=ExtResource("1_lkjr6")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -14, 0, 6)
 
 [node name="Interior_Wall_53" parent="." instance=ExtResource("1_lkjr6")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -14, 0, 10)
@@ -170,26 +181,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -14)
 [node name="Interior_Wall_28" parent="." instance=ExtResource("1_lkjr6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -14)
 
-[node name="Interior_Wall_31" parent="." instance=ExtResource("1_lkjr6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -10)
-
 [node name="Interior_Wall_32" parent="." instance=ExtResource("1_lkjr6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -6)
 
 [node name="Interior_Wall_33" parent="." instance=ExtResource("1_lkjr6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -2)
 
-[node name="Interior_Wall_34" parent="." instance=ExtResource("1_lkjr6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 2)
-
 [node name="Interior_Wall_35" parent="." instance=ExtResource("1_lkjr6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 6)
 
 [node name="Interior_Wall_29" parent="." instance=ExtResource("1_lkjr6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -18)
-
-[node name="Interior_Wall_30" parent="." instance=ExtResource("1_lkjr6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -22)
 
 [node name="Interior_Wall_36" parent="." instance=ExtResource("1_lkjr6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -26)
@@ -400,3 +402,6 @@ shape = SubResource("BoxShape3D_cimga")
 [node name="Lights" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("8_hx5vs")
 volume_db = -13.0
+
+[node name="Door_Corridor" parent="." instance=ExtResource("9_dtkfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -28)

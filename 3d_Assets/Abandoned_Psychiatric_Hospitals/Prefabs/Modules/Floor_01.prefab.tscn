@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://b2e1lofih87g1"]
 
-[ext_resource type="ArrayMesh" uid="uid://cm6p68jr63qcp" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Floor_01.Floor_01_LOD0.mesh" id="1_1cpan"]
-[ext_resource type="Material" uid="uid://cd52h5ewiyjbg" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Floor_01.mat.tres" id="2_25sk4"]
-[ext_resource type="Material" uid="uid://bguq0n7rvexi4" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Ceiling.mat.tres" id="3_gtu5a"]
-[ext_resource type="ArrayMesh" uid="uid://tvi376ul8q1c" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Floor_01.Floor_01_LOD1.mesh" id="4_y4egt"]
-[ext_resource type="ArrayMesh" uid="uid://0l0el5ld0ala" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Floor_01.Floor_01_LOD2.mesh" id="5_5weme"]
+[ext_resource type="ArrayMesh" uid="uid://cm6p68jr63qcp" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Floor_01.Floor_01_LOD0.mesh" id="1_1cpan"]
+[ext_resource type="Material" uid="uid://cd52h5ewiyjbg" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Floor_01.mat.tres" id="2_25sk4"]
+[ext_resource type="Material" uid="uid://bguq0n7rvexi4" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Ceiling.mat.tres" id="3_gtu5a"]
+[ext_resource type="ArrayMesh" uid="uid://tvi376ul8q1c" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Floor_01.Floor_01_LOD1.mesh" id="4_y4egt"]
+[ext_resource type="ArrayMesh" uid="uid://0l0el5ld0ala" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Floor_01.Floor_01_LOD2.mesh" id="5_5weme"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lwrpw"]
 size = Vector3(2, 0.309397, 2)

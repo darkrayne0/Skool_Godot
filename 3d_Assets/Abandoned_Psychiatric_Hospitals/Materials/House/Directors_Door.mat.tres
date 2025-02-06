@@ -7,7 +7,6 @@
 
 [resource]
 resource_name = "Directors_Door"
-depth_draw_mode = 1
 albedo_texture = ExtResource("1_1vg6l")
 metallic_texture = ExtResource("3_c3a4w")
 roughness_texture = ExtResource("3_c3a4w")

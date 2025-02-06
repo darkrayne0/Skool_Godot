@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bkqc6v6nb7btw"]
 
-[ext_resource type="ArrayMesh" uid="uid://xe623jwh8v48" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Books_03.Books_03.mesh" id="1_wcohi"]
-[ext_resource type="Material" uid="uid://bhcii1aw6rlff" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Books.mat.tres" id="2_esrbn"]
+[ext_resource type="ArrayMesh" uid="uid://xe623jwh8v48" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Directors_Office/extracted/Books_03.Books_03.mesh" id="1_wcohi"]
+[ext_resource type="Material" uid="uid://bhcii1aw6rlff" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Books.mat.tres" id="2_esrbn"]
 
 [node name="Books_03" type="Node3D"]
 

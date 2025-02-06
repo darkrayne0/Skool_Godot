@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://68exjsbhmrc2"]
 
-[ext_resource type="ArrayMesh" uid="uid://blrg0owtuvdel" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Tablet_03.Tablet_03.mesh" id="1_y033v"]
-[ext_resource type="Material" uid="uid://7knclqe2y08f" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Telephone.mat.tres" id="2_1xjpd"]
+[ext_resource type="ArrayMesh" uid="uid://blrg0owtuvdel" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Tablet_03.Tablet_03.mesh" id="1_y033v"]
+[ext_resource type="Material" uid="uid://7knclqe2y08f" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Telephone.mat.tres" id="2_1xjpd"]
 
 [node name="Tablet_03" type="Node3D"]
 

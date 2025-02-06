@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://dm2qxjjgs8lls"]
 
-[ext_resource type="ArrayMesh" uid="uid://cam5uxyrt82aj" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_Door_LOD0.mesh" id="1_y4fdd"]
-[ext_resource type="Material" uid="uid://cmtaeyb0cpxpk" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Wardrobe.mat.tres" id="2_vboki"]
-[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_gqg0e"]
-[ext_resource type="ArrayMesh" uid="uid://cru8lhd3cnui" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_Door_LOD1.mesh" id="4_wh2vr"]
-[ext_resource type="ArrayMesh" uid="uid://c1ujyjlaasjdf" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_LOD0.mesh" id="5_rmwpn"]
-[ext_resource type="ArrayMesh" uid="uid://dbfrxy0yxa301" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_LOD1.mesh" id="6_2q6vx"]
-[ext_resource type="ArrayMesh" uid="uid://b84csr1xs8cns" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_LOD2.mesh" id="7_b047u"]
+[ext_resource type="ArrayMesh" uid="uid://cam5uxyrt82aj" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_Door_LOD0.mesh" id="1_y4fdd"]
+[ext_resource type="Material" uid="uid://cmtaeyb0cpxpk" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Wardrobe.mat.tres" id="2_vboki"]
+[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_gqg0e"]
+[ext_resource type="ArrayMesh" uid="uid://cru8lhd3cnui" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_Door_LOD1.mesh" id="4_wh2vr"]
+[ext_resource type="ArrayMesh" uid="uid://c1ujyjlaasjdf" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_LOD0.mesh" id="5_rmwpn"]
+[ext_resource type="ArrayMesh" uid="uid://dbfrxy0yxa301" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_LOD1.mesh" id="6_2q6vx"]
+[ext_resource type="ArrayMesh" uid="uid://b84csr1xs8cns" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Wardrobe_02.Wardrobe_02_LOD2.mesh" id="7_b047u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tgku5"]
 size = Vector3(0.0323578, 2.041, 0.890421)

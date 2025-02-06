@@ -6,6 +6,8 @@
 
 [resource]
 resource_name = "Glass_01"
+transparency = 1
+blend_mode = 1
 depth_draw_mode = 1
 albedo_texture = ExtResource("1_rd4lg")
 metallic_texture = ExtResource("2_etfmk")

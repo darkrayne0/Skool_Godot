@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://gyhwh354j1q7"]
 
-[ext_resource type="ArrayMesh" uid="uid://chck7qfu7trdx" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_03.Lamp_03_LOD0.mesh" id="1_1qtou"]
-[ext_resource type="Material" uid="uid://7knclqe2y08f" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Telephone.mat.tres" id="2_m07ma"]
-[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_36rcl"]
-[ext_resource type="ArrayMesh" uid="uid://c8rx1dsd1trho" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_03.Lamp_03_LOD1.mesh" id="4_gwm7e"]
-[ext_resource type="ArrayMesh" uid="uid://n0d24p1gm021" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_03.Lamp_03_LOD2.mesh" id="5_j14t3"]
+[ext_resource type="ArrayMesh" uid="uid://chck7qfu7trdx" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_03.Lamp_03_LOD0.mesh" id="1_1qtou"]
+[ext_resource type="Material" uid="uid://7knclqe2y08f" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Telephone.mat.tres" id="2_m07ma"]
+[ext_resource type="Material" uid="uid://druc7tr41slqr" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Glass_01(Fade).mat.tres" id="3_36rcl"]
+[ext_resource type="ArrayMesh" uid="uid://c8rx1dsd1trho" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_03.Lamp_03_LOD1.mesh" id="4_gwm7e"]
+[ext_resource type="ArrayMesh" uid="uid://n0d24p1gm021" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_03.Lamp_03_LOD2.mesh" id="5_j14t3"]
 
 [node name="Lamp_03" type="Node3D"]
 

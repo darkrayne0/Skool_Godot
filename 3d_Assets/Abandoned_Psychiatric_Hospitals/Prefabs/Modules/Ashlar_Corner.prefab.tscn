@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dv3etfoql8de1"]
 
-[ext_resource type="ArrayMesh" uid="uid://cf2jcowwpkbgp" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Ashlar_Corner.Ashlar_Corner.mesh" id="1_nrbrm"]
-[ext_resource type="Material" uid="uid://b7874r6umged6" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Emergency_Door.mat.tres" id="2_cr1c2"]
+[ext_resource type="ArrayMesh" uid="uid://cf2jcowwpkbgp" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Ashlar_Corner.Ashlar_Corner.mesh" id="1_nrbrm"]
+[ext_resource type="Material" uid="uid://b7874r6umged6" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Emergency_Door.mat.tres" id="2_cr1c2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dqt6f"]
 size = Vector3(0.619851, 3.97902, 0.625574)

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c1dlihrrlm0bn"]
 
-[ext_resource type="ArrayMesh" uid="uid://bf3f12ne5dxu1" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_01.Lamp_01_LOD0.mesh" id="1_ehcdj"]
-[ext_resource type="Material" uid="uid://bguq0n7rvexi4" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Ceiling.mat.tres" id="2_4l8h1"]
-[ext_resource type="ArrayMesh" uid="uid://sdjwog0kycu1" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_01.Lamp_01_LOD1.mesh" id="3_38obv"]
+[ext_resource type="ArrayMesh" uid="uid://bf3f12ne5dxu1" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_01.Lamp_01_LOD0.mesh" id="1_ehcdj"]
+[ext_resource type="Material" uid="uid://bguq0n7rvexi4" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Ceiling.mat.tres" id="2_4l8h1"]
+[ext_resource type="ArrayMesh" uid="uid://sdjwog0kycu1" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Lamp_01.Lamp_01_LOD1.mesh" id="3_38obv"]
 
 [node name="Lamp_01" type="Node3D"]
 

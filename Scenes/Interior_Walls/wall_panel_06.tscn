@@ -1,16 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://buv1fv4th5a4a"]
+[gd_scene load_steps=4 format=4 uid="uid://buv1fv4th5a4a"]
 
-[ext_resource type="Texture2D" uid="uid://b065jtap6p4l" path="res://Materials/Textures/Directors_Door_Wall_06_Directors_Door_A.png" id="1_sviyt"]
-[ext_resource type="Texture2D" uid="uid://bgqnyaxn0qeji" path="res://Materials/Textures/Directors_Door_Wall_06_Directors_Door_N.png" id="2_r04lr"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qp1ly"]
-resource_name = "Directors_Door"
-cull_mode = 2
-albedo_texture = ExtResource("1_sviyt")
-roughness = 0.5
-normal_enabled = true
-normal_scale = 2.0
-normal_texture = ExtResource("2_r04lr")
+[ext_resource type="Material" uid="uid://bj34ykmaceqa7" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Directors_Door.mat.tres" id="1_k5l0c"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_c8mv4"]
 _surfaces = [{
@@ -34,7 +24,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 78,
 "index_data": PackedByteArray("FwAIAAcAFwAZAAgAEwADAAIAEwASAAMAFQACAAUAFQATAAIAGwAEAAsAGwAUAAQAEgAGAAMAEgAWAAYAGAAIABkAGAAJAAgAEAAJABgAEAAAAAkAEQAKAAEAEQAaAAoAHAAOAAwAHAAfAA4AGgAMAAoAGgAcAAwAHQANAB4AHQAPAA0AHQALAA8AHQAbAAsABgAXAAcABgAWABcA"),
-"material": SubResource("StandardMaterial3D_qp1ly"),
+"material": ExtResource("1_k5l0c"),
 "name": "Directors_Door",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),

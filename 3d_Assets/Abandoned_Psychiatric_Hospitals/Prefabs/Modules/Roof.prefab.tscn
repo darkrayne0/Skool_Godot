@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dfdo7xyyjtnxc"]
 
-[ext_resource type="ArrayMesh" uid="uid://22dwnom5a1jk" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Roof.Roof.mesh" id="1_d2w23"]
-[ext_resource type="Material" uid="uid://dd4s10nnbjmhs" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Concrete.mat.tres" id="2_lc6yv"]
+[ext_resource type="ArrayMesh" uid="uid://22dwnom5a1jk" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Modules/extracted/Roof.Roof.mesh" id="1_d2w23"]
+[ext_resource type="Material" uid="uid://dd4s10nnbjmhs" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/House/Concrete.mat.tres" id="2_lc6yv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x76ym"]
 size = Vector3(2, 0, 2)

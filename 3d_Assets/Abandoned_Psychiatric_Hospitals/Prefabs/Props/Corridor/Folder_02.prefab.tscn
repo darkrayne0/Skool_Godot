@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ch5mmo2jiaa2h"]
 
-[ext_resource type="ArrayMesh" uid="uid://co2ami8dw6h7n" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Folder_02.Folder_02_LOD0.mesh" id="1_yj8wv"]
-[ext_resource type="Material" uid="uid://ddtmbtpjbmb6s" path="res://Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Stationery.mat.tres" id="2_yqyfr"]
-[ext_resource type="ArrayMesh" uid="uid://bn4388agycp7q" path="res://Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Folder_02.Folder_02_LOD1.mesh" id="3_ngitg"]
+[ext_resource type="ArrayMesh" uid="uid://co2ami8dw6h7n" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Folder_02.Folder_02_LOD0.mesh" id="1_yj8wv"]
+[ext_resource type="Material" uid="uid://ddtmbtpjbmb6s" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Materials/Props/Corridor/Stationery.mat.tres" id="2_yqyfr"]
+[ext_resource type="ArrayMesh" uid="uid://bn4388agycp7q" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Models/Props/Corridor/extracted/Folder_02.Folder_02_LOD1.mesh" id="3_ngitg"]
 
 [node name="Folder_02" type="Node3D"]
 
