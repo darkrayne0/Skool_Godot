@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://7wfuud23aa16"]
+[gd_scene load_steps=7 format=3 uid="uid://7wfuud23aa16"]
 
 [ext_resource type="PackedScene" uid="uid://dmkto3kxwhfco" path="res://Scenes/Interior_Walls/wall_panel_01.tscn" id="1_ww3it"]
 [ext_resource type="PackedScene" uid="uid://2km8sua36wfu" path="res://Scenes/Interior_Walls/wall_panel_05.tscn" id="2_r12sn"]
 [ext_resource type="PackedScene" uid="uid://buv1fv4th5a4a" path="res://Scenes/Interior_Walls/wall_panel_06.tscn" id="3_xkiov"]
 [ext_resource type="PackedScene" uid="uid://pyb2djj3yj7r" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Props/Directors_Office/Directors_Door_Wall_03.prefab.tscn" id="4_amh3w"]
+[ext_resource type="PackedScene" uid="uid://47j25cqta7q1" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Props/Directors_Office/Directors_Door_Wall_04.prefab.tscn" id="6_vrysh"]
+[ext_resource type="PackedScene" uid="uid://d3b34bc50x7tm" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Props/Directors_Office/Directors_Door_Wall_06.prefab.tscn" id="7_kdd0s"]
 
 [node name="SouthEastHall" type="Node3D"]
 
@@ -124,6 +126,18 @@ transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -10, 0, 
 [node name="WallPanel57" parent="." instance=ExtResource("1_ww3it")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -8, 0, -29.8)
 
+[node name="WallPanel70" parent="." instance=ExtResource("1_ww3it")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -6, 0, -29.8)
+
+[node name="WallPanel72" parent="." instance=ExtResource("1_ww3it")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -4, 0, -29)
+
+[node name="WallPanel74" parent="." instance=ExtResource("1_ww3it")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -4, 0, -25)
+
+[node name="WallPanel75" parent="." instance=ExtResource("1_ww3it")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, -5, 0, -22)
+
 [node name="WallPanel42" parent="." instance=ExtResource("2_r12sn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -14)
 
@@ -204,3 +218,15 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -13.8,
 
 [node name="Directors_Door_Wall_05" parent="." instance=ExtResource("4_amh3w")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -13.8, 0, -18)
+
+[node name="Directors_Door_Wall_06" parent="." instance=ExtResource("6_vrysh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -23)
+
+[node name="Directors_Door_Wall_07" parent="." instance=ExtResource("7_kdd0s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -29)
+
+[node name="Directors_Door_Wall_08" parent="." instance=ExtResource("7_kdd0s")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5, 0, -22)
+
+[node name="Directors_Door_Wall_09" parent="." instance=ExtResource("7_kdd0s")]
+transform = Transform3D(0.707107, 0, -0.0494975, 0, 1, 0, 0.707107, 0, 0.0494975, -7.02275, 0, -21.9705)

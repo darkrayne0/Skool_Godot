@@ -1,36 +1,80 @@
 extends Node
 
-var _map: Node3D
-var _room_to_replace: Node3D
-var _new_room: Node3D
+
+var _what_to_do: String
+var _load_progress: Timer
+var _load_me: String
+var _group: Node3D
+var _to_replace: Node3D
+var _new_node: Node3D
 
 
+func _load_monitor() -> void:
 
-func _get_rooms(findroom: String) -> void:
-	_map = get_tree().get_first_node_in_group("map")
-	var rooms = _map.get_children() #gets all child nodes in the map node
+	var _load_status = ResourceLoader.load_threaded_get_status(_load_me)
 
-	for room in rooms: #finds the node that matches the passed stringname
-		if room.name == findroom:
-			_room_to_replace = room #sets that node as the room to replace
+	match _load_status:
+		ResourceLoader.THREAD_LOAD_INVALID_RESOURCE:
+			print_debug("THREAD_LOAD_INVALID_RESOURCE") #print
+		ResourceLoader.THREAD_LOAD_IN_PROGRESS:
+			print(_load_status) #print
+		ResourceLoader.THREAD_LOAD_FAILED:
+			print_debug("THREAD_LOAD_FAILED") #print
+		ResourceLoader.THREAD_LOAD_LOADED:
+			print(_load_status) #print
+			_load_progress.stop()
+			_load_progress.queue_free()
+			_new_node = ResourceLoader.load_threaded_get(_load_me).instantiate()
+			_load_finish()
 
 
-func swap_scene(room_to_load: String, room_to_replace: String, what_to_do: String) -> void:
-	_get_rooms(room_to_replace)
+func _begin_load(load_me: String) -> void:
 
-	ResourceLoader.load_threaded_request(room_to_load) #threaded loader to load new scene
-	await get_tree().create_timer(1.0).timeout #todo - current wait time for new scene to load
-	_new_room = ResourceLoader.load_threaded_get(room_to_load).instantiate() #inserts loaded scene
+	if (ResourceLoader.has_cached(load_me)):
+		_new_node = ResourceLoader.load_threaded_get(load_me).instantiate()
+	else:
+		ResourceLoader.load_threaded_request(load_me, "", true) #threaded loader to load new scene
+		_load_progress = Timer.new()
+		_load_progress.wait_time = 0.1
+		_load_progress.timeout.connect(_load_monitor)
+		get_tree().root.add_child(_load_progress)
+		_load_progress.start()
 
-	if what_to_do == "remove":
-		_map.remove_child(_room_to_replace) #removes old node from tree, stil in memory
-	elif what_to_do == "free":
-		_room_to_replace.free() #remove old node from tree, no longer in memory
-	elif what_to_do == "hide":
-		_room_to_replace.hide() #Hides old node, still running and in memory
 
-	_map.add_child(_new_room) #adds new scene to tree
-	#_map.call_deferred("add_child", _new_room) #same as above, maybe better?
+func _get_nodes(findroom: String, groupname: String) -> void:
 
-func load_room():
-	pass
+	_group = get_tree().get_first_node_in_group(groupname)
+	var nodes = _group.get_children() #gets all child nodes in the map node
+
+	for node in nodes: #finds the node that matches the passed stringname
+		if node.name == findroom:
+			_to_replace = node #sets that node as the room to replace
+			return
+
+
+func _load_finish() -> void:
+
+	if _what_to_do == "remove":
+		_group.remove_child(_to_replace) #removes old node from tree, stil in memory
+	elif _what_to_do == "free":
+		_to_replace.free() #remove old node from tree, no longer in memory
+	elif _what_to_do == "hide":
+		_to_replace.hide() #Hides old node, still running and in memory
+
+	_group.call_deferred("add_child", _new_node) #adds new node
+
+
+func swap_scene(load_me: String, replace_me: String, groupname, what_to_do: String) -> void:
+
+	_what_to_do = what_to_do #todo - maybe have a chek for all variables and comment what all this is after expansion
+	_load_me = load_me
+
+	if groupname and replace_me != null:
+		_get_nodes(replace_me, groupname)
+	else:
+		print_debug("replace_me and/or groupname = null") #print
+
+	if load_me != null:
+		_begin_load(load_me)
+	else:
+		print_debug("load_me = null") #print

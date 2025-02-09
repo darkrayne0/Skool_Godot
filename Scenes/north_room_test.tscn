@@ -399,6 +399,7 @@ transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 16.8, 0,
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 16.8, 0, -14)
 
 [node name="TeacherDesk" type="Node3D" parent="."]
+visible = false
 
 [node name="Computers" parent="TeacherDesk" instance=ExtResource("5_u6r61")]
 transform = Transform3D(0.406162, 0, 0.735277, 0, 0.84, 0, -0.735277, 0, 0.406162, 12.5656, 0.937762, -6.96292)

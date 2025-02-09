@@ -1,6 +1,5 @@
 [gd_scene load_steps=50 format=4 uid="uid://ykn0vowi4m1p"]
 
-[ext_resource type="Script" path="res://Scripts/arearoomload.gd" id="1_6ewns"]
 [ext_resource type="PackedScene" uid="uid://d0xvnytjomfy1" path="res://Scenes/Props/school_desk.scn" id="1_nqm36"]
 [ext_resource type="PackedScene" uid="uid://8ucv8vsft0qo" path="res://Scenes/Props/school_chair.scn" id="2_amid6"]
 [ext_resource type="Texture2D" uid="uid://b6pkaj2jxfmxs" path="res://Materials/Textures/Directors_Desk_A.tga" id="3_bf0ag"]
@@ -35,9 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://i16h775x0h17" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Props/Corridor/Urn_02.prefab.tscn" id="30_p0lrw"]
 [ext_resource type="PackedScene" uid="uid://dpy40qktmxo7n" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Props/Shelf.prefab.tscn" id="31_dg8s2"]
 [ext_resource type="PackedScene" uid="uid://chhx7o7yy6te2" path="res://3d_Assets/Abandoned_Psychiatric_Hospitals/Prefabs/Props/Corridor/Wardrobe_01.prefab.tscn" id="34_vpm81"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_v20qf"]
-size = Vector3(0.145508, 3.85425, 8)
+[ext_resource type="Script" path="res://Scripts/rm_load_trigger.gd" id="35_odfmw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3pa3t"]
 resource_name = "Directors_Desk"
@@ -204,19 +201,10 @@ _data = {
 "open_r_drawer": SubResource("Animation_mj504")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_v20qf"]
+size = Vector3(0.145508, 3.85425, 8)
+
 [node name="EastRoom" type="Node3D"]
-script = ExtResource("1_6ewns")
-room_to_load = "res://Scenes/north_room_test.tscn"
-room_to_replace = "NorthRoom"
-what_to_do = "free"
-
-[node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8792, 2, 9.875)
-collision_layer = 8
-collision_mask = 8
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("BoxShape3D_v20qf")
 
 [node name="Directors_Desk" type="Node3D" parent="."]
 transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 14, 0, 0.646065)
@@ -806,4 +794,19 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.274
 [node name="Urn_03" parent="." instance=ExtResource("30_p0lrw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9631, 0, 1.90797)
 
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[node name="LoadTrigger" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8792, 2, 9.875)
+script = ExtResource("35_odfmw")
+load_me = "res://Scenes/north_room_test.tscn"
+group_name = "map"
+replace_me = "NorthRoom"
+what_to_do = "remove"
+
+[node name="Area3D" type="Area3D" parent="LoadTrigger"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LoadTrigger/Area3D"]
+shape = SubResource("BoxShape3D_v20qf")
+
+[connection signal="body_entered" from="LoadTrigger/Area3D" to="LoadTrigger" method="_on_area_3d_body_entered" flags=6]
