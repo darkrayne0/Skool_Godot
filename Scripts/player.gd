@@ -24,9 +24,19 @@ var bob_time: float
 const FOV_CHANGE := 2.0
 @export var base_fov := 75.0
 @onready var camera := $player_0_camh/player_0_cam
+@onready var inventory: Control = $Inventory
 
 #state machine variables - LimboAI
 @onready var p_state: LimboHSM = $LimboHSM
+
+
+func _input(event): #looks for input
+	if event.is_action_pressed("PauseInventory"): #esc to pause game
+		inventory.visible = !inventory.visible
+		if inventory.visible:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		else:
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
 func _physics_process(delta: float) -> void:

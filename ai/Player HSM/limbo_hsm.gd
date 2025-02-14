@@ -26,8 +26,6 @@ func _ready(): #starts the state machine
 
 
 func _input(event): #looks for input
-	if event.is_action_pressed("ui_cancel"): #ui_cancle = esc to quit game
-		get_tree().quit()
 
 	if event.is_action_pressed("crouch"): #allows to change state on button press
 		dispatch(&"crouch_ready")

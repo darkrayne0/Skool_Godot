@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=3 uid="uid://bd5itfsrp4pc3"]
+
+[ext_resource type="Theme" uid="uid://ctbuy0yxlf3f" path="res://Themes/MinimalUI.tres" id="1_f4m8y"]
+[ext_resource type="PackedScene" uid="uid://bt2u5ij3bfine" path="res://Scenes/inventory_keys_carousel.tscn" id="2_gdx2r"]
+[ext_resource type="Script" path="res://Scripts/inventory_manager.gd" id="2_mvpya"]
+[ext_resource type="Shader" path="res://Shader/blur.gdshader" id="3_34e0a"]
+[ext_resource type="PackedScene" uid="uid://by1v4luacxfov" path="res://Scenes/inventory_notes_carousel.tscn" id="5_m1j3f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6d3ax"]
+shader = ExtResource("3_34e0a")
+shader_parameter/lod = 2.116
+shader_parameter/mix_percentage = 0.646
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_f4m8y")
+script = ExtResource("2_mvpya")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+material = SubResource("ShaderMaterial_6d3ax")
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Inventory"
+
+[node name="ItemList" type="ItemList" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+allow_search = false
+auto_height = true
+item_count = 4
+item_0/text = "Items"
+item_1/text = "Keys"
+item_2/text = "Notes"
+item_3/text = "Pesronal Info"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/HBoxContainer/VBoxContainer2/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1436, 776)
+render_target_update_mode = 4
+
+[node name="KeysCarousel" parent="MarginContainer/HBoxContainer/VBoxContainer2/SubViewportContainer/SubViewport" instance=ExtResource("2_gdx2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, 0)
+visible = false
+
+[node name="SubViewport2" type="SubViewport" parent="MarginContainer/HBoxContainer/VBoxContainer2/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1436, 776)
+render_target_update_mode = 4
+
+[node name="NotesCarousel" parent="MarginContainer/HBoxContainer/VBoxContainer2/SubViewportContainer/SubViewport2" instance=ExtResource("5_m1j3f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -125, 0)
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 31
+text = "Item Descriptions"
+
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3

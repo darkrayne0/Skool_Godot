@@ -1,6 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://6mc4hdd1xvgb"]
+[gd_scene load_steps=15 format=3 uid="uid://6mc4hdd1xvgb"]
 
-[ext_resource type="Script" path="res://Scripts/player_cam.gd" id="1_maico"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_maico"]
 [ext_resource type="Script" path="res://Scripts/player_0_camh.gd" id="3_8pnre"]
 [ext_resource type="Script" path="res://Scripts/player_vision_ray.gd" id="3_x4pdr"]
 [ext_resource type="Script" path="res://ai/Player HSM/limbo_hsm.gd" id="4_0qpnx"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://ai/Player HSM/idle.gd" id="6_23i8f"]
 [ext_resource type="Script" path="res://ai/Player HSM/move.gd" id="7_0ld4w"]
 [ext_resource type="Script" path="res://ai/Player HSM/sprint.gd" id="8_4bg82"]
+[ext_resource type="PackedScene" uid="uid://bd5itfsrp4pc3" path="res://Scenes/inventory.tscn" id="10_ds5j0"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_m3jvo"]
 
@@ -29,7 +30,7 @@ collision_mask = 263
 script = ExtResource("1_maico")
 
 [node name="player_0_shape" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.999998, 0, 0, 0, 0.999998, 0, 0, 0, 0.999998, 0, 0.998104, 0)
+transform = Transform3D(0.999998, 0, 0, 0, 0.999998, 0, 0, 0, 0.999998, 0.00423336, 0.998104, -0.0104778)
 mesh = SubResource("CapsuleMesh_m3jvo")
 
 [node name="player_0_collision" type="CollisionShape3D" parent="."]
@@ -78,3 +79,6 @@ script = ExtResource("7_0ld4w")
 
 [node name="sprint_state" type="LimboState" parent="LimboHSM"]
 script = ExtResource("8_4bg82")
+
+[node name="Inventory" parent="." instance=ExtResource("10_ds5j0")]
+visible = false

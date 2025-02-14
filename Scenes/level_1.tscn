@@ -111,7 +111,6 @@ shape = SubResource("ConcavePolygonShape3D_emihx")
 
 [node name="Ceiling_floor" parent="NavigationRegion3D/Map/Floor" instance=ExtResource("4_saa8l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.376, 3.085, -38.961)
-visible = false
 
 [node name="NorthRoom" parent="NavigationRegion3D/Map" instance=ExtResource("6_hw6ut")]
 
