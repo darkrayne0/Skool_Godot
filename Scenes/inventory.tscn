@@ -2,8 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://ctbuy0yxlf3f" path="res://Themes/MinimalUI.tres" id="1_f4m8y"]
 [ext_resource type="PackedScene" uid="uid://bt2u5ij3bfine" path="res://Scenes/inventory_keys_carousel.tscn" id="2_gdx2r"]
-[ext_resource type="Script" path="res://Scripts/inventory_manager.gd" id="2_mvpya"]
 [ext_resource type="Shader" path="res://Shader/blur.gdshader" id="3_34e0a"]
+[ext_resource type="Script" path="res://Scripts/inventory.gd" id="4_33juo"]
 [ext_resource type="PackedScene" uid="uid://by1v4luacxfov" path="res://Scenes/inventory_notes_carousel.tscn" id="5_m1j3f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6d3ax"]
@@ -11,7 +11,7 @@ shader = ExtResource("3_34e0a")
 shader_parameter/lod = 2.116
 shader_parameter/mix_percentage = 0.646
 
-[node name="Inventory" type="Control"]
+[node name="Inventory" type="Control" node_paths=PackedStringArray("keys_carousel", "notes_carousel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,7 +19,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_f4m8y")
-script = ExtResource("2_mvpya")
+script = ExtResource("4_33juo")
+keys_carousel = NodePath("MarginContainer/HBoxContainer/VBoxContainer2/SubViewportContainer/SubViewport/KeysCarousel")
+notes_carousel = NodePath("MarginContainer/HBoxContainer/VBoxContainer2/SubViewportContainer/SubViewport2/NotesCarousel")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -52,10 +54,10 @@ size_flags_vertical = 6
 allow_search = false
 auto_height = true
 item_count = 4
-item_0/text = "Items"
-item_1/text = "Keys"
-item_2/text = "Notes"
-item_3/text = "Pesronal Info"
+item_0/text = "Keys"
+item_1/text = "Notes"
+item_2/text = "Save"
+item_3/text = "Quit"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -100,3 +102,5 @@ text = "Item Descriptions"
 [node name="Control2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 3
+
+[connection signal="item_clicked" from="MarginContainer/HBoxContainer/VBoxContainer/ItemList" to="." method="_on_item_list_item_clicked"]
